@@ -1,0 +1,16 @@
+{
+  "name": "saas-dashboard",
+  "private": true,
+  "original-credits": "admin-lte",
+  "original-credits-repository": {
+    "type": "git",
+    "url": "git://github.com/almasaeed2010/AdminLTE.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "consolidate": "^0.13.1",
+    "express": "^4.13.3",
+    "handlebars": "^4.0.3",
+    "jsx-loader": "^0.13.2"
+  }
+}
