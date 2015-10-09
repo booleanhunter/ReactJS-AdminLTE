@@ -49,7 +49,7 @@ var config = {
 
     entry: {
         app: ['./public/js/main'],
-        vendors: ['react','jquery','jqueryui','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
+        vendors: ['react','jquery','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 
     output: {

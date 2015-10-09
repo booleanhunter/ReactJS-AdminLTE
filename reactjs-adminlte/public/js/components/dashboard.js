@@ -14,7 +14,7 @@ define(
         './containers/container-seven'
     ],
     function(React,$, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven){
-    	var SaasDashboard = React.createClass({
+    	var Dashboard = React.createClass({
     		render: function(){
     			return (
     				<div className="wrapper">
@@ -58,6 +58,6 @@ define(
     		}
     	})
 
-    	return SaasDashboard;
+    	return Dashboard;
     }   
 )     
