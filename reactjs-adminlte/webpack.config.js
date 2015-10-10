@@ -1,5 +1,4 @@
 /**
- * Copyright Toorq Media Serivces
  * @Author Ashwin Hariharan
  * @Details Webpack config file for adding new vendors, defining entry points and shimming modules. 
  */
@@ -10,10 +9,6 @@ var lib_dir = __dirname + '/public/js/libs',
     plugins_dir = __dirname + '/public/plugins';
 
 var config = {
-    addVendor: function (name, path) {  //This is not a built-in function
-        this.resolve.alias[name] = path;
-        this.module.noParse.push(new RegExp(path));
-    },
 
     resolve: {
         alias: {
@@ -59,8 +54,7 @@ var config = {
     
     module: {
         noParse: [
-            new RegExp(lib_dir + './public/js/libs/react.js'),
-            //new RegExp(lib_dir +'/jQuery-2.1.4.min.js'),
+            new RegExp(lib_dir + './public/js/libs/react.js')
         ],
         loaders: [
             { 
@@ -71,10 +65,6 @@ var config = {
     }
 };
 
-// config.addVendor('react', bower_dir + '/react/react.min.js');
-// config.addVendor('jquery',lib_dir +'/jquery-1.11.2.min.js');
-// config.addVendor('intro',lib_dir+'/intro.min.js');
-//config.addVendor('minimalect',lib_dir+'/jquery.minimalect.js');
 
 module.exports = config;
 
