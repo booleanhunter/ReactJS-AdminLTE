@@ -35,7 +35,11 @@ define(
                                 <li className="header">MAIN NAVIGATION</li>
                                 <li className="active treeview">
                                     <a href="#">
-                                        <i className="fa fa-dashboard"></i> <span>Dashboard</span> <i className="fa fa-angle-left pull-right"></i>
+                                        <i className="fa fa-dashboard"></i> 
+                                        <span>
+                                            Dashboard
+                                        </span> 
+                                        <i className="fa fa-angle-left pull-right"></i>
                                     </a>
                                     <ul className="treeview-menu">
                                         <li className="active"><a href="index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
@@ -57,7 +61,9 @@ define(
                                 </li>
                                 <li>
                                     <a href="pages/widgets.html">
-                                        <i className="fa fa-th"></i> <span>Widgets</span> <small className="label pull-right bg-green">new</small>
+                                        <i className="fa fa-th"></i>
+                                        <span>Widgets</span> 
+                                        <small className="label pull-right bg-green">new</small>
                                     </a>
                                 </li>
                                 <li className="treeview">

@@ -6,7 +6,34 @@ webpackJsonp([1],[
 
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * @author Ashwin Hariharan
+	 * @Details App execution starts from here. One of the entry points to begin execution. Renders the main app component.
+	 */
+
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(3),   
+	        __webpack_require__(4),
+	        __webpack_require__(12)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, Dashboard) {
+	    	React.render(React.createElement(Dashboard, null),  document.body);
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
+
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -16,13 +43,14 @@ webpackJsonp([1],[
 	        __webpack_require__(16),
 	        __webpack_require__(17),
 	        __webpack_require__(18),
-	        __webpack_require__(14),
 	        __webpack_require__(19),
+	        __webpack_require__(14),
 	        __webpack_require__(20),
 	        __webpack_require__(21),
 	        __webpack_require__(22),
-	        __webpack_require__(23)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven){
+	        __webpack_require__(23),
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu){
 	    	var Dashboard = React.createClass({displayName: "Dashboard",
 	    		render: function(){
 	    			return (
@@ -61,7 +89,17 @@ webpackJsonp([1],[
 	    							)
 	    						)
 
-	    					)
+	    					), 
+
+	                        React.createElement("footer", {className: "main-footer"}, 
+	                            React.createElement("div", {className: "pull-right hidden-xs"}, 
+	                                React.createElement("b", null, "Version"), " 2.3.0"
+	                            ), 
+	                            React.createElement("strong", null, "Copyright © 2014-2015 ", React.createElement("a", {href: "http://almsaeedstudio.com"}, "Almsaeed Studio"), "."), 
+	                            "All rights reserved."
+	                        )
+
+	                        /*<ControlsMenu />*/
 	    				)
 	    			)
 	    		}
@@ -71,33 +109,6 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
-	 * @author Ashwin Hariharan
-	 * @Details App execution starts from here. One of the entry points to begin execution. Renders the main app component.
-	 */
-
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(3),   
-	        __webpack_require__(4),
-	        __webpack_require__(1)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, Dashboard) {
-	    	React.render(React.createElement(Dashboard, null),  document.body);
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
-
-/***/ },
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
 /* 13 */,
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
@@ -106,7 +117,7 @@ webpackJsonp([1],[
 	        __webpack_require__(3),
 	        __webpack_require__(4),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var ContainerTwo = React.createClass({displayName: "ContainerTwo",
+	    	var ContainerThree = React.createClass({displayName: "ContainerThree",
 	    		render: function(){
 	                var style = {
 	                    position: 'relative',
@@ -116,20 +127,23 @@ webpackJsonp([1],[
 	                };
 	                //style="overflow: hidden; width: auto; height: 250px;"
 	    			return (
-	    				React.createElement("div", {className: "box box-success"}, 
+	    				React.createElement("div", {className: "box box-primary"}, 
 	                        React.createElement("div", {className: "box-header ui-sortable-handle"}, 
-	                            React.createElement("i", {className: "fa fa-comments-o"}), 
-	                            React.createElement("h3", {className: "box-title"}, "Chat"), 
-	                            React.createElement("div", {className: "box-tools pull-right", "data-toggle": "tooltip", title: "", "data-original-title": "Status"}, 
-	                                React.createElement("div", {className: "btn-group", "data-toggle": "btn-toggle"}, 
-	                                    React.createElement("button", {type: "button", className: "btn btn-default btn-sm active"}, React.createElement("i", {className: "fa fa-square text-green"})), 
-	                                    React.createElement("button", {type: "button", className: "btn btn-default btn-sm"}, React.createElement("i", {className: "fa fa-square text-red"}))
+	                            React.createElement("i", {className: "ion ion-clipboard"}), 
+	                            React.createElement("h3", {className: "box-title"}, "To Do List"), 
+	                            React.createElement("div", {className: "box-tools pull-right"}, 
+	                                React.createElement("ul", {className: "pagination pagination-sm inline"}, 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "«")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "1")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "2")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "3")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "»"))
 	                                )
 	                            )
 	                        ), 
 
-	                        React.createElement("div", {className: "slimScrollDiv", style: style}, 
-	                            React.createElement("div", {className: "box-body chat", id: "chat-box"}
+	                        React.createElement("div", {className: "box-body"}, 
+	                            React.createElement("ul", {className: "todo-list ui-sortable"}
 	                            )
 	                        )
 	                    )
@@ -137,7 +151,7 @@ webpackJsonp([1],[
 	    		}
 	    	})
 
-	    	return ContainerTwo;
+	    	return ContainerThree;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
@@ -147,8 +161,18 @@ webpackJsonp([1],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(3),
 	        __webpack_require__(4),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	        __webpack_require__(25),
+	        __webpack_require__(26),
+	        __webpack_require__(27)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderMessages, HeaderNotifications, HeaderTasks){
 	    	var HeaderBar = React.createClass({displayName: "HeaderBar",
+	            getInitialState: function(){
+	                return {
+	                    messages: [],
+	                    notifications: [],
+	                    tasks: []
+	                }
+	            },
 	            pushMenu: function(){
 	                if(document.body.clientWidth > 768){
 	                    if(document.body.className.indexOf('sidebar-collapse') === -1){
@@ -164,6 +188,41 @@ webpackJsonp([1],[
 	                    }
 	                }
 	                
+	            },
+	            componentDidMount:function(){
+	                var messages = [
+	                    {
+	                        displayName: 'Support Team',
+	                        displayPicture: 'dist/img/user2-160x160.jpg',
+	                        messageSubject: 'Why not buy a new awesome theme?',
+	                        messageTime: '5 mins',   
+	                    },
+	                    {
+	                        displayName: 'AdminLTE Design Team',
+	                        displayPicture: 'dist/img/user3-128x128.jpg',
+	                        messageSubject: 'Why not buy a new awesome theme?',
+	                        messageTime: '2 hours',
+	                    },
+	                    {
+	                        displayName: 'Developers',
+	                        displayPicture: 'dist/img/user4-128x128.jpg',
+	                        messageSubject: 'Why not buy a new awesome theme?',
+	                        messageTime: 'Today',
+	                    },
+	                    {
+	                        displayName: 'Sales Department',
+	                        displayPicture: 'dist/img/user3-128x128.jpg',
+	                        messageSubject: 'Why not buy a new awesome theme?',
+	                        messageTime: 'Yesterday',
+	                    },
+	                    {
+	                        displayName: 'Reviewers',
+	                        displayPicture: 'dist/img/user4-128x128.jpg',
+	                        messageSubject: 'Why not buy a new awesome theme?',
+	                        messageTime: '2 days',
+	                    },
+	                ];
+	                this.setState({messages: messages});
 	            },
 	    		render: function(){
 	                var that = this;
@@ -190,81 +249,7 @@ webpackJsonp([1],[
 	                                            React.createElement("i", {className: "fa fa-envelope-o"}), 
 	                                            React.createElement("span", {className: "label label-success"}, "4")
 	                                        ), 
-	                                        React.createElement("ul", {className: "dropdown-menu"}, 
-	                                            React.createElement("li", {className: "header"}, "You have 4 messages"), 
-	                                            React.createElement("li", null, 
-	                                                /* inner menu: contains the actual data */
-	                                                React.createElement("div", {className: "slimScrollDiv"}, 
-	                                                    React.createElement("ul", {className: "menu"}, 
-	                                                        React.createElement("li", null, 
-	                                                            /* start message */
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("div", {className: "pull-left"}, 
-	                                                                    React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"})
-	                                                                ), 
-	                                                                React.createElement("h4", null, 
-	                                                "Support Team", 
-	                                                React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " 5 mins")
-	                                              ), 
-	                                                                React.createElement("p", null, "Why not buy a new awesome theme?")
-	                                                            )
-	                                                        ), 
-	                                                        /* end message */
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("div", {className: "pull-left"}, 
-	                                                                    React.createElement("img", {src: "dist/img/user3-128x128.jpg", className: "img-circle", alt: "User Image"})
-	                                                                ), 
-	                                                                React.createElement("h4", null, 
-	                                                "AdminLTE Design Team", 
-	                                                React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " 2 hours")
-	                                              ), 
-	                                                                React.createElement("p", null, "Why not buy a new awesome theme?")
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("div", {className: "pull-left"}, 
-	                                                                    React.createElement("img", {src: "dist/img/user4-128x128.jpg", className: "img-circle", alt: "User Image"})
-	                                                                ), 
-	                                                                React.createElement("h4", null, 
-	                                                "Developers", 
-	                                                React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " Today")
-	                                              ), 
-	                                                                React.createElement("p", null, "Why not buy a new awesome theme?")
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("div", {className: "pull-left"}, 
-	                                                                    React.createElement("img", {src: "dist/img/user3-128x128.jpg", className: "img-circle", alt: "User Image"})
-	                                                                ), 
-	                                                                React.createElement("h4", null, 
-	                                                "Sales Department", 
-	                                                React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " Yesterday")
-	                                              ), 
-	                                                                React.createElement("p", null, "Why not buy a new awesome theme?")
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("div", {className: "pull-left"}, 
-	                                                                    React.createElement("img", {src: "dist/img/user4-128x128.jpg", className: "img-circle", alt: "User Image"})
-	                                                                ), 
-	                                                                React.createElement("h4", null, 
-	                                                "Reviewers", 
-	                                                React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " 2 days")
-	                                              ), 
-	                                                                React.createElement("p", null, "Why not buy a new awesome theme?")
-	                                                            )
-	                                                        )
-	                                                    ), 
-	                                                    React.createElement("div", {className: "slimScrollBar"}), 
-	                                                    React.createElement("div", {className: "slimScrollRail"})
-	                                                )
-	                                            ), 
-	                                            React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
-	                                        )
+	                                        React.createElement(HeaderMessages, {messages: that.state.messages})
 	                                    ), 
 	                                    /* Notifications: style can be found in dropdown.less */
 	                                    React.createElement("li", {className: "dropdown notifications-menu"}, 
@@ -272,44 +257,7 @@ webpackJsonp([1],[
 	                                            React.createElement("i", {className: "fa fa-bell-o"}), 
 	                                            React.createElement("span", {className: "label label-warning"}, "10")
 	                                        ), 
-	                                        React.createElement("ul", {className: "dropdown-menu"}, 
-	                                            React.createElement("li", {className: "header"}, "You have 10 notifications"), 
-	                                            React.createElement("li", null, 
-	                                                /* inner menu: contains the actual data */
-	                                                React.createElement("div", {className: "slimScrollDiv"}, 
-	                                                    React.createElement("ul", {className: "menu"}, 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("i", {className: "fa fa-users text-aqua"}), " 5 new members joined today"
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("i", {className: "fa fa-warning text-yellow"}), " Very long description here that may not fit into the page and may cause design problems"
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("i", {className: "fa fa-users text-red"}), " 5 new members joined"
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("i", {className: "fa fa-shopping-cart text-green"}), " 25 sales made"
-	                                                            )
-	                                                        ), 
-	                                                        React.createElement("li", null, 
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("i", {className: "fa fa-user text-red"}), " You changed your username"
-	                                                            )
-	                                                        )
-	                                                    ), 
-	                                                    React.createElement("div", {className: "slimScrollBar"}), 
-	                                                    React.createElement("div", {className: "slimScrollRail"})
-	                                                )
-	                                            ), 
-	                                            React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
-	                                        )
+	                                        React.createElement(HeaderNotifications, null)
 	                                    ), 
 	                                    /* Tasks: style can be found in dropdown.less */
 	                                    React.createElement("li", {className: "dropdown tasks-menu"}, 
@@ -317,81 +265,7 @@ webpackJsonp([1],[
 	                                            React.createElement("i", {className: "fa fa-flag-o"}), 
 	                                            React.createElement("span", {className: "label label-danger"}, "9")
 	                                        ), 
-	                                        React.createElement("ul", {className: "dropdown-menu"}, 
-	                                            React.createElement("li", {className: "header"}, "You have 9 tasks"), 
-	                                            React.createElement("li", null, 
-	                                                /* inner menu: contains the actual data */
-	                                                React.createElement("div", {className: "slimScrollDiv"}, 
-	                                                    React.createElement("ul", {className: "menu"}, 
-	                                                        React.createElement("li", null, 
-	                                                            /* Task item */
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("h3", null, 
-	                                                "Design some buttons", 
-	                                                React.createElement("small", {className: "pull-right"}, "20%")
-	                                              ), 
-	                                                                React.createElement("div", {className: "progress xs"}, 
-	                                                                    React.createElement("div", {className: "progress-bar progress-bar-aqua"}, 
-	                                                                        React.createElement("span", {className: "sr-only"}, "20% Complete")
-	                                                                    )
-	                                                                )
-	                                                            )
-	                                                        ), 
-	                                                        /* end task item */
-	                                                        React.createElement("li", null, 
-	                                                            /* Task item */
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("h3", null, 
-	                                                "Create a nice theme", 
-	                                                React.createElement("small", {className: "pull-right"}, "40%")
-	                                              ), 
-	                                                                React.createElement("div", {className: "progress xs"}, 
-	                                                                    React.createElement("div", {className: "progress-bar progress-bar-green"}, 
-	                                                                        React.createElement("span", {className: "sr-only"}, "40% Complete")
-	                                                                    )
-	                                                                )
-	                                                            )
-	                                                        ), 
-	                                                        /* end task item */
-	                                                        React.createElement("li", null, 
-	                                                            /* Task item */
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("h3", null, 
-	                                                "Some task I need to do", 
-	                                                React.createElement("small", {className: "pull-right"}, "60%")
-	                                              ), 
-	                                                                React.createElement("div", {className: "progress xs"}, 
-	                                                                    React.createElement("div", {className: "progress-bar progress-bar-red"}, 
-	                                                                        React.createElement("span", {className: "sr-only"}, "60% Complete")
-	                                                                    )
-	                                                                )
-	                                                            )
-	                                                        ), 
-	                                                        /* end task item */
-	                                                        React.createElement("li", null, 
-	                                                            /* Task item */
-	                                                            React.createElement("a", {href: "#"}, 
-	                                                                React.createElement("h3", null, 
-	                                                "Make beautiful transitions", 
-	                                                React.createElement("small", {className: "pull-right"}, "80%")
-	                                              ), 
-	                                                                React.createElement("div", {className: "progress xs"}, 
-	                                                                    React.createElement("div", {className: "progress-bar progress-bar-yellow"}, 
-	                                                                        React.createElement("span", {className: "sr-only"}, "80% Complete")
-	                                                                    )
-	                                                                )
-	                                                            )
-	                                                        )
-	                                                        /* end task item */
-	                                                    ), 
-	                                                    React.createElement("div", {className: "slimScrollBar"}), 
-	                                                    React.createElement("div", {className: "slimScrollRail"})
-	                                                )
-	                                            ), 
-	                                            React.createElement("li", {className: "footer"}, 
-	                                                React.createElement("a", {href: "#"}, "View all tasks")
-	                                            )
-	                                        )
+	                                        React.createElement(HeaderTasks, null)
 	                                    ), 
 	                                    /* User Account: style can be found in dropdown.less */
 	                                    React.createElement("li", {className: "dropdown user user-menu"}, 
@@ -485,7 +359,11 @@ webpackJsonp([1],[
 	                                React.createElement("li", {className: "header"}, "MAIN NAVIGATION"), 
 	                                React.createElement("li", {className: "active treeview"}, 
 	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-dashboard"}), " ", React.createElement("span", null, "Dashboard"), " ", React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                        React.createElement("i", {className: "fa fa-dashboard"}), 
+	                                        React.createElement("span", null, 
+	                                            "Dashboard"
+	                                        ), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
 	                                    ), 
 	                                    React.createElement("ul", {className: "treeview-menu"}, 
 	                                        React.createElement("li", {className: "active"}, React.createElement("a", {href: "index.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v1")), 
@@ -507,7 +385,9 @@ webpackJsonp([1],[
 	                                ), 
 	                                React.createElement("li", null, 
 	                                    React.createElement("a", {href: "pages/widgets.html"}, 
-	                                        React.createElement("i", {className: "fa fa-th"}), " ", React.createElement("span", null, "Widgets"), " ", React.createElement("small", {className: "label pull-right bg-green"}, "new")
+	                                        React.createElement("i", {className: "fa fa-th"}), 
+	                                        React.createElement("span", null, "Widgets"), 
+	                                        React.createElement("small", {className: "label pull-right bg-green"}, "new")
 	                                    )
 	                                ), 
 	                                React.createElement("li", {className: "treeview"}, 
@@ -696,7 +576,7 @@ webpackJsonp([1],[
 	        __webpack_require__(3),
 	        __webpack_require__(4),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var ContainerThree = React.createClass({displayName: "ContainerThree",
+	    	var ContainerTwo = React.createClass({displayName: "ContainerTwo",
 	    		render: function(){
 	                var style = {
 	                    position: 'relative',
@@ -706,23 +586,20 @@ webpackJsonp([1],[
 	                };
 	                //style="overflow: hidden; width: auto; height: 250px;"
 	    			return (
-	    				React.createElement("div", {className: "box box-primary"}, 
+	    				React.createElement("div", {className: "box box-success"}, 
 	                        React.createElement("div", {className: "box-header ui-sortable-handle"}, 
-	                            React.createElement("i", {className: "ion ion-clipboard"}), 
-	                            React.createElement("h3", {className: "box-title"}, "To Do List"), 
-	                            React.createElement("div", {className: "box-tools pull-right"}, 
-	                                React.createElement("ul", {className: "pagination pagination-sm inline"}, 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "«")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "1")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "2")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "3")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "»"))
+	                            React.createElement("i", {className: "fa fa-comments-o"}), 
+	                            React.createElement("h3", {className: "box-title"}, "Chat"), 
+	                            React.createElement("div", {className: "box-tools pull-right", "data-toggle": "tooltip", title: "", "data-original-title": "Status"}, 
+	                                React.createElement("div", {className: "btn-group", "data-toggle": "btn-toggle"}, 
+	                                    React.createElement("button", {type: "button", className: "btn btn-default btn-sm active"}, React.createElement("i", {className: "fa fa-square text-green"})), 
+	                                    React.createElement("button", {type: "button", className: "btn btn-default btn-sm"}, React.createElement("i", {className: "fa fa-square text-red"}))
 	                                )
 	                            )
 	                        ), 
 
-	                        React.createElement("div", {className: "box-body"}, 
-	                            React.createElement("ul", {className: "todo-list ui-sortable"}
+	                        React.createElement("div", {className: "slimScrollDiv", style: style}, 
+	                            React.createElement("div", {className: "box-body chat", id: "chat-box"}
 	                            )
 	                        )
 	                    )
@@ -730,7 +607,7 @@ webpackJsonp([1],[
 	    		}
 	    	})
 
-	    	return ContainerThree;
+	    	return ContainerTwo;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
@@ -903,6 +780,600 @@ webpackJsonp([1],[
 	    	})
 
 	    	return ContainerSeven;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(3),
+	        __webpack_require__(4),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	        var ControlsMenu = React.createClass({displayName: "ControlsMenu",
+	            componentDidMount:function(){
+
+	            },
+	            render: function(){
+	                var that = this;
+	                return (
+	                    React.createElement("aside", {className: "control-sidebar control-sidebar-dark control-sidebar-open"}, 
+	                        /* Create the tabs */
+	                        React.createElement("ul", {className: "nav nav-tabs nav-justified control-sidebar-tabs"}, 
+	                            React.createElement("li", {className: "active"}, 
+	                                React.createElement("a", {href: "#control-sidebar-theme-demo-options-tab", "data-toggle": "tab"}, React.createElement("i", {className: "fa fa-wrench"}))
+	                            ), 
+	                            React.createElement("li", null, React.createElement("a", {href: "#control-sidebar-home-tab", "data-toggle": "tab"}, React.createElement("i", {className: "fa fa-home"}))), 
+	                            React.createElement("li", null, React.createElement("a", {href: "#control-sidebar-settings-tab", "data-toggle": "tab"}, React.createElement("i", {className: "fa fa-gears"})))
+	                        ), 
+	                        /* Tab panes */
+	                        React.createElement("div", {className: "tab-content"}, 
+	                            /* Home tab content */
+	                            React.createElement("div", {className: "tab-pane", id: "control-sidebar-home-tab"}, 
+	                                React.createElement("h3", {className: "control-sidebar-heading"}, "Recent Activity"), 
+	                                React.createElement("ul", {className: "control-sidebar-menu"}, 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("i", {className: "menu-icon fa fa-birthday-cake bg-red"}), 
+	                                            React.createElement("div", {className: "menu-info"}, 
+	                                                React.createElement("h4", {className: "control-sidebar-subheading"}, "Langdons Birthday"), 
+	                                                React.createElement("p", null, "Will be 23 on April 24th")
+	                                            )
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("i", {className: "menu-icon fa fa-user bg-yellow"}), 
+	                                            React.createElement("div", {className: "menu-info"}, 
+	                                                React.createElement("h4", {className: "control-sidebar-subheading"}, "Frodo Updated His Profile"), 
+	                                                React.createElement("p", null, "New phone +1(800)555-1234")
+	                                            )
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("i", {className: "menu-icon fa fa-envelope-o bg-light-blue"}), 
+	                                            React.createElement("div", {className: "menu-info"}, 
+	                                                React.createElement("h4", {className: "control-sidebar-subheading"}, "Nora Joined Mailing List"), 
+	                                                React.createElement("p", null, "nora@example.com")
+	                                            )
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("i", {className: "menu-icon fa fa-file-code-o bg-green"}), 
+	                                            React.createElement("div", {className: "menu-info"}, 
+	                                                React.createElement("h4", {className: "control-sidebar-subheading"}, "Cron Job 254 Executed"), 
+	                                                React.createElement("p", null, "Execution time 5 seconds")
+	                                            )
+	                                        )
+	                                    )
+	                                ), 
+	                                /* /.control-sidebar-menu */
+
+	                                React.createElement("h3", {className: "control-sidebar-heading"}, "Tasks Progress"), 
+	                                React.createElement("ul", {className: "control-sidebar-menu"}, 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("h4", {className: "control-sidebar-subheading"}, 
+	                                        "Custom Template Design", 
+	                                        React.createElement("span", {className: "label label-danger pull-right"}, "70%")
+	                                      ), 
+	                                            React.createElement("div", {className: "progress progress-xxs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-danger", style: "width: 70%"})
+	                                            )
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("h4", {className: "control-sidebar-subheading"}, 
+	                                        "Update Resume", 
+	                                        React.createElement("span", {className: "label label-success pull-right"}, "95%")
+	                                      ), 
+	                                            React.createElement("div", {className: "progress progress-xxs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-success", style: "width: 95%"})
+	                                            )
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("h4", {className: "control-sidebar-subheading"}, 
+	                                        "Laravel Integration", 
+	                                        React.createElement("span", {className: "label label-warning pull-right"}, "50%")
+	                                      ), 
+	                                            React.createElement("div", {className: "progress progress-xxs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-warning", style: "width: 50%"})
+	                                            )
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "javascript::;"}, 
+	                                            React.createElement("h4", {className: "control-sidebar-subheading"}, 
+	                                        "Back End Framework", 
+	                                        React.createElement("span", {className: "label label-primary pull-right"}, "68%")
+	                                      ), 
+	                                            React.createElement("div", {className: "progress progress-xxs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-primary", style: "width: 68%"})
+	                                            )
+	                                        )
+	                                    )
+	                                )
+	                                /* /.control-sidebar-menu */
+
+	                            ), 
+	                            React.createElement("div", {id: "control-sidebar-theme-demo-options-tab", className: "tab-pane active"}, 
+	                                React.createElement("div", null, 
+	                                    React.createElement("h4", {className: "control-sidebar-heading"}, "Layout Options"), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            React.createElement("input", {type: "checkbox", "data-layout": "fixed", className: "pull-right"}), " Fixed layout"), 
+	                                        React.createElement("p", null, "Activate the fixed layout. You cant use fixed and" + " " +
+	                                            "boxed layouts together")
+	                                    ), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            React.createElement("input", {type: "checkbox", "data-layout": "layout-boxed", className: "pull-right"}), " Boxed Layout"), 
+	                                        React.createElement("p", null, "Activate the boxed layout")
+	                                    ), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            React.createElement("input", {type: "checkbox", "data-layout": "sidebar-collapse", className: "pull-right"}), " Toggle Sidebar"), 
+	                                        React.createElement("p", null, "Toggle the left sidebars state (open or collapse)")
+	                                    ), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            React.createElement("input", {type: "checkbox", "data-enable": "expandOnHover", className: "pull-right"}), " Sidebar Expand on Hover"), 
+	                                        React.createElement("p", null, "Let the sidebar mini expand on hover")
+	                                    ), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            React.createElement("input", {type: "checkbox", "data-controlsidebar": "control-sidebar-open", className: "pull-right"}), " Toggle Right Sidebar Slide"), 
+	                                        React.createElement("p", null, "Toggle between slide over content and push content" + " " +
+	                                            "effects"
+	                                        )
+	                                    ), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            React.createElement("input", {type: "checkbox", "data-sidebarskin": "toggle", className: "pull-right"}), " Toggle Right Sidebar Skin"), 
+	                                        React.createElement("p", null, "Toggle between dark and light skins for the right sidebar")
+	                                    ), 
+	                                    React.createElement("h4", {className: "control-sidebar-heading"}, "Skins"), 
+	                                    React.createElement("ul", {className: "list-unstyled clearfix"}, 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-blue", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px; background: #367fa9;"}), 
+	                                                    React.createElement("span", {className: "bg-light-blue", style: "display:block; width: 80%; float: left; height: 7px;"})
+	                                                ), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #222d32;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin"}, "Blue")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-black", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", {style: "box-shadow: 0 0 2px rgba(0,0,0,0.1)", className: "clearfix"}, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px; background: #fefefe;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 7px; background: #fefefe;"})
+	                                                ), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #222;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin"}, "Black")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-purple", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-purple-active"}), React.createElement("span", {className: "bg-purple", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #222d32;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin"}, "Purple")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-green", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-green-active"}), React.createElement("span", {className: "bg-green", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #222d32;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin"}, "Green")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-red", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-red-active"}), React.createElement("span", {className: "bg-red", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #222d32;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin"}, "Red")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-yellow", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-yellow-active"}), React.createElement("span", {className: "bg-yellow", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #222d32;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin"}, "Yellow")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-blue-light", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px; background: #367fa9;"}), 
+	                                                    React.createElement("span", {className: "bg-light-blue", style: "display:block; width: 80%; float: left; height: 7px;"})
+	                                                ), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin", style: "font-size: 12px"}, "Blue Light")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-black-light", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", {style: "box-shadow: 0 0 2px rgba(0,0,0,0.1)", className: "clearfix"}, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px; background: #fefefe;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 7px; background: #fefefe;"})
+	                                                ), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin", style: "font-size: 12px"}, "Black Light")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-purple-light", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-purple-active"}), React.createElement("span", {className: "bg-purple", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin", style: "font-size: 12px"}, "Purple Light")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-green-light", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-green-active"}), React.createElement("span", {className: "bg-green", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin", style: "font-size: 12px"}, "Green Light")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-red-light", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-red-active"}), React.createElement("span", {className: "bg-red", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin", style: "font-size: 12px"}, "Red Light")
+	                                        ), 
+	                                        React.createElement("li", {style: "float:left; width: 33.33333%; padding: 5px;"}, 
+	                                            React.createElement("a", {href: "javascript:void(0);", "data-skin": "skin-yellow-light", style: "display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)", 
+	                                            className: "clearfix full-opacity-hover"}, 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 7px;", 
+	                                                    className: "bg-yellow-active"}), React.createElement("span", {className: "bg-yellow", 
+	                                                    style: "display:block; width: 80%; float: left; height: 7px;"})), 
+	                                                React.createElement("div", null, React.createElement("span", {style: "display:block; width: 20%; float: left; height: 20px; background: #f9fafc;"}), 
+	                                                    React.createElement("span", {style: "display:block; width: 80%; float: left; height: 20px; background: #f4f5f7;"})
+	                                                )
+	                                            ), 
+	                                            React.createElement("p", {className: "text-center no-margin", style: "font-size: 12px;"}, "Yellow Light")
+	                                        )
+	                                    )
+	                                )
+	                            ), 
+	                            /* /.tab-pane */
+	                            /* Stats tab content */
+	                            React.createElement("div", {className: "tab-pane", id: "control-sidebar-stats-tab"}, "Stats Tab Content"), 
+	                            /* /.tab-pane */
+	                            /* Settings tab content */
+	                            React.createElement("div", {className: "tab-pane", id: "control-sidebar-settings-tab"}, 
+	                                React.createElement("form", {method: "post"}, 
+	                                    React.createElement("h3", {className: "control-sidebar-heading"}, "General Settings"), 
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            "Report panel usage", 
+	                                            React.createElement("input", {type: "checkbox", className: "pull-right", checked: ""})
+	                                        ), 
+	                                        React.createElement("p", null, 
+	                                            "Some information about this general settings option"
+	                                        )
+	                                    ), 
+	                                    /* /.form-group */
+
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            "Allow mail redirect", 
+	                                            React.createElement("input", {type: "checkbox", className: "pull-right", checked: ""})
+	                                        ), 
+	                                        React.createElement("p", null, 
+	                                            "Other sets of options are available"
+	                                        )
+	                                    ), 
+	                                    /* /.form-group */
+
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            "Expose author name in posts", 
+	                                            React.createElement("input", {type: "checkbox", className: "pull-right", checked: ""})
+	                                        ), 
+	                                        React.createElement("p", null, 
+	                                            "Allow the user to show his name in blog posts"
+	                                        )
+	                                    ), 
+	                                    /* /.form-group */
+
+	                                    React.createElement("h3", {className: "control-sidebar-heading"}, "Chat Settings"), 
+
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            "Show me as online", 
+	                                            React.createElement("input", {type: "checkbox", className: "pull-right", checked: ""})
+	                                        )
+	                                    ), 
+	                                    /* /.form-group */
+
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            "Turn off notifications", 
+	                                            React.createElement("input", {type: "checkbox", className: "pull-right"})
+	                                        )
+	                                    ), 
+	                                    /* /.form-group */
+
+	                                    React.createElement("div", {className: "form-group"}, 
+	                                        React.createElement("label", {className: "control-sidebar-subheading"}, 
+	                                            "Delete chat history", 
+	                                            React.createElement("a", {href: "javascript::;", className: "text-red pull-right"}, React.createElement("i", {className: "fa fa-trash-o"}))
+	                                        )
+	                                    )
+	                                    /* /.form-group */
+	                                )
+	                            )
+	                            /* /.tab-pane */
+	                        )
+	                    )
+	                )
+	            }
+	        })
+
+	        return ControlsMenu;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(3),
+	        __webpack_require__(4),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var HeaderMessages = React.createClass({displayName: "HeaderMessages",
+	            componentDidMount:function(){
+
+	            },
+	    		render: function(){
+	                var that = this;
+
+	                var messageList = this.props.messages.map(function(messageDetails){
+	                    return (
+	                        React.createElement("li", null, 
+	                            /* start message */
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("div", {className: "pull-left"}, 
+	                                    React.createElement("img", {src: messageDetails.displayPicture, className: "img-circle", alt: "User Image"})
+	                                ), 
+	                                React.createElement("h4", null, 
+	                                    messageDetails.displayName, 
+	                                    React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " ", messageDetails.messageTime)
+	                                ), 
+	                                React.createElement("p", null, messageDetails.messageSubject)
+	                            )
+	                        )
+	                    )
+	                });
+
+	    			return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    messageList
+	                                ), 
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return HeaderMessages;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(3),
+	        __webpack_require__(4),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
+	            componentDidMount:function(){
+
+	            },
+	    		render: function(){
+	                var that = this;
+	    			return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have 10 notifications"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("i", {className: "fa fa-users text-aqua"}), " 5 new members joined today"
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("i", {className: "fa fa-warning text-yellow"}), " Very long description here that may not fit into the page and may cause design problems"
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("i", {className: "fa fa-users text-red"}), " 5 new members joined"
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("i", {className: "fa fa-shopping-cart text-green"}), " 25 sales made"
+	                                        )
+	                                    ), 
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("i", {className: "fa fa-user text-red"}), " You changed your username"
+	                                        )
+	                                    )
+	                                ), 
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return HeaderNotifications;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(3),
+	        __webpack_require__(4),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var HeaderTasks = React.createClass({displayName: "HeaderTasks",
+	            componentDidMount:function(){
+
+	            },
+	    		render: function(){
+	                var that = this;
+	    			return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have 9 tasks"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    React.createElement("li", null, 
+	                                        /* Task item */
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("h3", null, 
+	                            "Design some buttons", 
+	                            React.createElement("small", {className: "pull-right"}, "20%")
+	                          ), 
+	                                            React.createElement("div", {className: "progress xs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-aqua"}, 
+	                                                    React.createElement("span", {className: "sr-only"}, "20% Complete")
+	                                                )
+	                                            )
+	                                        )
+	                                    ), 
+	                                    /* end task item */
+	                                    React.createElement("li", null, 
+	                                        /* Task item */
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("h3", null, 
+	                            "Create a nice theme", 
+	                            React.createElement("small", {className: "pull-right"}, "40%")
+	                          ), 
+	                                            React.createElement("div", {className: "progress xs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-green"}, 
+	                                                    React.createElement("span", {className: "sr-only"}, "40% Complete")
+	                                                )
+	                                            )
+	                                        )
+	                                    ), 
+	                                    /* end task item */
+	                                    React.createElement("li", null, 
+	                                        /* Task item */
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("h3", null, 
+	                            "Some task I need to do", 
+	                            React.createElement("small", {className: "pull-right"}, "60%")
+	                          ), 
+	                                            React.createElement("div", {className: "progress xs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-red"}, 
+	                                                    React.createElement("span", {className: "sr-only"}, "60% Complete")
+	                                                )
+	                                            )
+	                                        )
+	                                    ), 
+	                                    /* end task item */
+	                                    React.createElement("li", null, 
+	                                        /* Task item */
+	                                        React.createElement("a", {href: "#"}, 
+	                                            React.createElement("h3", null, 
+	                            "Make beautiful transitions", 
+	                            React.createElement("small", {className: "pull-right"}, "80%")
+	                          ), 
+	                                            React.createElement("div", {className: "progress xs"}, 
+	                                                React.createElement("div", {className: "progress-bar progress-bar-yellow"}, 
+	                                                    React.createElement("span", {className: "sr-only"}, "80% Complete")
+	                                                )
+	                                            )
+	                                        )
+	                                    )
+	                                    /* end task item */
+	                                ), 
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, 
+	                            React.createElement("a", {href: "#"}, "View all tasks")
+	                        )
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return HeaderTasks;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ }

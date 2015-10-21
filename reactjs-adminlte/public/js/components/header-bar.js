@@ -2,9 +2,19 @@ define(
     [
         'react',
         'jquery',
+        './header-messages',
+        './header-notifications',
+        './header-tasks'
     ],
-    function(React,$){
+    function(React, $, HeaderMessages, HeaderNotifications, HeaderTasks){
     	var HeaderBar = React.createClass({
+            getInitialState: function(){
+                return {
+                    messages: [],
+                    notifications: [],
+                    tasks: []
+                }
+            },
             pushMenu: function(){
                 if(document.body.clientWidth > 768){
                     if(document.body.className.indexOf('sidebar-collapse') === -1){
@@ -20,6 +30,41 @@ define(
                     }
                 }
                 
+            },
+            componentDidMount:function(){
+                var messages = [
+                    {
+                        displayName: 'Support Team',
+                        displayPicture: 'dist/img/user2-160x160.jpg',
+                        messageSubject: 'Why not buy a new awesome theme?',
+                        messageTime: '5 mins',   
+                    },
+                    {
+                        displayName: 'AdminLTE Design Team',
+                        displayPicture: 'dist/img/user3-128x128.jpg',
+                        messageSubject: 'Why not buy a new awesome theme?',
+                        messageTime: '2 hours',
+                    },
+                    {
+                        displayName: 'Developers',
+                        displayPicture: 'dist/img/user4-128x128.jpg',
+                        messageSubject: 'Why not buy a new awesome theme?',
+                        messageTime: 'Today',
+                    },
+                    {
+                        displayName: 'Sales Department',
+                        displayPicture: 'dist/img/user3-128x128.jpg',
+                        messageSubject: 'Why not buy a new awesome theme?',
+                        messageTime: 'Yesterday',
+                    },
+                    {
+                        displayName: 'Reviewers',
+                        displayPicture: 'dist/img/user4-128x128.jpg',
+                        messageSubject: 'Why not buy a new awesome theme?',
+                        messageTime: '2 days',
+                    },
+                ];
+                this.setState({messages: messages});
             },
     		render: function(){
                 var that = this;
@@ -46,81 +91,7 @@ define(
                                             <i className="fa fa-envelope-o"></i>
                                             <span className="label label-success">4</span>
                                         </a>
-                                        <ul className="dropdown-menu">
-                                            <li className="header">You have 4 messages</li>
-                                            <li>
-                                                {/* inner menu: contains the actual data */}
-                                                <div className="slimScrollDiv" >
-                                                    <ul className="menu" >
-                                                        <li>
-                                                            {/* start message */}
-                                                            <a href="#">
-                                                                <div className="pull-left">
-                                                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User Image" />
-                                                                </div>
-                                                                <h4>
-                                                Support Team
-                                                <small><i className="fa fa-clock-o"></i> 5 mins</small>
-                                              </h4>
-                                                                <p>Why not buy a new awesome theme?</p>
-                                                            </a>
-                                                        </li>
-                                                        {/* end message */}
-                                                        <li>
-                                                            <a href="#">
-                                                                <div className="pull-left">
-                                                                    <img src="dist/img/user3-128x128.jpg" className="img-circle" alt="User Image" />
-                                                                </div>
-                                                                <h4>
-                                                AdminLTE Design Team
-                                                <small><i className="fa fa-clock-o"></i> 2 hours</small>
-                                              </h4>
-                                                                <p>Why not buy a new awesome theme?</p>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <div className="pull-left">
-                                                                    <img src="dist/img/user4-128x128.jpg" className="img-circle" alt="User Image" />
-                                                                </div>
-                                                                <h4>
-                                                Developers
-                                                <small><i className="fa fa-clock-o"></i> Today</small>
-                                              </h4>
-                                                                <p>Why not buy a new awesome theme?</p>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <div className="pull-left">
-                                                                    <img src="dist/img/user3-128x128.jpg" className="img-circle" alt="User Image" />
-                                                                </div>
-                                                                <h4>
-                                                Sales Department
-                                                <small><i className="fa fa-clock-o"></i> Yesterday</small>
-                                              </h4>
-                                                                <p>Why not buy a new awesome theme?</p>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <div className="pull-left">
-                                                                    <img src="dist/img/user4-128x128.jpg" className="img-circle" alt="User Image" />
-                                                                </div>
-                                                                <h4>
-                                                Reviewers
-                                                <small><i className="fa fa-clock-o"></i> 2 days</small>
-                                              </h4>
-                                                                <p>Why not buy a new awesome theme?</p>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                    <div className="slimScrollBar" ></div>
-                                                    <div className="slimScrollRail" ></div>
-                                                </div>
-                                            </li>
-                                            <li className="footer"><a href="#">See All Messages</a></li>
-                                        </ul>
+                                        <HeaderMessages messages={that.state.messages} />
                                     </li>
                                     {/* Notifications: style can be found in dropdown.less */}
                                     <li className="dropdown notifications-menu">
@@ -128,44 +99,7 @@ define(
                                             <i className="fa fa-bell-o"></i>
                                             <span className="label label-warning">10</span>
                                         </a>
-                                        <ul className="dropdown-menu">
-                                            <li className="header">You have 10 notifications</li>
-                                            <li>
-                                                {/* inner menu: contains the actual data */}
-                                                <div className="slimScrollDiv">
-                                                    <ul className="menu">
-                                                        <li>
-                                                            <a href="#">
-                                                                <i className="fa fa-users text-aqua"></i> 5 new members joined today
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <i className="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <i className="fa fa-users text-red"></i> 5 new members joined
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-cart text-green"></i> 25 sales made
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <i className="fa fa-user text-red"></i> You changed your username
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                    <div className="slimScrollBar"></div>
-                                                    <div className="slimScrollRail"></div>
-                                                </div>
-                                            </li>
-                                            <li className="footer"><a href="#">View all</a></li>
-                                        </ul>
+                                        <HeaderNotifications />
                                     </li>
                                     {/* Tasks: style can be found in dropdown.less */}
                                     <li className="dropdown tasks-menu">
@@ -173,81 +107,7 @@ define(
                                             <i className="fa fa-flag-o"></i>
                                             <span className="label label-danger">9</span>
                                         </a>
-                                        <ul className="dropdown-menu">
-                                            <li className="header">You have 9 tasks</li>
-                                            <li>
-                                                {/* inner menu: contains the actual data */}
-                                                <div className="slimScrollDiv">
-                                                    <ul className="menu">
-                                                        <li>
-                                                            {/* Task item */}
-                                                            <a href="#">
-                                                                <h3>
-                                                Design some buttons
-                                                <small className="pull-right">20%</small>
-                                              </h3>
-                                                                <div className="progress xs">
-                                                                    <div className="progress-bar progress-bar-aqua">
-                                                                        <span className="sr-only">20% Complete</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        {/* end task item */}
-                                                        <li>
-                                                            {/* Task item */}
-                                                            <a href="#">
-                                                                <h3>
-                                                Create a nice theme
-                                                <small className="pull-right">40%</small>
-                                              </h3>
-                                                                <div className="progress xs">
-                                                                    <div className="progress-bar progress-bar-green">
-                                                                        <span className="sr-only">40% Complete</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        {/* end task item */}
-                                                        <li>
-                                                            {/* Task item */}
-                                                            <a href="#">
-                                                                <h3>
-                                                Some task I need to do
-                                                <small className="pull-right">60%</small>
-                                              </h3>
-                                                                <div className="progress xs">
-                                                                    <div className="progress-bar progress-bar-red">
-                                                                        <span className="sr-only">60% Complete</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        {/* end task item */}
-                                                        <li>
-                                                            {/* Task item */}
-                                                            <a href="#">
-                                                                <h3>
-                                                Make beautiful transitions
-                                                <small className="pull-right">80%</small>
-                                              </h3>
-                                                                <div className="progress xs">
-                                                                    <div className="progress-bar progress-bar-yellow">
-                                                                        <span className="sr-only">80% Complete</span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        {/* end task item */}
-                                                    </ul>
-                                                    <div className="slimScrollBar"></div>
-                                                    <div className="slimScrollRail"></div>
-                                                </div>
-                                            </li>
-                                            <li className="footer">
-                                                <a href="#">View all tasks</a>
-                                            </li>
-                                        </ul>
+                                        <HeaderTasks />
                                     </li>
                                     {/* User Account: style can be found in dropdown.less */}
                                     <li className="dropdown user user-menu">
