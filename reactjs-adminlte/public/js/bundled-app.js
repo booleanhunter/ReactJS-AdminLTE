@@ -149,7 +149,24 @@ webpackJsonp([1],[
 	        __webpack_require__(4),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var HeaderBar = React.createClass({displayName: "HeaderBar",
+	            pushMenu: function(){
+	                if(document.body.clientWidth > 768){
+	                    if(document.body.className.indexOf('sidebar-collapse') === -1){
+	                        document.body.className += ' sidebar-collapse';
+	                    }else{
+	                        document.body.className = document.body.className.replace(' sidebar-collapse','');
+	                    }
+	                }else{
+	                    if(document.body.className.indexOf('sidebar-open') === -1){
+	                        document.body.className += ' sidebar-open';
+	                    }else{
+	                        document.body.className = document.body.className.replace(' sidebar-open','');
+	                    }
+	                }
+	                
+	            },
 	    		render: function(){
+	                var that = this;
 	    			return (
 	    				React.createElement("header", {className: "main-header"}, 
 	                        /* Logo */
@@ -162,7 +179,7 @@ webpackJsonp([1],[
 	                        /* Header Navbar: style can be found in header.less */
 	                        React.createElement("nav", {className: "navbar navbar-static-top", role: "navigation"}, 
 	                            /* Sidebar toggle button*/
-	                            React.createElement("a", {href: "#", className: "sidebar-toggle", "data-toggle": "offcanvas", role: "button"}, 
+	                            React.createElement("a", {href: "#", className: "sidebar-toggle", "data-toggle": "offcanvas", role: "button", onClick: that.pushMenu}, 
 	                                React.createElement("span", {className: "sr-only"}, "Toggle navigation")
 	                            ), 
 	                            React.createElement("div", {className: "navbar-custom-menu"}, 
