@@ -222,7 +222,54 @@ webpackJsonp([1],[
 	                        messageTime: '2 days',
 	                    },
 	                ];
-	                this.setState({messages: messages});
+
+	                var notifications = [
+	                    {
+	                        subject: '5 new members joined today',
+	                        className: 'fa fa-users text-aqua'
+	                    },
+	                    {
+	                        subject: 'Very long description here that may not fit into the page and may cause design problems',
+	                        className: 'fa fa-warning text-yellow'
+	                    },
+	                    {
+	                        subject: '5 new members joined',
+	                        className: 'fa fa-users text-red'
+	                    },
+	                    {
+	                        subject: '25 sales made',
+	                        className: 'fa fa-shopping-cart text-green'
+	                    },
+	                    {
+	                        subject: 'You changed your username',
+	                        className: 'fa fa-user text-red'
+	                    }
+	                ];
+
+	                var tasks = [
+	                    {
+	                        subject: 'Design some buttons',
+	                        percentage: 20
+	                    },
+	                    {
+	                        subject: 'Create a nice theme',
+	                        percentage: 40
+	                    },
+	                    {
+	                        subject: 'Some task I need to do',
+	                        percentage: 60
+	                    },
+	                    {
+	                        subject: 'Make beautiful transitions',
+	                        percentage: 80
+	                    }
+	                ]
+
+	                this.setState({
+	                    messages: messages,
+	                    notifications: notifications,
+	                    tasks: tasks
+	                });
 	            },
 	    		render: function(){
 	                var that = this;
@@ -247,7 +294,7 @@ webpackJsonp([1],[
 	                                    React.createElement("li", {className: "dropdown messages-menu"}, 
 	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
 	                                            React.createElement("i", {className: "fa fa-envelope-o"}), 
-	                                            React.createElement("span", {className: "label label-success"}, "4")
+	                                            React.createElement("span", {className: "label label-success"}, that.state.messages.length)
 	                                        ), 
 	                                        React.createElement(HeaderMessages, {messages: that.state.messages})
 	                                    ), 
@@ -255,17 +302,17 @@ webpackJsonp([1],[
 	                                    React.createElement("li", {className: "dropdown notifications-menu"}, 
 	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
 	                                            React.createElement("i", {className: "fa fa-bell-o"}), 
-	                                            React.createElement("span", {className: "label label-warning"}, "10")
+	                                            React.createElement("span", {className: "label label-warning"}, that.state.notifications.length)
 	                                        ), 
-	                                        React.createElement(HeaderNotifications, null)
+	                                        React.createElement(HeaderNotifications, {notifications: that.state.notifications})
 	                                    ), 
 	                                    /* Tasks: style can be found in dropdown.less */
 	                                    React.createElement("li", {className: "dropdown tasks-menu"}, 
 	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
 	                                            React.createElement("i", {className: "fa fa-flag-o"}), 
-	                                            React.createElement("span", {className: "label label-danger"}, "9")
+	                                            React.createElement("span", {className: "label label-danger"}, that.state.notifications.length)
 	                                        ), 
-	                                        React.createElement(HeaderTasks, null)
+	                                        React.createElement(HeaderTasks, {tasks: that.state.tasks})
 	                                    ), 
 	                                    /* User Account: style can be found in dropdown.less */
 	                                    React.createElement("li", {className: "dropdown user user-menu"}, 
@@ -1203,9 +1250,11 @@ webpackJsonp([1],[
 	                        React.createElement("li", null, 
 	                            /* inner menu: contains the actual data */
 	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
 	                                React.createElement("ul", {className: "menu"}, 
 	                                    messageList
 	                                ), 
+	                                
 	                                React.createElement("div", {className: "slimScrollBar"}), 
 	                                React.createElement("div", {className: "slimScrollRail"})
 	                            )
@@ -1233,39 +1282,28 @@ webpackJsonp([1],[
 	            },
 	    		render: function(){
 	                var that = this;
+
+	                var notificationList = this.props.notifications.map(function(notificationDetails){
+	                    return (
+	                        React.createElement("li", null, 
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
+	                            )
+	                        )
+	                    )
+	                });
+
 	    			return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have 10 notifications"), 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
 	                        React.createElement("li", null, 
 	                            /* inner menu: contains the actual data */
 	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
 	                                React.createElement("ul", {className: "menu"}, 
-	                                    React.createElement("li", null, 
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("i", {className: "fa fa-users text-aqua"}), " 5 new members joined today"
-	                                        )
-	                                    ), 
-	                                    React.createElement("li", null, 
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("i", {className: "fa fa-warning text-yellow"}), " Very long description here that may not fit into the page and may cause design problems"
-	                                        )
-	                                    ), 
-	                                    React.createElement("li", null, 
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("i", {className: "fa fa-users text-red"}), " 5 new members joined"
-	                                        )
-	                                    ), 
-	                                    React.createElement("li", null, 
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("i", {className: "fa fa-shopping-cart text-green"}), " 25 sales made"
-	                                        )
-	                                    ), 
-	                                    React.createElement("li", null, 
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("i", {className: "fa fa-user text-red"}), " You changed your username"
-	                                        )
-	                                    )
+	                                    notificationList
 	                                ), 
+	                                
 	                                React.createElement("div", {className: "slimScrollBar"}), 
 	                                React.createElement("div", {className: "slimScrollRail"})
 	                            )
@@ -1293,74 +1331,50 @@ webpackJsonp([1],[
 	            },
 	    		render: function(){
 	                var that = this;
+	                var stylePercentage, progressBarColor;
+
+	                var taskList = this.props.tasks.map(function(taskDetails){
+	                    stylePercentage = {
+	                        width: taskDetails.percentage+'%'
+	                    };
+
+	                    if(taskDetails.percentage < 21){
+	                        progressBarColor = 'progress-bar-red'
+	                    }else if(taskDetails.percentage >20 && taskDetails.percentage < 41){
+	                        progressBarColor = 'progress-bar-yellow'
+	                    }else if(taskDetails.percentage >40 && taskDetails.percentage < 61){
+	                        progressBarColor = 'progress-bar-green'
+	                    }else if(taskDetails.percentage > 60){
+	                        progressBarColor = 'progress-bar-aqua';
+	                    }
+
+	                    return (
+	                        React.createElement("li", null, 
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("h3", null, 
+	                                    taskDetails.subject, 
+	                                    React.createElement("small", {className: "pull-right"}, taskDetails.percentage+'%')
+	                                ), 
+	                                React.createElement("div", {className: "progress xs"}, 
+	                                    React.createElement("div", {className: "progress-bar "+ progressBarColor, style: stylePercentage}, 
+	                                        React.createElement("span", {className: "sr-only"}, taskDetails.percentage + '% Complete', " ")
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                });
 	    			return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have 9 tasks"), 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
 	                        React.createElement("li", null, 
 	                            /* inner menu: contains the actual data */
 	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
 	                                React.createElement("ul", {className: "menu"}, 
-	                                    React.createElement("li", null, 
-	                                        /* Task item */
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("h3", null, 
-	                            "Design some buttons", 
-	                            React.createElement("small", {className: "pull-right"}, "20%")
-	                          ), 
-	                                            React.createElement("div", {className: "progress xs"}, 
-	                                                React.createElement("div", {className: "progress-bar progress-bar-aqua"}, 
-	                                                    React.createElement("span", {className: "sr-only"}, "20% Complete")
-	                                                )
-	                                            )
-	                                        )
-	                                    ), 
-	                                    /* end task item */
-	                                    React.createElement("li", null, 
-	                                        /* Task item */
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("h3", null, 
-	                            "Create a nice theme", 
-	                            React.createElement("small", {className: "pull-right"}, "40%")
-	                          ), 
-	                                            React.createElement("div", {className: "progress xs"}, 
-	                                                React.createElement("div", {className: "progress-bar progress-bar-green"}, 
-	                                                    React.createElement("span", {className: "sr-only"}, "40% Complete")
-	                                                )
-	                                            )
-	                                        )
-	                                    ), 
-	                                    /* end task item */
-	                                    React.createElement("li", null, 
-	                                        /* Task item */
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("h3", null, 
-	                            "Some task I need to do", 
-	                            React.createElement("small", {className: "pull-right"}, "60%")
-	                          ), 
-	                                            React.createElement("div", {className: "progress xs"}, 
-	                                                React.createElement("div", {className: "progress-bar progress-bar-red"}, 
-	                                                    React.createElement("span", {className: "sr-only"}, "60% Complete")
-	                                                )
-	                                            )
-	                                        )
-	                                    ), 
-	                                    /* end task item */
-	                                    React.createElement("li", null, 
-	                                        /* Task item */
-	                                        React.createElement("a", {href: "#"}, 
-	                                            React.createElement("h3", null, 
-	                            "Make beautiful transitions", 
-	                            React.createElement("small", {className: "pull-right"}, "80%")
-	                          ), 
-	                                            React.createElement("div", {className: "progress xs"}, 
-	                                                React.createElement("div", {className: "progress-bar progress-bar-yellow"}, 
-	                                                    React.createElement("span", {className: "sr-only"}, "80% Complete")
-	                                                )
-	                                            )
-	                                        )
-	                                    )
-	                                    /* end task item */
+	                                    taskList
 	                                ), 
+
 	                                React.createElement("div", {className: "slimScrollBar"}), 
 	                                React.createElement("div", {className: "slimScrollRail"})
 	                            )

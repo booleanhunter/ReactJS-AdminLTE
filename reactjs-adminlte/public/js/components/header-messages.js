@@ -35,9 +35,11 @@ define(
                         <li>
                             {/* inner menu: contains the actual data */}
                             <div className="slimScrollDiv" >
+
                                 <ul className="menu" >
                                     {messageList}
                                 </ul>
+                                
                                 <div className="slimScrollBar"></div>
                                 <div className="slimScrollRail"></div>
                             </div>

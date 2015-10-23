@@ -64,7 +64,54 @@ define(
                         messageTime: '2 days',
                     },
                 ];
-                this.setState({messages: messages});
+
+                var notifications = [
+                    {
+                        subject: '5 new members joined today',
+                        className: 'fa fa-users text-aqua'
+                    },
+                    {
+                        subject: 'Very long description here that may not fit into the page and may cause design problems',
+                        className: 'fa fa-warning text-yellow'
+                    },
+                    {
+                        subject: '5 new members joined',
+                        className: 'fa fa-users text-red'
+                    },
+                    {
+                        subject: '25 sales made',
+                        className: 'fa fa-shopping-cart text-green'
+                    },
+                    {
+                        subject: 'You changed your username',
+                        className: 'fa fa-user text-red'
+                    }
+                ];
+
+                var tasks = [
+                    {
+                        subject: 'Design some buttons',
+                        percentage: 20
+                    },
+                    {
+                        subject: 'Create a nice theme',
+                        percentage: 40
+                    },
+                    {
+                        subject: 'Some task I need to do',
+                        percentage: 60
+                    },
+                    {
+                        subject: 'Make beautiful transitions',
+                        percentage: 80
+                    }
+                ]
+
+                this.setState({
+                    messages: messages,
+                    notifications: notifications,
+                    tasks: tasks
+                });
             },
     		render: function(){
                 var that = this;
@@ -89,7 +136,7 @@ define(
                                     <li className="dropdown messages-menu">
                                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">
                                             <i className="fa fa-envelope-o"></i>
-                                            <span className="label label-success">4</span>
+                                            <span className="label label-success">{that.state.messages.length}</span>
                                         </a>
                                         <HeaderMessages messages={that.state.messages} />
                                     </li>
@@ -97,17 +144,17 @@ define(
                                     <li className="dropdown notifications-menu">
                                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">
                                             <i className="fa fa-bell-o"></i>
-                                            <span className="label label-warning">10</span>
+                                            <span className="label label-warning">{that.state.notifications.length}</span>
                                         </a>
-                                        <HeaderNotifications />
+                                        <HeaderNotifications notifications={that.state.notifications} />
                                     </li>
                                     {/* Tasks: style can be found in dropdown.less */}
                                     <li className="dropdown tasks-menu">
                                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">
                                             <i className="fa fa-flag-o"></i>
-                                            <span className="label label-danger">9</span>
+                                            <span className="label label-danger">{that.state.notifications.length}</span>
                                         </a>
-                                        <HeaderTasks />
+                                        <HeaderTasks tasks={that.state.tasks} />
                                     </li>
                                     {/* User Account: style can be found in dropdown.less */}
                                     <li className="dropdown user user-menu">
