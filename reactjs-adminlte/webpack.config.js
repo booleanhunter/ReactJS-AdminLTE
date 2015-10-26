@@ -4,6 +4,8 @@
  */
 
 var webpack = require('webpack');
+var path = require("path");
+
 var lib_dir = __dirname + '/public/libraries',
     node_dir = __dirname + '/node_modules',
     plugins_dir = __dirname + '/public/plugins';
@@ -39,18 +41,18 @@ var config = {
             'window.jQuery': "jquery",
             'window.$': 'jquery'
         }),
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js', Infinity),
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboard1/js/vendors.js', Infinity),
 
     ],
 
     entry: {
-        app: ['./public/dashboard1/js/main'],
+        dashboard1: './public/dashboard1/js/main',
         vendors: ['react','reactDom','jquery','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 
     output: {
-        path: './public/dashboard1/js',
-        filename: 'bundled-app.js'
+        path: path.join(__dirname, "public"),
+        filename: "[name]/js/[name].bundle.js"
     },
     
     module: {
