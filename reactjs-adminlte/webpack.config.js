@@ -4,7 +4,7 @@
  */
 
 var webpack = require('webpack');
-var lib_dir = __dirname + '/public/js/libs',
+var lib_dir = __dirname + '/public/libraries',
     node_dir = __dirname + '/node_modules',
     plugins_dir = __dirname + '/public/plugins';
 
@@ -13,6 +13,7 @@ var config = {
     resolve: {
         alias: {
             react: lib_dir + '/react.js',
+            reactDom: lib_dir + '/react-dom',
             jquery: lib_dir + '/jQuery-2.1.4.min.js',
             jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
             bootstrap: plugins_dir + '/bootstrap/js/bootstrap.min.js',
@@ -43,18 +44,18 @@ var config = {
     ],
 
     entry: {
-        app: ['./public/js/main'],
-        vendors: ['react','jquery','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
+        app: ['./public/dashboard1/js/main'],
+        vendors: ['react','reactDom','jquery','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 
     output: {
-        path: './public/js',
+        path: './public/dashboard1/js',
         filename: 'bundled-app.js'
     },
     
     module: {
         noParse: [
-            new RegExp(lib_dir + './public/js/libs/react.js')
+            new RegExp(lib_dir + './public/libraries/react-with-addons.js')
         ],
         loaders: [
             { 
