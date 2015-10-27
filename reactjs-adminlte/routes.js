@@ -8,6 +8,10 @@ function initialize(app){
         res.render('dashboard.html');		
 	});
 
+    app.get('/widgets.html', function(req, res){
+        res.render('widgets.html');
+    });
+
     app.get('/index.html', function(req, res){
         res.render('index.html');
     });
