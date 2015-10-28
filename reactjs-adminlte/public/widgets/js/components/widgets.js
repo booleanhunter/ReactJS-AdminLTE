@@ -2,12 +2,22 @@ define(
     [
         'react',
         'jquery',
-        './header-bar',
-        './navigation-menu'
+        './header-bar/header-bar',
+        './navigation-menu',
+        './page-widgets/info-box'
     ],
-    function(React,$, HeaderBar, NavigationMenu){
-    	var Dashboard = React.createClass({
+    function(React,$, HeaderBar, NavigationMenu, InfoBox){
+    	var Widgets = React.createClass({
     		render: function(){
+
+                var options = {
+                    color: 'bg-aqua',
+                    icon: 'fa-envelope-o',
+                    subject: 'Messages',
+                    stats: '1,410',
+                    content: ''
+                };
+
     			return (
     				<div className="wrapper">
     					<HeaderBar />
@@ -28,7 +38,9 @@ define(
 
     						<section className="content">
     							<div className="row">
-
+                                    <div className = "col-md-3 col-sm-6 col-xs-12">
+                                        <InfoBox options = {options} />
+                                    </div>
     							</div>
 
                                 <div className="row">
@@ -76,6 +88,6 @@ define(
     		}
     	})
 
-    	return Dashboard;
+    	return Widgets;
     }   
 )     

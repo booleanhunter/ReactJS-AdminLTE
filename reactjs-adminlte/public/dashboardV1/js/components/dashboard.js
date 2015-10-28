@@ -2,7 +2,7 @@ define(
     [
         'react',
         'jquery',
-        './header-bar',
+        './header-bar/header-bar',
         './navigation-menu',
         './control-panel',
         './containers/container-one',

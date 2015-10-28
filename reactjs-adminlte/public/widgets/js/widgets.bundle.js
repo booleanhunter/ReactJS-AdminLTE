@@ -26,10 +26,20 @@ webpackJsonp([2],{
 	        __webpack_require__(16),
 	        __webpack_require__(3),
 	        __webpack_require__(26),
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$, HeaderBar, NavigationMenu){
-	    	var Dashboard = React.createClass({displayName: "Dashboard",
+	        __webpack_require__(27),
+	        __webpack_require__(28)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$, HeaderBar, NavigationMenu, InfoBox){
+	    	var Widgets = React.createClass({displayName: "Widgets",
 	    		render: function(){
+
+	                var options = {
+	                    color: 'bg-aqua',
+	                    icon: 'fa-envelope-o',
+	                    subject: 'Messages',
+	                    stats: '1,410',
+	                    content: ''
+	                };
+
 	    			return (
 	    				React.createElement("div", {className: "wrapper"}, 
 	    					React.createElement(HeaderBar, null), 
@@ -49,8 +59,10 @@ webpackJsonp([2],{
 	    						), 
 
 	    						React.createElement("section", {className: "content"}, 
-	    							React.createElement("div", {className: "row"}
-
+	    							React.createElement("div", {className: "row"}, 
+	                                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                                        React.createElement(InfoBox, {options: options})
+	                                    )
 	    							), 
 
 	                                React.createElement("div", {className: "row"}
@@ -98,7 +110,7 @@ webpackJsonp([2],{
 	    		}
 	    	})
 
-	    	return Dashboard;
+	    	return Widgets;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
@@ -109,9 +121,9 @@ webpackJsonp([2],{
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(16),
 	        __webpack_require__(3),
-	        __webpack_require__(31),
 	        __webpack_require__(32),
-	        __webpack_require__(33)
+	        __webpack_require__(33),
+	        __webpack_require__(34)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderMessages, HeaderNotifications, HeaderTasks){
 	    	var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function(){
@@ -504,7 +516,44 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 31:
+/***/ 28:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(16),
+	        __webpack_require__(3),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var InfoBox = React.createClass({displayName: "InfoBox",
+	            componentDidMount:function(){
+
+	            },
+	    		render: function(){
+	                var that = this,
+	                    options = this.props.options;
+
+	    			return (
+	                    React.createElement("div", {className: "info-box"}, 
+	                        React.createElement("span", {className: "info-box-icon " + options.color}, 
+	                            React.createElement("i", {className: "fa "+options.icon})
+	                        ), 
+
+	                        React.createElement("div", {className: "info-box-content"}, 
+	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
+	                            React.createElement("span", {className: "info-box-number"}, options.stats)
+	                        ), 
+
+	                        options.content
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return InfoBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
+
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -562,7 +611,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -612,7 +661,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
