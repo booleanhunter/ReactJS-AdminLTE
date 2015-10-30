@@ -22,6 +22,6 @@ This is still a work in progress and will get better over time. Will try and thi
 
 Widgets created in ReactJS - https://github.com/ashwin01/ReactJS-AdminLTE/tree/master/reactjs-adminlte/public/widgets
 
-![alt tag](https://github.com/ashwin01/ReactJS-AdminLTE/tree/master/reactjs-adminlte/screenshots/widgets.png "Screenshot")
+![](https://github.com/ashwin01/ReactJS-AdminLTE/blob/master/reactjs-adminlte/screenshots/widgets.png)
 
 More stuff coming soon.
