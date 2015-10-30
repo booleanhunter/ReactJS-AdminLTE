@@ -17,3 +17,11 @@ This is still a work in progress and will get better over time. Will try and thi
 - Re-usable chart components
 - Command line options to choose between client-side rendering and server-side rendering in ReactJS
 - Including D3 / C3 charts 
+
+###UPDATE:
+
+Widgets created in ReactJS - https://github.com/ashwin01/ReactJS-AdminLTE/tree/master/reactjs-adminlte/public/widgets
+
+![alt tag](https://github.com/ashwin01/ReactJS-AdminLTE/tree/master/screenshots/widgets.png "Screenshot")
+
+More stuff coming soon.
