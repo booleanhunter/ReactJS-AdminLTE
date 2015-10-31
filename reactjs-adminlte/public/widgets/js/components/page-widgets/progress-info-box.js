@@ -1,20 +1,19 @@
 define(
     [
-        'react',
-        'jquery',
+        'react'
     ],
-    function(React,$){
-    	var ProgressInfoBox = React.createClass({
-    		render: function(){
+    function (React) {
+        var ProgressInfoBox = React.createClass({
+            render: function () {
                 var that = this,
                     options = this.props.options;
 
                 var style = {
-                    width: options.progress.percent+'%',
+                    width: options.progress.percent + '%',
                     backgroundColor: options.progress.color
                 };
 
-    			return (
+                return (
                     <div className={"info-box "+options.color}>
                         <span className="info-box-icon">
                             <i className={"fa "+options.icon}></i>
@@ -33,10 +32,10 @@ define(
                         
                         {options.content}
                     </div>
-    			)
-    		}
-    	})
+                )
+            }
+        })
 
-    	return ProgressInfoBox;
-    }   
-)     
+        return ProgressInfoBox;
+    }
+)
