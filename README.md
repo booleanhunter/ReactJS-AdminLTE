@@ -20,7 +20,7 @@ This is still a work in progress and will get better over time. Will try and thi
 
 ###UPDATE:
 
-Widgets created in ReactJS - [](./reactjs-adminlte/public/widgets)
+[Widgets created in ReactJS](./reactjs-adminlte/public/widgets)
 
 ![](./reactjs-adminlte/screenshots/widgets.png)
 
