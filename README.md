@@ -20,8 +20,8 @@ This is still a work in progress and will get better over time. Will try and thi
 
 ###UPDATE:
 
-Widgets created in ReactJS - [](./tree/master/reactjs-adminlte/public/widgets)
+Widgets created in ReactJS - [](./reactjs-adminlte/public/widgets)
 
-![](./blob/master/reactjs-adminlte/screenshots/widgets.png)
+![](./reactjs-adminlte/screenshots/widgets.png)
 
 More stuff coming soon.
