@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,7 +8,7 @@ webpackJsonp([2],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
 	        __webpack_require__(12)
@@ -32,20 +32,22 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	        __webpack_require__(26),
 	        __webpack_require__(27),
 	        __webpack_require__(28),
 	        __webpack_require__(29),
-	        __webpack_require__(30)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox) {
+	        __webpack_require__(30),
+	        __webpack_require__(31)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function () {
 	                return {
 	                    row1Options: [],
 	                    row2Options: [],
-	                    row3Options: []
+	                    row3Options: [],
+	                    row4Options: []
 	                }
 	            },
 	            componentDidMount: function () {
@@ -145,17 +147,23 @@ webpackJsonp([2],[
 	                    subject: 'Unique Visitors',
 	                    stats: '65',
 	                    link: '#'
-	                }]
+	                }];
+
+	                var row4Options = [{
+	                    title: 'Expandable',
+	                    content: 'The body of the box'
+	                }];
 
 	                this.setState({
 	                    row1Options: row1Options,
 	                    row2Options: row2Options,
-	                    row3Options: row3Options
+	                    row3Options: row3Options,
+	                    row4Options: row4Options
 	                });
 	            },
 	            render: function () {
 
-	                var rowiElements = this.state.row1Options.map(function (options, iterator) {
+	                var row1Elements = this.state.row1Options.map(function (options, iterator) {
 	                    return (
 	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
 	                            React.createElement(InfoBox, {options: options})
@@ -165,7 +173,7 @@ webpackJsonp([2],[
 
 	                var row2Elements = this.state.row2Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
+	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowTwo"+iterator}, 
 	                            React.createElement(ProgressInfoBox, {options: options})
 	                        )
 	                    )
@@ -173,8 +181,16 @@ webpackJsonp([2],[
 
 	                var row3Elements = this.state.row3Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
+	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowThree"+iterator}, 
 	                            React.createElement(StatBox, {options: options})
+	                        )
+	                    )
+	                });
+
+	                var row4Elements = this.state.row4Options.map(function (options, iterator) {
+	                    return (
+	                        React.createElement("div", {className: "col-md-3", key: "rowFour"+iterator}, 
+	                            React.createElement(SmallWindow, {options: options})
 	                        )
 	                    )
 	                });
@@ -199,7 +215,7 @@ webpackJsonp([2],[
 
 	                            React.createElement("section", {className: "content"}, 
 	                                React.createElement("div", {className: "row"}, 
-	                                    rowiElements
+	                                    row1Elements
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
@@ -207,11 +223,11 @@ webpackJsonp([2],[
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
-	                                     row3Elements
+	                                    row3Elements
 	                                ), 
 
-	                                React.createElement("div", {className: "row"}
-	                                                     
+	                                React.createElement("div", {className: "row"}, 
+	                                    row4Elements
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}
@@ -268,11 +284,11 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
-	        __webpack_require__(34),
 	        __webpack_require__(35),
-	        __webpack_require__(36)
+	        __webpack_require__(36),
+	        __webpack_require__(37)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -463,7 +479,7 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -650,7 +666,7 @@ webpackJsonp([2],[
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var InfoBox = React.createClass({displayName: "InfoBox",
 	            render: function () {
@@ -682,7 +698,7 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProgressInfoBox = React.createClass({displayName: "ProgressInfoBox",
 	            render: function () {
@@ -725,7 +741,7 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var StatBox = React.createClass({displayName: "StatBox",
 	            render: function () {
@@ -773,14 +789,58 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
+	        __webpack_require__(2)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
+	        var SmallWindow = React.createClass({displayName: "SmallWindow",
+	            toggleCollapse: function (event){
+	                if(ReactDOM.findDOMNode(this).className.indexOf('collapsed-box') !== -1){
+	                    ReactDOM.findDOMNode(this).className = ReactDOM.findDOMNode(this).className.replace(/ collapsed-box/g,'');
+	                }else{
+	                    ReactDOM.findDOMNode(this).className += ' collapsed-box';
+	                }
+	            },
+	            render: function () {
+	                var that = this,
+	                    options = this.props.options;
+
+	                return (
+	                    React.createElement("div", {className: "box box-default collapsed-box"}, 
+	                        React.createElement("div", {className: "box-header with-border"}, 
+	                            React.createElement("h3", {className: "box-title"}, options.title), 
+	                            React.createElement("div", {className: "box-tools pull-right"}, 
+	                                React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
+	                                    React.createElement("i", {className: "fa fa-plus"})
+	                                )
+	                            )
+	                            /* /.box-tools */
+	                        ), 
+	                        /* /.box-header */
+	                        React.createElement("div", {className: "box-body"}, 
+	                            options.content
+	                        )
+	                        /* /.box-body */
+	                    )
+	                )
+	            }
+	        })
+
+	        return SmallWindow;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(18),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -830,11 +890,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -876,11 +936,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 

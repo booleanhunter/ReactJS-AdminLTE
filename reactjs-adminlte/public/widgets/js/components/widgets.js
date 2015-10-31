@@ -6,15 +6,17 @@ define(
         './navigation-menu',
         './page-widgets/info-box',
         './page-widgets/progress-info-box',
-        './page-widgets/stat-box'
+        './page-widgets/stat-box',
+        './page-widgets/small-window'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox) {
+    function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
         var Widgets = React.createClass({
             getInitialState: function () {
                 return {
                     row1Options: [],
                     row2Options: [],
-                    row3Options: []
+                    row3Options: [],
+                    row4Options: []
                 }
             },
             componentDidMount: function () {
@@ -114,17 +116,23 @@ define(
                     subject: 'Unique Visitors',
                     stats: '65',
                     link: '#'
-                }]
+                }];
+
+                var row4Options = [{
+                    title: 'Expandable',
+                    content: 'The body of the box'
+                }];
 
                 this.setState({
                     row1Options: row1Options,
                     row2Options: row2Options,
-                    row3Options: row3Options
+                    row3Options: row3Options,
+                    row4Options: row4Options
                 });
             },
             render: function () {
 
-                var rowiElements = this.state.row1Options.map(function (options, iterator) {
+                var row1Elements = this.state.row1Options.map(function (options, iterator) {
                     return (
                         <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowOne"+iterator}>
                             <InfoBox options = {options} />
@@ -134,7 +142,7 @@ define(
 
                 var row2Elements = this.state.row2Options.map(function (options, iterator) {
                     return (
-                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowOne"+iterator}>
+                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowTwo"+iterator}>
                             <ProgressInfoBox options = {options} />
                         </div>
                     )
@@ -142,8 +150,16 @@ define(
 
                 var row3Elements = this.state.row3Options.map(function (options, iterator) {
                     return (
-                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowOne"+iterator}>
+                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowThree"+iterator}>
                             <StatBox options = {options} />
+                        </div>
+                    )
+                });
+
+                var row4Elements = this.state.row4Options.map(function (options, iterator) {
+                    return (
+                        <div className = "col-md-3" key={"rowFour"+iterator}>
+                            <SmallWindow options = {options} />
                         </div>
                     )
                 });
@@ -168,7 +184,7 @@ define(
 
                             <section className="content">
                                 <div className="row">
-                                    {rowiElements}
+                                    {row1Elements}
                                 </div>
 
                                 <div className="row">
@@ -176,11 +192,11 @@ define(
                                 </div>
 
                                 <div className="row">
-                                     {row3Elements}                
+                                    {row3Elements}                
                                 </div>
 
                                 <div className="row">
-                                                     
+                                    {row4Elements}       
                                 </div>
 
                                 <div className="row">

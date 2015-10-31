@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,7 +8,7 @@ webpackJsonp([1],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
 	        __webpack_require__(11)
@@ -21,186 +21,26 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
-	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
-	            render: function () {
-	                return (
-	                    React.createElement("aside", {className: "main-sidebar"}, 
-	                        /* sidebar: style can be found in sidebar.less */
-	                        React.createElement("section", {className: "sidebar"}, 
-	                            /* Sidebar user panel */
-	                            React.createElement("div", {className: "user-panel"}, 
-	                                React.createElement("div", {className: "pull-left image"}, 
-	                                    React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"})
-	                                ), 
-	                                React.createElement("div", {className: "pull-left info"}, 
-	                                    React.createElement("p", null, "Alexander Pierce"), 
-	                                    React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle text-success"}), " Online")
-	                                )
-	                            ), 
-	                            /* search form */
-	                            React.createElement("form", {action: "#", method: "get", className: "sidebar-form"}, 
-	                                React.createElement("div", {className: "input-group"}, 
-	                                    React.createElement("input", {type: "text", name: "q", className: "form-control", placeholder: "Search..."}), 
-	                                    React.createElement("span", {className: "input-group-btn"}, 
-	                                    React.createElement("button", {type: "submit", name: "search", id: "search-btn", className: "btn btn-flat"}, React.createElement("i", {className: "fa fa-search"}))
-	                                  )
-	                                )
-	                            ), 
-	                            /* /.search form */
-	                            /* sidebar menu: : style can be found in sidebar.less */
-	                            React.createElement("ul", {className: "sidebar-menu"}, 
-	                                React.createElement("li", {className: "header"}, "MAIN NAVIGATION"), 
-	                                React.createElement("li", {className: "active treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-dashboard"}), 
-	                                        React.createElement("span", null, 
-	                                            "Dashboard"
-	                                        ), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", {className: "active"}, React.createElement("a", {href: "index.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v1")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "index2.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v2"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-files-o"}), 
-	                                        React.createElement("span", null, "Layout Options"), 
-	                                        React.createElement("span", {className: "label label-primary pull-right"}, "4")
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/top-nav.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Top Navigation")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/boxed.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Boxed")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/fixed.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Fixed")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/collapsed-sidebar.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Collapsed Sidebar"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", null, 
-	                                    React.createElement("a", {href: "pages/widgets.html"}, 
-	                                        React.createElement("i", {className: "fa fa-th"}), 
-	                                        React.createElement("span", null, "Widgets"), 
-	                                        React.createElement("small", {className: "label pull-right bg-green"}, "new")
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-pie-chart"}), 
-	                                        React.createElement("span", null, "Charts"), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/chartjs.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " ChartJS")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/morris.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Morris")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/flot.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Flot")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/inline.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Inline charts"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-laptop"}), 
-	                                        React.createElement("span", null, "UI Elements"), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/general.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " General")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/icons.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Icons")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/buttons.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Buttons")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/sliders.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Sliders")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/timeline.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Timeline")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/modals.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Modals"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-edit"}), " ", React.createElement("span", null, "Forms"), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/forms/general.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " General Elements")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/forms/advanced.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Advanced Elements")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/forms/editors.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Editors"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-table"}), " ", React.createElement("span", null, "Tables"), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/tables/simple.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Simple tables")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/tables/data.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Data tables"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", null, 
-	                                    React.createElement("a", {href: "pages/calendar.html"}, 
-	                                        React.createElement("i", {className: "fa fa-calendar"}), " ", React.createElement("span", null, "Calendar"), 
-	                                        React.createElement("small", {className: "label pull-right bg-red"}, "3")
-	                                    )
-	                                ), 
-	                                React.createElement("li", null, 
-	                                    React.createElement("a", {href: "pages/mailbox/mailbox.html"}, 
-	                                        React.createElement("i", {className: "fa fa-envelope"}), " ", React.createElement("span", null, "Mailbox"), 
-	                                        React.createElement("small", {className: "label pull-right bg-yellow"}, "12")
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-folder"}), " ", React.createElement("span", null, "Examples"), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/invoice.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Invoice")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/profile.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Profile")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/login.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Login")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/register.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Register")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/lockscreen.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Lockscreen")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/404.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " 404 Error")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/500.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " 500 Error")), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/blank.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Blank Page"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", {className: "treeview"}, 
-	                                    React.createElement("a", {href: "#"}, 
-	                                        React.createElement("i", {className: "fa fa-share"}), " ", React.createElement("span", null, "Multilevel"), 
-	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
-	                                    ), 
-	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level One")), 
-	                                        React.createElement("li", null, 
-	                                            React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level One ", React.createElement("i", {className: "fa fa-angle-left pull-right"})), 
-	                                            React.createElement("ul", {className: "treeview-menu"}, 
-	                                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Two")), 
-	                                                React.createElement("li", null, 
-	                                                    React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Two ", React.createElement("i", {className: "fa fa-angle-left pull-right"})), 
-	                                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Three")), 
-	                                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Three"))
-	                                                    )
-	                                                )
-	                                            )
-	                                        ), 
-	                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level One"))
-	                                    )
-	                                ), 
-	                                React.createElement("li", null, React.createElement("a", {href: "documentation/index.html"}, React.createElement("i", {className: "fa fa-book"}), " ", React.createElement("span", null, "Documentation"))), 
-	                                React.createElement("li", {className: "header"}, "LABELS"), 
-	                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o text-red"}), " ", React.createElement("span", null, "Important"))), 
-	                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o text-yellow"}), " ", React.createElement("span", null, "Warning"))), 
-	                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o text-aqua"}), " ", React.createElement("span", null, "Information")))
-	                            )
-	                        )
-	                        /* /.sidebar */
-	                    )
-	                )
-	            }
-	        });
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var ControlPanel = React.createClass({displayName: "ControlPanel",
+	    		render: function(){
+	                var style = {
+	                    position: 'relative',
+	                    height: '300px'
+	                };
 
-	        return NavigationMenu
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+	    			return (
+	    				React.createElement("div", {className: "row", id: "contains-custom-header"}
+
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return ControlPanel;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
 /* 2 */,
@@ -216,11 +56,11 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	        __webpack_require__(16),
+	        __webpack_require__(17),
 	        __webpack_require__(1),
-	        __webpack_require__(18),
 	        __webpack_require__(19),
 	        __webpack_require__(20),
 	        __webpack_require__(15),
@@ -295,7 +135,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerThree = React.createClass({displayName: "ContainerThree",
@@ -340,11 +180,11 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
-	        __webpack_require__(31),
 	        __webpack_require__(32),
-	        __webpack_require__(33)
+	        __webpack_require__(33),
+	        __webpack_require__(34)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -531,38 +371,198 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 17 */,
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var ControlPanel = React.createClass({displayName: "ControlPanel",
-	    		render: function(){
-	                var style = {
-	                    position: 'relative',
-	                    height: '300px'
-	                };
-
-	    			return (
-	    				React.createElement("div", {className: "row", id: "contains-custom-header"}
-
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
+	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
+	            render: function () {
+	                return (
+	                    React.createElement("aside", {className: "main-sidebar"}, 
+	                        /* sidebar: style can be found in sidebar.less */
+	                        React.createElement("section", {className: "sidebar"}, 
+	                            /* Sidebar user panel */
+	                            React.createElement("div", {className: "user-panel"}, 
+	                                React.createElement("div", {className: "pull-left image"}, 
+	                                    React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"})
+	                                ), 
+	                                React.createElement("div", {className: "pull-left info"}, 
+	                                    React.createElement("p", null, "Alexander Pierce"), 
+	                                    React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle text-success"}), " Online")
+	                                )
+	                            ), 
+	                            /* search form */
+	                            React.createElement("form", {action: "#", method: "get", className: "sidebar-form"}, 
+	                                React.createElement("div", {className: "input-group"}, 
+	                                    React.createElement("input", {type: "text", name: "q", className: "form-control", placeholder: "Search..."}), 
+	                                    React.createElement("span", {className: "input-group-btn"}, 
+	                                    React.createElement("button", {type: "submit", name: "search", id: "search-btn", className: "btn btn-flat"}, React.createElement("i", {className: "fa fa-search"}))
+	                                  )
+	                                )
+	                            ), 
+	                            /* /.search form */
+	                            /* sidebar menu: : style can be found in sidebar.less */
+	                            React.createElement("ul", {className: "sidebar-menu"}, 
+	                                React.createElement("li", {className: "header"}, "MAIN NAVIGATION"), 
+	                                React.createElement("li", {className: "active treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-dashboard"}), 
+	                                        React.createElement("span", null, 
+	                                            "Dashboard"
+	                                        ), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", {className: "active"}, React.createElement("a", {href: "index.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v1")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "index2.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v2"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-files-o"}), 
+	                                        React.createElement("span", null, "Layout Options"), 
+	                                        React.createElement("span", {className: "label label-primary pull-right"}, "4")
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/top-nav.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Top Navigation")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/boxed.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Boxed")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/fixed.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Fixed")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/collapsed-sidebar.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Collapsed Sidebar"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", null, 
+	                                    React.createElement("a", {href: "pages/widgets.html"}, 
+	                                        React.createElement("i", {className: "fa fa-th"}), 
+	                                        React.createElement("span", null, "Widgets"), 
+	                                        React.createElement("small", {className: "label pull-right bg-green"}, "new")
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-pie-chart"}), 
+	                                        React.createElement("span", null, "Charts"), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/chartjs.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " ChartJS")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/morris.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Morris")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/flot.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Flot")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/charts/inline.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Inline charts"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-laptop"}), 
+	                                        React.createElement("span", null, "UI Elements"), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/general.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " General")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/icons.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Icons")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/buttons.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Buttons")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/sliders.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Sliders")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/timeline.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Timeline")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/UI/modals.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Modals"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-edit"}), " ", React.createElement("span", null, "Forms"), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/forms/general.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " General Elements")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/forms/advanced.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Advanced Elements")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/forms/editors.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Editors"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-table"}), " ", React.createElement("span", null, "Tables"), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/tables/simple.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Simple tables")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/tables/data.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Data tables"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", null, 
+	                                    React.createElement("a", {href: "pages/calendar.html"}, 
+	                                        React.createElement("i", {className: "fa fa-calendar"}), " ", React.createElement("span", null, "Calendar"), 
+	                                        React.createElement("small", {className: "label pull-right bg-red"}, "3")
+	                                    )
+	                                ), 
+	                                React.createElement("li", null, 
+	                                    React.createElement("a", {href: "pages/mailbox/mailbox.html"}, 
+	                                        React.createElement("i", {className: "fa fa-envelope"}), " ", React.createElement("span", null, "Mailbox"), 
+	                                        React.createElement("small", {className: "label pull-right bg-yellow"}, "12")
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-folder"}), " ", React.createElement("span", null, "Examples"), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/invoice.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Invoice")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/profile.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Profile")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/login.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Login")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/register.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Register")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/lockscreen.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Lockscreen")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/404.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " 404 Error")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/500.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " 500 Error")), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "pages/examples/blank.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Blank Page"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", {className: "treeview"}, 
+	                                    React.createElement("a", {href: "#"}, 
+	                                        React.createElement("i", {className: "fa fa-share"}), " ", React.createElement("span", null, "Multilevel"), 
+	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
+	                                    ), 
+	                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level One")), 
+	                                        React.createElement("li", null, 
+	                                            React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level One ", React.createElement("i", {className: "fa fa-angle-left pull-right"})), 
+	                                            React.createElement("ul", {className: "treeview-menu"}, 
+	                                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Two")), 
+	                                                React.createElement("li", null, 
+	                                                    React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Two ", React.createElement("i", {className: "fa fa-angle-left pull-right"})), 
+	                                                    React.createElement("ul", {className: "treeview-menu"}, 
+	                                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Three")), 
+	                                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level Three"))
+	                                                    )
+	                                                )
+	                                            )
+	                                        ), 
+	                                        React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o"}), " Level One"))
+	                                    )
+	                                ), 
+	                                React.createElement("li", null, React.createElement("a", {href: "documentation/index.html"}, React.createElement("i", {className: "fa fa-book"}), " ", React.createElement("span", null, "Documentation"))), 
+	                                React.createElement("li", {className: "header"}, "LABELS"), 
+	                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o text-red"}), " ", React.createElement("span", null, "Important"))), 
+	                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o text-yellow"}), " ", React.createElement("span", null, "Warning"))), 
+	                                React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-circle-o text-aqua"}), " ", React.createElement("span", null, "Information")))
+	                            )
+	                        )
+	                        /* /.sidebar */
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return ControlPanel;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return NavigationMenu
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 18 */,
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerOne = React.createClass({displayName: "ContainerOne",
@@ -598,7 +598,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerTwo = React.createClass({displayName: "ContainerTwo",
@@ -640,7 +640,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerFour = React.createClass({displayName: "ContainerFour",
@@ -679,7 +679,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerFive = React.createClass({displayName: "ContainerFive",
@@ -724,7 +724,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerSix = React.createClass({displayName: "ContainerSix",
@@ -768,7 +768,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerSeven = React.createClass({displayName: "ContainerSeven",
@@ -812,7 +812,7 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	        var ControlsMenu = React.createClass({displayName: "ControlsMenu",
@@ -1195,11 +1195,12 @@ webpackJsonp([1],[
 /* 28 */,
 /* 29 */,
 /* 30 */,
-/* 31 */
+/* 31 */,
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
+	        __webpack_require__(18),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -1249,11 +1250,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -1295,11 +1296,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
+	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 
