@@ -14,7 +14,7 @@ define(
         './containers/container-seven',
         './controls-menu'
     ],
-    function(React,$, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu){
+    function(React, $, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu){
     	var Dashboard = React.createClass({
     		render: function(){
     			return (

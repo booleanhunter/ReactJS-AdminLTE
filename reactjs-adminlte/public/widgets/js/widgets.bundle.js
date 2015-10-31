@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11,13 +11,45 @@ webpackJsonp([2],[
 	        __webpack_require__(17),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(12)
+	        __webpack_require__(11)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var InfoBox = React.createClass({displayName: "InfoBox",
+	            render: function () {
+	                var that = this,
+	                    options = this.props.options;
+
+	                return (
+	                    React.createElement("div", {className: "info-box"}, 
+	                        React.createElement("span", {className: "info-box-icon " + options.color}, 
+	                            React.createElement("i", {className: "fa "+options.icon})
+	                        ), 
+
+	                        React.createElement("div", {className: "info-box-content"}, 
+	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
+	                            React.createElement("span", {className: "info-box-number"}, options.stats)
+	                        ), 
+	                        
+	                        options.content
+	                    )
+	                )
+	            }
+	        })
+
+	        return InfoBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -27,140 +59,124 @@ webpackJsonp([2],[
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */,
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
 	        __webpack_require__(3),
-	        __webpack_require__(26),
-	        __webpack_require__(27),
-	        __webpack_require__(28),
-	        __webpack_require__(29),
-	        __webpack_require__(30)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox){
-	    	var Widgets = React.createClass({displayName: "Widgets",
-	            getInitialState: function(){
+	        __webpack_require__(15),
+	        __webpack_require__(16),
+	        __webpack_require__(1),
+	        __webpack_require__(18),
+	        __webpack_require__(19)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox) {
+	        var Widgets = React.createClass({displayName: "Widgets",
+	            getInitialState: function () {
 	                return {
 	                    row1Options: [],
 	                    row2Options: [],
 	                    row3Options: []
-	                } 
+	                }
 	            },
-	            componentDidMount: function(){
-	                var row1Options = [
-	                    {
-	                        color: 'bg-aqua',
-	                        icon: 'fa-envelope-o',
-	                        subject: 'Messages',
-	                        stats: '1,410',
-	                        content: ''
-	                    },
-	                    {
-	                        color: 'bg-green',
-	                        icon: 'fa-flag-o',
-	                        subject: 'Bookmarks',
-	                        stats: '410',
-	                        content: ''
-	                    },
-	                    {
-	                        color: 'bg-yellow',
-	                        icon: 'fa-files-o',
-	                        subject: 'Uploads',
-	                        stats: '13,648',
-	                        content: ''
-	                    },
-	                    {
-	                        color: 'bg-red',
-	                        icon: 'fa-star-o',
-	                        subject: 'Likes',
-	                        stats: '93,139',
-	                        content: ''
-	                    }
-	                ];
+	            componentDidMount: function () {
+	                var row1Options = [{
+	                    color: 'bg-aqua',
+	                    icon: 'fa-envelope-o',
+	                    subject: 'Messages',
+	                    stats: '1,410',
+	                    content: ''
+	                }, {
+	                    color: 'bg-green',
+	                    icon: 'fa-flag-o',
+	                    subject: 'Bookmarks',
+	                    stats: '410',
+	                    content: ''
+	                }, {
+	                    color: 'bg-yellow',
+	                    icon: 'fa-files-o',
+	                    subject: 'Uploads',
+	                    stats: '13,648',
+	                    content: ''
+	                }, {
+	                    color: 'bg-red',
+	                    icon: 'fa-star-o',
+	                    subject: 'Likes',
+	                    stats: '93,139',
+	                    content: ''
+	                }];
 
-	                var row2Options = [
-	                    {
-	                        color: 'bg-aqua',
-	                        icon: 'fa-bookmark-o',
-	                        subject: 'Bookmarks',
-	                        stats: '41,410',
-	                        content: '',
-	                        progress: {
-	                            percent: 70,
-	                            description: '70% Increase in 30 Days',
-	                            color: 'white'
-	                        }
-	                    },
-	                    {
-	                        color: 'bg-green',
-	                        icon: 'fa-thumbs-o-up',
-	                        subject: 'Likes',
-	                        stats: '41,410',
-	                        content: '',
-	                        progress: {
-	                            percent: 50,
-	                            description: '50% Increase in 30 Days',
-	                            color: 'white'
-	                        }
-	                    },
-	                    {
-	                        color: 'bg-yellow',
-	                        icon: 'fa-calendar',
-	                        subject: 'Events',
-	                        stats: '41,410',
-	                        content: '',
-	                        progress: {
-	                            percent: 70,
-	                            description: '70% Increase in 30 Days',
-	                            color: 'white'
-	                        }
-	                    },
-	                    {
-	                        color: 'bg-red',
-	                        icon: 'fa-comments-o',
-	                        subject: 'comments',
-	                        stats: '41,410',
-	                        content: '',
-	                        progress: {
-	                            percent: 70,
-	                            description: '70% Increase in 30 Days',
-	                            color: 'white'
-	                        }
+	                var row2Options = [{
+	                    color: 'bg-aqua',
+	                    icon: 'fa-bookmark-o',
+	                    subject: 'Bookmarks',
+	                    stats: '41,410',
+	                    content: '',
+	                    progress: {
+	                        percent: 70,
+	                        description: '70% Increase in 30 Days',
+	                        color: 'white'
 	                    }
-	                ];
+	                }, {
+	                    color: 'bg-green',
+	                    icon: 'fa-thumbs-o-up',
+	                    subject: 'Likes',
+	                    stats: '41,410',
+	                    content: '',
+	                    progress: {
+	                        percent: 50,
+	                        description: '50% Increase in 30 Days',
+	                        color: 'white'
+	                    }
+	                }, {
+	                    color: 'bg-yellow',
+	                    icon: 'fa-calendar',
+	                    subject: 'Events',
+	                    stats: '41,410',
+	                    content: '',
+	                    progress: {
+	                        percent: 70,
+	                        description: '70% Increase in 30 Days',
+	                        color: 'white'
+	                    }
+	                }, {
+	                    color: 'bg-red',
+	                    icon: 'fa-comments-o',
+	                    subject: 'comments',
+	                    stats: '41,410',
+	                    content: '',
+	                    progress: {
+	                        percent: 70,
+	                        description: '70% Increase in 30 Days',
+	                        color: 'white'
+	                    }
+	                }];
 
-	                var row3Options = [
-	                    {
-	                        color: 'bg-aqua',
-	                        icon: 'fa-shopping-cart',
-	                        subject: 'New Orders',
-	                        stats: '150',
-	                        link: '#'
-	                    },
-	                    {
-	                        color: 'bg-green',
-	                        icon: 'ion-stats-bars',
-	                        subject: 'Bounce Rate',
-	                        stats: '53%',
-	                        link: '#'
-	                    },
-	                    {
-	                        color: 'bg-yellow',
-	                        icon: 'ion-person-add',
-	                        subject: 'User Registrations',
-	                        stats: '44',
-	                        link: '#'
-	                    },
-	                    {
-	                        color: 'bg-red',
-	                        icon: 'ion-pie-graph',
-	                        subject: 'Unique Visitors',
-	                        stats: '65',
-	                        link: '#'
-	                    },
-	                ]    
+	                var row3Options = [{
+	                    color: 'bg-aqua',
+	                    icon: 'fa-shopping-cart',
+	                    subject: 'New Orders',
+	                    stats: '150',
+	                    link: '#'
+	                }, {
+	                    color: 'bg-green',
+	                    icon: 'ion-stats-bars',
+	                    subject: 'Bounce Rate',
+	                    stats: '53%',
+	                    link: '#'
+	                }, {
+	                    color: 'bg-yellow',
+	                    icon: 'ion-person-add',
+	                    subject: 'User Registrations',
+	                    stats: '44',
+	                    link: '#'
+	                }, {
+	                    color: 'bg-red',
+	                    icon: 'ion-pie-graph',
+	                    subject: 'Unique Visitors',
+	                    stats: '65',
+	                    link: '#'
+	                }]
 
 	                this.setState({
 	                    row1Options: row1Options,
@@ -168,17 +184,17 @@ webpackJsonp([2],[
 	                    row3Options: row3Options
 	                });
 	            },
-	    		render: function(){
+	            render: function () {
 
-	                var rowiElements = this.state.row1Options.map(function(options, iterator){
+	                var rowiElements = this.state.row1Options.map(function (options, iterator) {
 	                    return (
 	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
 	                            React.createElement(InfoBox, {options: options})
 	                        )
-	                    )     
+	                    )
 	                });
 
-	                var row2Elements = this.state.row2Options.map(function(options, iterator){
+	                var row2Elements = this.state.row2Options.map(function (options, iterator) {
 	                    return (
 	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
 	                            React.createElement(ProgressInfoBox, {options: options})
@@ -186,7 +202,7 @@ webpackJsonp([2],[
 	                    )
 	                });
 
-	                var row3Elements = this.state.row3Options.map(function(options, iterator){
+	                var row3Elements = this.state.row3Options.map(function (options, iterator) {
 	                    return (
 	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
 	                            React.createElement(StatBox, {options: options})
@@ -194,28 +210,28 @@ webpackJsonp([2],[
 	                    )
 	                });
 
-	    			return (
-	    				React.createElement("div", {className: "wrapper"}, 
-	    					React.createElement(HeaderBar, null), 
-	    					
-	    					React.createElement(NavigationMenu, null), 
-	    					
-	    					React.createElement("div", {className: "content-wrapper"}, 
-	    						React.createElement("section", {className: "content-header"}, 
-	    							React.createElement("h1", null, 
-	    						        "Widgets", 
-	    						       	React.createElement("small", null, "Preview page")
-	    						    )
-	    							/*<ol className="breadcrumb">
-	    								<li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
-	    								<li className="active">Dashboard</li>
-	    							</ol>*/
-	    						), 
+	                return (
+	                    React.createElement("div", {className: "wrapper"}, 
+	                        React.createElement(HeaderBar, null), 
+	                        
+	                        React.createElement(NavigationMenu, null), 
+	                        
+	                        React.createElement("div", {className: "content-wrapper"}, 
+	                            React.createElement("section", {className: "content-header"}, 
+	                                React.createElement("h1", null, 
+	                                    "Widgets", 
+	                                    React.createElement("small", null, "Preview page")
+	                                )
+	                                /*<ol className="breadcrumb">
+	                                    <li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
+	                                    <li className="active">Dashboard</li>
+	                                </ol>*/
+	                            ), 
 
-	    						React.createElement("section", {className: "content"}, 
-	    							React.createElement("div", {className: "row"}, 
+	                            React.createElement("section", {className: "content"}, 
+	                                React.createElement("div", {className: "row"}, 
 	                                    rowiElements
-	    							), 
+	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
 	                                    row2Elements
@@ -244,9 +260,9 @@ webpackJsonp([2],[
 	                                React.createElement("div", {className: "row"}
 	                                                     
 	                                )
-	    						)
+	                            )
 
-	    					), 
+	                        ), 
 
 	                        React.createElement("footer", {className: "main-footer"}, 
 	                            React.createElement("div", {className: "pull-right hidden-xs"}, 
@@ -257,37 +273,27 @@ webpackJsonp([2],[
 	                        )
 
 	                        /*<ControlsMenu />*/
-	    				)
-	    			)
-	    		}
-	    	})
+	                    )
+	                )
+	            }
+	        });
 
-	    	return Widgets;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return Widgets;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
 	        __webpack_require__(3),
-	        __webpack_require__(34),
-	        __webpack_require__(35),
-	        __webpack_require__(36)
+	        __webpack_require__(31),
+	        __webpack_require__(32),
+	        __webpack_require__(33)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderMessages, HeaderNotifications, HeaderTasks){
 	    	var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function(){
@@ -492,7 +498,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 27 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -678,72 +684,24 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
-	 * @Author Ashwin Hariharan
-	 * @Details A basic info-box for displaying info. this component takes an options object, from props.
-	 
-	 The options object needs 5 values, out of which 1 is optional.
-	 {
-	    color: 'bg-aqua' / 'bg-green' / 'bg-yellow' //To apply background color to the icon,
-	    icon: 'fa-envelope-o' / 'fa-flag-0' / 'fa-files-0' //Any font-awesome icon
-	    subject:  'Can be a string or a number',
-	    stats: 'Can be a string or a number',
-	    content: 'Can be a string or a number' //this is optional
-	 }
-
-	 */
-
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var InfoBox = React.createClass({displayName: "InfoBox",
-	    		render: function(){
-	                var that = this,
-	                    options = this.props.options;
-
-	    			return (
-	                    React.createElement("div", {className: "info-box"}, 
-	                        React.createElement("span", {className: "info-box-icon " + options.color}, 
-	                            React.createElement("i", {className: "fa "+options.icon})
-	                        ), 
-
-	                        React.createElement("div", {className: "info-box-content"}, 
-	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                            React.createElement("span", {className: "info-box-number"}, options.stats)
-	                        ), 
-	                        
-	                        options.content
-	                    )
-	    			)
-	    		}
-	    	})
-
-	    	return InfoBox;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
-
-/***/ },
-/* 29 */
+/* 17 */,
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var ProgressInfoBox = React.createClass({displayName: "ProgressInfoBox",
-	    		render: function(){
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var ProgressInfoBox = React.createClass({displayName: "ProgressInfoBox",
+	            render: function () {
 	                var that = this,
 	                    options = this.props.options;
 
 	                var style = {
-	                    width: options.progress.percent+'%',
+	                    width: options.progress.percent + '%',
 	                    backgroundColor: options.progress.color
 	                };
 
-	    			return (
+	                return (
 	                    React.createElement("div", {className: "info-box "+options.color}, 
 	                        React.createElement("span", {className: "info-box-icon"}, 
 	                            React.createElement("i", {className: "fa "+options.icon})
@@ -762,47 +720,49 @@ webpackJsonp([2],[
 	                        
 	                        options.content
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return ProgressInfoBox;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return ProgressInfoBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 30 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var StatBox = React.createClass({displayName: "StatBox",
-	    		render: function(){
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var StatBox = React.createClass({displayName: "StatBox",
+	            render: function () {
 	                var that = this,
 	                    options = this.props.options;
 
-	                var link = '', 
-	                    stats = React.createElement("h3", null, " ", options.stats, " ");
+	                var link = '',
+	                    stats =
+	                    React.createElement("h3", null, " ", options.stats, " ");
 
-	                if(this.props.options.link){
-	                    link =  React.createElement("a", {href: options.link, className: "small-box-footer"}, 
-	                                "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
-	                            );
+	                if (this.props.options.link) {
+	                    link =
+	                        React.createElement("a", {href: options.link, className: "small-box-footer"}, 
+	                            "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
+	                        );
 	                }
 
-	                if(options.stats.indexOf('%') !== -1){
-	                    var style={
+	                if (options.stats.indexOf('%') !== -1) {
+	                    var style = {
 	                        fontSize: '20px'
 	                    };
 
-	                    stats = React.createElement("h3", null, 
-	                                options.stats.replace(/%/g, ''), 
-	                                React.createElement("sup", {style: style}, "%")
-	                            )    
+	                    stats =
+	                        React.createElement("h3", null, 
+	                            options.stats.replace(/%/g, ''), 
+	                            React.createElement("sup", {style: style}, "%")
+	                        )
 	                }
 
-	    			return (
+	                return (
 	                    React.createElement("div", {className: "small-box "+options.color}, 
 	                        React.createElement("div", {className: "inner"}, 
 	                            stats, 
@@ -813,18 +773,26 @@ webpackJsonp([2],[
 	                        ), 
 	                        link
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return StatBox;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return StatBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -881,7 +849,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 35 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -930,7 +898,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 36 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [

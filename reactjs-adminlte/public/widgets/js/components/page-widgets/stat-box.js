@@ -44,7 +44,7 @@ define(
                     </div>
                 )
             }
-        })
+        });
 
         return StatBox;
     }

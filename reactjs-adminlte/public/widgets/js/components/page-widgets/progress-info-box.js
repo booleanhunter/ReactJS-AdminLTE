@@ -34,7 +34,7 @@ define(
                     </div>
                 )
             }
-        })
+        });
 
         return ProgressInfoBox;
     }
