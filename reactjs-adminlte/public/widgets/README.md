@@ -2,7 +2,7 @@
 
 ### List of widgets
 
-- #### [InfoBox](./js/components/page-widgets/info-box.js)
+#### - [InfoBox](./js/components/page-widgets/info-box.js)
 
 A basic info-box for displaying info. This component takes an options object, from props.
 
@@ -18,7 +18,7 @@ The options object needs 5 values.
 }
 ```
 
-- #### [ProgressInfoBox](./js/components/page-widgets/info-box.js)
+#### - [ProgressInfoBox](./js/components/page-widgets/progress-info-box.js)
 
 An info-box for displaying info along with a progress bar. This component takes an options object, from props.
 
