@@ -1,6 +1,6 @@
-### All widgets are in [](./js/components)
+### All widgets are in [js/components/page-widgets](./js/components/page-widgets)
 
-- ####[InfoBox](./js/components/page-widgets/info-box.js)
+#### [InfoBox](./js/components/page-widgets/info-box.js)
 
 A basic info-box for displaying info. this component takes an options object, from props.
 
