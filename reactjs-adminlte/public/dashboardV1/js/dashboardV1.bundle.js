@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11,375 +11,23 @@ webpackJsonp([2],[
 	        __webpack_require__(17),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(12)
+	        __webpack_require__(11)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, Dashboard) {
 	    	ReactDOM.render(React.createElement(Dashboard, null),  document.getElementById('dashboard-container'));
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
 	        __webpack_require__(3),
-	        __webpack_require__(21),
-	        __webpack_require__(22),
-	        __webpack_require__(23),
-	        __webpack_require__(24),
-	        __webpack_require__(25),
-	        __webpack_require__(20),
-	        __webpack_require__(26),
-	        __webpack_require__(27),
-	        __webpack_require__(28),
-	        __webpack_require__(29),
-	        __webpack_require__(30)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu){
-	    	var Dashboard = React.createClass({displayName: "Dashboard",
-	    		render: function(){
-	    			return (
-	    				React.createElement("div", {className: "wrapper"}, 
-	    					React.createElement(HeaderBar, null), 
-	    					
-	    					React.createElement(NavigationMenu, null), 
-	    					
-	    					React.createElement("div", {className: "content-wrapper"}, 
-	    						React.createElement("section", {className: "content-header"}, 
-	    							React.createElement("h1", null, 
-	    						        "Dashboard", 
-	    						       	React.createElement("small", null, "Control panel")
-	    						    ), 
-	    							/*<ol className="breadcrumb">
-	    								<li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
-	    								<li className="active">Dashboard</li>
-	    							</ol>*/
-	                                React.createElement(ControlPanel, null)
-	    						), 
-
-	    						React.createElement("section", {className: "content"}, 
-	    							React.createElement("div", {className: "row"}, 
-	    								React.createElement("section", {className: "col-lg-7 connectedSortable ui-sortable"}, 
-	    									React.createElement(ContainerOne, null), 
-	                                        React.createElement(ContainerTwo, null), 
-	                                        React.createElement(ContainerThree, null), 
-	                                        React.createElement(ContainerFour, null)
-	    								), 
-
-	                                    React.createElement("section", {className: "col-lg-5 connectedSortable ui-sortable"}, 
-	                                        React.createElement(ContainerFive, null), 
-	                                        React.createElement(ContainerSix, null), 
-	                                        React.createElement(ContainerSeven, null)
-	                                    )
-	    							)
-	    						)
-
-	    					), 
-
-	                        React.createElement("footer", {className: "main-footer"}, 
-	                            React.createElement("div", {className: "pull-right hidden-xs"}, 
-	                                React.createElement("b", null, "Version"), " 2.3.0"
-	                            ), 
-	                            React.createElement("strong", null, "Copyright © 2014-2015 ", React.createElement("a", {href: "http://almsaeedstudio.com"}, "Almsaeed Studio"), "."), 
-	                            "All rights reserved."
-	                        )
-
-	                        /*<ControlsMenu />*/
-	    				)
-	    			)
-	    		}
-	    	})
-
-	    	return Dashboard;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
-
-/***/ },
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var ContainerThree = React.createClass({displayName: "ContainerThree",
-	    		render: function(){
-	                var style = {
-	                    position: 'relative',
-	                    height: '250px',
-	                    width: 'auto',
-	                    overflow: 'hidden'
-	                };
-	                //style="overflow: hidden; width: auto; height: 250px;"
-	    			return (
-	    				React.createElement("div", {className: "box box-primary"}, 
-	                        React.createElement("div", {className: "box-header ui-sortable-handle"}, 
-	                            React.createElement("i", {className: "ion ion-clipboard"}), 
-	                            React.createElement("h3", {className: "box-title"}, "To Do List"), 
-	                            React.createElement("div", {className: "box-tools pull-right"}, 
-	                                React.createElement("ul", {className: "pagination pagination-sm inline"}, 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "«")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "1")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "2")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "3")), 
-	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "»"))
-	                                )
-	                            )
-	                        ), 
-
-	                        React.createElement("div", {className: "box-body"}, 
-	                            React.createElement("ul", {className: "todo-list ui-sortable"}
-	                            )
-	                        )
-	                    )
-	    			)
-	    		}
-	    	})
-
-	    	return ContainerThree;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	        __webpack_require__(34),
-	        __webpack_require__(35),
-	        __webpack_require__(36)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderMessages, HeaderNotifications, HeaderTasks){
-	    	var HeaderBar = React.createClass({displayName: "HeaderBar",
-	            getInitialState: function(){
-	                return {
-	                    messages: [],
-	                    notifications: [],
-	                    tasks: []
-	                }
-	            },
-	            pushMenu: function(){
-	                if(document.body.clientWidth > 768){
-	                    if(document.body.className.indexOf('sidebar-collapse') === -1){
-	                        document.body.className += ' sidebar-collapse';
-	                    }else{
-	                        document.body.className = document.body.className.replace(' sidebar-collapse','');
-	                    }
-	                }else{
-	                    if(document.body.className.indexOf('sidebar-open') === -1){
-	                        document.body.className += ' sidebar-open';
-	                    }else{
-	                        document.body.className = document.body.className.replace(' sidebar-open','');
-	                    }
-	                }
-	                
-	            },
-	            componentDidMount:function(){
-	                var messages = [
-	                    {
-	                        displayName: 'Support Team',
-	                        displayPicture: 'dist/img/user2-160x160.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: '5 mins',   
-	                    },
-	                    {
-	                        displayName: 'AdminLTE Design Team',
-	                        displayPicture: 'dist/img/user3-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: '2 hours',
-	                    },
-	                    {
-	                        displayName: 'Developers',
-	                        displayPicture: 'dist/img/user4-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: 'Today',
-	                    },
-	                    {
-	                        displayName: 'Sales Department',
-	                        displayPicture: 'dist/img/user3-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: 'Yesterday',
-	                    },
-	                    {
-	                        displayName: 'Reviewers',
-	                        displayPicture: 'dist/img/user4-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: '2 days',
-	                    },
-	                ];
-
-	                var notifications = [
-	                    {
-	                        subject: '5 new members joined today',
-	                        className: 'fa fa-users text-aqua'
-	                    },
-	                    {
-	                        subject: 'Very long description here that may not fit into the page and may cause design problems',
-	                        className: 'fa fa-warning text-yellow'
-	                    },
-	                    {
-	                        subject: '5 new members joined',
-	                        className: 'fa fa-users text-red'
-	                    },
-	                    {
-	                        subject: '25 sales made',
-	                        className: 'fa fa-shopping-cart text-green'
-	                    },
-	                    {
-	                        subject: 'You changed your username',
-	                        className: 'fa fa-user text-red'
-	                    }
-	                ];
-
-	                var tasks = [
-	                    {
-	                        subject: 'Design some buttons',
-	                        percentage: 20
-	                    },
-	                    {
-	                        subject: 'Create a nice theme',
-	                        percentage: 40
-	                    },
-	                    {
-	                        subject: 'Some task I need to do',
-	                        percentage: 60
-	                    },
-	                    {
-	                        subject: 'Make beautiful transitions',
-	                        percentage: 80
-	                    }
-	                ]
-
-	                this.setState({
-	                    messages: messages,
-	                    notifications: notifications,
-	                    tasks: tasks
-	                });
-	            },
-	    		render: function(){
-	                var that = this;
-	    			return (
-	    				React.createElement("header", {className: "main-header"}, 
-	                        /* Logo */
-	                        React.createElement("a", {href: "index2.html", className: "logo"}, 
-	                            /* mini logo for sidebar mini 50x50 pixels */
-	                            React.createElement("span", {className: "logo-mini"}, React.createElement("b", null, "A"), "LT"), 
-	                            /* logo for regular state and mobile devices */
-	                            React.createElement("span", {className: "logo-lg"}, React.createElement("b", null, "Admin"), "LTE")
-	                        ), 
-	                        /* Header Navbar: style can be found in header.less */
-	                        React.createElement("nav", {className: "navbar navbar-static-top", role: "navigation"}, 
-	                            /* Sidebar toggle button*/
-	                            React.createElement("a", {href: "#", className: "sidebar-toggle", "data-toggle": "offcanvas", role: "button", onClick: that.pushMenu}, 
-	                                React.createElement("span", {className: "sr-only"}, "Toggle navigation")
-	                            ), 
-	                            React.createElement("div", {className: "navbar-custom-menu"}, 
-	                                React.createElement("ul", {className: "nav navbar-nav"}, 
-	                                    /* Messages: style can be found in dropdown.less*/
-	                                    React.createElement("li", {className: "dropdown messages-menu"}, 
-	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
-	                                            React.createElement("i", {className: "fa fa-envelope-o"}), 
-	                                            React.createElement("span", {className: "label label-success"}, that.state.messages.length)
-	                                        ), 
-	                                        React.createElement(HeaderMessages, {messages: that.state.messages})
-	                                    ), 
-	                                    /* Notifications: style can be found in dropdown.less */
-	                                    React.createElement("li", {className: "dropdown notifications-menu"}, 
-	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
-	                                            React.createElement("i", {className: "fa fa-bell-o"}), 
-	                                            React.createElement("span", {className: "label label-warning"}, that.state.notifications.length)
-	                                        ), 
-	                                        React.createElement(HeaderNotifications, {notifications: that.state.notifications})
-	                                    ), 
-	                                    /* Tasks: style can be found in dropdown.less */
-	                                    React.createElement("li", {className: "dropdown tasks-menu"}, 
-	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
-	                                            React.createElement("i", {className: "fa fa-flag-o"}), 
-	                                            React.createElement("span", {className: "label label-danger"}, that.state.notifications.length)
-	                                        ), 
-	                                        React.createElement(HeaderTasks, {tasks: that.state.tasks})
-	                                    ), 
-	                                    /* User Account: style can be found in dropdown.less */
-	                                    React.createElement("li", {className: "dropdown user user-menu"}, 
-	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
-	                                            React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "user-image", alt: "User Image"}), 
-	                                            React.createElement("span", {className: "hidden-xs"}, "Alexander Pierce")
-	                                        ), 
-	                                        React.createElement("ul", {className: "dropdown-menu"}, 
-	                                            /* User image */
-	                                            React.createElement("li", {className: "user-header"}, 
-	                                                React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"}), 
-	                                                React.createElement("p", null, 
-	                                                    "Alexander Pierce - Web Developer", 
-	                                                    React.createElement("small", null, "Member since Nov. 2012")
-	                                                )
-	                                            ), 
-	                                            /* Menu Body */
-	                                            React.createElement("li", {className: "user-body"}, 
-	                                                React.createElement("div", {className: "col-xs-4 text-center"}, 
-	                                                    React.createElement("a", {href: "#"}, "Followers")
-	                                                ), 
-	                                                React.createElement("div", {className: "col-xs-4 text-center"}, 
-	                                                    React.createElement("a", {href: "#"}, "Sales")
-	                                                ), 
-	                                                React.createElement("div", {className: "col-xs-4 text-center"}, 
-	                                                    React.createElement("a", {href: "#"}, "Friends")
-	                                                )
-	                                            ), 
-	                                            /* Menu Footer */
-	                                            React.createElement("li", {className: "user-footer"}, 
-	                                                React.createElement("div", {className: "pull-left"}, 
-	                                                    React.createElement("a", {href: "#", className: "btn btn-default btn-flat"}, "Profile")
-	                                                ), 
-	                                                React.createElement("div", {className: "pull-right"}, 
-	                                                    React.createElement("a", {href: "#", className: "btn btn-default btn-flat"}, "Sign out")
-	                                                )
-	                                            )
-	                                        )
-	                                    ), 
-	                                    /* ontrol Sidebar Toggle Button */
-	                                    React.createElement("li", null, 
-	                                        React.createElement("a", {href: "#", "data-toggle": "control-sidebar"}, React.createElement("i", {className: "fa fa-gears"}))
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	    			)
-	    		}
-	    	})
-
-	    	return HeaderBar;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var NavigationMenu = React.createClass({displayName: "NavigationMenu",
-	    		render: function(){
-	    			return (
-	    				React.createElement("aside", {className: "main-sidebar"}, 
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
+	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
+	            render: function () {
+	                return (
+	                    React.createElement("aside", {className: "main-sidebar"}, 
 	                        /* sidebar: style can be found in sidebar.less */
 	                        React.createElement("section", {className: "sidebar"}, 
 	                            /* Sidebar user panel */
@@ -547,15 +195,344 @@ webpackJsonp([2],[
 	                        )
 	                        /* /.sidebar */
 	                    )
+	                )
+	            }
+	        });
+
+	        return NavigationMenu
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(17),
+	        __webpack_require__(3),
+	        __webpack_require__(16),
+	        __webpack_require__(1),
+	        __webpack_require__(18),
+	        __webpack_require__(19),
+	        __webpack_require__(20),
+	        __webpack_require__(15),
+	        __webpack_require__(21),
+	        __webpack_require__(22),
+	        __webpack_require__(23),
+	        __webpack_require__(24),
+	        __webpack_require__(25)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu){
+	    	var Dashboard = React.createClass({displayName: "Dashboard",
+	    		render: function(){
+	    			return (
+	    				React.createElement("div", {className: "wrapper"}, 
+	    					React.createElement(HeaderBar, null), 
+	    					
+	    					React.createElement(NavigationMenu, null), 
+	    					
+	    					React.createElement("div", {className: "content-wrapper"}, 
+	    						React.createElement("section", {className: "content-header"}, 
+	    							React.createElement("h1", null, 
+	    						        "Dashboard", 
+	    						       	React.createElement("small", null, "Control panel")
+	    						    ), 
+	    							/*<ol className="breadcrumb">
+	    								<li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
+	    								<li className="active">Dashboard</li>
+	    							</ol>*/
+	                                React.createElement(ControlPanel, null)
+	    						), 
+
+	    						React.createElement("section", {className: "content"}, 
+	    							React.createElement("div", {className: "row"}, 
+	    								React.createElement("section", {className: "col-lg-7 connectedSortable ui-sortable"}, 
+	    									React.createElement(ContainerOne, null), 
+	                                        React.createElement(ContainerTwo, null), 
+	                                        React.createElement(ContainerThree, null), 
+	                                        React.createElement(ContainerFour, null)
+	    								), 
+
+	                                    React.createElement("section", {className: "col-lg-5 connectedSortable ui-sortable"}, 
+	                                        React.createElement(ContainerFive, null), 
+	                                        React.createElement(ContainerSix, null), 
+	                                        React.createElement(ContainerSeven, null)
+	                                    )
+	    							)
+	    						)
+
+	    					), 
+
+	                        React.createElement("footer", {className: "main-footer"}, 
+	                            React.createElement("div", {className: "pull-right hidden-xs"}, 
+	                                React.createElement("b", null, "Version"), " 2.3.0"
+	                            ), 
+	                            React.createElement("strong", null, "Copyright © 2014-2015 ", React.createElement("a", {href: "http://almsaeedstudio.com"}, "Almsaeed Studio"), "."), 
+	                            "All rights reserved."
+	                        )
+
+	                        /*<ControlsMenu />*/
+	    				)
 	    			)
 	    		}
 	    	})
 
-	    	return NavigationMenu
+	    	return Dashboard;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 23 */
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(17),
+	        __webpack_require__(3),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var ContainerThree = React.createClass({displayName: "ContainerThree",
+	    		render: function(){
+	                var style = {
+	                    position: 'relative',
+	                    height: '250px',
+	                    width: 'auto',
+	                    overflow: 'hidden'
+	                };
+	                //style="overflow: hidden; width: auto; height: 250px;"
+	    			return (
+	    				React.createElement("div", {className: "box box-primary"}, 
+	                        React.createElement("div", {className: "box-header ui-sortable-handle"}, 
+	                            React.createElement("i", {className: "ion ion-clipboard"}), 
+	                            React.createElement("h3", {className: "box-title"}, "To Do List"), 
+	                            React.createElement("div", {className: "box-tools pull-right"}, 
+	                                React.createElement("ul", {className: "pagination pagination-sm inline"}, 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "«")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "1")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "2")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "3")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "»"))
+	                                )
+	                            )
+	                        ), 
+
+	                        React.createElement("div", {className: "box-body"}, 
+	                            React.createElement("ul", {className: "todo-list ui-sortable"}
+	                            )
+	                        )
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return ContainerThree;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(17),
+	        __webpack_require__(3),
+	        __webpack_require__(31),
+	        __webpack_require__(32),
+	        __webpack_require__(33)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
+	        var HeaderBar = React.createClass({displayName: "HeaderBar",
+	            getInitialState: function () {
+	                return {
+	                    messages: [],
+	                    notifications: [],
+	                    tasks: []
+	                }
+	            },
+	            pushMenu: function () {
+	                if(document.body.clientWidth > 768){
+	                    if(document.body.className.indexOf('sidebar-collapse') === -1){
+	                        document.body.className += ' sidebar-collapse';
+	                    }else {
+	                        document.body.className = document.body.className.replace(' sidebar-collapse', '');
+	                    }
+	                }else{
+	                    if (document.body.className.indexOf('sidebar-open') === -1) {
+	                        document.body.className += ' sidebar-open';
+	                    }else{
+	                        document.body.className = document.body.className.replace(' sidebar-open','');
+	                    }
+	                }
+	            },
+	            componentDidMount: function () {
+	                var messages = [{
+	                    displayName: 'Support Team',
+	                    displayPicture: 'dist/img/user2-160x160.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: '5 mins',
+	                }, {
+	                    displayName: 'AdminLTE Design Team',
+	                    displayPicture: 'dist/img/user3-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: '2 hours',
+	                }, {
+	                    displayName: 'Developers',
+	                    displayPicture: 'dist/img/user4-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: 'Today',
+	                }, {
+	                    displayName: 'Sales Department',
+	                    displayPicture: 'dist/img/user3-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: 'Yesterday',
+	                }, {
+	                    displayName: 'Reviewers',
+	                    displayPicture: 'dist/img/user4-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: '2 days',
+	                }];
+
+	                var notifications = [{
+	                    subject: '5 new members joined today',
+	                    className: 'fa fa-users text-aqua'
+	                }, {
+	                    subject: 'Very long description here that may not fit into the page and may cause design problems',
+	                    className: 'fa fa-warning text-yellow'
+	                }, {
+	                    subject: '5 new members joined',
+	                    className: 'fa fa-users text-red'
+	                }, {
+	                    subject: '25 sales made',
+	                    className: 'fa fa-shopping-cart text-green'
+	                }, {
+	                    subject: 'You changed your username',
+	                    className: 'fa fa-user text-red'
+	                }];
+
+	                var tasks = [{
+	                    subject: 'Design some buttons',
+	                    percentage: 20
+	                }, {
+	                    subject: 'Create a nice theme',
+	                    percentage: 40
+	                }, {
+	                    subject: 'Some task I need to do',
+	                    percentage: 60
+	                }, {
+	                    subject: 'Make beautiful transitions',
+	                    percentage: 80
+	                }];
+
+	                this.setState({
+	                    messages: messages,
+	                    notifications: notifications,
+	                    tasks: tasks
+	                });
+	            },
+	            render: function () {
+	                var that = this;
+	                return (
+	                    React.createElement("header", {className: "main-header"}, 
+	                        /* Logo */
+	                        React.createElement("a", {href: "index2.html", className: "logo"}, 
+	                            /* mini logo for sidebar mini 50x50 pixels */
+	                            React.createElement("span", {className: "logo-mini"}, React.createElement("b", null, "A"), "LT"), 
+	                            /* logo for regular state and mobile devices */
+	                            React.createElement("span", {className: "logo-lg"}, React.createElement("b", null, "Admin"), "LTE")
+	                        ), 
+	                        /* Header Navbar: style can be found in header.less */
+	                        React.createElement("nav", {className: "navbar navbar-static-top", role: "navigation"}, 
+	                            /* Sidebar toggle button*/
+	                            React.createElement("a", {href: "#", className: "sidebar-toggle", "data-toggle": "offcanvas", role: "button", onClick: that.pushMenu}, 
+	                                React.createElement("span", {className: "sr-only"}, "Toggle navigation")
+	                            ), 
+	                            React.createElement("div", {className: "navbar-custom-menu"}, 
+	                                React.createElement("ul", {className: "nav navbar-nav"}, 
+	                                    /* Messages: style can be found in dropdown.less*/
+	                                    React.createElement("li", {className: "dropdown messages-menu"}, 
+	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                            React.createElement("i", {className: "fa fa-envelope-o"}), 
+	                                            React.createElement("span", {className: "label label-success"}, that.state.messages.length)
+	                                        ), 
+	                                        React.createElement(HeaderMessages, {messages: that.state.messages})
+	                                    ), 
+	                                    /* Notifications: style can be found in dropdown.less */
+	                                    React.createElement("li", {className: "dropdown notifications-menu"}, 
+	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                            React.createElement("i", {className: "fa fa-bell-o"}), 
+	                                            React.createElement("span", {className: "label label-warning"}, that.state.notifications.length)
+	                                        ), 
+	                                        React.createElement(HeaderNotifications, {notifications: that.state.notifications})
+	                                    ), 
+	                                    /* Tasks: style can be found in dropdown.less */
+	                                    React.createElement("li", {className: "dropdown tasks-menu"}, 
+	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                            React.createElement("i", {className: "fa fa-flag-o"}), 
+	                                            React.createElement("span", {className: "label label-danger"}, that.state.notifications.length)
+	                                        ), 
+	                                        React.createElement(HeaderTasks, {tasks: that.state.tasks})
+	                                    ), 
+	                                    /* User Account: style can be found in dropdown.less */
+	                                    React.createElement("li", {className: "dropdown user user-menu"}, 
+	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                            React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "user-image", alt: "User Image"}), 
+	                                            React.createElement("span", {className: "hidden-xs"}, "Alexander Pierce")
+	                                        ), 
+	                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                            /* User image */
+	                                            React.createElement("li", {className: "user-header"}, 
+	                                                React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"}), 
+	                                                React.createElement("p", null, 
+	                                                    "Alexander Pierce - Web Developer", 
+	                                                    React.createElement("small", null, "Member since Nov. 2012")
+	                                                )
+	                                            ), 
+	                                            /* Menu Body */
+	                                            React.createElement("li", {className: "user-body"}, 
+	                                                React.createElement("div", {className: "col-xs-4 text-center"}, 
+	                                                    React.createElement("a", {href: "#"}, "Followers")
+	                                                ), 
+	                                                React.createElement("div", {className: "col-xs-4 text-center"}, 
+	                                                    React.createElement("a", {href: "#"}, "Sales")
+	                                                ), 
+	                                                React.createElement("div", {className: "col-xs-4 text-center"}, 
+	                                                    React.createElement("a", {href: "#"}, "Friends")
+	                                                )
+	                                            ), 
+	                                            /* Menu Footer */
+	                                            React.createElement("li", {className: "user-footer"}, 
+	                                                React.createElement("div", {className: "pull-left"}, 
+	                                                    React.createElement("a", {href: "#", className: "btn btn-default btn-flat"}, "Profile")
+	                                                ), 
+	                                                React.createElement("div", {className: "pull-right"}, 
+	                                                    React.createElement("a", {href: "#", className: "btn btn-default btn-flat"}, "Sign out")
+	                                                )
+	                                            )
+	                                        )
+	                                    ), 
+	                                    /* ontrol Sidebar Toggle Button */
+	                                    React.createElement("li", null, 
+	                                        React.createElement("a", {href: "#", "data-toggle": "control-sidebar"}, React.createElement("i", {className: "fa fa-gears"}))
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderBar;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 17 */,
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -581,7 +558,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 24 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -617,7 +594,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 25 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -659,7 +636,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 26 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -698,7 +675,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 27 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -743,7 +720,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 28 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -787,7 +764,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 29 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -831,7 +808,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 30 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1213,24 +1190,23 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var HeaderMessages = React.createClass({displayName: "HeaderMessages",
-	            componentDidMount:function(){
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
-	            },
-	    		render: function(){
+	            render: function () {
 	                var that = this;
 
-	                var messageList = this.props.messages.map(function(messageDetails, iterator){
+	                var messageList = this.props.messages.map(function (messageDetails, iterator) {
 	                    return (
 	                        React.createElement("li", {key: "header-message-item"+iterator}, 
 	                            /* start message */
@@ -1248,7 +1224,7 @@ webpackJsonp([2],[
 	                    )
 	                });
 
-	    			return (
+	                return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
 	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
 	                        React.createElement("li", null, 
@@ -1265,39 +1241,36 @@ webpackJsonp([2],[
 	                        ), 
 	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderMessages;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderMessages;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 35 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
-	            componentDidMount:function(){
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
-	            },
-	    		render: function(){
+	            render: function () {
 	                var that = this;
 
-	                var notificationList = this.props.notifications.map(function(notificationDetails, iterator){
+	                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
 	                    return (
 	                        React.createElement("li", {key: "header-notification-item"+iterator}, 
-	                            React.createElement("a", {href: "#"}, 
-	                                React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
-	                            )
+	                        React.createElement("a", {href: "#"}, 
+	                            React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
 	                        )
+	                    )
 	                    )
 	                });
 
-	    			return (
+	                return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
 	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
 	                        React.createElement("li", null, 
@@ -1314,41 +1287,38 @@ webpackJsonp([2],[
 	                        ), 
 	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderNotifications;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderNotifications;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var HeaderTasks = React.createClass({displayName: "HeaderTasks",
-	            componentDidMount:function(){
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 
-	            },
-	    		render: function(){
+	            render: function(){
 	                var that = this;
 	                var stylePercentage, progressBarColor;
 
-	                var taskList = this.props.tasks.map(function(taskDetails, iterator){
+	                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
 	                    stylePercentage = {
-	                        width: taskDetails.percentage+'%'
+	                        width: taskDetails.percentage + '%'
 	                    };
 
 	                    if(taskDetails.percentage < 21){
 	                        progressBarColor = 'progress-bar-red'
-	                    }else if(taskDetails.percentage >20 && taskDetails.percentage < 41){
+	                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
 	                        progressBarColor = 'progress-bar-yellow'
-	                    }else if(taskDetails.percentage >40 && taskDetails.percentage < 61){
+	                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
 	                        progressBarColor = 'progress-bar-green'
-	                    }else if(taskDetails.percentage > 60){
+	                    }else if (taskDetails.percentage > 60){
 	                        progressBarColor = 'progress-bar-aqua';
 	                    }
 
@@ -1368,7 +1338,8 @@ webpackJsonp([2],[
 	                        )
 	                    )
 	                });
-	    			return (
+
+	                return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
 	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
 	                        React.createElement("li", null, 
@@ -1387,12 +1358,12 @@ webpackJsonp([2],[
 	                            React.createElement("a", {href: "#"}, "View all tasks")
 	                        )
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderTasks;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderTasks;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }
 ]);

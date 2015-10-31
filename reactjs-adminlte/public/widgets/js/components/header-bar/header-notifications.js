@@ -1,27 +1,24 @@
 define(
     [
-        'react',
-        'jquery',
+        'react'
     ],
-    function(React,$){
-    	var HeaderNotifications = React.createClass({
-            componentDidMount:function(){
+    function (React) {
+        var HeaderNotifications = React.createClass({
 
-            },
-    		render: function(){
+            render: function () {
                 var that = this;
 
-                var notificationList = this.props.notifications.map(function(notificationDetails, iterator){
+                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
                     return (
                         <li key={"header-notification-item"+iterator}>
-                            <a href="#">
-                                <i className={notificationDetails.className}></i> {notificationDetails.subject}
-                            </a>
-                        </li>
+                        <a href="#">
+                            <i className={notificationDetails.className}></i> {notificationDetails.subject}
+                        </a>
+                    </li>
                     )
                 });
 
-    			return (
+                return (
                     <ul className="dropdown-menu">
                         <li className="header">You have {this.props.notifications.length} notifications</li>
                         <li>
@@ -38,10 +35,10 @@ define(
                         </li>
                         <li className="footer"><a href="#">View all</a></li>
                     </ul>
-    			)
-    		}
-    	})
+                )
+            }
+        });
 
-    	return HeaderNotifications;
-    }   
-)     
+        return HeaderNotifications;
+    }
+)

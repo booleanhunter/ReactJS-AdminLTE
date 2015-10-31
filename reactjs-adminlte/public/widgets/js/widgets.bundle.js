@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11,45 +11,13 @@ webpackJsonp([1],[
 	        __webpack_require__(17),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(11)
+	        __webpack_require__(12)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var InfoBox = React.createClass({displayName: "InfoBox",
-	            render: function () {
-	                var that = this,
-	                    options = this.props.options;
-
-	                return (
-	                    React.createElement("div", {className: "info-box"}, 
-	                        React.createElement("span", {className: "info-box-icon " + options.color}, 
-	                            React.createElement("i", {className: "fa "+options.icon})
-	                        ), 
-
-	                        React.createElement("div", {className: "info-box-content"}, 
-	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                            React.createElement("span", {className: "info-box-number"}, options.stats)
-	                        ), 
-	                        
-	                        options.content
-	                    )
-	                )
-	            }
-	        })
-
-	        return InfoBox;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
+/* 1 */,
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -59,17 +27,18 @@ webpackJsonp([1],[
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
 	        __webpack_require__(3),
-	        __webpack_require__(15),
-	        __webpack_require__(16),
-	        __webpack_require__(1),
-	        __webpack_require__(18),
-	        __webpack_require__(19)
+	        __webpack_require__(26),
+	        __webpack_require__(27),
+	        __webpack_require__(28),
+	        __webpack_require__(29),
+	        __webpack_require__(30)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function () {
@@ -282,118 +251,110 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
 	        __webpack_require__(3),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(33)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderMessages, HeaderNotifications, HeaderTasks){
-	    	var HeaderBar = React.createClass({displayName: "HeaderBar",
-	            getInitialState: function(){
+	        __webpack_require__(34),
+	        __webpack_require__(35),
+	        __webpack_require__(36)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
+	        var HeaderBar = React.createClass({displayName: "HeaderBar",
+	            getInitialState: function () {
 	                return {
 	                    messages: [],
 	                    notifications: [],
 	                    tasks: []
 	                }
 	            },
-	            pushMenu: function(){
+	            pushMenu: function () {
 	                if(document.body.clientWidth > 768){
 	                    if(document.body.className.indexOf('sidebar-collapse') === -1){
 	                        document.body.className += ' sidebar-collapse';
-	                    }else{
-	                        document.body.className = document.body.className.replace(' sidebar-collapse','');
+	                    }else {
+	                        document.body.className = document.body.className.replace(' sidebar-collapse', '');
 	                    }
 	                }else{
-	                    if(document.body.className.indexOf('sidebar-open') === -1){
+	                    if (document.body.className.indexOf('sidebar-open') === -1) {
 	                        document.body.className += ' sidebar-open';
 	                    }else{
 	                        document.body.className = document.body.className.replace(' sidebar-open','');
 	                    }
 	                }
-	                
 	            },
-	            componentDidMount:function(){
-	                var messages = [
-	                    {
-	                        displayName: 'Support Team',
-	                        displayPicture: 'dist/img/user2-160x160.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: '5 mins',   
-	                    },
-	                    {
-	                        displayName: 'AdminLTE Design Team',
-	                        displayPicture: 'dist/img/user3-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: '2 hours',
-	                    },
-	                    {
-	                        displayName: 'Developers',
-	                        displayPicture: 'dist/img/user4-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: 'Today',
-	                    },
-	                    {
-	                        displayName: 'Sales Department',
-	                        displayPicture: 'dist/img/user3-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: 'Yesterday',
-	                    },
-	                    {
-	                        displayName: 'Reviewers',
-	                        displayPicture: 'dist/img/user4-128x128.jpg',
-	                        messageSubject: 'Why not buy a new awesome theme?',
-	                        messageTime: '2 days',
-	                    },
-	                ];
+	            componentDidMount: function () {
+	                var messages = [{
+	                    displayName: 'Support Team',
+	                    displayPicture: 'dist/img/user2-160x160.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: '5 mins',
+	                }, {
+	                    displayName: 'AdminLTE Design Team',
+	                    displayPicture: 'dist/img/user3-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: '2 hours',
+	                }, {
+	                    displayName: 'Developers',
+	                    displayPicture: 'dist/img/user4-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: 'Today',
+	                }, {
+	                    displayName: 'Sales Department',
+	                    displayPicture: 'dist/img/user3-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: 'Yesterday',
+	                }, {
+	                    displayName: 'Reviewers',
+	                    displayPicture: 'dist/img/user4-128x128.jpg',
+	                    messageSubject: 'Why not buy a new awesome theme?',
+	                    messageTime: '2 days',
+	                }];
 
-	                var notifications = [
-	                    {
-	                        subject: '5 new members joined today',
-	                        className: 'fa fa-users text-aqua'
-	                    },
-	                    {
-	                        subject: 'Very long description here that may not fit into the page and may cause design problems',
-	                        className: 'fa fa-warning text-yellow'
-	                    },
-	                    {
-	                        subject: '5 new members joined',
-	                        className: 'fa fa-users text-red'
-	                    },
-	                    {
-	                        subject: '25 sales made',
-	                        className: 'fa fa-shopping-cart text-green'
-	                    },
-	                    {
-	                        subject: 'You changed your username',
-	                        className: 'fa fa-user text-red'
-	                    }
-	                ];
+	                var notifications = [{
+	                    subject: '5 new members joined today',
+	                    className: 'fa fa-users text-aqua'
+	                }, {
+	                    subject: 'Very long description here that may not fit into the page and may cause design problems',
+	                    className: 'fa fa-warning text-yellow'
+	                }, {
+	                    subject: '5 new members joined',
+	                    className: 'fa fa-users text-red'
+	                }, {
+	                    subject: '25 sales made',
+	                    className: 'fa fa-shopping-cart text-green'
+	                }, {
+	                    subject: 'You changed your username',
+	                    className: 'fa fa-user text-red'
+	                }];
 
-	                var tasks = [
-	                    {
-	                        subject: 'Design some buttons',
-	                        percentage: 20
-	                    },
-	                    {
-	                        subject: 'Create a nice theme',
-	                        percentage: 40
-	                    },
-	                    {
-	                        subject: 'Some task I need to do',
-	                        percentage: 60
-	                    },
-	                    {
-	                        subject: 'Make beautiful transitions',
-	                        percentage: 80
-	                    }
-	                ]
+	                var tasks = [{
+	                    subject: 'Design some buttons',
+	                    percentage: 20
+	                }, {
+	                    subject: 'Create a nice theme',
+	                    percentage: 40
+	                }, {
+	                    subject: 'Some task I need to do',
+	                    percentage: 60
+	                }, {
+	                    subject: 'Make beautiful transitions',
+	                    percentage: 80
+	                }];
 
 	                this.setState({
 	                    messages: messages,
@@ -401,10 +362,10 @@ webpackJsonp([1],[
 	                    tasks: tasks
 	                });
 	            },
-	    		render: function(){
+	            render: function () {
 	                var that = this;
-	    			return (
-	    				React.createElement("header", {className: "main-header"}, 
+	                return (
+	                    React.createElement("header", {className: "main-header"}, 
 	                        /* Logo */
 	                        React.createElement("a", {href: "index2.html", className: "logo"}, 
 	                            /* mini logo for sidebar mini 50x50 pixels */
@@ -490,25 +451,25 @@ webpackJsonp([1],[
 	                            )
 	                        )
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderBar;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderBar;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 16 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
 	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var NavigationMenu = React.createClass({displayName: "NavigationMenu",
-	    		render: function(){
-	    			return (
-	    				React.createElement("aside", {className: "main-sidebar"}, 
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
+	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
+	            render: function () {
+	                return (
+	                    React.createElement("aside", {className: "main-sidebar"}, 
 	                        /* sidebar: style can be found in sidebar.less */
 	                        React.createElement("section", {className: "sidebar"}, 
 	                            /* Sidebar user panel */
@@ -534,7 +495,7 @@ webpackJsonp([1],[
 	                            /* sidebar menu: : style can be found in sidebar.less */
 	                            React.createElement("ul", {className: "sidebar-menu"}, 
 	                                React.createElement("li", {className: "header"}, "MAIN NAVIGATION"), 
-	                                React.createElement("li", {className: "treeview"}, 
+	                                React.createElement("li", {className: "active treeview"}, 
 	                                    React.createElement("a", {href: "#"}, 
 	                                        React.createElement("i", {className: "fa fa-dashboard"}), 
 	                                        React.createElement("span", null, 
@@ -543,7 +504,7 @@ webpackJsonp([1],[
 	                                        React.createElement("i", {className: "fa fa-angle-left pull-right"})
 	                                    ), 
 	                                    React.createElement("ul", {className: "treeview-menu"}, 
-	                                        React.createElement("li", null, React.createElement("a", {href: "index.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v1")), 
+	                                        React.createElement("li", {className: "active"}, React.createElement("a", {href: "index.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v1")), 
 	                                        React.createElement("li", null, React.createElement("a", {href: "index2.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Dashboard v2"))
 	                                    )
 	                                ), 
@@ -560,7 +521,7 @@ webpackJsonp([1],[
 	                                        React.createElement("li", null, React.createElement("a", {href: "pages/layout/collapsed-sidebar.html"}, React.createElement("i", {className: "fa fa-circle-o"}), " Collapsed Sidebar"))
 	                                    )
 	                                ), 
-	                                React.createElement("li", {className: "active"}, 
+	                                React.createElement("li", null, 
 	                                    React.createElement("a", {href: "pages/widgets.html"}, 
 	                                        React.createElement("i", {className: "fa fa-th"}), 
 	                                        React.createElement("span", null, "Widgets"), 
@@ -676,16 +637,48 @@ webpackJsonp([1],[
 	                        )
 	                        /* /.sidebar */
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return NavigationMenu
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return NavigationMenu
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 17 */,
-/* 18 */
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var InfoBox = React.createClass({displayName: "InfoBox",
+	            render: function () {
+	                var that = this,
+	                    options = this.props.options;
+
+	                return (
+	                    React.createElement("div", {className: "info-box"}, 
+	                        React.createElement("span", {className: "info-box-icon " + options.color}, 
+	                            React.createElement("i", {className: "fa "+options.icon})
+	                        ), 
+
+	                        React.createElement("div", {className: "info-box-content"}, 
+	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
+	                            React.createElement("span", {className: "info-box-number"}, options.stats)
+	                        ), 
+	                        
+	                        options.content
+	                    )
+	                )
+	            }
+	        })
+
+	        return InfoBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -728,7 +721,7 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 19 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -740,8 +733,7 @@ webpackJsonp([1],[
 	                    options = this.props.options;
 
 	                var link = '',
-	                    stats =
-	                    React.createElement("h3", null, " ", options.stats, " ");
+	                    stats = React.createElement("h3", null, " ", options.stats, " ");
 
 	                if (this.props.options.link) {
 	                    link =
@@ -781,32 +773,21 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var HeaderMessages = React.createClass({displayName: "HeaderMessages",
-	            componentDidMount:function(){
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
-	            },
-	    		render: function(){
+	            render: function () {
 	                var that = this;
 
-	                var messageList = this.props.messages.map(function(messageDetails, iterator){
+	                var messageList = this.props.messages.map(function (messageDetails, iterator) {
 	                    return (
 	                        React.createElement("li", {key: "header-message-item"+iterator}, 
 	                            /* start message */
@@ -824,7 +805,7 @@ webpackJsonp([1],[
 	                    )
 	                });
 
-	    			return (
+	                return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
 	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
 	                        React.createElement("li", null, 
@@ -841,39 +822,36 @@ webpackJsonp([1],[
 	                        ), 
 	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderMessages;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderMessages;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
-	            componentDidMount:function(){
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
-	            },
-	    		render: function(){
+	            render: function () {
 	                var that = this;
 
-	                var notificationList = this.props.notifications.map(function(notificationDetails, iterator){
+	                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
 	                    return (
 	                        React.createElement("li", {key: "header-notification-item"+iterator}, 
-	                            React.createElement("a", {href: "#"}, 
-	                                React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
-	                            )
+	                        React.createElement("a", {href: "#"}, 
+	                            React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
 	                        )
+	                    )
 	                    )
 	                });
 
-	    			return (
+	                return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
 	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
 	                        React.createElement("li", null, 
@@ -890,41 +868,38 @@ webpackJsonp([1],[
 	                        ), 
 	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderNotifications;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderNotifications;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(17),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var HeaderTasks = React.createClass({displayName: "HeaderTasks",
-	            componentDidMount:function(){
+	        __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 
-	            },
-	    		render: function(){
+	            render: function(){
 	                var that = this;
 	                var stylePercentage, progressBarColor;
 
-	                var taskList = this.props.tasks.map(function(taskDetails, iterator){
+	                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
 	                    stylePercentage = {
-	                        width: taskDetails.percentage+'%'
+	                        width: taskDetails.percentage + '%'
 	                    };
 
 	                    if(taskDetails.percentage < 21){
 	                        progressBarColor = 'progress-bar-red'
-	                    }else if(taskDetails.percentage >20 && taskDetails.percentage < 41){
+	                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
 	                        progressBarColor = 'progress-bar-yellow'
-	                    }else if(taskDetails.percentage >40 && taskDetails.percentage < 61){
+	                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
 	                        progressBarColor = 'progress-bar-green'
-	                    }else if(taskDetails.percentage > 60){
+	                    }else if (taskDetails.percentage > 60){
 	                        progressBarColor = 'progress-bar-aqua';
 	                    }
 
@@ -944,7 +919,8 @@ webpackJsonp([1],[
 	                        )
 	                    )
 	                });
-	    			return (
+
+	                return (
 	                    React.createElement("ul", {className: "dropdown-menu"}, 
 	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
 	                        React.createElement("li", null, 
@@ -963,12 +939,12 @@ webpackJsonp([1],[
 	                            React.createElement("a", {href: "#"}, "View all tasks")
 	                        )
 	                    )
-	    			)
-	    		}
-	    	})
+	                )
+	            }
+	        });
 
-	    	return HeaderTasks;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+	        return HeaderTasks;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }
 ]);

@@ -1,29 +1,26 @@
 define(
     [
-        'react',
-        'jquery',
+        'react'
     ],
-    function(React,$){
-    	var HeaderTasks = React.createClass({
-            componentDidMount:function(){
+    function (React) {
+        var HeaderTasks = React.createClass({
 
-            },
-    		render: function(){
+            render: function(){
                 var that = this;
                 var stylePercentage, progressBarColor;
 
-                var taskList = this.props.tasks.map(function(taskDetails, iterator){
+                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
                     stylePercentage = {
-                        width: taskDetails.percentage+'%'
+                        width: taskDetails.percentage + '%'
                     };
 
                     if(taskDetails.percentage < 21){
                         progressBarColor = 'progress-bar-red'
-                    }else if(taskDetails.percentage >20 && taskDetails.percentage < 41){
+                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
                         progressBarColor = 'progress-bar-yellow'
-                    }else if(taskDetails.percentage >40 && taskDetails.percentage < 61){
+                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
                         progressBarColor = 'progress-bar-green'
-                    }else if(taskDetails.percentage > 60){
+                    }else if (taskDetails.percentage > 60){
                         progressBarColor = 'progress-bar-aqua';
                     }
 
@@ -43,7 +40,8 @@ define(
                         </li>
                     )
                 });
-    			return (
+
+                return (
                     <ul className="dropdown-menu">
                         <li className="header">You have {this.props.tasks.length} tasks</li>
                         <li>
@@ -62,10 +60,10 @@ define(
                             <a href="#">View all tasks</a>
                         </li>
                     </ul>
-    			)
-    		}
-    	})
+                )
+            }
+        });
 
-    	return HeaderTasks;
-    }   
-)     
+        return HeaderTasks;
+    }
+)

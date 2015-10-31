@@ -3,11 +3,11 @@ define(
         'react',
         'jquery',
     ],
-    function(React,$){
-    	var NavigationMenu = React.createClass({
-    		render: function(){
-    			return (
-    				<aside className="main-sidebar">
+    function (React, $) {
+        var NavigationMenu = React.createClass({
+            render: function () {
+                return (
+                    <aside className="main-sidebar">
                         {/* sidebar: style can be found in sidebar.less */}
                         <section className="sidebar" >
                             {/* Sidebar user panel */}
@@ -175,10 +175,10 @@ define(
                         </section>
                         {/* /.sidebar */}
                     </aside>
-    			)
-    		}
-    	})
+                )
+            }
+        });
 
-    	return NavigationMenu
-    }   
-)     
+        return NavigationMenu
+    }
+)

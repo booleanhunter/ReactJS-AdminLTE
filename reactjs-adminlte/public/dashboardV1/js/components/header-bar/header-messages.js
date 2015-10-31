@@ -1,17 +1,14 @@
 define(
     [
         'react',
-        'jquery',
     ],
-    function(React,$){
-    	var HeaderMessages = React.createClass({
-            componentDidMount:function(){
+    function (React) {
+        var HeaderMessages = React.createClass({
 
-            },
-    		render: function(){
+            render: function () {
                 var that = this;
 
-                var messageList = this.props.messages.map(function(messageDetails, iterator){
+                var messageList = this.props.messages.map(function (messageDetails, iterator) {
                     return (
                         <li key={"header-message-item"+iterator}>
                             {/* start message */}
@@ -29,7 +26,7 @@ define(
                     )
                 });
 
-    			return (
+                return (
                     <ul className="dropdown-menu">
                         <li className="header">You have {this.props.messages.length} messages</li>
                         <li>
@@ -46,10 +43,10 @@ define(
                         </li>
                         <li className="footer"><a href="#">See All Messages</a></li>
                     </ul>
-    			)
-    		}
-    	})
+                )
+            }
+        });
 
-    	return HeaderMessages;
-    }   
-)     
+        return HeaderMessages;
+    }
+)

@@ -3,11 +3,11 @@ define(
         'react',
         'jquery',
     ],
-    function(React,$){
-    	var NavigationMenu = React.createClass({
-    		render: function(){
-    			return (
-    				<aside className="main-sidebar">
+    function (React, $) {
+        var NavigationMenu = React.createClass({
+            render: function () {
+                return (
+                    <aside className="main-sidebar">
                         {/* sidebar: style can be found in sidebar.less */}
                         <section className="sidebar" >
                             {/* Sidebar user panel */}
@@ -33,7 +33,7 @@ define(
                             {/* sidebar menu: : style can be found in sidebar.less */}
                             <ul className="sidebar-menu">
                                 <li className="header">MAIN NAVIGATION</li>
-                                <li className="treeview">
+                                <li className="active treeview">
                                     <a href="#">
                                         <i className="fa fa-dashboard"></i> 
                                         <span>
@@ -42,7 +42,7 @@ define(
                                         <i className="fa fa-angle-left pull-right"></i>
                                     </a>
                                     <ul className="treeview-menu">
-                                        <li><a href="index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
+                                        <li className="active"><a href="index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
                                         <li><a href="index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
                                     </ul>
                                 </li>
@@ -59,7 +59,7 @@ define(
                                         <li><a href="pages/layout/collapsed-sidebar.html"><i className="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
                                     </ul>
                                 </li>
-                                <li className="active">
+                                <li>
                                     <a href="pages/widgets.html">
                                         <i className="fa fa-th"></i>
                                         <span>Widgets</span> 
@@ -175,10 +175,10 @@ define(
                         </section>
                         {/* /.sidebar */}
                     </aside>
-    			)
-    		}
-    	})
+                )
+            }
+        });
 
-    	return NavigationMenu
-    }   
-)     
+        return NavigationMenu
+    }
+)

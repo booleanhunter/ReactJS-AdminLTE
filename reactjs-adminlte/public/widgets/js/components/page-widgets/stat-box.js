@@ -9,8 +9,7 @@ define(
                     options = this.props.options;
 
                 var link = '',
-                    stats =
-                    <h3> {options.stats} </h3>;
+                    stats = <h3> {options.stats} </h3>;
 
                 if (this.props.options.link) {
                     link =
