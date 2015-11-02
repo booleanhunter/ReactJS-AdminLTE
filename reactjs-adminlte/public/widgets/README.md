@@ -2,6 +2,7 @@
 
 ## List of widgets
 
+
 ### - [InfoBox](./js/components/page-widgets/info-box.js)
 
 A basic info-box for displaying info. This component takes an options object, from props.
@@ -17,7 +18,7 @@ The options object needs 5 values.
 	content: 'Can be a string or a number'
 }
 ```
-##### Usage
+##### Usage: 
 
 ```javascript
 
@@ -31,8 +32,9 @@ var infoBoxOptions = {
 
 <InfoBox options = {infoBoxOptions} />
 ```
-results in this - 
+
 ![](../../screenshots/info-box.png)
+
 
 ### - [ProgressInfoBox](./js/components/page-widgets/progress-info-box.js)
 
@@ -54,6 +56,28 @@ The options object needs 6 values.
 	}
 }
 ```
+##### Usage: 
+
+```javascript
+
+var progressBoxOptions = {
+	color: 'bg-green',
+	icon: 'fa-thumbs-o-up',
+	subject: 'Likes',
+	stats: '41,410',
+	content: '',
+	progress: {
+	    percent: 50,
+	    description: '50% Increase in 30 Days',
+	    color: 'white'
+	} 
+};
+
+<ProgressInfoBox options = {progressBoxOptions} />
+```
+
+![](../../screenshots/progress-info-box.png)
+
 
 ### - [StatBox](./js/components/page-widgets/stat-box.js)
 
@@ -70,3 +94,19 @@ The options object needs 5 values, out of which 1 is optional
 	link: 'Link to go to for more information',	(Optional)
 }
 ```
+##### Usage: 
+
+```javascript
+
+var statBoxOptions = {
+	color: 'bg-yellow',
+	icon: 'ion-person-add',
+	subject: 'User Registrations',
+	stats: '44',
+	link: '#' 
+};
+
+<StatBox options = {statBoxOptions} />
+```
+
+![](../../screenshots/stat-box.png)
