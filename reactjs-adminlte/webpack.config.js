@@ -41,7 +41,7 @@ var config = {
             'window.jQuery': "jquery",
             'window.$': 'jquery'
         }),
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
+        //new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
         new webpack.optimize.CommonsChunkPlugin('vendors', 'widgets/js/vendors.js', Infinity),
 
     ],

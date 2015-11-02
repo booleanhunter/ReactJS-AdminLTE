@@ -131,7 +131,7 @@ define(
                 });
             },
             render: function () {
-
+                console.log(this.props.children);
                 var row1Elements = this.state.row1Options.map(function (options, iterator) {
                     return (
                         <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowOne"+iterator}>

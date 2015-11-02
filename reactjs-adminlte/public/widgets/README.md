@@ -1,8 +1,8 @@
-##### [Go to the widgets folder](./js/components/page-widgets)
+#### [Go to the widgets folder](./js/components/page-widgets)
 
-### List of widgets
+## List of widgets
 
-#### - [InfoBox](./js/components/page-widgets/info-box.js)
+### - [InfoBox](./js/components/page-widgets/info-box.js)
 
 A basic info-box for displaying info. This component takes an options object, from props.
 
@@ -17,8 +17,24 @@ The options object needs 5 values.
 	content: 'Can be a string or a number'
 }
 ```
+##### Usage
 
-#### - [ProgressInfoBox](./js/components/page-widgets/progress-info-box.js)
+```javascript
+
+var infoBoxOptions = {
+	color: 'bg-aqua',
+	icon: 'fa-envelope-o',
+	subject: 'Messages',
+	stats: '1,410',
+	content: '' 
+};
+
+<InfoBox options = {infoBoxOptions} />
+```
+results in this - 
+![](../../screenshots/info-box.png)
+
+### - [ProgressInfoBox](./js/components/page-widgets/progress-info-box.js)
 
 An info-box for displaying info along with a progress bar. This component takes an options object, from props.
 
@@ -39,7 +55,7 @@ The options object needs 6 values.
 }
 ```
 
-#### - [StatBox](./js/components/page-widgets/stat-box.js)
+### - [StatBox](./js/components/page-widgets/stat-box.js)
 
 An box for displaying some basic info, highlighting numbers or stats. This component takes an options object, from props.
 
