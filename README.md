@@ -12,9 +12,11 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
 
 - JQuery slideUp/slideDown animation on mobile - 
+
 ![](./reactjs-adminlte/screenshots/window-jquery.gif)
 
 - With velocity.js, there is a visible performance improvement - 
+
 ![](./reactjs-adminlte/screenshots/window-velocity.gif)
 
 More stuff coming soon. Stay tuned!
