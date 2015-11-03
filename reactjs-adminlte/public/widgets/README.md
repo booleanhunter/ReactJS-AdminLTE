@@ -3,9 +3,9 @@
 ## List of widgets
 
 
-### - [InfoBox](./js/components/page-widgets/info-box.js)
+### - [InfoTile](./js/components/page-widgets/info-tile.js)
 
-A basic info-box for displaying info. This component takes an options object, from props.
+A basic info-tile for displaying info. This component takes an options object, from props.
 
 The options object needs 5 values.
 
@@ -22,7 +22,7 @@ The options object needs 5 values.
 
 ```javascript
 
-var infoBoxOptions = {
+var infoTileOptions = {
 	color: 'bg-aqua',
 	icon: 'fa-envelope-o',
 	subject: 'Messages',
@@ -30,15 +30,15 @@ var infoBoxOptions = {
 	content: '' 
 };
 
-<InfoBox options = {infoBoxOptions} />
+<InfoTile options = {infoTileOptions} />
 ```
 
-![](../../screenshots/info-box.png)
+![](../../screenshots/info-tile.png)
 
 
-### - [ProgressInfoBox](./js/components/page-widgets/progress-info-box.js)
+### - [ProgressInfoTile](./js/components/page-widgets/progress-info-tile.js)
 
-An info-box for displaying info along with a progress bar. This component takes an options object, from props.
+An info-tile for displaying info along with a progress bar. This component takes an options object, from props.
 
 The options object needs 6 values.
 
@@ -60,7 +60,7 @@ The options object needs 6 values.
 
 ```javascript
 
-var progressBoxOptions = {
+var progressTileOptions = {
 	color: 'bg-green',
 	icon: 'fa-thumbs-o-up',
 	subject: 'Likes',
@@ -73,15 +73,15 @@ var progressBoxOptions = {
 	} 
 };
 
-<ProgressInfoBox options = {progressBoxOptions} />
+<ProgressInfoTile options = {progressTileOptions} />
 ```
 
-![](../../screenshots/progress-info-box.png)
+![](../../screenshots/progress-info-tile.png)
 
 
-### - [StatBox](./js/components/page-widgets/stat-box.js)
+### - [StatTile](./js/components/page-widgets/stat-tile.js)
 
-An box for displaying some basic info, highlighting numbers or stats. This component takes an options object, from props.
+An tile for displaying some basic info, highlighting numbers or stats. This component takes an options object, from props.
 
 The options object needs 5 values, out of which 1 is optional
 
@@ -98,7 +98,7 @@ The options object needs 5 values, out of which 1 is optional
 
 ```javascript
 
-var statBoxOptions = {
+var StatTileOptions = {
 	color: 'bg-yellow',
 	icon: 'ion-person-add',
 	subject: 'User Registrations',
@@ -106,7 +106,7 @@ var statBoxOptions = {
 	link: '#' 
 };
 
-<StatBox options = {statBoxOptions} />
+<StatTile options = {StatTileOptions} />
 ```
 
-![](../../screenshots/stat-box.png)
+![](../../screenshots/stat-tile.png)

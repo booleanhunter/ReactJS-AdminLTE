@@ -4,12 +4,12 @@ define(
         'jquery',
         './header-bar/header-bar',
         './navigation-menu',
-        './page-widgets/info-box',
-        './page-widgets/progress-info-box',
-        './page-widgets/stat-box',
-        './page-widgets/small-window'
+        './page-widgets/info-tile',
+        './page-widgets/progress-info-tile',
+        './page-widgets/stat-tile',
+        './page-widgets/small-box'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
@@ -134,25 +134,25 @@ define(
             render: function() {
                 var row1Elements = this.state.row1Options.map(function (options, iterator) {
                     return (
-                        <InfoBox options = {options} key={"rowOne"+iterator}/>
+                        <InfoTile options = {options} key={"rowOne"+iterator}/>
                     )
                 });
 
                 var row2Elements = this.state.row2Options.map(function (options, iterator) {
                     return (
-                        <ProgressInfoBox options = {options} key={"rowTwo"+iterator} />
+                        <ProgressInfoTile options = {options} key={"rowTwo"+iterator} />
                     )
                 });
 
                 var row3Elements = this.state.row3Options.map(function (options, iterator) {
                     return (
-                        <StatBox options = {options} key={"rowThree"+iterator}/>
+                        <StatTile options = {options} key={"rowThree"+iterator}/>
                     )
                 });
 
                 var row4Elements = this.state.row4Options.map(function (options, iterator) {
                     return (
-                        <SmallWindow options = {options} key={"rowFour"+iterator} />
+                        <SmallBox options = {options} key={"rowFour"+iterator} />
                     )
                 });
 

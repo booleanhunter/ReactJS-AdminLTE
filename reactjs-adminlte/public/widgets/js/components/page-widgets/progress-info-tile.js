@@ -3,7 +3,7 @@ define(
         'react'
     ],
     function (React) {
-        var ProgressInfoBox = React.createClass({
+        var ProgressInfoTile = React.createClass({
             getDefaultProps: function() {
                 return {
                     options: {
@@ -54,6 +54,6 @@ define(
             }
         });
 
-        return ProgressInfoBox;
+        return ProgressInfoTile;
     }
 )

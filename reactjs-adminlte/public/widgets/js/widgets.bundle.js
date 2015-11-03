@@ -41,7 +41,7 @@ webpackJsonp([2],[
 	        __webpack_require__(30),
 	        __webpack_require__(31),
 	        __webpack_require__(32)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
 	                return {
@@ -166,25 +166,25 @@ webpackJsonp([2],[
 	            render: function() {
 	                var row1Elements = this.state.row1Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(InfoBox, {options: options, key: "rowOne"+iterator})
+	                        React.createElement(InfoTile, {options: options, key: "rowOne"+iterator})
 	                    )
 	                });
 
 	                var row2Elements = this.state.row2Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(ProgressInfoBox, {options: options, key: "rowTwo"+iterator})
+	                        React.createElement(ProgressInfoTile, {options: options, key: "rowTwo"+iterator})
 	                    )
 	                });
 
 	                var row3Elements = this.state.row3Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(StatBox, {options: options, key: "rowThree"+iterator})
+	                        React.createElement(StatTile, {options: options, key: "rowThree"+iterator})
 	                    )
 	                });
 
 	                var row4Elements = this.state.row4Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(SmallWindow, {options: options, key: "rowFour"+iterator})
+	                        React.createElement(SmallBox, {options: options, key: "rowFour"+iterator})
 	                    )
 	                });
 
@@ -661,7 +661,7 @@ webpackJsonp([2],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var InfoBox = React.createClass({displayName: "InfoBox",
+	        var InfoTile = React.createClass({displayName: "InfoTile",
 	            getDefaultProps: function() {
 	                return {
 	                    options: {
@@ -696,7 +696,7 @@ webpackJsonp([2],[
 	            }
 	        });
 
-	        return InfoBox;
+	        return InfoTile;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
@@ -706,7 +706,7 @@ webpackJsonp([2],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var ProgressInfoBox = React.createClass({displayName: "ProgressInfoBox",
+	        var ProgressInfoTile = React.createClass({displayName: "ProgressInfoTile",
 	            getDefaultProps: function() {
 	                return {
 	                    options: {
@@ -757,7 +757,7 @@ webpackJsonp([2],[
 	            }
 	        });
 
-	        return ProgressInfoBox;
+	        return ProgressInfoTile;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
@@ -767,7 +767,7 @@ webpackJsonp([2],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var StatBox = React.createClass({displayName: "StatBox",
+	        var StatTile = React.createClass({displayName: "StatTile",
 	            getDefaultProps: function() {
 	                return {
 	                    options: {
@@ -822,7 +822,7 @@ webpackJsonp([2],[
 	            }
 	        });
 
-	        return StatBox;
+	        return StatTile;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
@@ -834,7 +834,7 @@ webpackJsonp([2],[
 	        __webpack_require__(2),
 	        __webpack_require__(39)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
-	        var SmallWindow = React.createClass({displayName: "SmallWindow",
+	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            toggleCollapse: function(event) {
 	                var box = ReactDOM.findDOMNode(this).children[0],
 	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
@@ -886,7 +886,7 @@ webpackJsonp([2],[
 	            }
 	        })
 
-	        return SmallWindow;
+	        return SmallBox;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },

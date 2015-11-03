@@ -3,7 +3,7 @@ define(
         'react'
     ],
     function (React) {
-        var InfoBox = React.createClass({
+        var InfoTile = React.createClass({
             getDefaultProps: function() {
                 return {
                     options: {
@@ -38,6 +38,6 @@ define(
             }
         });
 
-        return InfoBox;
+        return InfoTile;
     }
 )

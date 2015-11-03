@@ -5,7 +5,7 @@ define(
         '../../common-functions'
     ],
     function (React, ReactDOM, commonFunctions) {
-        var SmallWindow = React.createClass({
+        var SmallBox = React.createClass({
             toggleCollapse: function(event) {
                 var box = ReactDOM.findDOMNode(this).children[0],
                     boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
@@ -57,6 +57,6 @@ define(
             }
         })
 
-        return SmallWindow;
+        return SmallBox;
     }
 )

@@ -3,7 +3,7 @@ define(
         'react'
     ],
     function (React) {
-        var StatBox = React.createClass({
+        var StatTile = React.createClass({
             getDefaultProps: function() {
                 return {
                     options: {
@@ -58,6 +58,6 @@ define(
             }
         });
 
-        return StatBox;
+        return StatTile;
     }
 )
