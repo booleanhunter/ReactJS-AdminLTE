@@ -11,7 +11,7 @@ define(
     ],
     function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
         var Widgets = React.createClass({
-            getInitialState: function () {
+            getInitialState: function() {
                 return {
                     row1Options: [],
                     row2Options: [],
@@ -19,7 +19,7 @@ define(
                     row4Options: []
                 }
             },
-            componentDidMount: function () {
+            componentDidMount: function() {
                 var row1Options = [{
                     color: 'bg-aqua',
                     icon: 'fa-envelope-o',
@@ -119,6 +119,7 @@ define(
                 }];
 
                 var row4Options = [{
+                    type: 'collapsable', 
                     title: 'Expandable',
                     content: 'The body of the box'
                 }];
@@ -130,37 +131,28 @@ define(
                     row4Options: row4Options
                 });
             },
-            render: function () {
-                console.log(this.props.children);
+            render: function() {
                 var row1Elements = this.state.row1Options.map(function (options, iterator) {
                     return (
-                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowOne"+iterator}>
-                            <InfoBox options = {options} />
-                        </div>
+                        <InfoBox options = {options} key={"rowOne"+iterator}/>
                     )
                 });
 
                 var row2Elements = this.state.row2Options.map(function (options, iterator) {
                     return (
-                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowTwo"+iterator}>
-                            <ProgressInfoBox options = {options} />
-                        </div>
+                        <ProgressInfoBox options = {options} key={"rowTwo"+iterator} />
                     )
                 });
 
                 var row3Elements = this.state.row3Options.map(function (options, iterator) {
                     return (
-                        <div className = "col-md-3 col-sm-6 col-xs-12" key={"rowThree"+iterator}>
-                            <StatBox options = {options} />
-                        </div>
+                        <StatBox options = {options} key={"rowThree"+iterator}/>
                     )
                 });
 
                 var row4Elements = this.state.row4Options.map(function (options, iterator) {
                     return (
-                        <div className = "col-md-3" key={"rowFour"+iterator}>
-                            <SmallWindow options = {options} />
-                        </div>
+                        <SmallWindow options = {options} key={"rowFour"+iterator} />
                     )
                 });
 
@@ -188,7 +180,7 @@ define(
                                 </div>
 
                                 <div className="row">
-                                    {row2Elements}            
+                                    {row2Elements}         
                                 </div>
 
                                 <div className="row">

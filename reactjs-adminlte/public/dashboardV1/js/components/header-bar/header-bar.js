@@ -16,17 +16,18 @@ define(
                 }
             },
             pushMenu: function () {
-                if(document.body.clientWidth > 768){
-                    if(document.body.className.indexOf('sidebar-collapse') === -1){
-                        document.body.className += ' sidebar-collapse';
+                var body = document.body;
+                if(body.clientWidth > 768){
+                    if(body.className.indexOf('sidebar-collapse') === -1){
+                        body.className += ' sidebar-collapse';
                     }else {
-                        document.body.className = document.body.className.replace(' sidebar-collapse', '');
+                        body.className = body.className.replace(' sidebar-collapse', '');
                     }
                 }else{
-                    if (document.body.className.indexOf('sidebar-open') === -1) {
-                        document.body.className += ' sidebar-open';
+                    if (body.className.indexOf('sidebar-open') === -1) {
+                        body.className += ' sidebar-open';
                     }else{
-                        document.body.className = document.body.className.replace(' sidebar-open','');
+                        body.className = body.className.replace(' sidebar-open','');
                     }
                 }
             },

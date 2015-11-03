@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -42,7 +42,7 @@ webpackJsonp([1],[
 	        __webpack_require__(31)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
 	        var Widgets = React.createClass({displayName: "Widgets",
-	            getInitialState: function () {
+	            getInitialState: function() {
 	                return {
 	                    row1Options: [],
 	                    row2Options: [],
@@ -50,7 +50,7 @@ webpackJsonp([1],[
 	                    row4Options: []
 	                }
 	            },
-	            componentDidMount: function () {
+	            componentDidMount: function() {
 	                var row1Options = [{
 	                    color: 'bg-aqua',
 	                    icon: 'fa-envelope-o',
@@ -150,6 +150,7 @@ webpackJsonp([1],[
 	                }];
 
 	                var row4Options = [{
+	                    type: 'collapsable', 
 	                    title: 'Expandable',
 	                    content: 'The body of the box'
 	                }];
@@ -161,37 +162,28 @@ webpackJsonp([1],[
 	                    row4Options: row4Options
 	                });
 	            },
-	            render: function () {
-	                console.log(this.props.children);
+	            render: function() {
 	                var row1Elements = this.state.row1Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowOne"+iterator}, 
-	                            React.createElement(InfoBox, {options: options})
-	                        )
+	                        React.createElement(InfoBox, {options: options, key: "rowOne"+iterator})
 	                    )
 	                });
 
 	                var row2Elements = this.state.row2Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowTwo"+iterator}, 
-	                            React.createElement(ProgressInfoBox, {options: options})
-	                        )
+	                        React.createElement(ProgressInfoBox, {options: options, key: "rowTwo"+iterator})
 	                    )
 	                });
 
 	                var row3Elements = this.state.row3Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12", key: "rowThree"+iterator}, 
-	                            React.createElement(StatBox, {options: options})
-	                        )
+	                        React.createElement(StatBox, {options: options, key: "rowThree"+iterator})
 	                    )
 	                });
 
 	                var row4Elements = this.state.row4Options.map(function (options, iterator) {
 	                    return (
-	                        React.createElement("div", {className: "col-md-3", key: "rowFour"+iterator}, 
-	                            React.createElement(SmallWindow, {options: options})
-	                        )
+	                        React.createElement(SmallWindow, {options: options, key: "rowFour"+iterator})
 	                    )
 	                });
 
@@ -299,17 +291,18 @@ webpackJsonp([1],[
 	                }
 	            },
 	            pushMenu: function () {
-	                if(document.body.clientWidth > 768){
-	                    if(document.body.className.indexOf('sidebar-collapse') === -1){
-	                        document.body.className += ' sidebar-collapse';
+	                var body = document.body;
+	                if(body.clientWidth > 768){
+	                    if(body.className.indexOf('sidebar-collapse') === -1){
+	                        body.className += ' sidebar-collapse';
 	                    }else {
-	                        document.body.className = document.body.className.replace(' sidebar-collapse', '');
+	                        body.className = body.className.replace(' sidebar-collapse', '');
 	                    }
 	                }else{
-	                    if (document.body.className.indexOf('sidebar-open') === -1) {
-	                        document.body.className += ' sidebar-open';
+	                    if (body.className.indexOf('sidebar-open') === -1) {
+	                        body.className += ' sidebar-open';
 	                    }else{
-	                        document.body.className = document.body.className.replace(' sidebar-open','');
+	                        body.className = body.className.replace(' sidebar-open','');
 	                    }
 	                }
 	            },
@@ -664,31 +657,43 @@ webpackJsonp([1],[
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var InfoBox = React.createClass({displayName: "InfoBox",
-	            render: function () {
+	            getDefaultProps: function() {
+	                return {
+	                    options: {
+	                        color: 'bg-red',
+	                        icon: 'fa-star-o',
+	                        subject: 'Default Subject',
+	                        stats: '0',
+	                        content: ''
+	                    }
+	                }
+	            },
+	            render: function() {
 	                var that = this,
 	                    options = this.props.options;
 
 	                return (
-	                    React.createElement("div", {className: "info-box"}, 
-	                        React.createElement("span", {className: "info-box-icon " + options.color}, 
-	                            React.createElement("i", {className: "fa "+options.icon})
-	                        ), 
+	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                        React.createElement("div", {className: "info-box"}, 
+	                            React.createElement("span", {className: "info-box-icon " + options.color}, 
+	                                React.createElement("i", {className: "fa "+options.icon})
+	                            ), 
 
-	                        React.createElement("div", {className: "info-box-content"}, 
-	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                            React.createElement("span", {className: "info-box-number"}, options.stats)
-	                        ), 
-	                        
-	                        options.content
+	                            React.createElement("div", {className: "info-box-content"}, 
+	                                React.createElement("span", {className: "info-box-text"}, options.subject), 
+	                                React.createElement("span", {className: "info-box-number"}, options.stats)
+	                            ), 
+	                            
+	                            options.content
+	                        )
 	                    )
 	                )
 	            }
-	        })
+	        });
 
 	        return InfoBox;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
@@ -701,7 +706,23 @@ webpackJsonp([1],[
 	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProgressInfoBox = React.createClass({displayName: "ProgressInfoBox",
-	            render: function () {
+	            getDefaultProps: function() {
+	                return {
+	                    options: {
+	                        color: 'bg-aqua',
+	                        icon: 'fa-star-o',
+	                        subject: 'Default Subject',
+	                        stats: '0',
+	                        content: '',
+	                        progress: {
+	                            percent: 50,
+	                            description: 'Default progress 50%',
+	                            color: 'white'
+	                        }
+	                    }
+	                }
+	            },
+	            render: function() {
 	                var that = this,
 	                    options = this.props.options;
 
@@ -711,23 +732,25 @@ webpackJsonp([1],[
 	                };
 
 	                return (
-	                    React.createElement("div", {className: "info-box "+options.color}, 
-	                        React.createElement("span", {className: "info-box-icon"}, 
-	                            React.createElement("i", {className: "fa "+options.icon})
-	                        ), 
-
-	                        React.createElement("div", {className: "info-box-content"}, 
-	                            React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                            React.createElement("span", {className: "info-box-number"}, options.stats), 
-	                            React.createElement("div", {className: "progress"}, 
-	                                React.createElement("div", {className: "progress-bar", style: style})
+	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                        React.createElement("div", {className: "info-box "+options.color}, 
+	                            React.createElement("span", {className: "info-box-icon"}, 
+	                                React.createElement("i", {className: "fa "+options.icon})
 	                            ), 
-	                            React.createElement("span", {className: "progress-description"}, 
-	                                options.progress.description
-	                            )
-	                        ), 
-	                        
-	                        options.content
+
+	                            React.createElement("div", {className: "info-box-content"}, 
+	                                React.createElement("span", {className: "info-box-text"}, options.subject), 
+	                                React.createElement("span", {className: "info-box-number"}, options.stats), 
+	                                React.createElement("div", {className: "progress"}, 
+	                                    React.createElement("div", {className: "progress-bar", style: style})
+	                                ), 
+	                                React.createElement("span", {className: "progress-description"}, 
+	                                    options.progress.description
+	                                )
+	                            ), 
+	                            
+	                            options.content
+	                        )
 	                    )
 	                )
 	            }
@@ -744,21 +767,32 @@ webpackJsonp([1],[
 	        __webpack_require__(18)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var StatBox = React.createClass({displayName: "StatBox",
-	            render: function () {
+	            getDefaultProps: function() {
+	                return {
+	                    options: {
+	                        color: 'bg-yellow',
+	                        icon: 'ion-person-add',
+	                        subject: 'Default Subject',
+	                        stats: '0',
+	                        link: '/default/link'
+	                    }
+	                }
+	            },
+	            render: function() {
 	                var that = this,
 	                    options = this.props.options;
 
 	                var link = '',
 	                    stats = React.createElement("h3", null, " ", options.stats, " ");
 
-	                if (this.props.options.link) {
+	                if(this.props.options.link) {
 	                    link =
 	                        React.createElement("a", {href: options.link, className: "small-box-footer"}, 
 	                            "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
 	                        );
 	                }
 
-	                if (options.stats.indexOf('%') !== -1) {
+	                if(options.stats.indexOf('%') !== -1) {
 	                    var style = {
 	                        fontSize: '20px'
 	                    };
@@ -770,16 +804,18 @@ webpackJsonp([1],[
 	                        )
 	                }
 
-	                return (
-	                    React.createElement("div", {className: "small-box "+options.color}, 
-	                        React.createElement("div", {className: "inner"}, 
-	                            stats, 
-	                            React.createElement("p", null, options.subject)
-	                        ), 
-	                        React.createElement("div", {className: "icon"}, 
-	                            React.createElement("i", {className: "fa "+options.icon})
-	                        ), 
-	                        link
+	                return(
+	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
+	                        React.createElement("div", {className: "small-box "+options.color}, 
+	                            React.createElement("div", {className: "inner"}, 
+	                                stats, 
+	                                React.createElement("p", null, options.subject)
+	                            ), 
+	                            React.createElement("div", {className: "icon"}, 
+	                                React.createElement("i", {className: "fa "+options.icon})
+	                            ), 
+	                            link
+	                        )
 	                    )
 	                )
 	            }
@@ -794,36 +830,69 @@ webpackJsonp([1],[
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(18),
-	        __webpack_require__(2)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
+	        __webpack_require__(2),
+	        __webpack_require__(3)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, $) {
 	        var SmallWindow = React.createClass({displayName: "SmallWindow",
-	            toggleCollapse: function (event){
-	                if(ReactDOM.findDOMNode(this).className.indexOf('collapsed-box') !== -1){
-	                    ReactDOM.findDOMNode(this).className = ReactDOM.findDOMNode(this).className.replace(/ collapsed-box/g,'');
-	                }else{
-	                    ReactDOM.findDOMNode(this).className += ' collapsed-box';
+	            toggleCollapse: function(event) {
+	                var box = ReactDOM.findDOMNode(this).children[0],
+	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
+	                    icon = event.currentTarget.children[0],
+	                    that = this;
+
+	                if(box.className.indexOf('collapsed-box') !== -1) {
+	                    icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
+
+	                    $(boxBody).slideDown(500, function () {
+	                        box.className = box.className.replace(/ collapsed-box/g, '');
+	                    });
+	                } else {
+	                    icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
+
+	                    $(boxBody).slideUp(500, function () {
+	                        box.className += ' collapsed-box';
+	                    });
 	                }
 	            },
-	            render: function () {
+	            render: function() {
 	                var that = this,
-	                    options = this.props.options;
+	                    options = this.props.options,
+	                    boxClassname, button;
 
-	                return (
-	                    React.createElement("div", {className: "box box-default collapsed-box"}, 
-	                        React.createElement("div", {className: "box-header with-border"}, 
-	                            React.createElement("h3", {className: "box-title"}, options.title), 
-	                            React.createElement("div", {className: "box-tools pull-right"}, 
-	                                React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
-	                                    React.createElement("i", {className: "fa fa-plus"})
+	                switch(options.type){
+	                    case 'expandable': 
+	                        boxClassname = "collapsed-box";
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
+	                                React.createElement("i", {className: "fa fa-plus"})
+	                            );
+	                        break;
+
+	                    case 'collapsable':
+	                        boxClassname = '';
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
+	                                React.createElement("i", {className: "fa fa-minus"})
+	                            );
+	                        break;  
+	                }
+
+	                return(
+	                    React.createElement("div", {className: "col-md-3"}, 
+	                        React.createElement("div", {className: "box box-default "+boxClassname}, 
+	                            React.createElement("div", {className: "box-header with-border"}, 
+	                                React.createElement("h3", {className: "box-title"}, options.title), 
+	                                React.createElement("div", {className: "box-tools pull-right"}, 
+	                                    button
 	                                )
+	                                /* /.box-tools */
+	                            ), 
+	                            /* /.box-header */
+	                            React.createElement("div", {className: "box-body"}, 
+	                                options.content
 	                            )
-	                            /* /.box-tools */
-	                        ), 
-	                        /* /.box-header */
-	                        React.createElement("div", {className: "box-body"}, 
-	                            options.content
+	                            /* /.box-body */
 	                        )
-	                        /* /.box-body */
 	                    )
 	                )
 	            }

@@ -1,30 +1,42 @@
-
 define(
     [
         'react'
     ],
     function (React) {
         var InfoBox = React.createClass({
-            render: function () {
+            getDefaultProps: function() {
+                return {
+                    options: {
+                        color: 'bg-red',
+                        icon: 'fa-star-o',
+                        subject: 'Default Subject',
+                        stats: '0',
+                        content: ''
+                    }
+                }
+            },
+            render: function() {
                 var that = this,
                     options = this.props.options;
 
                 return (
-                    <div className="info-box">
-                        <span className={"info-box-icon " + options.color}>
-                            <i className={"fa "+options.icon}></i>
-                        </span>
+                    <div className = "col-md-3 col-sm-6 col-xs-12">
+                        <div className="info-box">
+                            <span className={"info-box-icon " + options.color}>
+                                <i className={"fa "+options.icon}></i>
+                            </span>
 
-                        <div className="info-box-content">
-                            <span className="info-box-text">{options.subject}</span>
-                            <span className="info-box-number">{options.stats}</span>
+                            <div className="info-box-content">
+                                <span className="info-box-text">{options.subject}</span>
+                                <span className="info-box-number">{options.stats}</span>
+                            </div>
+                            
+                            {options.content}
                         </div>
-                        
-                        {options.content}
                     </div>
                 )
             }
-        })
+        });
 
         return InfoBox;
     }
