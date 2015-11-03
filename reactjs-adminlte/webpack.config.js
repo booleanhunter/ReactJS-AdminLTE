@@ -17,6 +17,7 @@ var config = {
             react: lib_dir + '/react.js',
             reactDom: lib_dir + '/react-dom',
             jquery: lib_dir + '/jQuery-2.1.4.min.js',
+            velocity: lib_dir + '/velocity.min.js',
             jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
             bootstrap: plugins_dir + '/bootstrap/js/bootstrap.min.js',
             //raphael: plugins_dir + '/raphael/raphael.min.js',
@@ -49,7 +50,7 @@ var config = {
     entry: {
         dashboardV1: './public/dashboardV1/js/main',
         widgets: './public/widgets/js/main',
-        vendors: ['react','reactDom','jquery','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
+        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 
     output: {

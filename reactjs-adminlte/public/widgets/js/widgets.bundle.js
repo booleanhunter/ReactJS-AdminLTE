@@ -8,10 +8,10 @@ webpackJsonp([2],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18),
+	        __webpack_require__(19),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(12)
+	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
@@ -28,18 +28,19 @@ webpackJsonp([2],[
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18),
+	        __webpack_require__(19),
 	        __webpack_require__(3),
-	        __webpack_require__(26),
 	        __webpack_require__(27),
 	        __webpack_require__(28),
 	        __webpack_require__(29),
 	        __webpack_require__(30),
-	        __webpack_require__(31)
+	        __webpack_require__(31),
+	        __webpack_require__(32)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoBox, ProgressInfoBox, StatBox, SmallWindow) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
@@ -259,7 +260,6 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
@@ -272,15 +272,16 @@ webpackJsonp([2],[
 /* 23 */,
 /* 24 */,
 /* 25 */,
-/* 26 */
+/* 26 */,
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18),
+	        __webpack_require__(19),
 	        __webpack_require__(3),
-	        __webpack_require__(35),
 	        __webpack_require__(36),
-	        __webpack_require__(37)
+	        __webpack_require__(37),
+	        __webpack_require__(38)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -468,11 +469,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18),
+	        __webpack_require__(19),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -654,11 +655,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18)
+	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var InfoBox = React.createClass({displayName: "InfoBox",
 	            getDefaultProps: function() {
@@ -699,11 +700,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18)
+	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProgressInfoBox = React.createClass({displayName: "ProgressInfoBox",
 	            getDefaultProps: function() {
@@ -760,11 +761,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18)
+	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var StatBox = React.createClass({displayName: "StatBox",
 	            getDefaultProps: function() {
@@ -825,34 +826,21 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18),
+	        __webpack_require__(19),
 	        __webpack_require__(2),
-	        __webpack_require__(3)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, $) {
+	        __webpack_require__(39)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var SmallWindow = React.createClass({displayName: "SmallWindow",
 	            toggleCollapse: function(event) {
 	                var box = ReactDOM.findDOMNode(this).children[0],
 	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
-	                    icon = event.currentTarget.children[0],
-	                    that = this;
+	                    icon = event.currentTarget.children[0];
 
-	                if(box.className.indexOf('collapsed-box') !== -1) {
-	                    icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
-
-	                    $(boxBody).slideDown(500, function () {
-	                        box.className = box.className.replace(/ collapsed-box/g, '');
-	                    });
-	                } else {
-	                    icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
-
-	                    $(boxBody).slideUp(500, function () {
-	                        box.className += ' collapsed-box';
-	                    });
-	                }
+	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
 	            },
 	            render: function() {
 	                var that = this,
@@ -902,14 +890,14 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18),
+	        __webpack_require__(19),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -959,11 +947,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18)
+	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -1005,11 +993,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(18)
+	        __webpack_require__(19)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 
@@ -1073,6 +1061,45 @@ webpackJsonp([2],[
 	        });
 
 	        return HeaderTasks;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        exports,
+	        __webpack_require__(3),
+	        __webpack_require__(4)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (exports, $, velocity) {
+
+	        exports.toggleBoxCollapse = function(box, boxBody, icon) {
+	            if(box.className.indexOf('collapsed-box') !== -1) {
+	                icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
+	                $(boxBody).velocity('slideDown', {
+	                    duration: 500,
+	                    easing: 'easeInSine',
+	                    complete: function() {
+	                        box.className = box.className.replace(/ collapsed-box/g, '');
+	                    }
+	                });
+	                // $(boxBody).slideDown(500, function () {
+	                //     box.className = box.className.replace(/ collapsed-box/g, '');
+	                // });
+	            } else {
+	                icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
+	                $(boxBody).velocity('slideUp', {
+	                    duration: 500,
+	                    easing: 'easeInSine',
+	                    complete: function() {
+	                        box.className += ' collapsed-box';
+	                    }
+	                });
+	                // $(boxBody).slideUp(500, function () {
+	                //     box.className += ' collapsed-box';
+	                // });
+	            }
+	        }
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }

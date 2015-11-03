@@ -2,29 +2,16 @@ define(
     [
         'react',
         'reactDom',
-        'jquery'
+        '../../common-functions'
     ],
-    function (React, ReactDOM, $) {
+    function (React, ReactDOM, commonFunctions) {
         var SmallWindow = React.createClass({
             toggleCollapse: function(event) {
                 var box = ReactDOM.findDOMNode(this).children[0],
                     boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
-                    icon = event.currentTarget.children[0],
-                    that = this;
+                    icon = event.currentTarget.children[0];
 
-                if(box.className.indexOf('collapsed-box') !== -1) {
-                    icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
-
-                    $(boxBody).slideDown(500, function () {
-                        box.className = box.className.replace(/ collapsed-box/g, '');
-                    });
-                } else {
-                    icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
-
-                    $(boxBody).slideUp(500, function () {
-                        box.className += ' collapsed-box';
-                    });
-                }
+                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
             },
             render: function() {
                 var that = this,
