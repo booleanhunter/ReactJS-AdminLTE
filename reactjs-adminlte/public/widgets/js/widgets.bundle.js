@@ -11,7 +11,7 @@ webpackJsonp([2],[
 	        __webpack_require__(19),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(13)
+	        __webpack_require__(12)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
@@ -28,8 +28,7 @@ webpackJsonp([2],[
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */,
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -40,15 +39,18 @@ webpackJsonp([2],[
 	        __webpack_require__(29),
 	        __webpack_require__(30),
 	        __webpack_require__(31),
-	        __webpack_require__(32)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox) {
+	        __webpack_require__(32),
+	        __webpack_require__(33)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox, ChatBox) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
 	                return {
 	                    row1Options: [],
 	                    row2Options: [],
 	                    row3Options: [],
-	                    row4Options: []
+	                    row4Options: [],
+	                    row5Options: [],
+	                    row6Options: []
 	                }
 	            },
 	            componentDidMount: function() {
@@ -151,16 +153,65 @@ webpackJsonp([2],[
 	                }];
 
 	                var row4Options = [{
-	                    type: 'collapsable', 
+	                    type: 'expandable', 
+	                    theme: 'box-default',
 	                    title: 'Expandable',
 	                    content: 'The body of the box'
+	                }, {
+	                    type: 'collapsable',
+	                    theme: 'box-success',
+	                    title: 'Removable',
+	                    content: 'The body of the box'
+	                }, {
+	                    type: 'collapsable', 
+	                    theme: 'box-warning',
+	                    title: 'Collapsable',
+	                    content: 'The body of the box'
+	                }, {
+	                    type: 'removable',
+	                    theme: 'box-danger',
+	                    loading: true,
+	                    title: 'Loading state',
+	                    content: 'The body of the box'      
 	                }];
+
+	                var row5Options = [{
+	                    type: 'expandable', 
+	                    theme: 'box-primary',
+	                    border: true,
+	                    title: 'Expandable',
+	                    content: 'The body of the box'
+	                }, {
+	                    type: 'collapsable',
+	                    theme: 'box-warning',
+	                    border: true,
+	                    title: 'Removable',
+	                    content: 'The body of the box'
+	                }, {
+	                    type: 'removable', 
+	                    theme: 'box-danger',
+	                    border: true,
+	                    title: 'Collapsable',
+	                    content: 'The body of the box'
+	                }, {
+	                    type: 'removable',
+	                    theme: 'box-info',
+	                    loading: true,
+	                    border: true,
+	                    title: 'Loading state',
+	                    content: 'The body of the box'      
+	                }];
+
+	                var row6Options = [
+
+	                ]
 
 	                this.setState({
 	                    row1Options: row1Options,
 	                    row2Options: row2Options,
 	                    row3Options: row3Options,
-	                    row4Options: row4Options
+	                    row4Options: row4Options,
+	                    row5Options: row5Options
 	                });
 	            },
 	            render: function() {
@@ -183,6 +234,12 @@ webpackJsonp([2],[
 	                });
 
 	                var row4Elements = this.state.row4Options.map(function (options, iterator) {
+	                    return (
+	                        React.createElement(SmallBox, {options: options, key: "rowFour"+iterator})
+	                    )
+	                });
+
+	                var row5Elements = this.state.row5Options.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(SmallBox, {options: options, key: "rowFour"+iterator})
 	                    )
@@ -223,12 +280,12 @@ webpackJsonp([2],[
 	                                    row4Elements
 	                                ), 
 
-	                                React.createElement("div", {className: "row"}
-	                                                     
+	                                React.createElement("div", {className: "row"}, 
+	                                    row5Elements
 	                                ), 
 
-	                                React.createElement("div", {className: "row"}
-	                                                     
+	                                React.createElement("div", {className: "row"}, 
+	                                    React.createElement(ChatBox, null)
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}
@@ -260,6 +317,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
@@ -279,9 +337,9 @@ webpackJsonp([2],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19),
 	        __webpack_require__(3),
-	        __webpack_require__(36),
 	        __webpack_require__(37),
-	        __webpack_require__(38)
+	        __webpack_require__(38),
+	        __webpack_require__(39)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -832,9 +890,21 @@ webpackJsonp([2],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19),
 	        __webpack_require__(2),
-	        __webpack_require__(39)
+	        __webpack_require__(40)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var SmallBox = React.createClass({displayName: "SmallBox",
+	            getDefaultProps: function() {
+	                return {
+	                    options: {
+	                        type: 'expandable',
+	                        theme: 'box-default',
+	                        loading: false,
+	                        border: true,
+	                        title: 'Default title',
+	                        content: 'Default content',
+	                    }
+	                }
+	            },
 	            toggleCollapse: function(event) {
 	                var box = ReactDOM.findDOMNode(this).children[0],
 	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
@@ -842,10 +912,14 @@ webpackJsonp([2],[
 
 	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
 	            },
+	            removeBox: function(event){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+	                commonFunctions.removeBox(box);
+	            },
 	            render: function() {
 	                var that = this,
 	                    options = this.props.options,
-	                    boxClassname, button;
+	                    boxClassname, button, borderClass, loadingState;
 
 	                switch(options.type){
 	                    case 'expandable': 
@@ -862,12 +936,31 @@ webpackJsonp([2],[
 	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
 	                                React.createElement("i", {className: "fa fa-minus"})
 	                            );
-	                        break;  
+	                        break;
+
+	                    case 'removable':
+	                        boxClassname = '';
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "remove", onClick: that.removeBox}, 
+	                                React.createElement("i", {className: "fa fa-times"})
+	                            );
+	                        break; 
+	                }
+
+	                if(options.loading === true){
+	                    loadingState = 
+	                        React.createElement("div", {className: "overlay"}, 
+	                            React.createElement("i", {className: "fa fa-refresh fa-spin"})
+	                        )
+	                }
+
+	                if(options.border === true){
+	                    borderClass = 'box-solid';
 	                }
 
 	                return(
 	                    React.createElement("div", {className: "col-md-3"}, 
-	                        React.createElement("div", {className: "box box-default "+boxClassname}, 
+	                        React.createElement("div", {className: "box"+" " + options.theme+" " + boxClassname + " "+borderClass}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
 	                                React.createElement("h3", {className: "box-title"}, options.title), 
 	                                React.createElement("div", {className: "box-tools pull-right"}, 
@@ -878,8 +971,9 @@ webpackJsonp([2],[
 	                            /* /.box-header */
 	                            React.createElement("div", {className: "box-body"}, 
 	                                options.content
-	                            )
+	                            ), 
 	                            /* /.box-body */
+	                            loadingState
 	                        )
 	                    )
 	                )
@@ -890,10 +984,148 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */,
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(19),
+	        __webpack_require__(2),
+	        __webpack_require__(40)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        var ChatBox = React.createClass({displayName: "ChatBox",
+	            toggleCollapse: function(event) {
+	                var box = ReactDOM.findDOMNode(this).children[0],
+	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
+	                    icon = event.currentTarget.children[0];
+
+	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
+	            },
+	            removeBox: function(event){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+	                commonFunctions.removeBox(box);
+	            },
+	            render: function() {
+	                return (
+	                    React.createElement("div", {className: "col-md-3"}, 
+	                        /* DIRECT CHAT PRIMARY */
+	                        React.createElement("div", {className: "box box-primary direct-chat direct-chat-primary"}, 
+	                            React.createElement("div", {className: "box-header with-border"}, 
+	                                React.createElement("h3", {className: "box-title"}, "Direct Chat"), 
+	                                React.createElement("div", {className: "box-tools pull-right"}, 
+	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge bg-light-blue", "data-original-title": "3 New Messages"}, 
+	                                        "3"
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse"}, 
+	                                        React.createElement("i", {className: "fa fa-minus"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts"}, 
+	                                        React.createElement("i", {className: "fa fa-comments"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove"}, 
+	                                        React.createElement("i", {className: "fa fa-times"})
+	                                    )
+	                                )
+	                            ), 
+	                            /* /.box-header */
+	                            React.createElement("div", {className: "box-body"}, 
+	                                /* Conversations are loaded here */
+	                                React.createElement("div", {className: "direct-chat-messages"}, 
+	                                    /* Message. Default to the left */
+	                                    React.createElement("div", {className: "direct-chat-msg"}, 
+	                                        React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                            React.createElement("span", {className: "direct-chat-name pull-left"}, 
+	                                                "Alexander Pierce"
+	                                            ), 
+	                                            React.createElement("span", {className: "direct-chat-timestamp pull-right"}, 
+	                                                "23 Jan 2:00 pm"
+	                                            )
+	                                        ), 
+	                                        /* /.direct-chat-info */
+	                                        React.createElement("img", {className: "direct-chat-img", src: "../dist/img/user1-128x128.jpg", alt: "message user image"}), 
+	                                        /* /.direct-chat-img */
+	                                        React.createElement("div", {className: "direct-chat-text"}, 
+	                                            "Is this template really for free? Thats unbelievable!"
+	                                        )
+	                                        /* /.direct-chat-text */
+	                                    ), 
+	                                    /* /.direct-chat-msg */
+
+	                                    /* Message to the right */
+	                                    React.createElement("div", {className: "direct-chat-msg right"}, 
+	                                        React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                            React.createElement("span", {className: "direct-chat-name pull-right"}, 
+	                                                "Sarah Bullock"
+	                                            ), 
+	                                            React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
+	                                                "23 Jan 2:05 pm"
+	                                            )
+	                                        ), 
+	                                        /* /.direct-chat-info */
+	                                        React.createElement("img", {className: "direct-chat-img", src: "../dist/img/user3-128x128.jpg", alt: "message user image"}), 
+	                                        /* /.direct-chat-img */
+	                                        React.createElement("div", {className: "direct-chat-text"}, 
+	                                            "You better believe it!"
+	                                        )
+	                                        /* /.direct-chat-text */
+	                                    )
+	                                    /* /.direct-chat-msg */
+	                                ), 
+	                                /*/.direct-chat-messages*/
+
+	                                /* Contacts are loaded here */
+	                                React.createElement("div", {className: "direct-chat-contacts"}, 
+	                                    React.createElement("ul", {className: "contacts-list"}, 
+	                                        React.createElement("li", null, 
+	                                            React.createElement("a", {href: "#"}, 
+	                                                React.createElement("img", {className: "contacts-list-img", src: "../dist/img/user1-128x128.jpg"}), 
+	                                                React.createElement("div", {className: "contacts-list-info"}, 
+	                                                    React.createElement("span", {className: "contacts-list-name"}, 
+	                                                        "Count Dracula", 
+	                                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
+	                                                        "2/28/2015"
+	                                                    )
+	                                                ), 
+	                                                    React.createElement("span", {className: "contacts-list-msg"}, 
+	                                                        "How have you been? I was..."
+	                                                    )
+	                                                )
+	                                                /* /.contacts-list-info */
+	                                            )
+	                                        )
+	                                        /* End Contact Item */
+	                                    )
+	                                    /* /.contatcts-list */
+	                                )
+	                                /* /.direct-chat-pane */
+	                            ), 
+	                            /* /.box-body */
+	                            React.createElement("div", {className: "box-footer"}, 
+	                                React.createElement("form", {action: "#", method: "post"}, 
+	                                    React.createElement("div", {className: "input-group"}, 
+	                                        React.createElement("input", {type: "text", name: "message", placeholder: "Type Message ...", className: "form-control"}), 
+	                                        React.createElement("span", {className: "input-group-btn"}, 
+	                                            React.createElement("button", {type: "button", className: "btn btn-primary btn-flat"}, "Send")
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                            /* /.box-footer*/
+	                        )
+	                        /*/.direct-chat */
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return ChatBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
 /* 34 */,
 /* 35 */,
-/* 36 */
+/* 36 */,
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -947,7 +1179,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -993,7 +1225,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1064,7 +1296,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1099,6 +1331,13 @@ webpackJsonp([2],[
 	                //     box.className += ' collapsed-box';
 	                // });
 	            }
+	        };
+
+	        exports.removeBox = function(box){
+	            $(box).velocity('slideUp', {
+	                duration: 500,
+	                easing: 'easeInSine'
+	            });
 	        }
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 

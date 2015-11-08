@@ -32,6 +32,13 @@ define(
                 //     box.className += ' collapsed-box';
                 // });
             }
+        };
+
+        exports.removeBox = function(box){
+            $(box).velocity('slideUp', {
+                duration: 500,
+                easing: 'easeInSine'
+            });
         }
     }
 )

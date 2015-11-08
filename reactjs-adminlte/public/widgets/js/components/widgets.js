@@ -7,16 +7,19 @@ define(
         './page-widgets/info-tile',
         './page-widgets/progress-info-tile',
         './page-widgets/stat-tile',
-        './page-widgets/small-box'
+        './page-widgets/small-box',
+        './page-widgets/chat-box'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox, ChatBox) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
                     row1Options: [],
                     row2Options: [],
                     row3Options: [],
-                    row4Options: []
+                    row4Options: [],
+                    row5Options: [],
+                    row6Options: []
                 }
             },
             componentDidMount: function() {
@@ -119,16 +122,65 @@ define(
                 }];
 
                 var row4Options = [{
-                    type: 'collapsable', 
+                    type: 'expandable', 
+                    theme: 'box-default',
                     title: 'Expandable',
                     content: 'The body of the box'
+                }, {
+                    type: 'collapsable',
+                    theme: 'box-success',
+                    title: 'Removable',
+                    content: 'The body of the box'
+                }, {
+                    type: 'collapsable', 
+                    theme: 'box-warning',
+                    title: 'Collapsable',
+                    content: 'The body of the box'
+                }, {
+                    type: 'removable',
+                    theme: 'box-danger',
+                    loading: true,
+                    title: 'Loading state',
+                    content: 'The body of the box'      
                 }];
+
+                var row5Options = [{
+                    type: 'expandable', 
+                    theme: 'box-primary',
+                    border: true,
+                    title: 'Expandable',
+                    content: 'The body of the box'
+                }, {
+                    type: 'collapsable',
+                    theme: 'box-warning',
+                    border: true,
+                    title: 'Removable',
+                    content: 'The body of the box'
+                }, {
+                    type: 'removable', 
+                    theme: 'box-danger',
+                    border: true,
+                    title: 'Collapsable',
+                    content: 'The body of the box'
+                }, {
+                    type: 'removable',
+                    theme: 'box-info',
+                    loading: true,
+                    border: true,
+                    title: 'Loading state',
+                    content: 'The body of the box'      
+                }];
+
+                var row6Options = [
+
+                ]
 
                 this.setState({
                     row1Options: row1Options,
                     row2Options: row2Options,
                     row3Options: row3Options,
-                    row4Options: row4Options
+                    row4Options: row4Options,
+                    row5Options: row5Options
                 });
             },
             render: function() {
@@ -151,6 +203,12 @@ define(
                 });
 
                 var row4Elements = this.state.row4Options.map(function (options, iterator) {
+                    return (
+                        <SmallBox options = {options} key={"rowFour"+iterator} />
+                    )
+                });
+
+                var row5Elements = this.state.row5Options.map(function (options, iterator) {
                     return (
                         <SmallBox options = {options} key={"rowFour"+iterator} />
                     )
@@ -192,11 +250,11 @@ define(
                                 </div>
 
                                 <div className="row">
-                                                     
+                                    {row5Elements}             
                                 </div>
 
                                 <div className="row">
-                                                     
+                                    <ChatBox />               
                                 </div>
 
                                 <div className="row">

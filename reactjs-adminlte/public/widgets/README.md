@@ -18,7 +18,7 @@ The options object needs 5 values.
 	content: 'Can be a string or a number'
 }
 ```
-##### Usage: 
+#### Usage: 
 
 ```javascript
 
@@ -56,7 +56,7 @@ The options object needs 6 values.
 	}
 }
 ```
-##### Usage: 
+#### Usage: 
 
 ```javascript
 
@@ -94,7 +94,7 @@ The options object needs 5 values, out of which 1 is optional
 	link: 'Link to go to for more information',	(Optional)
 }
 ```
-##### Usage: 
+#### Usage: 
 
 ```javascript
 
@@ -110,3 +110,89 @@ var StatTileOptions = {
 ```
 
 ![](../../screenshots/stat-tile.png)
+
+
+### - [SmallBox](./js/components/page-widgets/small-box.js)
+
+An box / window for displaying some basic info, to which properties can be applied. This component takes an options object, from props.
+
+The options object takes 6 values, out of which 2 are optional
+
+```javascript
+{
+	type: 'expandable' / 'collapsable' / 'removable', (To make the box expandable, collapsable or removable)
+	theme: 'box-default' / 'box-primary' / 'box-warning' / 'box-danger' / 'box-success',
+	loading: true, (Optional boolean value, to show a loading animation)
+	border: true, (Optional boolean value, will apply a border for the box and color for the title bar)
+	title: 'Can be a string or a number',
+	content: 'Can be a string or a number'
+}
+```
+#### Usage: 
+
+##### An expandable box with border
+
+```javascript
+
+var SmallBoxOptions = {
+	type: 'expandable'
+	theme: 'box-default',
+	border: true,
+	title: 'Expandable',
+	content: 'The body of the box'
+};
+
+<SmallBox options = {SmallBoxOptions} />
+```
+
+![](../../screenshots/small-box-expandable.png)
+
+##### An collapsable box with border
+
+```javascript
+
+var SmallBoxOptions = {
+	type: 'collapsable'
+	theme: 'box-primary',
+	border: true,
+	title: 'Collapsable',
+	content: 'The body of the box'
+};
+
+<SmallBox options = {SmallBoxOptions} />
+```
+
+![](../../screenshots/small-box-collapsable.png)
+
+##### A removable box without border
+
+```javascript
+
+var SmallBoxOptions = {
+	type: 'removable'
+	theme: 'box-danger',
+	title: 'Removable',
+	content: 'The body of the box'
+};
+
+<SmallBox options = {SmallBoxOptions} />
+```
+
+![](../../screenshots/small-box-removable.png)
+
+##### A removable box without border with loading animation
+
+```javascript
+
+var SmallBoxOptions = {
+	type: 'removable'
+	theme: 'box-warning',
+	loading: true,
+	title: 'Loading state',
+	content: 'The body of the box'
+};
+
+<SmallBox options = {SmallBoxOptions} />
+```
+
+![](../../screenshots/small-box-loading.png)
