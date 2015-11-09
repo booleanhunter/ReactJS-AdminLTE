@@ -57,10 +57,9 @@ define(
 
                         <footer className="main-footer">
                             <div className="pull-right hidden-xs">
-                                <b>Version</b> 2.3.0
+                                <b>Version</b> 1.0.0
                             </div>
-                            <strong>Copyright © 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong>
-                            All rights reserved.
+                            <strong>This project is a derivative of <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong>
                         </footer>
 
                         {/*<ControlsMenu />*/}

@@ -39,6 +39,19 @@ define(
                 duration: 500,
                 easing: 'easeInSine'
             });
-        }
+        };
+
+        exports.initialize = function(){
+            function bootstrapTooltips(selector){
+                $('body').tooltip({
+                  selector: selector
+                });
+            }
+
+            return {
+                bootstrapTooltips: bootstrapTooltips
+            }
+            
+        };
     }
 )

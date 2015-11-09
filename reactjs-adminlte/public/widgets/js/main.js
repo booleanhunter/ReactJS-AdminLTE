@@ -8,9 +8,12 @@ define(
         'react',
         'reactDom',   
         'jquery',
+        './common-functions',
         './components/widgets'
     ], 
-    function(React, ReactDOM, $, Widgets) {
+    function(React, ReactDOM, $, commonFunctions, Widgets) {
     	ReactDOM.render(<Widgets />,  document.getElementById('widgets-container'));
+
+    	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
     }
 )    

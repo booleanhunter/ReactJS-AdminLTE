@@ -43,7 +43,7 @@ define(
 
                 return(
                     <div className = "col-lg-3 col-xs-6">
-                        <div className={"small-box "+options.color}>
+                        <div className={"small-box "+options.theme}>
                             <div className="inner">
                                 {stats}
                                 <p>{options.subject}</p>

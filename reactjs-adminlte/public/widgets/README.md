@@ -11,7 +11,7 @@ The options object needs 5 values.
 
 ```javascript
 {
-	color: 'bg-aqua' / 'bg-green' / 'bg-yellow', (To apply background color to the icon),
+	theme: 'bg-aqua' / 'bg-green' / 'bg-yellow', (To apply background color to the icon),
 	icon: 'fa-envelope-o' / 'fa-flag-0' / 'fa-files-0', (Any font-awesome icon)
 	subject:  'Can be a string or a number',
 	stats: 'Can be a string or a number',
@@ -23,7 +23,7 @@ The options object needs 5 values.
 ```javascript
 
 var infoTileOptions = {
-	color: 'bg-aqua',
+	theme: 'bg-aqua',
 	icon: 'fa-envelope-o',
 	subject: 'Messages',
 	stats: '1,410',
@@ -44,7 +44,7 @@ The options object needs 6 values.
 
 ```javascript
 {
-	color: 'bg-aqua' / 'bg-green' / 'bg-yellow', (To apply background color to the icon),
+	theme: 'bg-aqua' / 'bg-green' / 'bg-yellow', (To apply background color to the icon),
 	icon: 'fa-bookmark-o' / 'fa-thumbs-o-up' / 'fa-calendar', (Any font-awesome icon)
 	subject:  'Can be a string or a number',
 	stats: 'Can be a string or a number',
@@ -61,7 +61,7 @@ The options object needs 6 values.
 ```javascript
 
 var progressTileOptions = {
-	color: 'bg-green',
+	theme: 'bg-green',
 	icon: 'fa-thumbs-o-up',
 	subject: 'Likes',
 	stats: '41,410',
@@ -81,13 +81,13 @@ var progressTileOptions = {
 
 ### - [StatTile](./js/components/page-widgets/stat-tile.js)
 
-An tile for displaying some basic info, highlighting numbers or stats. This component takes an options object, from props.
+A tile for displaying some basic info, highlighting numbers or stats. This component takes an options object, from props.
 
 The options object needs 5 values, out of which 1 is optional
 
 ```javascript
 {
-	color: 'bg-aqua' / 'bg-green' / 'bg-red', (To apply background color to the icon),
+	theme: 'bg-aqua' / 'bg-green' / 'bg-red', (To apply background color to the icon),
 	icon: 'fa-shopping-cart' / 'ion-stats-bars' / 'ion-person-add', (Any font-awesome icon)
 	subject:  'Can be a string or a number',
 	stats: 'Can be a string or a number',
@@ -98,15 +98,15 @@ The options object needs 5 values, out of which 1 is optional
 
 ```javascript
 
-var StatTileOptions = {
-	color: 'bg-yellow',
+var statTileOptions = {
+	theme: 'bg-yellow',
 	icon: 'ion-person-add',
 	subject: 'User Registrations',
 	stats: '44',
 	link: '#' 
 };
 
-<StatTile options = {StatTileOptions} />
+<StatTile options = {statTileOptions} />
 ```
 
 ![](../../screenshots/stat-tile.png)
@@ -114,7 +114,7 @@ var StatTileOptions = {
 
 ### - [SmallBox](./js/components/page-widgets/small-box.js)
 
-An box / window for displaying some basic info, to which properties can be applied. This component takes an options object, from props.
+A box / window for displaying some basic info, to which properties can be applied. This component takes an options object, from props.
 
 The options object takes 6 values, out of which 2 are optional
 
@@ -134,7 +134,7 @@ The options object takes 6 values, out of which 2 are optional
 
 ```javascript
 
-var SmallBoxOptions = {
+var smallBoxOptions = {
 	type: 'expandable'
 	theme: 'box-default',
 	border: true,
@@ -142,16 +142,16 @@ var SmallBoxOptions = {
 	content: 'The body of the box'
 };
 
-<SmallBox options = {SmallBoxOptions} />
+<SmallBox options = {smallBoxOptions} />
 ```
 
 ![](../../screenshots/small-box-expandable.png)
 
-##### An collapsable box with border
+##### A collapsable box with border
 
 ```javascript
 
-var SmallBoxOptions = {
+var smallBoxOptions = {
 	type: 'collapsable'
 	theme: 'box-primary',
 	border: true,
@@ -159,7 +159,7 @@ var SmallBoxOptions = {
 	content: 'The body of the box'
 };
 
-<SmallBox options = {SmallBoxOptions} />
+<SmallBox options = {smallBoxOptions} />
 ```
 
 ![](../../screenshots/small-box-collapsable.png)
@@ -168,14 +168,14 @@ var SmallBoxOptions = {
 
 ```javascript
 
-var SmallBoxOptions = {
+var smallBoxOptions = {
 	type: 'removable'
 	theme: 'box-danger',
 	title: 'Removable',
 	content: 'The body of the box'
 };
 
-<SmallBox options = {SmallBoxOptions} />
+<SmallBox options = {smallBoxOptions} />
 ```
 
 ![](../../screenshots/small-box-removable.png)
@@ -184,7 +184,7 @@ var SmallBoxOptions = {
 
 ```javascript
 
-var SmallBoxOptions = {
+var smallBoxOptions = {
 	type: 'removable'
 	theme: 'box-warning',
 	loading: true,
@@ -192,7 +192,7 @@ var SmallBoxOptions = {
 	content: 'The body of the box'
 };
 
-<SmallBox options = {SmallBoxOptions} />
+<SmallBox options = {smallBoxOptions} />
 ```
 
 ![](../../screenshots/small-box-loading.png)

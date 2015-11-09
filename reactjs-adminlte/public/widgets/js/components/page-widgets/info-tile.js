@@ -22,7 +22,7 @@ define(
                 return (
                     <div className = "col-md-3 col-sm-6 col-xs-12">
                         <div className="info-box">
-                            <span className={"info-box-icon " + options.color}>
+                            <span className={"info-box-icon " + options.theme}>
                                 <i className={"fa "+options.icon}></i>
                             </span>
 

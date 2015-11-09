@@ -14,43 +14,43 @@ define(
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
-                    row1Options: [],
-                    row2Options: [],
-                    row3Options: [],
-                    row4Options: [],
-                    row5Options: [],
-                    row6Options: []
+                    infoTileOptions: [],
+                    progressInfoTileOptions: [],
+                    statTileOptions: [],
+                    smallBoxOptions: [],
+                    smallBoxBorderedOptions: [],
+                    chatBoxOptions: []
                 }
             },
             componentDidMount: function() {
-                var row1Options = [{
-                    color: 'bg-aqua',
+                var infoTileOptions = [{
+                    theme: 'bg-aqua',
                     icon: 'fa-envelope-o',
                     subject: 'Messages',
                     stats: '1,410',
                     content: ''
                 }, {
-                    color: 'bg-green',
+                    theme: 'bg-green',
                     icon: 'fa-flag-o',
                     subject: 'Bookmarks',
                     stats: '410',
                     content: ''
                 }, {
-                    color: 'bg-yellow',
+                    theme: 'bg-yellow',
                     icon: 'fa-files-o',
                     subject: 'Uploads',
                     stats: '13,648',
                     content: ''
                 }, {
-                    color: 'bg-red',
+                    theme: 'bg-red',
                     icon: 'fa-star-o',
                     subject: 'Likes',
                     stats: '93,139',
                     content: ''
                 }];
 
-                var row2Options = [{
-                    color: 'bg-aqua',
+                var progressInfoTileOptions = [{
+                    theme: 'bg-aqua',
                     icon: 'fa-bookmark-o',
                     subject: 'Bookmarks',
                     stats: '41,410',
@@ -61,7 +61,7 @@ define(
                         color: 'white'
                     }
                 }, {
-                    color: 'bg-green',
+                    theme: 'bg-green',
                     icon: 'fa-thumbs-o-up',
                     subject: 'Likes',
                     stats: '41,410',
@@ -72,7 +72,7 @@ define(
                         color: 'white'
                     }
                 }, {
-                    color: 'bg-yellow',
+                    theme: 'bg-yellow',
                     icon: 'fa-calendar',
                     subject: 'Events',
                     stats: '41,410',
@@ -83,7 +83,7 @@ define(
                         color: 'white'
                     }
                 }, {
-                    color: 'bg-red',
+                    theme: 'bg-red',
                     icon: 'fa-comments-o',
                     subject: 'comments',
                     stats: '41,410',
@@ -95,33 +95,33 @@ define(
                     }
                 }];
 
-                var row3Options = [{
-                    color: 'bg-aqua',
+                var statTileOptions = [{
+                    theme: 'bg-aqua',
                     icon: 'fa-shopping-cart',
                     subject: 'New Orders',
                     stats: '150',
                     link: '#'
                 }, {
-                    color: 'bg-green',
+                    theme: 'bg-green',
                     icon: 'ion-stats-bars',
                     subject: 'Bounce Rate',
                     stats: '53%',
                     link: '#'
                 }, {
-                    color: 'bg-yellow',
+                    theme: 'bg-yellow',
                     icon: 'ion-person-add',
                     subject: 'User Registrations',
                     stats: '44',
                     link: '#'
                 }, {
-                    color: 'bg-red',
+                    theme: 'bg-red',
                     icon: 'ion-pie-graph',
                     subject: 'Unique Visitors',
                     stats: '65',
                     link: '#'
                 }];
 
-                var row4Options = [{
+                var smallBoxOptions = [{
                     type: 'expandable', 
                     theme: 'box-default',
                     title: 'Expandable',
@@ -129,12 +129,12 @@ define(
                 }, {
                     type: 'collapsable',
                     theme: 'box-success',
-                    title: 'Removable',
+                    title: 'Collapsable',
                     content: 'The body of the box'
                 }, {
-                    type: 'collapsable', 
+                    type: 'removable', 
                     theme: 'box-warning',
-                    title: 'Collapsable',
+                    title: 'Removable',
                     content: 'The body of the box'
                 }, {
                     type: 'removable',
@@ -144,7 +144,7 @@ define(
                     content: 'The body of the box'      
                 }];
 
-                var row5Options = [{
+                var smallBoxBorderedOptions = [{
                     type: 'expandable', 
                     theme: 'box-primary',
                     border: true,
@@ -154,13 +154,13 @@ define(
                     type: 'collapsable',
                     theme: 'box-warning',
                     border: true,
-                    title: 'Removable',
+                    title: 'Collapsable',
                     content: 'The body of the box'
                 }, {
                     type: 'removable', 
                     theme: 'box-danger',
                     border: true,
-                    title: 'Collapsable',
+                    title: 'Removable',
                     content: 'The body of the box'
                 }, {
                     type: 'removable',
@@ -171,46 +171,170 @@ define(
                     content: 'The body of the box'      
                 }];
 
-                var row6Options = [
-
-                ]
+                var chatBoxOptions = [{
+                    theme: {
+                        header: 'box-primary',
+                        notification: 'bg-light-blue',
+                        chat: 'direct-chat-primary',
+                        button: 'btn-primary'
+                    },
+                    title: 'Direct Chat',
+                    notifications: 2,
+                    conversations: [{
+                        name: 'Alexander Pierce',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        date: '23 Jan 2:00 pm',
+                        message: "Is this template really for free? That's unbelievable!"
+                    }, {
+                        self: true,
+                        name: 'Sarah Bullock',
+                        displayPicture: '../dist/img/user3-128x128.jpg',
+                        date: '23 Jan 2:05 pm',    
+                        message: 'You better believe it!'
+                    }],
+                    contacts: [{
+                        name: 'Count Dracula',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        link: '#',
+                        date: '2/28/2015',
+                        message: 'How have you been? I was...'
+                    }, {
+                        name: 'Count Dracula',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        link: '#',
+                        date: '2/28/2015',
+                        message: 'How have you been? I was...'
+                    }]
+                }, {
+                    theme: {
+                        border: true,
+                        header: 'box-success',
+                        notification: 'bg-green',
+                        chat: 'direct-chat-success',
+                        button: 'btn-success'
+                    },
+                    title: 'Direct Chat',
+                    notifications: 3,
+                    conversations: [{
+                        name: 'Alexander Pierce',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        date: '23 Jan 2:00 pm',
+                        message: "Is this template really for free? That's unbelievable!"
+                    }, {
+                        self: true,
+                        name: 'Sarah Bullock',
+                        displayPicture: '../dist/img/user3-128x128.jpg',
+                        date: '23 Jan 2:05 pm',    
+                        message: 'You better believe it!'
+                    }],
+                    contacts: [{
+                        name: 'Count Dracula',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        link: '#',
+                        date: '2/28/2015',
+                        message: 'How have you been? I was...'
+                    }]
+                }, {
+                    theme: {
+                        header: 'box-warning',
+                        notification: 'bg-yellow',
+                        chat: 'direct-chat-warning',
+                        button: 'btn-warning'
+                    },
+                    title: 'Direct Chat',
+                    notifications: 4,
+                    conversations: [{
+                        name: 'Alexander Pierce',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        date: '23 Jan 2:00 pm',
+                        message: "Is this template really for free? That's unbelievable!"
+                    }, {
+                        self: true,
+                        name: 'Sarah Bullock',
+                        displayPicture: '../dist/img/user3-128x128.jpg',
+                        date: '23 Jan 2:05 pm',    
+                        message: 'You better believe it!'
+                    }],
+                    contacts: [{
+                        name: 'Count Dracula',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        link: '#',
+                        date: '2/28/2015',
+                        message: 'How have you been? I was...'
+                    }]
+                }, {
+                    theme: {
+                        header: 'box-danger',
+                        notification: 'bg-red',
+                        chat: 'direct-chat-danger',
+                        button: 'btn-danger'
+                    },
+                    title: 'Direct Chat',
+                    notifications: 5,
+                    conversations: [{
+                        name: 'Alexander Pierce',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        date: '23 Jan 2:00 pm',
+                        message: "Is this template really for free? That's unbelievable!"
+                    }, {
+                        self: true,
+                        name: 'Sarah Bullock',
+                        displayPicture: '../dist/img/user3-128x128.jpg',
+                        date: '23 Jan 2:05 pm',    
+                        message: 'You better believe it!'
+                    }],
+                    contacts: [{
+                        name: 'Count Dracula',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        link: '#',
+                        date: '2/28/2015',
+                        message: 'How have you been? I was...'
+                    }]
+                }];
 
                 this.setState({
-                    row1Options: row1Options,
-                    row2Options: row2Options,
-                    row3Options: row3Options,
-                    row4Options: row4Options,
-                    row5Options: row5Options
+                    infoTileOptions: infoTileOptions,
+                    progressInfoTileOptions: progressInfoTileOptions,
+                    statTileOptions: statTileOptions,
+                    smallBoxOptions: smallBoxOptions,
+                    smallBoxBorderedOptions: smallBoxBorderedOptions,
+                    chatBoxOptions: chatBoxOptions
                 });
             },
             render: function() {
-                var row1Elements = this.state.row1Options.map(function (options, iterator) {
+                var infoTileWidgets = this.state.infoTileOptions.map(function (options, iterator) {
                     return (
                         <InfoTile options = {options} key={"rowOne"+iterator}/>
                     )
                 });
 
-                var row2Elements = this.state.row2Options.map(function (options, iterator) {
+                var progressInfoTileWidgets = this.state.progressInfoTileOptions.map(function (options, iterator) {
                     return (
                         <ProgressInfoTile options = {options} key={"rowTwo"+iterator} />
                     )
                 });
 
-                var row3Elements = this.state.row3Options.map(function (options, iterator) {
+                var statTileWidgets = this.state.statTileOptions.map(function (options, iterator) {
                     return (
                         <StatTile options = {options} key={"rowThree"+iterator}/>
                     )
                 });
 
-                var row4Elements = this.state.row4Options.map(function (options, iterator) {
+                var smallBoxWidgets = this.state.smallBoxOptions.map(function (options, iterator) {
                     return (
                         <SmallBox options = {options} key={"rowFour"+iterator} />
                     )
                 });
 
-                var row5Elements = this.state.row5Options.map(function (options, iterator) {
+                var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
                     return (
-                        <SmallBox options = {options} key={"rowFour"+iterator} />
+                        <SmallBox options = {options} key={"rowFive"+iterator} />
+                    )
+                });
+
+                var chatBoxWidgets = this.state.chatBoxOptions.map(function (options, iterator) {
+                    return (
+                        <ChatBox options = {options} key={"rowSix"+iterator} />
                     )
                 });
 
@@ -234,27 +358,27 @@ define(
 
                             <section className="content">
                                 <div className="row">
-                                    {row1Elements}
+                                    {infoTileWidgets}
                                 </div>
 
                                 <div className="row">
-                                    {row2Elements}         
+                                    {progressInfoTileWidgets}         
                                 </div>
 
                                 <div className="row">
-                                    {row3Elements}                
+                                    {statTileWidgets}                
                                 </div>
 
                                 <div className="row">
-                                    {row4Elements}       
+                                    {smallBoxWidgets}       
                                 </div>
 
                                 <div className="row">
-                                    {row5Elements}             
+                                    {smallBoxBorderedWidgets}             
                                 </div>
 
                                 <div className="row">
-                                    <ChatBox />               
+                                    {chatBoxWidgets}               
                                 </div>
 
                                 <div className="row">
@@ -270,10 +394,9 @@ define(
 
                         <footer className="main-footer">
                             <div className="pull-right hidden-xs">
-                                <b>Version</b> 2.3.0
+                                <b>Version</b> 1.0.0
                             </div>
-                            <strong>Copyright © 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong>
-                            All rights reserved.
+                            <strong>This project is a derivative of <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong>
                         </footer>
 
                         {/*<ControlsMenu />*/}

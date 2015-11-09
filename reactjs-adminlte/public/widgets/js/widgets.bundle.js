@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11,13 +11,60 @@ webpackJsonp([2],[
 	        __webpack_require__(19),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(12)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, Widgets) {
+	        __webpack_require__(13),
+	        __webpack_require__(14)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, commonFunctions, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
+
+	    	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(19)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var InfoTile = React.createClass({displayName: "InfoTile",
+	            getDefaultProps: function() {
+	                return {
+	                    options: {
+	                        color: 'bg-red',
+	                        icon: 'fa-star-o',
+	                        subject: 'Default Subject',
+	                        stats: '0',
+	                        content: ''
+	                    }
+	                }
+	            },
+	            render: function() {
+	                var that = this,
+	                    options = this.props.options;
+
+	                return (
+	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                        React.createElement("div", {className: "info-box"}, 
+	                            React.createElement("span", {className: "info-box-icon " + options.theme}, 
+	                                React.createElement("i", {className: "fa "+options.icon})
+	                            ), 
+
+	                            React.createElement("div", {className: "info-box-content"}, 
+	                                React.createElement("span", {className: "info-box-text"}, options.subject), 
+	                                React.createElement("span", {className: "info-box-number"}, options.stats)
+	                            ), 
+	                            
+	                            options.content
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return InfoTile;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -28,60 +75,120 @@ webpackJsonp([2],[
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        exports,
+	        __webpack_require__(3),
+	        __webpack_require__(4)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (exports, $, velocity) {
+
+	        exports.toggleBoxCollapse = function(box, boxBody, icon) {
+	            if(box.className.indexOf('collapsed-box') !== -1) {
+	                icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
+	                $(boxBody).velocity('slideDown', {
+	                    duration: 500,
+	                    easing: 'easeInSine',
+	                    complete: function() {
+	                        box.className = box.className.replace(/ collapsed-box/g, '');
+	                    }
+	                });
+	                // $(boxBody).slideDown(500, function () {
+	                //     box.className = box.className.replace(/ collapsed-box/g, '');
+	                // });
+	            } else {
+	                icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
+	                $(boxBody).velocity('slideUp', {
+	                    duration: 500,
+	                    easing: 'easeInSine',
+	                    complete: function() {
+	                        box.className += ' collapsed-box';
+	                    }
+	                });
+	                // $(boxBody).slideUp(500, function () {
+	                //     box.className += ' collapsed-box';
+	                // });
+	            }
+	        };
+
+	        exports.removeBox = function(box){
+	            $(box).velocity('slideUp', {
+	                duration: 500,
+	                easing: 'easeInSine'
+	            });
+	        };
+
+	        exports.initialize = function(){
+	            function bootstrapTooltips(selector){
+	                $('body').tooltip({
+	                  selector: selector
+	                });
+	            }
+
+	            return {
+	                bootstrapTooltips: bootstrapTooltips
+	            }
+	            
+	        };
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19),
 	        __webpack_require__(3),
-	        __webpack_require__(27),
-	        __webpack_require__(28),
-	        __webpack_require__(29),
-	        __webpack_require__(30),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(33)
+	        __webpack_require__(17),
+	        __webpack_require__(18),
+	        __webpack_require__(1),
+	        __webpack_require__(20),
+	        __webpack_require__(21),
+	        __webpack_require__(22),
+	        __webpack_require__(23)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox, ChatBox) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
 	                return {
-	                    row1Options: [],
-	                    row2Options: [],
-	                    row3Options: [],
-	                    row4Options: [],
-	                    row5Options: [],
-	                    row6Options: []
+	                    infoTileOptions: [],
+	                    progressInfoTileOptions: [],
+	                    statTileOptions: [],
+	                    smallBoxOptions: [],
+	                    smallBoxBorderedOptions: [],
+	                    chatBoxOptions: []
 	                }
 	            },
 	            componentDidMount: function() {
-	                var row1Options = [{
-	                    color: 'bg-aqua',
+	                var infoTileOptions = [{
+	                    theme: 'bg-aqua',
 	                    icon: 'fa-envelope-o',
 	                    subject: 'Messages',
 	                    stats: '1,410',
 	                    content: ''
 	                }, {
-	                    color: 'bg-green',
+	                    theme: 'bg-green',
 	                    icon: 'fa-flag-o',
 	                    subject: 'Bookmarks',
 	                    stats: '410',
 	                    content: ''
 	                }, {
-	                    color: 'bg-yellow',
+	                    theme: 'bg-yellow',
 	                    icon: 'fa-files-o',
 	                    subject: 'Uploads',
 	                    stats: '13,648',
 	                    content: ''
 	                }, {
-	                    color: 'bg-red',
+	                    theme: 'bg-red',
 	                    icon: 'fa-star-o',
 	                    subject: 'Likes',
 	                    stats: '93,139',
 	                    content: ''
 	                }];
 
-	                var row2Options = [{
-	                    color: 'bg-aqua',
+	                var progressInfoTileOptions = [{
+	                    theme: 'bg-aqua',
 	                    icon: 'fa-bookmark-o',
 	                    subject: 'Bookmarks',
 	                    stats: '41,410',
@@ -92,7 +199,7 @@ webpackJsonp([2],[
 	                        color: 'white'
 	                    }
 	                }, {
-	                    color: 'bg-green',
+	                    theme: 'bg-green',
 	                    icon: 'fa-thumbs-o-up',
 	                    subject: 'Likes',
 	                    stats: '41,410',
@@ -103,7 +210,7 @@ webpackJsonp([2],[
 	                        color: 'white'
 	                    }
 	                }, {
-	                    color: 'bg-yellow',
+	                    theme: 'bg-yellow',
 	                    icon: 'fa-calendar',
 	                    subject: 'Events',
 	                    stats: '41,410',
@@ -114,7 +221,7 @@ webpackJsonp([2],[
 	                        color: 'white'
 	                    }
 	                }, {
-	                    color: 'bg-red',
+	                    theme: 'bg-red',
 	                    icon: 'fa-comments-o',
 	                    subject: 'comments',
 	                    stats: '41,410',
@@ -126,33 +233,33 @@ webpackJsonp([2],[
 	                    }
 	                }];
 
-	                var row3Options = [{
-	                    color: 'bg-aqua',
+	                var statTileOptions = [{
+	                    theme: 'bg-aqua',
 	                    icon: 'fa-shopping-cart',
 	                    subject: 'New Orders',
 	                    stats: '150',
 	                    link: '#'
 	                }, {
-	                    color: 'bg-green',
+	                    theme: 'bg-green',
 	                    icon: 'ion-stats-bars',
 	                    subject: 'Bounce Rate',
 	                    stats: '53%',
 	                    link: '#'
 	                }, {
-	                    color: 'bg-yellow',
+	                    theme: 'bg-yellow',
 	                    icon: 'ion-person-add',
 	                    subject: 'User Registrations',
 	                    stats: '44',
 	                    link: '#'
 	                }, {
-	                    color: 'bg-red',
+	                    theme: 'bg-red',
 	                    icon: 'ion-pie-graph',
 	                    subject: 'Unique Visitors',
 	                    stats: '65',
 	                    link: '#'
 	                }];
 
-	                var row4Options = [{
+	                var smallBoxOptions = [{
 	                    type: 'expandable', 
 	                    theme: 'box-default',
 	                    title: 'Expandable',
@@ -160,12 +267,12 @@ webpackJsonp([2],[
 	                }, {
 	                    type: 'collapsable',
 	                    theme: 'box-success',
-	                    title: 'Removable',
+	                    title: 'Collapsable',
 	                    content: 'The body of the box'
 	                }, {
-	                    type: 'collapsable', 
+	                    type: 'removable', 
 	                    theme: 'box-warning',
-	                    title: 'Collapsable',
+	                    title: 'Removable',
 	                    content: 'The body of the box'
 	                }, {
 	                    type: 'removable',
@@ -175,7 +282,7 @@ webpackJsonp([2],[
 	                    content: 'The body of the box'      
 	                }];
 
-	                var row5Options = [{
+	                var smallBoxBorderedOptions = [{
 	                    type: 'expandable', 
 	                    theme: 'box-primary',
 	                    border: true,
@@ -185,13 +292,13 @@ webpackJsonp([2],[
 	                    type: 'collapsable',
 	                    theme: 'box-warning',
 	                    border: true,
-	                    title: 'Removable',
+	                    title: 'Collapsable',
 	                    content: 'The body of the box'
 	                }, {
 	                    type: 'removable', 
 	                    theme: 'box-danger',
 	                    border: true,
-	                    title: 'Collapsable',
+	                    title: 'Removable',
 	                    content: 'The body of the box'
 	                }, {
 	                    type: 'removable',
@@ -202,46 +309,170 @@ webpackJsonp([2],[
 	                    content: 'The body of the box'      
 	                }];
 
-	                var row6Options = [
-
-	                ]
+	                var chatBoxOptions = [{
+	                    theme: {
+	                        header: 'box-primary',
+	                        notification: 'bg-light-blue',
+	                        chat: 'direct-chat-primary',
+	                        button: 'btn-primary'
+	                    },
+	                    title: 'Direct Chat',
+	                    notifications: 2,
+	                    conversations: [{
+	                        name: 'Alexander Pierce',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        date: '23 Jan 2:00 pm',
+	                        message: "Is this template really for free? That's unbelievable!"
+	                    }, {
+	                        self: true,
+	                        name: 'Sarah Bullock',
+	                        displayPicture: '../dist/img/user3-128x128.jpg',
+	                        date: '23 Jan 2:05 pm',    
+	                        message: 'You better believe it!'
+	                    }],
+	                    contacts: [{
+	                        name: 'Count Dracula',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        link: '#',
+	                        date: '2/28/2015',
+	                        message: 'How have you been? I was...'
+	                    }, {
+	                        name: 'Count Dracula',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        link: '#',
+	                        date: '2/28/2015',
+	                        message: 'How have you been? I was...'
+	                    }]
+	                }, {
+	                    theme: {
+	                        border: true,
+	                        header: 'box-success',
+	                        notification: 'bg-green',
+	                        chat: 'direct-chat-success',
+	                        button: 'btn-success'
+	                    },
+	                    title: 'Direct Chat',
+	                    notifications: 3,
+	                    conversations: [{
+	                        name: 'Alexander Pierce',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        date: '23 Jan 2:00 pm',
+	                        message: "Is this template really for free? That's unbelievable!"
+	                    }, {
+	                        self: true,
+	                        name: 'Sarah Bullock',
+	                        displayPicture: '../dist/img/user3-128x128.jpg',
+	                        date: '23 Jan 2:05 pm',    
+	                        message: 'You better believe it!'
+	                    }],
+	                    contacts: [{
+	                        name: 'Count Dracula',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        link: '#',
+	                        date: '2/28/2015',
+	                        message: 'How have you been? I was...'
+	                    }]
+	                }, {
+	                    theme: {
+	                        header: 'box-warning',
+	                        notification: 'bg-yellow',
+	                        chat: 'direct-chat-warning',
+	                        button: 'btn-warning'
+	                    },
+	                    title: 'Direct Chat',
+	                    notifications: 4,
+	                    conversations: [{
+	                        name: 'Alexander Pierce',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        date: '23 Jan 2:00 pm',
+	                        message: "Is this template really for free? That's unbelievable!"
+	                    }, {
+	                        self: true,
+	                        name: 'Sarah Bullock',
+	                        displayPicture: '../dist/img/user3-128x128.jpg',
+	                        date: '23 Jan 2:05 pm',    
+	                        message: 'You better believe it!'
+	                    }],
+	                    contacts: [{
+	                        name: 'Count Dracula',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        link: '#',
+	                        date: '2/28/2015',
+	                        message: 'How have you been? I was...'
+	                    }]
+	                }, {
+	                    theme: {
+	                        header: 'box-danger',
+	                        notification: 'bg-red',
+	                        chat: 'direct-chat-danger',
+	                        button: 'btn-danger'
+	                    },
+	                    title: 'Direct Chat',
+	                    notifications: 5,
+	                    conversations: [{
+	                        name: 'Alexander Pierce',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        date: '23 Jan 2:00 pm',
+	                        message: "Is this template really for free? That's unbelievable!"
+	                    }, {
+	                        self: true,
+	                        name: 'Sarah Bullock',
+	                        displayPicture: '../dist/img/user3-128x128.jpg',
+	                        date: '23 Jan 2:05 pm',    
+	                        message: 'You better believe it!'
+	                    }],
+	                    contacts: [{
+	                        name: 'Count Dracula',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        link: '#',
+	                        date: '2/28/2015',
+	                        message: 'How have you been? I was...'
+	                    }]
+	                }];
 
 	                this.setState({
-	                    row1Options: row1Options,
-	                    row2Options: row2Options,
-	                    row3Options: row3Options,
-	                    row4Options: row4Options,
-	                    row5Options: row5Options
+	                    infoTileOptions: infoTileOptions,
+	                    progressInfoTileOptions: progressInfoTileOptions,
+	                    statTileOptions: statTileOptions,
+	                    smallBoxOptions: smallBoxOptions,
+	                    smallBoxBorderedOptions: smallBoxBorderedOptions,
+	                    chatBoxOptions: chatBoxOptions
 	                });
 	            },
 	            render: function() {
-	                var row1Elements = this.state.row1Options.map(function (options, iterator) {
+	                var infoTileWidgets = this.state.infoTileOptions.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(InfoTile, {options: options, key: "rowOne"+iterator})
 	                    )
 	                });
 
-	                var row2Elements = this.state.row2Options.map(function (options, iterator) {
+	                var progressInfoTileWidgets = this.state.progressInfoTileOptions.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(ProgressInfoTile, {options: options, key: "rowTwo"+iterator})
 	                    )
 	                });
 
-	                var row3Elements = this.state.row3Options.map(function (options, iterator) {
+	                var statTileWidgets = this.state.statTileOptions.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(StatTile, {options: options, key: "rowThree"+iterator})
 	                    )
 	                });
 
-	                var row4Elements = this.state.row4Options.map(function (options, iterator) {
+	                var smallBoxWidgets = this.state.smallBoxOptions.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(SmallBox, {options: options, key: "rowFour"+iterator})
 	                    )
 	                });
 
-	                var row5Elements = this.state.row5Options.map(function (options, iterator) {
+	                var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(SmallBox, {options: options, key: "rowFour"+iterator})
+	                        React.createElement(SmallBox, {options: options, key: "rowFive"+iterator})
+	                    )
+	                });
+
+	                var chatBoxWidgets = this.state.chatBoxOptions.map(function (options, iterator) {
+	                    return (
+	                        React.createElement(ChatBox, {options: options, key: "rowSix"+iterator})
 	                    )
 	                });
 
@@ -265,27 +496,27 @@ webpackJsonp([2],[
 
 	                            React.createElement("section", {className: "content"}, 
 	                                React.createElement("div", {className: "row"}, 
-	                                    row1Elements
+	                                    infoTileWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
-	                                    row2Elements
+	                                    progressInfoTileWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
-	                                    row3Elements
+	                                    statTileWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
-	                                    row4Elements
+	                                    smallBoxWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
-	                                    row5Elements
+	                                    smallBoxBorderedWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}, 
-	                                    React.createElement(ChatBox, null)
+	                                    chatBoxWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}
@@ -301,10 +532,9 @@ webpackJsonp([2],[
 
 	                        React.createElement("footer", {className: "main-footer"}, 
 	                            React.createElement("div", {className: "pull-right hidden-xs"}, 
-	                                React.createElement("b", null, "Version"), " 2.3.0"
+	                                React.createElement("b", null, "Version"), " 1.0.0"
 	                            ), 
-	                            React.createElement("strong", null, "Copyright © 2014-2015 ", React.createElement("a", {href: "http://almsaeedstudio.com"}, "Almsaeed Studio"), "."), 
-	                            "All rights reserved."
+	                            React.createElement("strong", null, "This project is a derivative of ", React.createElement("a", {href: "http://almsaeedstudio.com"}, "Almsaeed Studio"), ".")
 	                        )
 
 	                        /*<ControlsMenu />*/
@@ -317,29 +547,17 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 13 */,
-/* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19),
 	        __webpack_require__(3),
-	        __webpack_require__(37),
-	        __webpack_require__(38),
-	        __webpack_require__(39)
+	        __webpack_require__(35),
+	        __webpack_require__(36),
+	        __webpack_require__(37)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -527,7 +745,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 28 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -713,52 +931,8 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var InfoTile = React.createClass({displayName: "InfoTile",
-	            getDefaultProps: function() {
-	                return {
-	                    options: {
-	                        color: 'bg-red',
-	                        icon: 'fa-star-o',
-	                        subject: 'Default Subject',
-	                        stats: '0',
-	                        content: ''
-	                    }
-	                }
-	            },
-	            render: function() {
-	                var that = this,
-	                    options = this.props.options;
-
-	                return (
-	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
-	                        React.createElement("div", {className: "info-box"}, 
-	                            React.createElement("span", {className: "info-box-icon " + options.color}, 
-	                                React.createElement("i", {className: "fa "+options.icon})
-	                            ), 
-
-	                            React.createElement("div", {className: "info-box-content"}, 
-	                                React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                                React.createElement("span", {className: "info-box-number"}, options.stats)
-	                            ), 
-	                            
-	                            options.content
-	                        )
-	                    )
-	                )
-	            }
-	        });
-
-	        return InfoTile;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 30 */
+/* 19 */,
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -792,7 +966,7 @@ webpackJsonp([2],[
 
 	                return (
 	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
-	                        React.createElement("div", {className: "info-box "+options.color}, 
+	                        React.createElement("div", {className: "info-box "+options.theme}, 
 	                            React.createElement("span", {className: "info-box-icon"}, 
 	                                React.createElement("i", {className: "fa "+options.icon})
 	                            ), 
@@ -819,7 +993,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -865,7 +1039,7 @@ webpackJsonp([2],[
 
 	                return(
 	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
-	                        React.createElement("div", {className: "small-box "+options.color}, 
+	                        React.createElement("div", {className: "small-box "+options.theme}, 
 	                            React.createElement("div", {className: "inner"}, 
 	                                stats, 
 	                                React.createElement("p", null, options.subject)
@@ -884,13 +1058,13 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19),
 	        __webpack_require__(2),
-	        __webpack_require__(40)
+	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            getDefaultProps: function() {
@@ -984,13 +1158,13 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(19),
 	        __webpack_require__(2),
-	        __webpack_require__(40)
+	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var ChatBox = React.createClass({displayName: "ChatBox",
 	            toggleCollapse: function(event) {
@@ -1004,24 +1178,107 @@ webpackJsonp([2],[
 	                var box = ReactDOM.findDOMNode(this).children[0];
 	                commonFunctions.removeBox(box);
 	            },
+	            toggleChat: function(){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+
+	                if(box.className.indexOf('direct-chat-contacts-open') === -1){
+	                    box.className += ' direct-chat-contacts-open';
+	                }else{
+	                    box.className = box.className.replace(/direct-chat-contacts-open/g,'');
+	                }
+	            },
 	            render: function() {
+	                var options = this.props.options, borderClass,
+	                    that = this;
+
+	                var conversations = options.conversations.map(function(messageDetails, iterator){
+	                    if(messageDetails.self === true){
+	                        return (
+	                            React.createElement("div", {className: "direct-chat-msg right", key: "message"+iterator}, 
+	                                React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                    React.createElement("span", {className: "direct-chat-name pull-right"}, 
+	                                        messageDetails.name
+	                                    ), 
+	                                    React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
+	                                        messageDetails.date
+	                                    )
+	                                ), 
+	                                /* /.direct-chat-info */
+	                                React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
+	                                /* /.direct-chat-img */
+	                                React.createElement("div", {className: "direct-chat-text"}, 
+	                                    messageDetails.message
+	                                )
+	                                /* /.direct-chat-text */
+	                            )
+	                        )
+	                    }else{
+	                        return (
+	                            React.createElement("div", {className: "direct-chat-msg", key: "message"+iterator}, 
+	                                React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                    React.createElement("span", {className: "direct-chat-name pull-left"}, 
+	                                        messageDetails.name
+	                                    ), 
+	                                    React.createElement("span", {className: "direct-chat-timestamp pull-right"}, 
+	                                        messageDetails.date
+	                                    )
+	                                ), 
+	                                /* /.direct-chat-info */
+	                                React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
+	                                /* /.direct-chat-img */
+	                                React.createElement("div", {className: "direct-chat-text"}, 
+	                                    messageDetails.message
+	                                )
+	                                /* /.direct-chat-text */
+	                            )
+	                        )
+	                    }
+	                });
+	                
+	                var contacts = options.contacts.map(function(contactDetails, iterator){
+	                    return (
+	                        React.createElement("li", {key: "contact"+iterator}, 
+	                            React.createElement("a", {href: contactDetails.link}, 
+	                                React.createElement("img", {className: "contacts-list-img", src: contactDetails.displayPicture}), 
+	                                React.createElement("div", {className: "contacts-list-info"}, 
+	                                    React.createElement("span", {className: "contacts-list-name"}, 
+	                                        contactDetails.name, 
+	                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
+	                                        contactDetails.date
+	                                    )
+	                                ), 
+	                                    React.createElement("span", {className: "contacts-list-msg"}, 
+	                                        contactDetails.message
+	                                    )
+	                                )
+	                                /* /.contacts-list-info */
+	                            )
+	                        )
+	                    )
+	                });
+
+	                if(options.theme.border === true){
+	                    borderClass = 'box-solid';
+	                }
+
 	                return (
 	                    React.createElement("div", {className: "col-md-3"}, 
 	                        /* DIRECT CHAT PRIMARY */
-	                        React.createElement("div", {className: "box box-primary direct-chat direct-chat-primary"}, 
+	                        React.createElement("div", {className: "box " + options.theme.header + " direct-chat " + options.theme.chat + " " + borderClass}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
-	                                React.createElement("h3", {className: "box-title"}, "Direct Chat"), 
+	                                React.createElement("h3", {className: "box-title"}, options.title), 
 	                                React.createElement("div", {className: "box-tools pull-right"}, 
-	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge bg-light-blue", "data-original-title": "3 New Messages"}, 
-	                                        "3"
+	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge "+options.theme.notification, 
+	                                        "data-original-title": options.notifications+ " New Messages"}, 
+	                                        options.notifications
 	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse"}, 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
 	                                        React.createElement("i", {className: "fa fa-minus"})
 	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts"}, 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts", onClick: that.toggleChat}, 
 	                                        React.createElement("i", {className: "fa fa-comments"})
 	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove"}, 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: that.removeBox}, 
 	                                        React.createElement("i", {className: "fa fa-times"})
 	                                    )
 	                                )
@@ -1031,67 +1288,14 @@ webpackJsonp([2],[
 	                                /* Conversations are loaded here */
 	                                React.createElement("div", {className: "direct-chat-messages"}, 
 	                                    /* Message. Default to the left */
-	                                    React.createElement("div", {className: "direct-chat-msg"}, 
-	                                        React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                            React.createElement("span", {className: "direct-chat-name pull-left"}, 
-	                                                "Alexander Pierce"
-	                                            ), 
-	                                            React.createElement("span", {className: "direct-chat-timestamp pull-right"}, 
-	                                                "23 Jan 2:00 pm"
-	                                            )
-	                                        ), 
-	                                        /* /.direct-chat-info */
-	                                        React.createElement("img", {className: "direct-chat-img", src: "../dist/img/user1-128x128.jpg", alt: "message user image"}), 
-	                                        /* /.direct-chat-img */
-	                                        React.createElement("div", {className: "direct-chat-text"}, 
-	                                            "Is this template really for free? Thats unbelievable!"
-	                                        )
-	                                        /* /.direct-chat-text */
-	                                    ), 
-	                                    /* /.direct-chat-msg */
-
-	                                    /* Message to the right */
-	                                    React.createElement("div", {className: "direct-chat-msg right"}, 
-	                                        React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                            React.createElement("span", {className: "direct-chat-name pull-right"}, 
-	                                                "Sarah Bullock"
-	                                            ), 
-	                                            React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
-	                                                "23 Jan 2:05 pm"
-	                                            )
-	                                        ), 
-	                                        /* /.direct-chat-info */
-	                                        React.createElement("img", {className: "direct-chat-img", src: "../dist/img/user3-128x128.jpg", alt: "message user image"}), 
-	                                        /* /.direct-chat-img */
-	                                        React.createElement("div", {className: "direct-chat-text"}, 
-	                                            "You better believe it!"
-	                                        )
-	                                        /* /.direct-chat-text */
-	                                    )
-	                                    /* /.direct-chat-msg */
+	                                    conversations
 	                                ), 
 	                                /*/.direct-chat-messages*/
 
 	                                /* Contacts are loaded here */
 	                                React.createElement("div", {className: "direct-chat-contacts"}, 
 	                                    React.createElement("ul", {className: "contacts-list"}, 
-	                                        React.createElement("li", null, 
-	                                            React.createElement("a", {href: "#"}, 
-	                                                React.createElement("img", {className: "contacts-list-img", src: "../dist/img/user1-128x128.jpg"}), 
-	                                                React.createElement("div", {className: "contacts-list-info"}, 
-	                                                    React.createElement("span", {className: "contacts-list-name"}, 
-	                                                        "Count Dracula", 
-	                                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
-	                                                        "2/28/2015"
-	                                                    )
-	                                                ), 
-	                                                    React.createElement("span", {className: "contacts-list-msg"}, 
-	                                                        "How have you been? I was..."
-	                                                    )
-	                                                )
-	                                                /* /.contacts-list-info */
-	                                            )
-	                                        )
+	                                        contacts
 	                                        /* End Contact Item */
 	                                    )
 	                                    /* /.contatcts-list */
@@ -1104,7 +1308,7 @@ webpackJsonp([2],[
 	                                    React.createElement("div", {className: "input-group"}, 
 	                                        React.createElement("input", {type: "text", name: "message", placeholder: "Type Message ...", className: "form-control"}), 
 	                                        React.createElement("span", {className: "input-group-btn"}, 
-	                                            React.createElement("button", {type: "button", className: "btn btn-primary btn-flat"}, "Send")
+	                                            React.createElement("button", {type: "button", className: "btn btn-flat "+options.theme.button}, "Send")
 	                                        )
 	                                    )
 	                                )
@@ -1122,10 +1326,18 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
 /* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1179,7 +1391,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 38 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1225,7 +1437,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 39 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1293,52 +1505,6 @@ webpackJsonp([2],[
 	        });
 
 	        return HeaderTasks;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        exports,
-	        __webpack_require__(3),
-	        __webpack_require__(4)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (exports, $, velocity) {
-
-	        exports.toggleBoxCollapse = function(box, boxBody, icon) {
-	            if(box.className.indexOf('collapsed-box') !== -1) {
-	                icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
-	                $(boxBody).velocity('slideDown', {
-	                    duration: 500,
-	                    easing: 'easeInSine',
-	                    complete: function() {
-	                        box.className = box.className.replace(/ collapsed-box/g, '');
-	                    }
-	                });
-	                // $(boxBody).slideDown(500, function () {
-	                //     box.className = box.className.replace(/ collapsed-box/g, '');
-	                // });
-	            } else {
-	                icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
-	                $(boxBody).velocity('slideUp', {
-	                    duration: 500,
-	                    easing: 'easeInSine',
-	                    complete: function() {
-	                        box.className += ' collapsed-box';
-	                    }
-	                });
-	                // $(boxBody).slideUp(500, function () {
-	                //     box.className += ' collapsed-box';
-	                // });
-	            }
-	        };
-
-	        exports.removeBox = function(box){
-	            $(box).velocity('slideUp', {
-	                duration: 500,
-	                easing: 'easeInSine'
-	            });
-	        }
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }
