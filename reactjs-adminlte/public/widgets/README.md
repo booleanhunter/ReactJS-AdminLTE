@@ -3,7 +3,7 @@
 ## List of widgets
 
 
-### - [InfoTile](./js/components/page-widgets/info-tile.js)
+### - [InfoTile](./js/components/page-widgets/info-tile/info-tile.js)
 
 A basic info-tile for displaying info. This component takes 5 values from props.
 
@@ -28,7 +28,7 @@ content = 'Can be a string or a number'
 ```
 ![](../../screenshots/info-tile.png)
 
-You can optionally display a progress status and bar by passing the [ProgressBar](./js/components/page-widgets/progress-bar.js) component as props.children
+You can optionally display a progress status and bar by passing the [ProgressBar](./js/components/page-widgets/info-tile/progress-bar.js) component as props.children
 
 ```javascript
 <InfoTile content = '' icon = 'fa-thumbs-o-up' stats = '41,410' subject = 'Likes' theme = 'bg-green' >
@@ -85,7 +85,7 @@ content = 'Can be a string or a number'
 
 <SmallBox 
 	border = true
-	content = 'The body of the box
+	content = 'The body of the box'
 	theme = 'box-default'
 	title = 'Expandable'
 	type = 'expandable'
@@ -100,7 +100,7 @@ content = 'Can be a string or a number'
 
 <SmallBox 
 	border = true
-	content = 'The body of the box
+	content = 'The body of the box'
 	theme = 'box-primary'
 	title = 'Collapsable'
 	type = 'collapsable'
@@ -113,7 +113,7 @@ content = 'Can be a string or a number'
 
 ```javascript
 <SmallBox 
-	content = 'The body of the box
+	content = 'The body of the box'
 	theme = 'box-danger'
 	title = 'Removable'
 	type = 'removable'
@@ -126,9 +126,9 @@ content = 'Can be a string or a number'
 
 ```javascript
 <SmallBox 
-	content = 'The body of the box
+	content = 'The body of the box'
 	theme = 'box-warning'
-	loading = true,
+	loading = true
 	title = 'Loading state'
 	type = 'removable'
 />
