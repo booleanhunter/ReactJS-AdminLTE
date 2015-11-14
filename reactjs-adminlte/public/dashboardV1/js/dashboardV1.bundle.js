@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,7 +8,7 @@ webpackJsonp([2],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
 	        __webpack_require__(12)
@@ -17,7 +17,32 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(20),
+	        __webpack_require__(3),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
+	    	var ControlPanel = React.createClass({displayName: "ControlPanel",
+	    		render: function(){
+	                var style = {
+	                    position: 'relative',
+	                    height: '300px'
+	                };
+
+	    			return (
+	    				React.createElement("div", {className: "row", id: "contains-custom-header"}
+
+	                    )
+	    			)
+	    		}
+	    	})
+
+	    	return ControlPanel;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
+
+/***/ },
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -32,19 +57,19 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
+	        __webpack_require__(18),
+	        __webpack_require__(19),
+	        __webpack_require__(1),
+	        __webpack_require__(21),
+	        __webpack_require__(22),
+	        __webpack_require__(17),
+	        __webpack_require__(23),
+	        __webpack_require__(24),
 	        __webpack_require__(25),
 	        __webpack_require__(26),
-	        __webpack_require__(27),
-	        __webpack_require__(28),
-	        __webpack_require__(29),
-	        __webpack_require__(24),
-	        __webpack_require__(30),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(33),
-	        __webpack_require__(34)
+	        __webpack_require__(27)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, $, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu){
 	    	var Dashboard = React.createClass({displayName: "Dashboard",
 	    		render: function(){
@@ -107,18 +132,11 @@ webpackJsonp([2],[
 /* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerThree = React.createClass({displayName: "ContainerThree",
@@ -159,15 +177,15 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 25 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
+	        __webpack_require__(37),
 	        __webpack_require__(38),
-	        __webpack_require__(39),
-	        __webpack_require__(40)
+	        __webpack_require__(39)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -355,11 +373,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 26 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -541,37 +559,12 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 27 */
+/* 20 */,
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
-	        __webpack_require__(3),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
-	    	var ControlPanel = React.createClass({displayName: "ControlPanel",
-	    		render: function(){
-	                var style = {
-	                    position: 'relative',
-	                    height: '300px'
-	                };
-
-	    			return (
-	    				React.createElement("div", {className: "row", id: "contains-custom-header"}
-
-	                    )
-	    			)
-	    		}
-	    	})
-
-	    	return ControlPanel;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerOne = React.createClass({displayName: "ContainerOne",
@@ -603,11 +596,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 29 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerTwo = React.createClass({displayName: "ContainerTwo",
@@ -645,11 +638,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 30 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerFour = React.createClass({displayName: "ContainerFour",
@@ -684,11 +677,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 31 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerFive = React.createClass({displayName: "ContainerFive",
@@ -729,11 +722,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 32 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerSix = React.createClass({displayName: "ContainerSix",
@@ -773,11 +766,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 33 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	    	var ContainerSeven = React.createClass({displayName: "ContainerSeven",
@@ -817,11 +810,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
-/* 34 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React,$){
 	        var ControlsMenu = React.createClass({displayName: "ControlsMenu",
@@ -1199,14 +1192,20 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))     
 
 /***/ },
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
 /* 35 */,
 /* 36 */,
-/* 37 */,
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -1256,11 +1255,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
+	        __webpack_require__(20)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -1302,11 +1301,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
+	        __webpack_require__(20)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 

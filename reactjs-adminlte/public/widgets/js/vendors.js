@@ -76,7 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"1":"widgets","2":"dashboardV1"}[chunkId]||chunkId) + "/js/" + ({"1":"widgets","2":"dashboardV1"}[chunkId]||chunkId) + ".bundle.js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"1":"dashboardV1","2":"widgets"}[chunkId]||chunkId) + "/js/" + ({"1":"dashboardV1","2":"widgets"}[chunkId]||chunkId) + ".bundle.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -98,7 +98,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(19);
+	__webpack_require__(20);
 	__webpack_require__(2);
 	__webpack_require__(5);
 	__webpack_require__(3);
@@ -131,7 +131,7 @@
 	;(function(f) {
 	  // CommonJS
 	  if (true) {
-	    module.exports = f(__webpack_require__(19));
+	    module.exports = f(__webpack_require__(20));
 
 	  // RequireJS
 	  } else if (typeof define === "function" && define.amd) {
@@ -6293,7 +6293,8 @@
 /***/ },
 /* 17 */,
 /* 18 */,
-/* 19 */
+/* 19 */,
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var require; /**

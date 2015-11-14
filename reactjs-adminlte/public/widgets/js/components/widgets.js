@@ -4,13 +4,15 @@ define(
         'jquery',
         './header-bar/header-bar',
         './navigation-menu',
-        './page-widgets/info-tile',
-        './page-widgets/progress-info-tile',
+        './page-widgets/info-tile/info-tile',
+        './page-widgets/info-tile/progress-bar',
         './page-widgets/stat-tile',
         './page-widgets/small-box',
-        './page-widgets/chat-box'
+        './page-widgets/chat-box/chat-box',
+        './page-widgets/chat-box/conversations',
+        './page-widgets/chat-box/contacts'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox, ChatBox) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
@@ -55,44 +57,36 @@ define(
                     subject: 'Bookmarks',
                     stats: '41,410',
                     content: '',
-                    progress: {
-                        percent: 70,
-                        description: '70% Increase in 30 Days',
-                        color: 'white'
-                    }
+                    progressPercent: 70,
+                    progressDescription: '70% Increase in 30 Days',
+                    progressColor: 'white'
                 }, {
                     theme: 'bg-green',
                     icon: 'fa-thumbs-o-up',
                     subject: 'Likes',
                     stats: '41,410',
                     content: '',
-                    progress: {
-                        percent: 50,
-                        description: '50% Increase in 30 Days',
-                        color: 'white'
-                    }
+                    progressPercent: 50,
+                    progressDescription: '50% Increase in 30 Days',
+                    progressColor: 'white'
                 }, {
                     theme: 'bg-yellow',
                     icon: 'fa-calendar',
                     subject: 'Events',
                     stats: '41,410',
                     content: '',
-                    progress: {
-                        percent: 70,
-                        description: '70% Increase in 30 Days',
-                        color: 'white'
-                    }
+                    progressPercent: 70,
+                    progressDescription: '70% Increase in 30 Days',
+                    progressColor: 'white'
                 }, {
                     theme: 'bg-red',
                     icon: 'fa-comments-o',
                     subject: 'comments',
                     stats: '41,410',
                     content: '',
-                    progress: {
-                        percent: 70,
-                        description: '70% Increase in 30 Days',
-                        color: 'white'
-                    }
+                    progressPercent: 70,
+                    progressDescription: '70% Increase in 30 Days',
+                    progressColor: 'white'
                 }];
 
                 var statTileOptions = [{
@@ -172,14 +166,13 @@ define(
                 }];
 
                 var chatBoxOptions = [{
-                    theme: {
-                        header: 'box-primary',
-                        notification: 'bg-light-blue',
-                        chat: 'direct-chat-primary',
-                        button: 'btn-primary'
-                    },
+                    headerTheme: 'box-primary',
+                    notificationTheme: 'bg-light-blue',
+                    chatTheme: 'direct-chat-primary',
+                    buttonTheme: 'btn-primary',
                     title: 'Direct Chat',
                     notifications: 2,
+
                     conversations: [{
                         name: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -192,6 +185,7 @@ define(
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
+
                     contacts: [{
                         name: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -206,15 +200,14 @@ define(
                         message: 'How have you been? I was...'
                     }]
                 }, {
-                    theme: {
-                        border: true,
-                        header: 'box-success',
-                        notification: 'bg-green',
-                        chat: 'direct-chat-success',
-                        button: 'btn-success'
-                    },
+                    headerTheme: 'box-success',
+                    notificationTheme: 'bg-green',
+                    chatTheme: 'direct-chat-success',
+                    buttonTheme: 'btn-success',
+                    border: true,
                     title: 'Direct Chat',
                     notifications: 3,
+
                     conversations: [{
                         name: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -227,6 +220,7 @@ define(
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
+
                     contacts: [{
                         name: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -235,14 +229,13 @@ define(
                         message: 'How have you been? I was...'
                     }]
                 }, {
-                    theme: {
-                        header: 'box-warning',
-                        notification: 'bg-yellow',
-                        chat: 'direct-chat-warning',
-                        button: 'btn-warning'
-                    },
+                    headerTheme: 'box-warning',
+                    notificationTheme: 'bg-yellow',
+                    chatTheme: 'direct-chat-warning',
+                    buttonTheme: 'btn-warning',
                     title: 'Direct Chat',
                     notifications: 4,
+
                     conversations: [{
                         name: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -255,6 +248,7 @@ define(
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
+
                     contacts: [{
                         name: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -263,14 +257,13 @@ define(
                         message: 'How have you been? I was...'
                     }]
                 }, {
-                    theme: {
-                        header: 'box-danger',
-                        notification: 'bg-red',
-                        chat: 'direct-chat-danger',
-                        button: 'btn-danger'
-                    },
+                    headerTheme: 'box-danger',
+                    notificationTheme: 'bg-red',
+                    chatTheme: 'direct-chat-danger',
+                    buttonTheme: 'btn-danger',
                     title: 'Direct Chat',
                     notifications: 5,
+
                     conversations: [{
                         name: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -283,6 +276,7 @@ define(
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
+
                     contacts: [{
                         name: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
@@ -304,37 +298,85 @@ define(
             render: function() {
                 var infoTileWidgets = this.state.infoTileOptions.map(function (options, iterator) {
                     return (
-                        <InfoTile options = {options} key={"rowOne"+iterator}/>
+                        <InfoTile 
+                            key = {"rowOne"+iterator}
+                            content = '' 
+                            icon = {options.icon} 
+                            stats = {options.stats} 
+                            subject = {options.subject} 
+                            theme = {options.theme} />
                     )
                 });
 
                 var progressInfoTileWidgets = this.state.progressInfoTileOptions.map(function (options, iterator) {
                     return (
-                        <ProgressInfoTile options = {options} key={"rowTwo"+iterator} />
+                        <InfoTile 
+                            key = {"rowOne"+iterator} 
+                            content='' 
+                            icon = {options.icon} 
+                            stats = {options.stats} 
+                            subject = {options.subject} 
+                            theme = {options.theme} >
+                            <ProgressBar percent={options.progressPercent} description={options.progressDescription} color={options.progressColor} />
+                        </InfoTile>    
                     )
                 });
 
                 var statTileWidgets = this.state.statTileOptions.map(function (options, iterator) {
                     return (
-                        <StatTile options = {options} key={"rowThree"+iterator}/>
+                        <StatTile 
+                            key={"rowThree"+iterator}
+                            icon = {options.icon} 
+                            link = {options.link}
+                            stats = {options.stats}
+                            subject = {options.subject} 
+                            theme = {options.theme} />
                     )
                 });
 
                 var smallBoxWidgets = this.state.smallBoxOptions.map(function (options, iterator) {
                     return (
-                        <SmallBox options = {options} key={"rowFour"+iterator} />
+                        <SmallBox 
+                            key={"rowFour"+iterator} 
+                            border = {false}
+                            content = {options.content}
+                            loading = {options.loading} 
+                            theme = {options.theme}
+                            title = {options.title} 
+                            type = {options.type} />
                     )
                 });
 
                 var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
                     return (
-                        <SmallBox options = {options} key={"rowFive"+iterator} />
+                        <SmallBox 
+                            key={"rowFour"+iterator} 
+                            border = {options.border}
+                            content = {options.content}
+                            loading = {options.loading} 
+                            theme = {options.theme}
+                            title = {options.title} 
+                            type = {options.type} />
                     )
                 });
 
                 var chatBoxWidgets = this.state.chatBoxOptions.map(function (options, iterator) {
                     return (
-                        <ChatBox options = {options} key={"rowSix"+iterator} />
+                        <ChatBox 
+                            key={"rowSix"+iterator} 
+                            buttonTheme = {options.buttonTheme}
+                            chatTheme = {options.chatTheme}
+                            headerTheme = {options.headerTheme}
+                            notificationTheme = {options.notificationTheme}
+                            title = {options.title}
+                            notifications = {options.notifications}
+                            border = {options.border} >
+
+                            <Conversations conversations = {options.conversations} />
+                            <Contacts contacts = {options.contacts} />
+                            
+                        </ChatBox>
+
                     )
                 });
 

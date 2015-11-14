@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,7 +8,7 @@ webpackJsonp([1],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
 	        __webpack_require__(13),
@@ -20,51 +20,7 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var InfoTile = React.createClass({displayName: "InfoTile",
-	            getDefaultProps: function() {
-	                return {
-	                    options: {
-	                        color: 'bg-red',
-	                        icon: 'fa-star-o',
-	                        subject: 'Default Subject',
-	                        stats: '0',
-	                        content: ''
-	                    }
-	                }
-	            },
-	            render: function() {
-	                var that = this,
-	                    options = this.props.options;
-
-	                return (
-	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
-	                        React.createElement("div", {className: "info-box"}, 
-	                            React.createElement("span", {className: "info-box-icon " + options.theme}, 
-	                                React.createElement("i", {className: "fa "+options.icon})
-	                            ), 
-
-	                            React.createElement("div", {className: "info-box-content"}, 
-	                                React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                                React.createElement("span", {className: "info-box-number"}, options.stats)
-	                            ), 
-	                            
-	                            options.content
-	                        )
-	                    )
-	                )
-	            }
-	        });
-
-	        return InfoTile;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
+/* 1 */,
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -139,16 +95,18 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
-	        __webpack_require__(3),
-	        __webpack_require__(17),
-	        __webpack_require__(18),
-	        __webpack_require__(1),
 	        __webpack_require__(20),
-	        __webpack_require__(21),
-	        __webpack_require__(22),
-	        __webpack_require__(23)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressInfoTile, StatTile, SmallBox, ChatBox) {
+	        __webpack_require__(3),
+	        __webpack_require__(29),
+	        __webpack_require__(30),
+	        __webpack_require__(31),
+	        __webpack_require__(32),
+	        __webpack_require__(28),
+	        __webpack_require__(33),
+	        __webpack_require__(34),
+	        __webpack_require__(35),
+	        __webpack_require__(36)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
 	                return {
@@ -193,44 +151,36 @@ webpackJsonp([1],[
 	                    subject: 'Bookmarks',
 	                    stats: '41,410',
 	                    content: '',
-	                    progress: {
-	                        percent: 70,
-	                        description: '70% Increase in 30 Days',
-	                        color: 'white'
-	                    }
+	                    progressPercent: 70,
+	                    progressDescription: '70% Increase in 30 Days',
+	                    progressColor: 'white'
 	                }, {
 	                    theme: 'bg-green',
 	                    icon: 'fa-thumbs-o-up',
 	                    subject: 'Likes',
 	                    stats: '41,410',
 	                    content: '',
-	                    progress: {
-	                        percent: 50,
-	                        description: '50% Increase in 30 Days',
-	                        color: 'white'
-	                    }
+	                    progressPercent: 50,
+	                    progressDescription: '50% Increase in 30 Days',
+	                    progressColor: 'white'
 	                }, {
 	                    theme: 'bg-yellow',
 	                    icon: 'fa-calendar',
 	                    subject: 'Events',
 	                    stats: '41,410',
 	                    content: '',
-	                    progress: {
-	                        percent: 70,
-	                        description: '70% Increase in 30 Days',
-	                        color: 'white'
-	                    }
+	                    progressPercent: 70,
+	                    progressDescription: '70% Increase in 30 Days',
+	                    progressColor: 'white'
 	                }, {
 	                    theme: 'bg-red',
 	                    icon: 'fa-comments-o',
 	                    subject: 'comments',
 	                    stats: '41,410',
 	                    content: '',
-	                    progress: {
-	                        percent: 70,
-	                        description: '70% Increase in 30 Days',
-	                        color: 'white'
-	                    }
+	                    progressPercent: 70,
+	                    progressDescription: '70% Increase in 30 Days',
+	                    progressColor: 'white'
 	                }];
 
 	                var statTileOptions = [{
@@ -310,14 +260,13 @@ webpackJsonp([1],[
 	                }];
 
 	                var chatBoxOptions = [{
-	                    theme: {
-	                        header: 'box-primary',
-	                        notification: 'bg-light-blue',
-	                        chat: 'direct-chat-primary',
-	                        button: 'btn-primary'
-	                    },
+	                    headerTheme: 'box-primary',
+	                    notificationTheme: 'bg-light-blue',
+	                    chatTheme: 'direct-chat-primary',
+	                    buttonTheme: 'btn-primary',
 	                    title: 'Direct Chat',
 	                    notifications: 2,
+
 	                    conversations: [{
 	                        name: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -330,6 +279,7 @@ webpackJsonp([1],[
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
+
 	                    contacts: [{
 	                        name: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -344,15 +294,14 @@ webpackJsonp([1],[
 	                        message: 'How have you been? I was...'
 	                    }]
 	                }, {
-	                    theme: {
-	                        border: true,
-	                        header: 'box-success',
-	                        notification: 'bg-green',
-	                        chat: 'direct-chat-success',
-	                        button: 'btn-success'
-	                    },
+	                    headerTheme: 'box-success',
+	                    notificationTheme: 'bg-green',
+	                    chatTheme: 'direct-chat-success',
+	                    buttonTheme: 'btn-success',
+	                    border: true,
 	                    title: 'Direct Chat',
 	                    notifications: 3,
+
 	                    conversations: [{
 	                        name: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -365,6 +314,7 @@ webpackJsonp([1],[
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
+
 	                    contacts: [{
 	                        name: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -373,14 +323,13 @@ webpackJsonp([1],[
 	                        message: 'How have you been? I was...'
 	                    }]
 	                }, {
-	                    theme: {
-	                        header: 'box-warning',
-	                        notification: 'bg-yellow',
-	                        chat: 'direct-chat-warning',
-	                        button: 'btn-warning'
-	                    },
+	                    headerTheme: 'box-warning',
+	                    notificationTheme: 'bg-yellow',
+	                    chatTheme: 'direct-chat-warning',
+	                    buttonTheme: 'btn-warning',
 	                    title: 'Direct Chat',
 	                    notifications: 4,
+
 	                    conversations: [{
 	                        name: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -393,6 +342,7 @@ webpackJsonp([1],[
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
+
 	                    contacts: [{
 	                        name: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -401,14 +351,13 @@ webpackJsonp([1],[
 	                        message: 'How have you been? I was...'
 	                    }]
 	                }, {
-	                    theme: {
-	                        header: 'box-danger',
-	                        notification: 'bg-red',
-	                        chat: 'direct-chat-danger',
-	                        button: 'btn-danger'
-	                    },
+	                    headerTheme: 'box-danger',
+	                    notificationTheme: 'bg-red',
+	                    chatTheme: 'direct-chat-danger',
+	                    buttonTheme: 'btn-danger',
 	                    title: 'Direct Chat',
 	                    notifications: 5,
+
 	                    conversations: [{
 	                        name: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -421,6 +370,7 @@ webpackJsonp([1],[
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
+
 	                    contacts: [{
 	                        name: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
@@ -442,37 +392,85 @@ webpackJsonp([1],[
 	            render: function() {
 	                var infoTileWidgets = this.state.infoTileOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(InfoTile, {options: options, key: "rowOne"+iterator})
+	                        React.createElement(InfoTile, {
+	                            key: "rowOne"+iterator, 
+	                            content: "", 
+	                            icon: options.icon, 
+	                            stats: options.stats, 
+	                            subject: options.subject, 
+	                            theme: options.theme})
 	                    )
 	                });
 
 	                var progressInfoTileWidgets = this.state.progressInfoTileOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(ProgressInfoTile, {options: options, key: "rowTwo"+iterator})
+	                        React.createElement(InfoTile, {
+	                            key: "rowOne"+iterator, 
+	                            content: "", 
+	                            icon: options.icon, 
+	                            stats: options.stats, 
+	                            subject: options.subject, 
+	                            theme: options.theme}, 
+	                            React.createElement(ProgressBar, {percent: options.progressPercent, description: options.progressDescription, color: options.progressColor})
+	                        )    
 	                    )
 	                });
 
 	                var statTileWidgets = this.state.statTileOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(StatTile, {options: options, key: "rowThree"+iterator})
+	                        React.createElement(StatTile, {
+	                            key: "rowThree"+iterator, 
+	                            icon: options.icon, 
+	                            link: options.link, 
+	                            stats: options.stats, 
+	                            subject: options.subject, 
+	                            theme: options.theme})
 	                    )
 	                });
 
 	                var smallBoxWidgets = this.state.smallBoxOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(SmallBox, {options: options, key: "rowFour"+iterator})
+	                        React.createElement(SmallBox, {
+	                            key: "rowFour"+iterator, 
+	                            border: false, 
+	                            content: options.content, 
+	                            loading: options.loading, 
+	                            theme: options.theme, 
+	                            title: options.title, 
+	                            type: options.type})
 	                    )
 	                });
 
 	                var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(SmallBox, {options: options, key: "rowFive"+iterator})
+	                        React.createElement(SmallBox, {
+	                            key: "rowFour"+iterator, 
+	                            border: options.border, 
+	                            content: options.content, 
+	                            loading: options.loading, 
+	                            theme: options.theme, 
+	                            title: options.title, 
+	                            type: options.type})
 	                    )
 	                });
 
 	                var chatBoxWidgets = this.state.chatBoxOptions.map(function (options, iterator) {
 	                    return (
-	                        React.createElement(ChatBox, {options: options, key: "rowSix"+iterator})
+	                        React.createElement(ChatBox, {
+	                            key: "rowSix"+iterator, 
+	                            buttonTheme: options.buttonTheme, 
+	                            chatTheme: options.chatTheme, 
+	                            headerTheme: options.headerTheme, 
+	                            notificationTheme: options.notificationTheme, 
+	                            title: options.title, 
+	                            notifications: options.notifications, 
+	                            border: options.border}, 
+
+	                            React.createElement(Conversations, {conversations: options.conversations}), 
+	                            React.createElement(Contacts, {contacts: options.contacts})
+	                            
+	                        )
+
 	                    )
 	                });
 
@@ -549,15 +547,86 @@ webpackJsonp([1],[
 /***/ },
 /* 15 */,
 /* 16 */,
-/* 17 */
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var StatTile = React.createClass({displayName: "StatTile",
+	            getDefaultProps: function() {
+	                return {
+	                    color: 'bg-yellow',
+	                    icon: 'ion-person-add',
+	                    subject: 'Default Subject',
+	                    stats: '0',
+	                    link: '/default/link'
+	                }
+	            },
+	            render: function() {
+	                var link = '',
+	                    stats = React.createElement("h3", null, " ", this.props.stats, " ");
+
+	                if(this.props.link) {
+	                    link =
+	                        React.createElement("a", {href: this.props.link, className: "small-box-footer"}, 
+	                            "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
+	                        );
+	                }
+
+	                if(this.props.stats.indexOf('%') !== -1) {
+	                    var style = {
+	                        fontSize: '20px'
+	                    };
+
+	                    stats =
+	                        React.createElement("h3", null, 
+	                            this.props.stats.replace(/%/g, ''), 
+	                            React.createElement("sup", {style: style}, "%")
+	                        )
+	                }
+
+	                return(
+	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
+	                        React.createElement("div", {className: "small-box "+this.props.theme}, 
+	                            React.createElement("div", {className: "inner"}, 
+	                                stats, 
+	                                React.createElement("p", null, this.props.subject)
+	                            ), 
+	                            React.createElement("div", {className: "icon"}, 
+	                                React.createElement("i", {className: "fa "+this.props.icon})
+	                            ), 
+	                            link
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return StatTile;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(20),
 	        __webpack_require__(3),
-	        __webpack_require__(35),
-	        __webpack_require__(36),
-	        __webpack_require__(37)
+	        __webpack_require__(40),
+	        __webpack_require__(41),
+	        __webpack_require__(42)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -745,11 +814,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 18 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -931,152 +1000,123 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 19 */,
-/* 20 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
+	        __webpack_require__(20)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var ProgressInfoTile = React.createClass({displayName: "ProgressInfoTile",
+	        var InfoTile = React.createClass({displayName: "InfoTile",
 	            getDefaultProps: function() {
 	                return {
-	                    options: {
-	                        color: 'bg-aqua',
-	                        icon: 'fa-star-o',
-	                        subject: 'Default Subject',
-	                        stats: '0',
-	                        content: '',
-	                        progress: {
-	                            percent: 50,
-	                            description: 'Default progress 50%',
-	                            color: 'white'
-	                        }
-	                    }
+	                    content: '',
+	                    icon: 'fa-star-o',
+	                    stats: '0',
+	                    subject: 'Default Subject',
+	                    theme: 'bg-aqua'      
 	                }
 	            },
 	            render: function() {
-	                var that = this,
-	                    options = this.props.options;
+	                
+	                if(this.props.children){
+	                    return (
+	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                            React.createElement("div", {className: "info-box "+this.props.theme}, 
+	                                React.createElement("span", {className: "info-box-icon"}, 
+	                                    React.createElement("i", {className: "fa "+this.props.icon})
+	                                ), 
+
+	                                React.createElement("div", {className: "info-box-content"}, 
+	                                    React.createElement("span", {className: "info-box-text"}, this.props.subject), 
+	                                    React.createElement("span", {className: "info-box-number"}, this.props.stats), 
+	                                    this.props.children
+	                                ), 
+	                                
+	                                this.props.content
+	                            )
+	                        )
+	                    )       
+	                }else{
+	                    return (
+	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                            React.createElement("div", {className: "info-box"}, 
+	                                React.createElement("span", {className: "info-box-icon " + this.props.theme}, 
+	                                    React.createElement("i", {className: "fa "+this.props.icon})
+	                                ), 
+
+	                                React.createElement("div", {className: "info-box-content"}, 
+	                                    React.createElement("span", {className: "info-box-text"}, this.props.subject), 
+	                                    React.createElement("span", {className: "info-box-number"}, this.props.stats)
+	                                ), 
+	                                
+	                                this.props.content
+	                            )
+	                        )
+	                    )
+	                }                
+	            }
+	        });
+
+	        return InfoTile;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var ProgressBar = React.createClass({displayName: "ProgressBar",
+	            getDefaultProps: function() {
+	                return {
+	                    percent: 50,
+	                    description: 'Default progress 50%',
+	                    color: 'white'
+	                }
+	            },
+	            render: function() {
+	                var that = this;
 
 	                var style = {
-	                    width: options.progress.percent + '%',
-	                    backgroundColor: options.progress.color
+	                    width: this.props.percent + '%',
+	                    backgroundColor: this.props.color
 	                };
 
 	                return (
-	                    React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
-	                        React.createElement("div", {className: "info-box "+options.theme}, 
-	                            React.createElement("span", {className: "info-box-icon"}, 
-	                                React.createElement("i", {className: "fa "+options.icon})
-	                            ), 
-
-	                            React.createElement("div", {className: "info-box-content"}, 
-	                                React.createElement("span", {className: "info-box-text"}, options.subject), 
-	                                React.createElement("span", {className: "info-box-number"}, options.stats), 
-	                                React.createElement("div", {className: "progress"}, 
-	                                    React.createElement("div", {className: "progress-bar", style: style})
-	                                ), 
-	                                React.createElement("span", {className: "progress-description"}, 
-	                                    options.progress.description
-	                                )
-	                            ), 
-	                            
-	                            options.content
+	                    React.createElement("div", null, 
+	                        React.createElement("div", {className: "progress"}, 
+	                            React.createElement("div", {className: "progress-bar", style: style})
+	                        ), 
+	                        React.createElement("span", {className: "progress-description"}, 
+	                            this.props.description
 	                        )
 	                    )
 	                )
 	            }
 	        });
 
-	        return ProgressInfoTile;
+	        return ProgressBar;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 21 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var StatTile = React.createClass({displayName: "StatTile",
-	            getDefaultProps: function() {
-	                return {
-	                    options: {
-	                        color: 'bg-yellow',
-	                        icon: 'ion-person-add',
-	                        subject: 'Default Subject',
-	                        stats: '0',
-	                        link: '/default/link'
-	                    }
-	                }
-	            },
-	            render: function() {
-	                var that = this,
-	                    options = this.props.options;
-
-	                var link = '',
-	                    stats = React.createElement("h3", null, " ", options.stats, " ");
-
-	                if(this.props.options.link) {
-	                    link =
-	                        React.createElement("a", {href: options.link, className: "small-box-footer"}, 
-	                            "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
-	                        );
-	                }
-
-	                if(options.stats.indexOf('%') !== -1) {
-	                    var style = {
-	                        fontSize: '20px'
-	                    };
-
-	                    stats =
-	                        React.createElement("h3", null, 
-	                            options.stats.replace(/%/g, ''), 
-	                            React.createElement("sup", {style: style}, "%")
-	                        )
-	                }
-
-	                return(
-	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
-	                        React.createElement("div", {className: "small-box "+options.theme}, 
-	                            React.createElement("div", {className: "inner"}, 
-	                                stats, 
-	                                React.createElement("p", null, options.subject)
-	                            ), 
-	                            React.createElement("div", {className: "icon"}, 
-	                                React.createElement("i", {className: "fa "+options.icon})
-	                            ), 
-	                            link
-	                        )
-	                    )
-	                )
-	            }
-	        });
-
-	        return StatTile;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(2),
 	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            getDefaultProps: function() {
 	                return {
-	                    options: {
-	                        type: 'expandable',
-	                        theme: 'box-default',
-	                        loading: false,
-	                        border: true,
-	                        title: 'Default title',
-	                        content: 'Default content',
-	                    }
+	                    type: 'expandable',
+	                    theme: 'box-default',
+	                    loading: false,
+	                    border: true,
+	                    title: 'Default title',
+	                    content: 'Default content',
 	                }
 	            },
 	            toggleCollapse: function(event) {
@@ -1092,10 +1132,9 @@ webpackJsonp([1],[
 	            },
 	            render: function() {
 	                var that = this,
-	                    options = this.props.options,
 	                    boxClassname, button, borderClass, loadingState;
 
-	                switch(options.type){
+	                switch(this.props.type){
 	                    case 'expandable': 
 	                        boxClassname = "collapsed-box";
 	                        button = 
@@ -1121,22 +1160,22 @@ webpackJsonp([1],[
 	                        break; 
 	                }
 
-	                if(options.loading === true){
+	                if(this.props.loading === true){
 	                    loadingState = 
 	                        React.createElement("div", {className: "overlay"}, 
 	                            React.createElement("i", {className: "fa fa-refresh fa-spin"})
 	                        )
 	                }
 
-	                if(options.border === true){
+	                if(this.props.border === true){
 	                    borderClass = 'box-solid';
 	                }
 
 	                return(
 	                    React.createElement("div", {className: "col-md-3"}, 
-	                        React.createElement("div", {className: "box"+" " + options.theme+" " + boxClassname + " "+borderClass}, 
+	                        React.createElement("div", {className: "box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
-	                                React.createElement("h3", {className: "box-title"}, options.title), 
+	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
 	                                React.createElement("div", {className: "box-tools pull-right"}, 
 	                                    button
 	                                )
@@ -1144,7 +1183,7 @@ webpackJsonp([1],[
 	                            ), 
 	                            /* /.box-header */
 	                            React.createElement("div", {className: "box-body"}, 
-	                                options.content
+	                                this.props.content
 	                            ), 
 	                            /* /.box-body */
 	                            loadingState
@@ -1158,11 +1197,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 23 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	        __webpack_require__(2),
 	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
@@ -1188,10 +1227,74 @@ webpackJsonp([1],[
 	                }
 	            },
 	            render: function() {
-	                var options = this.props.options, borderClass,
-	                    that = this;
+	                var borderClass, that = this;
 
-	                var conversations = options.conversations.map(function(messageDetails, iterator){
+	                if(this.props.border === true){
+	                    borderClass = 'box-solid';
+	                }
+
+	                return (
+	                    React.createElement("div", {className: "col-md-3"}, 
+	                        /* DIRECT CHAT PRIMARY */
+	                        React.createElement("div", {className: "box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass}, 
+	                            React.createElement("div", {className: "box-header with-border"}, 
+	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
+	                                React.createElement("div", {className: "box-tools pull-right"}, 
+	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge "+this.props.notificationTheme, 
+	                                        "data-original-title": this.props.notifications+ " New Messages"}, 
+	                                        this.props.notifications
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
+	                                        React.createElement("i", {className: "fa fa-minus"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts", onClick: that.toggleChat}, 
+	                                        React.createElement("i", {className: "fa fa-comments"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: that.removeBox}, 
+	                                        React.createElement("i", {className: "fa fa-times"})
+	                                    )
+	                                )
+	                            ), 
+	                            /* /.box-header */
+	                            React.createElement("div", {className: "box-body"}, 
+	                                this.props.children
+	                            ), 
+	                            /* /.box-body */
+	                            React.createElement("div", {className: "box-footer"}, 
+	                                React.createElement("form", {action: "#", method: "post"}, 
+	                                    React.createElement("div", {className: "input-group"}, 
+	                                        React.createElement("input", {type: "text", name: "message", placeholder: "Type Message ...", className: "form-control"}), 
+	                                        React.createElement("span", {className: "input-group-btn"}, 
+	                                            React.createElement("button", {type: "button", className: "btn btn-flat "+this.props.buttonTheme}, "Send")
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                            /* /.box-footer*/
+	                        )
+	                        /*/.direct-chat */
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return ChatBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(20),
+	        __webpack_require__(2),
+	        __webpack_require__(13)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        var Conversations = React.createClass({displayName: "Conversations",
+	            render: function() {
+
+	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
 	                    if(messageDetails.self === true){
 	                        return (
 	                            React.createElement("div", {className: "direct-chat-msg right", key: "message"+iterator}, 
@@ -1234,8 +1337,33 @@ webpackJsonp([1],[
 	                        )
 	                    }
 	                });
+
+	                return (      
+	                    React.createElement("div", {className: "direct-chat-messages"}, 
+	                        /* Message. Default to the left */
+	                        conversations
+	                    )
+	                )
 	                
-	                var contacts = options.contacts.map(function(contactDetails, iterator){
+	            }
+	        });
+
+	        return Conversations;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(20),
+	        __webpack_require__(2),
+	        __webpack_require__(13)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        var Contacts = React.createClass({displayName: "Contacts",
+	            render: function() {
+
+	                var contacts = this.props.contacts.map(function(contactDetails, iterator){
 	                    return (
 	                        React.createElement("li", {key: "contact"+iterator}, 
 	                            React.createElement("a", {href: contactDetails.link}, 
@@ -1257,91 +1385,30 @@ webpackJsonp([1],[
 	                    )
 	                });
 
-	                if(options.theme.border === true){
-	                    borderClass = 'box-solid';
-	                }
-
 	                return (
-	                    React.createElement("div", {className: "col-md-3"}, 
-	                        /* DIRECT CHAT PRIMARY */
-	                        React.createElement("div", {className: "box " + options.theme.header + " direct-chat " + options.theme.chat + " " + borderClass}, 
-	                            React.createElement("div", {className: "box-header with-border"}, 
-	                                React.createElement("h3", {className: "box-title"}, options.title), 
-	                                React.createElement("div", {className: "box-tools pull-right"}, 
-	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge "+options.theme.notification, 
-	                                        "data-original-title": options.notifications+ " New Messages"}, 
-	                                        options.notifications
-	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
-	                                        React.createElement("i", {className: "fa fa-minus"})
-	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts", onClick: that.toggleChat}, 
-	                                        React.createElement("i", {className: "fa fa-comments"})
-	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: that.removeBox}, 
-	                                        React.createElement("i", {className: "fa fa-times"})
-	                                    )
-	                                )
-	                            ), 
-	                            /* /.box-header */
-	                            React.createElement("div", {className: "box-body"}, 
-	                                /* Conversations are loaded here */
-	                                React.createElement("div", {className: "direct-chat-messages"}, 
-	                                    /* Message. Default to the left */
-	                                    conversations
-	                                ), 
-	                                /*/.direct-chat-messages*/
-
-	                                /* Contacts are loaded here */
-	                                React.createElement("div", {className: "direct-chat-contacts"}, 
-	                                    React.createElement("ul", {className: "contacts-list"}, 
-	                                        contacts
-	                                        /* End Contact Item */
-	                                    )
-	                                    /* /.contatcts-list */
-	                                )
-	                                /* /.direct-chat-pane */
-	                            ), 
-	                            /* /.box-body */
-	                            React.createElement("div", {className: "box-footer"}, 
-	                                React.createElement("form", {action: "#", method: "post"}, 
-	                                    React.createElement("div", {className: "input-group"}, 
-	                                        React.createElement("input", {type: "text", name: "message", placeholder: "Type Message ...", className: "form-control"}), 
-	                                        React.createElement("span", {className: "input-group-btn"}, 
-	                                            React.createElement("button", {type: "button", className: "btn btn-flat "+options.theme.button}, "Send")
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                            /* /.box-footer*/
+	                    React.createElement("div", {className: "direct-chat-contacts"}, 
+	                        React.createElement("ul", {className: "contacts-list"}, 
+	                            contacts
+	                            /* End Contact Item */
 	                        )
-	                        /*/.direct-chat */
+	                        /* /.contatcts-list */
 	                    )
 	                )
-	                
 	            }
 	        });
 
-	        return ChatBox;
+	        return Contacts;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19),
+	        __webpack_require__(20),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -1391,11 +1458,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
+	        __webpack_require__(20)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -1437,11 +1504,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(19)
+	        __webpack_require__(20)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 

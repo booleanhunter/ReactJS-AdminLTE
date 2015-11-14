@@ -8,14 +8,12 @@ define(
         var SmallBox = React.createClass({
             getDefaultProps: function() {
                 return {
-                    options: {
-                        type: 'expandable',
-                        theme: 'box-default',
-                        loading: false,
-                        border: true,
-                        title: 'Default title',
-                        content: 'Default content',
-                    }
+                    type: 'expandable',
+                    theme: 'box-default',
+                    loading: false,
+                    border: true,
+                    title: 'Default title',
+                    content: 'Default content',
                 }
             },
             toggleCollapse: function(event) {
@@ -31,10 +29,9 @@ define(
             },
             render: function() {
                 var that = this,
-                    options = this.props.options,
                     boxClassname, button, borderClass, loadingState;
 
-                switch(options.type){
+                switch(this.props.type){
                     case 'expandable': 
                         boxClassname = "collapsed-box";
                         button = 
@@ -60,22 +57,22 @@ define(
                         break; 
                 }
 
-                if(options.loading === true){
+                if(this.props.loading === true){
                     loadingState = 
                         <div className="overlay">
                             <i className="fa fa-refresh fa-spin"></i>
                         </div>
                 }
 
-                if(options.border === true){
+                if(this.props.border === true){
                     borderClass = 'box-solid';
                 }
 
                 return(
                     <div className = "col-md-3">
-                        <div className={"box"+" " + options.theme+" " + boxClassname + " "+borderClass}>
+                        <div className={"box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}>
                             <div className="box-header with-border">
-                                <h3 className="box-title">{options.title}</h3>
+                                <h3 className="box-title">{this.props.title}</h3>
                                 <div className="box-tools pull-right">
                                     {button}
                                 </div>
@@ -83,7 +80,7 @@ define(
                             </div>
                             {/* /.box-header */}
                             <div className="box-body">
-                                {options.content}
+                                {this.props.content}
                             </div>
                             {/* /.box-body */}
                             {loadingState}
