@@ -11,8 +11,8 @@ webpackJsonp([2],[
 	        __webpack_require__(20),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(13),
-	        __webpack_require__(14)
+	        __webpack_require__(12),
+	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, commonFunctions, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
 
@@ -20,7 +20,67 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var InfoTile = React.createClass({displayName: "InfoTile",
+	            getDefaultProps: function() {
+	                return {
+	                    content: '',
+	                    icon: 'fa-star-o',
+	                    stats: '0',
+	                    subject: 'Default Subject',
+	                    theme: 'bg-aqua'      
+	                }
+	            },
+	            render: function() {
+	                
+	                if(this.props.children){
+	                    return (
+	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                            React.createElement("div", {className: "info-box "+this.props.theme}, 
+	                                React.createElement("span", {className: "info-box-icon"}, 
+	                                    React.createElement("i", {className: "fa "+this.props.icon})
+	                                ), 
+
+	                                React.createElement("div", {className: "info-box-content"}, 
+	                                    React.createElement("span", {className: "info-box-text"}, this.props.subject), 
+	                                    React.createElement("span", {className: "info-box-number"}, this.props.stats), 
+	                                    this.props.children
+	                                ), 
+	                                
+	                                this.props.content
+	                            )
+	                        )
+	                    )       
+	                }else{
+	                    return (
+	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                            React.createElement("div", {className: "info-box"}, 
+	                                React.createElement("span", {className: "info-box-icon " + this.props.theme}, 
+	                                    React.createElement("i", {className: "fa "+this.props.icon})
+	                                ), 
+
+	                                React.createElement("div", {className: "info-box-content"}, 
+	                                    React.createElement("span", {className: "info-box-text"}, this.props.subject), 
+	                                    React.createElement("span", {className: "info-box-number"}, this.props.stats)
+	                                ), 
+	                                
+	                                this.props.content
+	                            )
+	                        )
+	                    )
+	                }                
+	            }
+	        });
+
+	        return InfoTile;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -31,8 +91,7 @@ webpackJsonp([2],[
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */,
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -91,21 +150,21 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(20),
 	        __webpack_require__(3),
-	        __webpack_require__(29),
-	        __webpack_require__(30),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(28),
-	        __webpack_require__(33),
-	        __webpack_require__(34),
-	        __webpack_require__(35),
-	        __webpack_require__(36)
+	        __webpack_require__(18),
+	        __webpack_require__(19),
+	        __webpack_require__(1),
+	        __webpack_require__(21),
+	        __webpack_require__(17),
+	        __webpack_require__(22),
+	        __webpack_require__(23),
+	        __webpack_require__(24),
+	        __webpack_require__(25)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
@@ -468,7 +527,7 @@ webpackJsonp([2],[
 
 	                            React.createElement(Conversations, {conversations: options.conversations}), 
 	                            React.createElement(Contacts, {contacts: options.contacts})
-	                            
+
 	                        )
 
 	                    )
@@ -545,20 +604,10 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -618,15 +667,15 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 29 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(20),
 	        __webpack_require__(3),
-	        __webpack_require__(40),
-	        __webpack_require__(41),
-	        __webpack_require__(42)
+	        __webpack_require__(37),
+	        __webpack_require__(38),
+	        __webpack_require__(39)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -814,7 +863,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 30 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1000,68 +1049,8 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var InfoTile = React.createClass({displayName: "InfoTile",
-	            getDefaultProps: function() {
-	                return {
-	                    content: '',
-	                    icon: 'fa-star-o',
-	                    stats: '0',
-	                    subject: 'Default Subject',
-	                    theme: 'bg-aqua'      
-	                }
-	            },
-	            render: function() {
-	                
-	                if(this.props.children){
-	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
-	                            React.createElement("div", {className: "info-box "+this.props.theme}, 
-	                                React.createElement("span", {className: "info-box-icon"}, 
-	                                    React.createElement("i", {className: "fa "+this.props.icon})
-	                                ), 
-
-	                                React.createElement("div", {className: "info-box-content"}, 
-	                                    React.createElement("span", {className: "info-box-text"}, this.props.subject), 
-	                                    React.createElement("span", {className: "info-box-number"}, this.props.stats), 
-	                                    this.props.children
-	                                ), 
-	                                
-	                                this.props.content
-	                            )
-	                        )
-	                    )       
-	                }else{
-	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
-	                            React.createElement("div", {className: "info-box"}, 
-	                                React.createElement("span", {className: "info-box-icon " + this.props.theme}, 
-	                                    React.createElement("i", {className: "fa "+this.props.icon})
-	                                ), 
-
-	                                React.createElement("div", {className: "info-box-content"}, 
-	                                    React.createElement("span", {className: "info-box-text"}, this.props.subject), 
-	                                    React.createElement("span", {className: "info-box-number"}, this.props.stats)
-	                                ), 
-	                                
-	                                this.props.content
-	                            )
-	                        )
-	                    )
-	                }                
-	            }
-	        });
-
-	        return InfoTile;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 32 */
+/* 20 */,
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1100,13 +1089,13 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(20),
 	        __webpack_require__(2),
-	        __webpack_require__(13)
+	        __webpack_require__(12)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            getDefaultProps: function() {
@@ -1197,13 +1186,13 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 34 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(20),
 	        __webpack_require__(2),
-	        __webpack_require__(13)
+	        __webpack_require__(12)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var ChatBox = React.createClass({displayName: "ChatBox",
 	            toggleCollapse: function(event) {
@@ -1228,7 +1217,10 @@ webpackJsonp([2],[
 	            },
 	            render: function() {
 	                var borderClass, that = this;
-
+	                var a = React.Children.map(this.props.children, function(child){
+	                    return child
+	                });
+	                console.log(a);
 	                if(this.props.border === true){
 	                    borderClass = 'box-solid';
 	                }
@@ -1283,13 +1275,13 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 35 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(20),
 	        __webpack_require__(2),
-	        __webpack_require__(13)
+	        __webpack_require__(12)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var Conversations = React.createClass({displayName: "Conversations",
 	            render: function() {
@@ -1352,13 +1344,13 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(20),
 	        __webpack_require__(2),
-	        __webpack_require__(13)
+	        __webpack_require__(12)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var Contacts = React.createClass({displayName: "Contacts",
 	            render: function() {
@@ -1401,10 +1393,18 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1458,7 +1458,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 41 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1504,7 +1504,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 42 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [

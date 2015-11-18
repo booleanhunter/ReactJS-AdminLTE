@@ -28,7 +28,10 @@ define(
             },
             render: function() {
                 var borderClass, that = this;
-
+                var a = React.Children.map(this.props.children, function(child){
+                    return child
+                });
+                console.log(a);
                 if(this.props.border === true){
                     borderClass = 'box-solid';
                 }

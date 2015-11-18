@@ -374,7 +374,7 @@ define(
 
                             <Conversations conversations = {options.conversations} />
                             <Contacts contacts = {options.contacts} />
-                            
+
                         </ChatBox>
 
                     )
