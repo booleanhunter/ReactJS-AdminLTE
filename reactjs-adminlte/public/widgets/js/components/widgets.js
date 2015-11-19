@@ -10,9 +10,12 @@ define(
         './page-widgets/small-box',
         './page-widgets/chat-box/chat-box',
         './page-widgets/chat-box/conversations',
-        './page-widgets/chat-box/contacts'
+        './page-widgets/chat-box/contacts',
+        './page-widgets/profile-card/profile-card',
+        './page-widgets/profile-card/profile-info-list',
+        './page-widgets/profile-card/profile-info-blocks'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
@@ -21,7 +24,8 @@ define(
                     statTileOptions: [],
                     smallBoxOptions: [],
                     smallBoxBorderedOptions: [],
-                    chatBoxOptions: []
+                    chatBoxOptions: [],
+                    ProfileCardOptions: []
                 }
             },
             componentDidMount: function() {
@@ -284,7 +288,69 @@ define(
                         date: '2/28/2015',
                         message: 'How have you been? I was...'
                     }]
-                }];
+                }],
+
+                ProfileCardOptions = [
+                    {
+                        theme: 'bg-yellow',
+                        displayName: 'Nadia Carmichael',
+                        description: 'Lead Developer',
+                        displayPicture: '../dist/img/user7-128x128.jpg',
+                        pictureAlignment: 'left',
+                        infoList: [{
+                            description: 'Projects',
+                            stats: 31,
+                            link: '#',
+                            badgeTheme: 'bg-blue'
+                        }, {
+                            description: 'Tasks',
+                            stats: 5,
+                            link: '#',
+                            badgeTheme: 'bg-aqua'
+                        }, {
+                            description: 'Completed Projects',
+                            stats: 12,
+                            link: '#',
+                            badgeTheme: 'bg-green'
+                        }, {
+                            description: 'Followers',
+                            stats: 842,
+                            link: '#',
+                            badgeTheme: 'bg-red'
+                        }]
+                    }, {
+                        theme: 'bg-aqua-active',
+                        displayName: 'Alexander Pierce',
+                        description: 'Founder & CEO',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        infoList: [{
+                            description: 'SALES',
+                            stats: '3,200'
+                        }, {
+                            description: 'FOLLOWERS',
+                            stats: '13,000'
+                        }, {
+                            description: 'PRODUCTS',
+                            stats: 35
+                        }]
+                    }, {
+                        theme: 'bg-black',
+                        displayName: 'Elizabeth Pierce',
+                        description: 'Web Designer',
+                        displayPicture: '../dist/img/user3-128x128.jpg',
+                        profilePicture: '../dist/img/photo1.png',
+                        infoList: [{
+                            description: 'SALES',
+                            stats: '3,200'
+                        }, {
+                            description: 'FOLLOWERS',
+                            stats: '13,000'
+                        }, {
+                            description: 'PRODUCTS',
+                            stats: 35
+                        }]
+                    }
+                ];
 
                 this.setState({
                     infoTileOptions: infoTileOptions,
@@ -292,7 +358,8 @@ define(
                     statTileOptions: statTileOptions,
                     smallBoxOptions: smallBoxOptions,
                     smallBoxBorderedOptions: smallBoxBorderedOptions,
-                    chatBoxOptions: chatBoxOptions
+                    chatBoxOptions: chatBoxOptions,
+                    ProfileCardOptions: ProfileCardOptions
                 });
             },
             render: function() {
@@ -311,7 +378,7 @@ define(
                 var progressInfoTileWidgets = this.state.progressInfoTileOptions.map(function (options, iterator) {
                     return (
                         <InfoTile 
-                            key = {"rowOne"+iterator} 
+                            key = {"rowTwo"+iterator} 
                             content='' 
                             icon = {options.icon} 
                             stats = {options.stats} 
@@ -350,7 +417,7 @@ define(
                 var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
                     return (
                         <SmallBox 
-                            key={"rowFour"+iterator} 
+                            key={"rowFive"+iterator} 
                             border = {options.border}
                             content = {options.content}
                             loading = {options.loading} 
@@ -378,6 +445,40 @@ define(
                         </ChatBox>
 
                     )
+                });
+
+                var ProfileCardWidgets = this.state.ProfileCardOptions.map(function (options, iterator) {
+                    if(options.pictureAlignment === 'left'){
+                        return (
+                            <ProfileCard 
+                                key={"rowSeven"+iterator}
+                                theme={options.theme} 
+                                displayName={options.displayName} 
+                                description={options.description}
+                                displayPicture={options.displayPicture}
+                                pictureAlignment={options.pictureAlignment}
+                                profilePicture={options.profilePicture} >
+
+                                <ProfileInfoList list={options.infoList} />
+
+                            </ProfileCard>
+                        )
+                    }else{
+                        return (
+                            <ProfileCard 
+                                key={"rowSeven"+iterator}
+                                theme={options.theme} 
+                                displayName={options.displayName} 
+                                description={options.description}
+                                displayPicture={options.displayPicture}
+                                profilePicture={options.profilePicture} >
+
+                                <ProfileInfoBlocks list={options.infoList} />
+
+                            </ProfileCard>
+                        )
+                    }
+                
                 });
 
                 return (
@@ -422,9 +523,9 @@ define(
                                 <div className="row">
                                     {chatBoxWidgets}               
                                 </div>
-
+                                <h2 className="page-header">Social Widgets</h2>
                                 <div className="row">
-                                                     
+                                    {ProfileCardWidgets}
                                 </div>
 
                                 <div className="row">
