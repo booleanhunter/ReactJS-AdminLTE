@@ -1,10 +1,18 @@
 define(
     [
-        'react',
-        'reactDom',
+        'react'
     ],
-    function (React, ReactDOM) {
-        var ProfileTypeOne = React.createClass({
+    function (React) {
+        var ProfileCard = React.createClass({
+            getDefaultProps: function() {
+                return {
+                    pictureAlignment: 'center',
+                    theme: 'bg-yellow',
+                    displayName: 'John Doe',
+                    description: 'My profile description',
+                    displayPicture: '../dist/img/user7-128x128.jpg'   
+                }
+            },
             render: function() {
                 var profilePicture = {}, alignmentType = 'widget-user', footerPadding = '';
                 
@@ -43,6 +51,6 @@ define(
             }
         });
 
-        return ProfileTypeOne;
+        return ProfileCard;
     }
 )

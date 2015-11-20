@@ -183,7 +183,7 @@ define(
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
-                        self: true,
+                        align: 'right',
                         name: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
@@ -218,7 +218,7 @@ define(
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
-                        self: true,
+                        align: 'right',
                         name: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
@@ -246,7 +246,7 @@ define(
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
-                        self: true,
+                        align: 'right',
                         name: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
@@ -274,7 +274,7 @@ define(
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
-                        self: true,
+                        align: 'right',
                         name: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    

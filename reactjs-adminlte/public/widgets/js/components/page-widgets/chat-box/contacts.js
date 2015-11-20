@@ -1,10 +1,8 @@
 define(
     [
-        'react',
-        'reactDom',
-        '../../../common-functions'
+        'react'
     ],
-    function (React, ReactDOM, commonFunctions) {
+    function (React) {
         var Contacts = React.createClass({
             render: function() {
 

@@ -277,7 +277,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -312,7 +312,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -340,7 +340,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -368,7 +368,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -1307,6 +1307,16 @@ webpackJsonp([2],[
 	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var ChatBox = React.createClass({displayName: "ChatBox",
+	            getDefaultProps: function() {
+	                return {
+	                    headerTheme: 'box-primary',
+	                    notificationTheme: 'bg-light-blue',
+	                    chatTheme: 'direct-chat-primary',
+	                    buttonTheme: 'btn-primary',
+	                    title: 'Chat Box',
+	                    notifications: 0   
+	                }
+	            },
 	            toggleCollapse: function(event) {
 	                var box = ReactDOM.findDOMNode(this).children[0],
 	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
@@ -1324,11 +1334,11 @@ webpackJsonp([2],[
 	                if(box.className.indexOf('direct-chat-contacts-open') === -1){
 	                    box.className += ' direct-chat-contacts-open';
 	                }else{
-	                    box.className = box.className.replace(/direct-chat-contacts-open/g,'');
+	                    box.className = box.className.replace(/ direct-chat-contacts-open/g,'');
 	                }
 	            },
 	            render: function() {
-	                var borderClass, that = this;
+	                var borderClass = '', that = this;
 	                var a = React.Children.map(this.props.children, function(child){
 	                    return child
 	                });
@@ -1391,55 +1401,31 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
-	        __webpack_require__(2),
-	        __webpack_require__(13)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var Conversations = React.createClass({displayName: "Conversations",
 	            render: function() {
 
 	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
-	                    if(messageDetails.self === true){
-	                        return (
-	                            React.createElement("div", {className: "direct-chat-msg right", key: "message"+iterator}, 
-	                                React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                    React.createElement("span", {className: "direct-chat-name pull-right"}, 
-	                                        messageDetails.name
-	                                    ), 
-	                                    React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
-	                                        messageDetails.date
-	                                    )
+	                    return (
+	                        React.createElement("div", {className: "direct-chat-msg " + messageDetails.align, key: "message"+iterator}, 
+	                            React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                React.createElement("span", {className: "direct-chat-name pull-right"}, 
+	                                    messageDetails.name
 	                                ), 
-	                                /* /.direct-chat-info */
-	                                React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
-	                                /* /.direct-chat-img */
-	                                React.createElement("div", {className: "direct-chat-text"}, 
-	                                    messageDetails.message
+	                                React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
+	                                    messageDetails.date
 	                                )
-	                                /* /.direct-chat-text */
+	                            ), 
+	                            /* /.direct-chat-info */
+	                            React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
+	                            /* /.direct-chat-img */
+	                            React.createElement("div", {className: "direct-chat-text"}, 
+	                                messageDetails.message
 	                            )
+	                            /* /.direct-chat-text */
 	                        )
-	                    }else{
-	                        return (
-	                            React.createElement("div", {className: "direct-chat-msg", key: "message"+iterator}, 
-	                                React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                    React.createElement("span", {className: "direct-chat-name pull-left"}, 
-	                                        messageDetails.name
-	                                    ), 
-	                                    React.createElement("span", {className: "direct-chat-timestamp pull-right"}, 
-	                                        messageDetails.date
-	                                    )
-	                                ), 
-	                                /* /.direct-chat-info */
-	                                React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
-	                                /* /.direct-chat-img */
-	                                React.createElement("div", {className: "direct-chat-text"}, 
-	                                    messageDetails.message
-	                                )
-	                                /* /.direct-chat-text */
-	                            )
-	                        )
-	                    }
+	                    )
 	                });
 
 	                return (      
@@ -1460,10 +1446,8 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
-	        __webpack_require__(2),
-	        __webpack_require__(13)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var Contacts = React.createClass({displayName: "Contacts",
 	            render: function() {
 
@@ -1509,10 +1493,18 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
-	        __webpack_require__(2),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
-	        var ProfileTypeOne = React.createClass({displayName: "ProfileTypeOne",
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var ProfileCard = React.createClass({displayName: "ProfileCard",
+	            getDefaultProps: function() {
+	                return {
+	                    pictureAlignment: 'center',
+	                    theme: 'bg-yellow',
+	                    displayName: 'John Doe',
+	                    description: 'My profile description',
+	                    displayPicture: '../dist/img/user7-128x128.jpg'   
+	                }
+	            },
 	            render: function() {
 	                var profilePicture = {}, alignmentType = 'widget-user', footerPadding = '';
 	                
@@ -1551,7 +1543,7 @@ webpackJsonp([2],[
 	            }
 	        });
 
-	        return ProfileTypeOne;
+	        return ProfileCard;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },

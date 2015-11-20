@@ -6,6 +6,16 @@ define(
     ],
     function (React, ReactDOM, commonFunctions) {
         var ChatBox = React.createClass({
+            getDefaultProps: function() {
+                return {
+                    headerTheme: 'box-primary',
+                    notificationTheme: 'bg-light-blue',
+                    chatTheme: 'direct-chat-primary',
+                    buttonTheme: 'btn-primary',
+                    title: 'Chat Box',
+                    notifications: 0   
+                }
+            },
             toggleCollapse: function(event) {
                 var box = ReactDOM.findDOMNode(this).children[0],
                     boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
@@ -23,11 +33,11 @@ define(
                 if(box.className.indexOf('direct-chat-contacts-open') === -1){
                     box.className += ' direct-chat-contacts-open';
                 }else{
-                    box.className = box.className.replace(/direct-chat-contacts-open/g,'');
+                    box.className = box.className.replace(/ direct-chat-contacts-open/g,'');
                 }
             },
             render: function() {
-                var borderClass, that = this;
+                var borderClass = '', that = this;
                 var a = React.Children.map(this.props.children, function(child){
                     return child
                 });
