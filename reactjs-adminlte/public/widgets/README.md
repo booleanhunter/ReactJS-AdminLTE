@@ -171,7 +171,7 @@ title = 'Can be a string or a number'
 Pass the [Conversations](./js/components/page-widgets/chat-box/conversations.js) component as props.children to add chat messages. It accepts an array of objects containing chat information.
 
 ```javascript
-conversationsArray: [{
+var conversationsArray = [{
     name: 'John Doe',
     displayPicture: 'url of the image', 
     date: '23 Jan 2:00 pm',
@@ -184,7 +184,7 @@ conversationsArray: [{
 Pass the [Contacts](./js/components/page-widgets/chat-box/contacts.js) component as props.children to add contacts in the right drawer. It accepts an array of objects containing contact information
 
 ```javascript
-contactsArray: [{
+var contactsArray = [{
     name: 'John Doe',
     displayPicture: 'url of the image',
     link: '#',
