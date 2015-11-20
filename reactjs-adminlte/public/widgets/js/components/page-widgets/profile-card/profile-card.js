@@ -14,16 +14,16 @@ define(
                 }
             },
             render: function() {
-                var profilePicture = {}, alignmentType = 'widget-user', footerPadding = '';
+                var coverPicture = {}, alignmentType = 'widget-user', footerPadding = '';
                 
                 if(this.props.pictureAlignment === 'left'){
                     alignmentType = 'widget-user-2';
                     footerPadding = 'no-padding';
                 }
 
-                if(this.props.profilePicture){
-                    profilePicture = {
-                        background: 'url('+this.props.profilePicture+') center'
+                if(this.props.coverPicture){
+                    coverPicture = {
+                        background: 'url('+this.props.coverPicture+') center'
                     };
                 }
 
@@ -32,7 +32,7 @@ define(
                         {/* Widget: user widget style 1 */}
                         <div className={"box box-widget "+alignmentType}>
                             {/* Add the bg color to the header using any of the bg-* classes */}
-                            <div className={"widget-user-header "+this.props.theme} style={profilePicture}>
+                            <div className={"widget-user-header "+this.props.theme} style={coverPicture}>
                                 <div className="widget-user-image">
                                     <img className="img-circle" src={this.props.displayPicture} alt="User Avatar" />
                                 </div>

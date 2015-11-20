@@ -1,9 +1,8 @@
 define(
     [
         'react',
-        'reactDom',
     ],
-    function (React, ReactDOM) {
+    function (React) {
         var ProfileInfoList = React.createClass({
             render: function() {
                 var listItems = this.props.list.map(function(info, iterator){

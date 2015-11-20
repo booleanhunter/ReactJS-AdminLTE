@@ -338,7 +338,7 @@ define(
                         displayName: 'Elizabeth Pierce',
                         description: 'Web Designer',
                         displayPicture: '../dist/img/user3-128x128.jpg',
-                        profilePicture: '../dist/img/photo1.png',
+                        coverPicture: '../dist/img/photo1.png',
                         infoList: [{
                             description: 'SALES',
                             stats: '3,200'
@@ -457,7 +457,7 @@ define(
                                 description={options.description}
                                 displayPicture={options.displayPicture}
                                 pictureAlignment={options.pictureAlignment}
-                                profilePicture={options.profilePicture} >
+                                coverPicture={options.coverPicture} >
 
                                 <ProfileInfoList list={options.infoList} />
 
@@ -471,7 +471,7 @@ define(
                                 displayName={options.displayName} 
                                 description={options.description}
                                 displayPicture={options.displayPicture}
-                                profilePicture={options.profilePicture} >
+                                coverPicture={options.coverPicture} >
 
                                 <ProfileInfoBlocks list={options.infoList} />
 

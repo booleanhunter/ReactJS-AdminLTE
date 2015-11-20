@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -432,7 +432,7 @@ webpackJsonp([2],[
 	                        displayName: 'Elizabeth Pierce',
 	                        description: 'Web Designer',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
-	                        profilePicture: '../dist/img/photo1.png',
+	                        coverPicture: '../dist/img/photo1.png',
 	                        infoList: [{
 	                            description: 'SALES',
 	                            stats: '3,200'
@@ -551,7 +551,7 @@ webpackJsonp([2],[
 	                                description: options.description, 
 	                                displayPicture: options.displayPicture, 
 	                                pictureAlignment: options.pictureAlignment, 
-	                                profilePicture: options.profilePicture}, 
+	                                coverPicture: options.coverPicture}, 
 
 	                                React.createElement(ProfileInfoList, {list: options.infoList})
 
@@ -565,7 +565,7 @@ webpackJsonp([2],[
 	                                displayName: options.displayName, 
 	                                description: options.description, 
 	                                displayPicture: options.displayPicture, 
-	                                profilePicture: options.profilePicture}, 
+	                                coverPicture: options.coverPicture}, 
 
 	                                React.createElement(ProfileInfoBlocks, {list: options.infoList})
 
@@ -1506,16 +1506,16 @@ webpackJsonp([2],[
 	                }
 	            },
 	            render: function() {
-	                var profilePicture = {}, alignmentType = 'widget-user', footerPadding = '';
+	                var coverPicture = {}, alignmentType = 'widget-user', footerPadding = '';
 	                
 	                if(this.props.pictureAlignment === 'left'){
 	                    alignmentType = 'widget-user-2';
 	                    footerPadding = 'no-padding';
 	                }
 
-	                if(this.props.profilePicture){
-	                    profilePicture = {
-	                        background: 'url('+this.props.profilePicture+') center'
+	                if(this.props.coverPicture){
+	                    coverPicture = {
+	                        background: 'url('+this.props.coverPicture+') center'
 	                    };
 	                }
 
@@ -1524,7 +1524,7 @@ webpackJsonp([2],[
 	                        /* Widget: user widget style 1 */
 	                        React.createElement("div", {className: "box box-widget "+alignmentType}, 
 	                            /* Add the bg color to the header using any of the bg-* classes */
-	                            React.createElement("div", {className: "widget-user-header "+this.props.theme, style: profilePicture}, 
+	                            React.createElement("div", {className: "widget-user-header "+this.props.theme, style: coverPicture}, 
 	                                React.createElement("div", {className: "widget-user-image"}, 
 	                                    React.createElement("img", {className: "img-circle", src: this.props.displayPicture, alt: "User Avatar"})
 	                                ), 

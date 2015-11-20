@@ -1,10 +1,9 @@
 define(
     [
-        'react',
-        'reactDom',
+        'react'
     ],
-    function (React, ReactDOM) {
-        var ProfileInfoList = React.createClass({
+    function (React) {
+        var ProfileInfoBlocks = React.createClass({
             render: function() {
                 var descriptionBlocks = this.props.list.map(function(info, iterator){
                     return (
@@ -26,6 +25,6 @@ define(
             }
         });
 
-        return ProfileInfoList;
+        return ProfileInfoBlocks;
     }
 )
