@@ -11,7 +11,7 @@ define(
                         <div className={"direct-chat-msg " + messageDetails.align} key={"message"+iterator}>
                             <div className="direct-chat-info clearfix">
                                 <span className="direct-chat-name pull-right">
-                                    {messageDetails.name}
+                                    {messageDetails.displayName}
                                 </span>
                                 <span className="direct-chat-timestamp pull-left">
                                     {messageDetails.date}

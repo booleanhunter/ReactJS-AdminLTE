@@ -13,7 +13,7 @@ define(
                                 <img className="contacts-list-img" src={contactDetails.displayPicture} />
                                 <div className="contacts-list-info">
                                     <span className="contacts-list-name">
-                                        {contactDetails.name}
+                                        {contactDetails.displayName}
                                     <small className="contacts-list-date pull-right">
                                         {contactDetails.date}
                                     </small>

@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,7 +8,7 @@ webpackJsonp([1],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
+	        __webpack_require__(24),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
 	        __webpack_require__(13),
@@ -20,7 +20,105 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24),
+	        __webpack_require__(2),
+	        __webpack_require__(13)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        var ChatBox = React.createClass({displayName: "ChatBox",
+	            getDefaultProps: function() {
+	                return {
+	                    headerTheme: 'box-primary',
+	                    notificationTheme: 'bg-light-blue',
+	                    chatTheme: 'direct-chat-primary',
+	                    buttonTheme: 'btn-primary',
+	                    title: 'Chat Box',
+	                    notifications: 0   
+	                }
+	            },
+	            toggleCollapse: function(event) {
+	                var box = ReactDOM.findDOMNode(this).children[0],
+	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
+	                    icon = event.currentTarget.children[0];
+
+	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
+	            },
+	            removeBox: function(event){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+	                commonFunctions.removeBox(box);
+	            },
+	            toggleChat: function(){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+
+	                if(box.className.indexOf('direct-chat-contacts-open') === -1){
+	                    box.className += ' direct-chat-contacts-open';
+	                }else{
+	                    box.className = box.className.replace(/ direct-chat-contacts-open/g,'');
+	                }
+	            },
+	            render: function() {
+	                var borderClass = '', that = this;
+	                var a = React.Children.map(this.props.children, function(child){
+	                    return child
+	                });
+	                console.log(a);
+	                if(this.props.border === true){
+	                    borderClass = 'box-solid';
+	                }
+
+	                return (
+	                    React.createElement("div", {className: "col-md-3"}, 
+	                        /* DIRECT CHAT PRIMARY */
+	                        React.createElement("div", {className: "box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass}, 
+	                            React.createElement("div", {className: "box-header with-border"}, 
+	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
+	                                React.createElement("div", {className: "box-tools pull-right"}, 
+	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge "+this.props.notificationTheme, 
+	                                        "data-original-title": this.props.notifications+ " New Messages"}, 
+	                                        this.props.notifications
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
+	                                        React.createElement("i", {className: "fa fa-minus"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts", onClick: that.toggleChat}, 
+	                                        React.createElement("i", {className: "fa fa-comments"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: that.removeBox}, 
+	                                        React.createElement("i", {className: "fa fa-times"})
+	                                    )
+	                                )
+	                            ), 
+	                            /* /.box-header */
+	                            React.createElement("div", {className: "box-body"}, 
+	                                this.props.children
+	                            ), 
+	                            /* /.box-body */
+	                            React.createElement("div", {className: "box-footer"}, 
+	                                React.createElement("form", {action: "#", method: "post"}, 
+	                                    React.createElement("div", {className: "input-group"}, 
+	                                        React.createElement("input", {type: "text", name: "message", placeholder: "Type Message ...", className: "form-control"}), 
+	                                        React.createElement("span", {className: "input-group-btn"}, 
+	                                            React.createElement("button", {type: "button", className: "btn btn-flat "+this.props.buttonTheme}, "Send")
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                            /* /.box-footer*/
+	                        )
+	                        /*/.direct-chat */
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return ChatBox;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -95,21 +193,24 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
+	        __webpack_require__(24),
 	        __webpack_require__(3),
+	        __webpack_require__(17),
+	        __webpack_require__(18),
+	        __webpack_require__(20),
+	        __webpack_require__(21),
+	        __webpack_require__(22),
+	        __webpack_require__(23),
+	        __webpack_require__(1),
+	        __webpack_require__(19),
+	        __webpack_require__(25),
+	        __webpack_require__(26),
+	        __webpack_require__(27),
+	        __webpack_require__(28),
 	        __webpack_require__(29),
 	        __webpack_require__(30),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(33),
-	        __webpack_require__(28),
-	        __webpack_require__(34),
-	        __webpack_require__(35),
-	        __webpack_require__(36),
-	        __webpack_require__(37),
-	        __webpack_require__(38),
-	        __webpack_require__(39)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks) {
+	        __webpack_require__(31)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
 	                return {
@@ -119,7 +220,8 @@ webpackJsonp([1],[
 	                    smallBoxOptions: [],
 	                    smallBoxBorderedOptions: [],
 	                    chatBoxOptions: [],
-	                    ProfileCardOptions: []
+	                    profileCardOptions: [],
+	                    postOptions: []
 	                }
 	            },
 	            componentDidMount: function() {
@@ -272,26 +374,26 @@ webpackJsonp([1],[
 	                    notifications: 2,
 
 	                    conversations: [{
-	                        name: 'Alexander Pierce',
+	                        displayName: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
 	                        align: 'right',
-	                        name: 'Sarah Bullock',
+	                        displayName: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
 
 	                    contacts: [{
-	                        name: 'Count Dracula',
+	                        displayName: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        link: '#',
 	                        date: '2/28/2015',
 	                        message: 'How have you been? I was...'
 	                    }, {
-	                        name: 'Count Dracula',
+	                        displayName: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        link: '#',
 	                        date: '2/28/2015',
@@ -307,20 +409,20 @@ webpackJsonp([1],[
 	                    notifications: 3,
 
 	                    conversations: [{
-	                        name: 'Alexander Pierce',
+	                        displayName: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
 	                        align: 'right',
-	                        name: 'Sarah Bullock',
+	                        displayName: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
 
 	                    contacts: [{
-	                        name: 'Count Dracula',
+	                        displayName: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        link: '#',
 	                        date: '2/28/2015',
@@ -335,20 +437,20 @@ webpackJsonp([1],[
 	                    notifications: 4,
 
 	                    conversations: [{
-	                        name: 'Alexander Pierce',
+	                        displayName: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
 	                        align: 'right',
-	                        name: 'Sarah Bullock',
+	                        displayName: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
 
 	                    contacts: [{
-	                        name: 'Count Dracula',
+	                        displayName: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        link: '#',
 	                        date: '2/28/2015',
@@ -363,20 +465,20 @@ webpackJsonp([1],[
 	                    notifications: 5,
 
 	                    conversations: [{
-	                        name: 'Alexander Pierce',
+	                        displayName: 'Alexander Pierce',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
 	                        align: 'right',
-	                        name: 'Sarah Bullock',
+	                        displayName: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
 	                        message: 'You better believe it!'
 	                    }],
 
 	                    contacts: [{
-	                        name: 'Count Dracula',
+	                        displayName: 'Count Dracula',
 	                        displayPicture: '../dist/img/user1-128x128.jpg',
 	                        link: '#',
 	                        date: '2/28/2015',
@@ -384,7 +486,7 @@ webpackJsonp([1],[
 	                    }]
 	                }],
 
-	                ProfileCardOptions = [
+	                profileCardOptions = [
 	                    {
 	                        theme: 'bg-yellow',
 	                        displayName: 'Nadia Carmichael',
@@ -446,6 +548,57 @@ webpackJsonp([1],[
 	                    }
 	                ];
 
+	                var postOptions = [
+	                    {
+	                        displayName: 'Jonathan Burke Jr.',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        date: 'Shared publicly - 7:30 PM Today',
+	                        postPicture: '../dist/img/photo2.png',
+	                        content: 'I took this photo this morning. What do you guys think?',
+	                        socialInfo: '127 likes - 3 comments',
+	                        comments: [
+	                            {
+	                                displayName: 'Maria Gonzales',
+	                                displayPicture: '../dist/img/user3-128x128.jpg',
+	                                date: '8:03 PM Today',
+	                                content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	                            }, {
+	                                displayName: 'Luna Stark',
+	                                displayPicture: '../dist/img/user4-128x128.jpg',
+	                                date: '8:03 PM Today',
+	                                content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	                            }
+	                        ]
+	                    }, {
+	                        displayName: 'Jonathan Burke Jr.',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        date: 'Shared publicly - 7:30 PM Today',
+	                        content: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.',
+	                        socialInfo: '45 likes - 2 comments',
+	                        attachments: [
+	                            {
+	                                title: 'Lorem ipsum text generator',
+	                                link: 'http://www.lipsum.com/',
+	                                picture: '../dist/img/photo1.png',
+	                                content: 'Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
+	                            }
+	                        ],
+	                        comments: [
+	                            {
+	                                displayName: 'Maria Gonzales',
+	                                displayPicture: '../dist/img/user3-128x128.jpg',
+	                                date: '8:03 PM Today',
+	                                content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	                            }, {
+	                                displayName: 'Nora Havisham',
+	                                displayPicture: '../dist/img/user5-128x128.jpg',
+	                                date: '8:03 PM Today',
+	                                content: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+	                            }
+	                        ]
+	                    }
+	                ];
+
 	                this.setState({
 	                    infoTileOptions: infoTileOptions,
 	                    progressInfoTileOptions: progressInfoTileOptions,
@@ -453,7 +606,8 @@ webpackJsonp([1],[
 	                    smallBoxOptions: smallBoxOptions,
 	                    smallBoxBorderedOptions: smallBoxBorderedOptions,
 	                    chatBoxOptions: chatBoxOptions,
-	                    ProfileCardOptions: ProfileCardOptions
+	                    profileCardOptions: profileCardOptions,
+	                    postOptions: postOptions
 	                });
 	            },
 	            render: function() {
@@ -541,7 +695,7 @@ webpackJsonp([1],[
 	                    )
 	                });
 
-	                var ProfileCardWidgets = this.state.ProfileCardOptions.map(function (options, iterator) {
+	                var ProfileCardWidgets = this.state.profileCardOptions.map(function (options, iterator) {
 	                    if(options.pictureAlignment === 'left'){
 	                        return (
 	                            React.createElement(ProfileCard, {
@@ -572,7 +726,26 @@ webpackJsonp([1],[
 	                            )
 	                        )
 	                    }
-	                
+	                });
+
+	                var posts = this.state.postOptions.map(function (options, iterator) {
+	                    return (
+	                        React.createElement(Post, {
+	                            key: "rowEight"+iterator, 
+	                            displayName: options.displayName, 
+	                            displayPicture: options.displayPicture, 
+	                            date: options.date, 
+	                            postPicture: options.postPicture, 
+	                            content: options.content, 
+	                            attachments: options.attachments, 
+	                            comments: options.comments}, 
+
+	                            React.createElement(SocialButton, {type: "like"}), 
+	                            React.createElement(SocialButton, {type: "share"}), 
+	                            React.createElement(SocialInfo, {info: options.socialInfo})
+	                        )
+
+	                    )
 	                });
 
 	                return (
@@ -622,8 +795,8 @@ webpackJsonp([1],[
 	                                    ProfileCardWidgets
 	                                ), 
 
-	                                React.createElement("div", {className: "row"}
-	                                                     
+	                                React.createElement("div", {className: "row"}, 
+	                                    posts
 	                                )
 	                            )
 
@@ -648,123 +821,15 @@ webpackJsonp([1],[
 /***/ },
 /* 15 */,
 /* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
-	        __webpack_require__(2),
-	        __webpack_require__(13)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
-	        var SmallBox = React.createClass({displayName: "SmallBox",
-	            getDefaultProps: function() {
-	                return {
-	                    type: 'expandable',
-	                    theme: 'box-default',
-	                    loading: false,
-	                    border: true,
-	                    title: 'Default title',
-	                    content: 'Default content',
-	                }
-	            },
-	            toggleCollapse: function(event) {
-	                var box = ReactDOM.findDOMNode(this).children[0],
-	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
-	                    icon = event.currentTarget.children[0];
-
-	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
-	            },
-	            removeBox: function(event){
-	                var box = ReactDOM.findDOMNode(this).children[0];
-	                commonFunctions.removeBox(box);
-	            },
-	            render: function() {
-	                var that = this,
-	                    boxClassname, button, borderClass, loadingState;
-
-	                switch(this.props.type){
-	                    case 'expandable': 
-	                        boxClassname = "collapsed-box";
-	                        button = 
-	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
-	                                React.createElement("i", {className: "fa fa-plus"})
-	                            );
-	                        break;
-
-	                    case 'collapsable':
-	                        boxClassname = '';
-	                        button = 
-	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
-	                                React.createElement("i", {className: "fa fa-minus"})
-	                            );
-	                        break;
-
-	                    case 'removable':
-	                        boxClassname = '';
-	                        button = 
-	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "remove", onClick: that.removeBox}, 
-	                                React.createElement("i", {className: "fa fa-times"})
-	                            );
-	                        break; 
-	                }
-
-	                if(this.props.loading === true){
-	                    loadingState = 
-	                        React.createElement("div", {className: "overlay"}, 
-	                            React.createElement("i", {className: "fa fa-refresh fa-spin"})
-	                        )
-	                }
-
-	                if(this.props.border === true){
-	                    borderClass = 'box-solid';
-	                }
-
-	                return(
-	                    React.createElement("div", {className: "col-md-3"}, 
-	                        React.createElement("div", {className: "box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}, 
-	                            React.createElement("div", {className: "box-header with-border"}, 
-	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
-	                                React.createElement("div", {className: "box-tools pull-right"}, 
-	                                    button
-	                                )
-	                                /* /.box-tools */
-	                            ), 
-	                            /* /.box-header */
-	                            React.createElement("div", {className: "box-body"}, 
-	                                this.props.content
-	                            ), 
-	                            /* /.box-body */
-	                            loadingState
-	                        )
-	                    )
-	                )
-	            }
-	        })
-
-	        return SmallBox;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
+	        __webpack_require__(24),
 	        __webpack_require__(3),
-	        __webpack_require__(43),
-	        __webpack_require__(44),
-	        __webpack_require__(45)
+	        __webpack_require__(48),
+	        __webpack_require__(49),
+	        __webpack_require__(50)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -952,11 +1017,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 30 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
+	        __webpack_require__(24),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -1138,11 +1203,56 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Conversations = React.createClass({displayName: "Conversations",
+	            render: function() {
+
+	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
+	                    return (
+	                        React.createElement("div", {className: "direct-chat-msg " + messageDetails.align, key: "message"+iterator}, 
+	                            React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                React.createElement("span", {className: "direct-chat-name pull-right"}, 
+	                                    messageDetails.displayName
+	                                ), 
+	                                React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
+	                                    messageDetails.date
+	                                )
+	                            ), 
+	                            /* /.direct-chat-info */
+	                            React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
+	                            /* /.direct-chat-img */
+	                            React.createElement("div", {className: "direct-chat-text"}, 
+	                                messageDetails.message
+	                            )
+	                            /* /.direct-chat-text */
+	                        )
+	                    )
+	                });
+
+	                return (      
+	                    React.createElement("div", {className: "direct-chat-messages"}, 
+	                        /* Message. Default to the left */
+	                        conversations
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return Conversations;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var InfoTile = React.createClass({displayName: "InfoTile",
 	            getDefaultProps: function() {
@@ -1199,11 +1309,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProgressBar = React.createClass({displayName: "ProgressBar",
 	            getDefaultProps: function() {
@@ -1238,11 +1348,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var StatTile = React.createClass({displayName: "StatTile",
 	            getDefaultProps: function() {
@@ -1298,23 +1408,23 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 34 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
+	        __webpack_require__(24),
 	        __webpack_require__(2),
 	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
-	        var ChatBox = React.createClass({displayName: "ChatBox",
+	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            getDefaultProps: function() {
 	                return {
-	                    headerTheme: 'box-primary',
-	                    notificationTheme: 'bg-light-blue',
-	                    chatTheme: 'direct-chat-primary',
-	                    buttonTheme: 'btn-primary',
-	                    title: 'Chat Box',
-	                    notifications: 0   
+	                    type: 'expandable',
+	                    theme: 'box-default',
+	                    loading: false,
+	                    border: true,
+	                    title: 'Default title',
+	                    content: 'Default content',
 	                }
 	            },
 	            toggleCollapse: function(event) {
@@ -1328,125 +1438,79 @@ webpackJsonp([1],[
 	                var box = ReactDOM.findDOMNode(this).children[0];
 	                commonFunctions.removeBox(box);
 	            },
-	            toggleChat: function(){
-	                var box = ReactDOM.findDOMNode(this).children[0];
-
-	                if(box.className.indexOf('direct-chat-contacts-open') === -1){
-	                    box.className += ' direct-chat-contacts-open';
-	                }else{
-	                    box.className = box.className.replace(/ direct-chat-contacts-open/g,'');
-	                }
-	            },
 	            render: function() {
-	                var borderClass = '', that = this;
-	                var a = React.Children.map(this.props.children, function(child){
-	                    return child
-	                });
-	                console.log(a);
+	                var that = this,
+	                    boxClassname, button, borderClass, loadingState;
+
+	                switch(this.props.type){
+	                    case 'expandable': 
+	                        boxClassname = "collapsed-box";
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
+	                                React.createElement("i", {className: "fa fa-plus"})
+	                            );
+	                        break;
+
+	                    case 'collapsable':
+	                        boxClassname = '';
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
+	                                React.createElement("i", {className: "fa fa-minus"})
+	                            );
+	                        break;
+
+	                    case 'removable':
+	                        boxClassname = '';
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "remove", onClick: that.removeBox}, 
+	                                React.createElement("i", {className: "fa fa-times"})
+	                            );
+	                        break; 
+	                }
+
+	                if(this.props.loading === true){
+	                    loadingState = 
+	                        React.createElement("div", {className: "overlay"}, 
+	                            React.createElement("i", {className: "fa fa-refresh fa-spin"})
+	                        )
+	                }
+
 	                if(this.props.border === true){
 	                    borderClass = 'box-solid';
 	                }
 
-	                return (
+	                return(
 	                    React.createElement("div", {className: "col-md-3"}, 
-	                        /* DIRECT CHAT PRIMARY */
-	                        React.createElement("div", {className: "box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass}, 
+	                        React.createElement("div", {className: "box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
 	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
 	                                React.createElement("div", {className: "box-tools pull-right"}, 
-	                                    React.createElement("span", {"data-toggle": "tooltip", title: "", className: "badge "+this.props.notificationTheme, 
-	                                        "data-original-title": this.props.notifications+ " New Messages"}, 
-	                                        this.props.notifications
-	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.toggleCollapse}, 
-	                                        React.createElement("i", {className: "fa fa-minus"})
-	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "", "data-widget": "chat-pane-toggle", "data-original-title": "Contacts", onClick: that.toggleChat}, 
-	                                        React.createElement("i", {className: "fa fa-comments"})
-	                                    ), 
-	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: that.removeBox}, 
-	                                        React.createElement("i", {className: "fa fa-times"})
-	                                    )
+	                                    button
 	                                )
+	                                /* /.box-tools */
 	                            ), 
 	                            /* /.box-header */
 	                            React.createElement("div", {className: "box-body"}, 
-	                                this.props.children
+	                                this.props.content
 	                            ), 
 	                            /* /.box-body */
-	                            React.createElement("div", {className: "box-footer"}, 
-	                                React.createElement("form", {action: "#", method: "post"}, 
-	                                    React.createElement("div", {className: "input-group"}, 
-	                                        React.createElement("input", {type: "text", name: "message", placeholder: "Type Message ...", className: "form-control"}), 
-	                                        React.createElement("span", {className: "input-group-btn"}, 
-	                                            React.createElement("button", {type: "button", className: "btn btn-flat "+this.props.buttonTheme}, "Send")
-	                                        )
-	                                    )
-	                                )
-	                            )
-	                            /* /.box-footer*/
+	                            loadingState
 	                        )
-	                        /*/.direct-chat */
 	                    )
 	                )
-	                
 	            }
-	        });
+	        })
 
-	        return ChatBox;
+	        return SmallBox;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 35 */
+/* 24 */,
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var Conversations = React.createClass({displayName: "Conversations",
-	            render: function() {
-
-	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
-	                    return (
-	                        React.createElement("div", {className: "direct-chat-msg " + messageDetails.align, key: "message"+iterator}, 
-	                            React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                React.createElement("span", {className: "direct-chat-name pull-right"}, 
-	                                    messageDetails.name
-	                                ), 
-	                                React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
-	                                    messageDetails.date
-	                                )
-	                            ), 
-	                            /* /.direct-chat-info */
-	                            React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
-	                            /* /.direct-chat-img */
-	                            React.createElement("div", {className: "direct-chat-text"}, 
-	                                messageDetails.message
-	                            )
-	                            /* /.direct-chat-text */
-	                        )
-	                    )
-	                });
-
-	                return (      
-	                    React.createElement("div", {className: "direct-chat-messages"}, 
-	                        /* Message. Default to the left */
-	                        conversations
-	                    )
-	                )
-	                
-	            }
-	        });
-
-	        return Conversations;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var Contacts = React.createClass({displayName: "Contacts",
 	            render: function() {
@@ -1458,7 +1522,7 @@ webpackJsonp([1],[
 	                                React.createElement("img", {className: "contacts-list-img", src: contactDetails.displayPicture}), 
 	                                React.createElement("div", {className: "contacts-list-info"}, 
 	                                    React.createElement("span", {className: "contacts-list-name"}, 
-	                                        contactDetails.name, 
+	                                        contactDetails.displayName, 
 	                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
 	                                        contactDetails.date
 	                                    )
@@ -1489,11 +1553,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProfileCard = React.createClass({displayName: "ProfileCard",
 	            getDefaultProps: function() {
@@ -1547,13 +1611,12 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 38 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
-	        __webpack_require__(2),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
+	        __webpack_require__(24),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProfileInfoList = React.createClass({displayName: "ProfileInfoList",
 	            render: function() {
 	                var listItems = this.props.list.map(function(info, iterator){
@@ -1581,14 +1644,13 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 39 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
-	        __webpack_require__(2),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
-	        var ProfileInfoList = React.createClass({displayName: "ProfileInfoList",
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var ProfileInfoBlocks = React.createClass({displayName: "ProfileInfoBlocks",
 	            render: function() {
 	                var descriptionBlocks = this.props.list.map(function(info, iterator){
 	                    return (
@@ -1610,10 +1672,228 @@ webpackJsonp([1],[
 	            }
 	        });
 
-	        return ProfileInfoList;
+	        return ProfileInfoBlocks;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24),
+	        __webpack_require__(2),
+	        __webpack_require__(43),
+	        __webpack_require__(44),
+	        __webpack_require__(13)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, Comment, Attachment, commonFunctions) {
+	        var Post = React.createClass({displayName: "Post",
+	            getDefaultProps: function() {
+	                return {
+	                    pictureAlignment: 'center',
+	                    theme: 'bg-yellow',
+	                    displayName: 'John Doe',
+	                    description: 'My profile description',
+	                    displayPicture: '../dist/img/user7-128x128.jpg'   
+	                }
+	            },
+	            toggleCollapse: function(event) {
+	                var box = ReactDOM.findDOMNode(this).children[0],
+	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
+	                    icon = event.currentTarget.children[0];
+
+	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
+	            },
+	            removeBox: function(event){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+	                commonFunctions.removeBox(box);
+	            },
+	            render: function() {
+	                var postPicture = '', attachments = [], comments = [];
+
+	                if(this.props.postPicture){
+	                    postPicture = React.createElement("img", {className: "img-responsive pad", src: this.props.postPicture, alt: "Photo"});
+	                }
+
+	                if(this.props.attachments){
+	                    attachments = this.props.attachments.map(function(attachmentDetails, iterator){
+	                        return (
+	                            React.createElement(Attachment, {key: iterator, 
+	                                title: attachmentDetails.title, 
+	                                picture: attachmentDetails.picture, 
+	                                link: attachmentDetails.link, 
+	                                content: attachmentDetails.content})
+	                        )
+	                    });
+	                }
+
+	                if(this.props.comments){
+	                    comments = this.props.comments.map(function(commentDetails, iterator){
+	                        return (
+	                            React.createElement(Comment, {key: iterator, 
+	                                displayName: commentDetails.displayName, 
+	                                displayPicture: commentDetails.displayPicture, 
+	                                date: commentDetails.date, 
+	                                content: commentDetails.content})
+	                        )
+	                    });
+	                }
+
+	                return (
+	                    React.createElement("div", {className: "col-md-6"}, 
+	                        React.createElement("div", {className: "box box-widget"}, 
+	                            React.createElement("div", {className: "box-header with-border"}, 
+	                                React.createElement("div", {className: "user-block"}, 
+	                                    React.createElement("img", {className: "img-circle", src: this.props.displayPicture, alt: "user image"}), 
+	                                    React.createElement("span", {className: "username"}, 
+	                                        React.createElement("a", {href: "#"}, this.props.displayName)
+	                                    ), 
+	                                    React.createElement("span", {className: "description"}, this.props.date)
+	                                ), 
+	                                /* /.user-block */
+	                                React.createElement("div", {className: "box-tools"}, 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-toggle": "tooltip", title: "Mark as read"}, 
+	                                        React.createElement("i", {className: "fa fa-circle-o"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: this.toggleCollapse}, 
+	                                        React.createElement("i", {className: "fa fa-minus"})
+	                                    ), 
+	                                    React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: this.removeBox}, 
+	                                        React.createElement("i", {className: "fa fa-times"})
+	                                    )
+	                                )
+	                                /* /.box-tools */
+	                            ), 
+	                            /* /.box-header */
+	                            React.createElement("div", {className: "box-body"}, 
+	                                postPicture, 
+	                                React.createElement("p", null, this.props.content), 
+	                                attachments, 
+	                                this.props.children
+	                            ), 
+	                            /* /.box-body */
+	                            React.createElement("div", {className: "box-footer box-comments"}, 
+	                                comments
+	                                /* /.box-comment */
+	                            ), 
+	                            /* /.box-footer */
+	                            React.createElement("div", {className: "box-footer"}, 
+	                                React.createElement("form", {action: "#", method: "post"}, 
+	                                    React.createElement("img", {className: "img-responsive img-circle img-sm", src: "../dist/img/user4-128x128.jpg", alt: "alt text"}), 
+	                                    /* .img-push is used to add margin to elements next to floating images */
+	                                    React.createElement("div", {className: "img-push"}, 
+	                                        React.createElement("input", {type: "text", className: "form-control input-sm", placeholder: "Press enter to post comment"})
+	                                    )
+	                                )
+	                            )
+	                            /* /.box-footer */
+	                        )
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return Post;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var SocialButton = React.createClass({displayName: "SocialButton",
+	            getDefaultProps: function() {
+	                return {
+	                    position: '',
+	                    type: 'like',
+	                    theme: 'btn-default'
+	                }
+	            },
+	            render: function() {
+	                var position;
+	                switch(this.props.position){
+	                    case 'left':
+	                        position = 'pull-left';
+	                        break;
+	                    case 'right':
+	                        position = 'pull-right';
+	                        break;
+	                    default:
+	                        position = ''
+	                }
+
+	                if(this.props.type === 'like'){
+	                    return (
+	                        React.createElement("button", {className: "btn btn-xs "+position+" "+this.props.theme}, 
+	                            React.createElement("i", {className: "fa fa-thumbs-o-up"}), 
+	                            "Like"
+	                        )
+	                        
+	                    )
+	                }else if(this.props.type === 'share'){
+	                    return (
+	                        React.createElement("button", {className: "btn btn-xs "+position+" "+this.props.theme}, 
+	                            React.createElement("i", {className: "fa fa-share"}), 
+	                            "Share"
+	                        )
+	                    )
+	                }
+	                
+	            }
+	        });
+
+	        return SocialButton;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var SocialInfo = React.createClass({displayName: "SocialInfo",
+	            getDefaultProps: function() {
+	                return {
+	                    info: '',
+	                    position: 'pull-right'
+	                }
+	            },
+	            render: function() {
+	                var position = '';
+	                switch(this.props.position){
+	                    case 'left':
+	                        position = 'pull-left';
+	                        break;
+	                    case 'right':
+	                        position = 'pull-right';
+	                        break;
+	                    default:
+	                        position = 'pull-right';
+	                }
+
+	                return (
+	                    React.createElement("span", {className: "text-muted "+position}, 
+	                        this.props.info
+	                    )
+	                )
+	            }
+	        });
+
+	        return SocialInfo;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
 /* 40 */,
 /* 41 */,
 /* 42 */,
@@ -1621,7 +1901,87 @@ webpackJsonp([1],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22),
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Post = React.createClass({displayName: "Post",
+	            getDefaultProps: function() {
+	                return {
+	                    content: 'sample comment',
+	                    displayName: 'John Doe', 
+	                    displayPicture: '../dist/img/user4-128x128.jpg',
+	                    date: '8:03 PM Today'
+	                }
+	            },
+	            render: function() {
+	                return (
+	                    React.createElement("div", {className: "box-comment"}, 
+	                        /* User image */
+	                        React.createElement("img", {className: "img-circle img-sm", src: this.props.displayPicture, alt: "user image"}), 
+	                        React.createElement("div", {className: "comment-text"}, 
+	                            React.createElement("span", {className: "username"}, 
+	                                this.props.displayName, 
+	                                React.createElement("span", {className: "text-muted pull-right"}, this.props.date)
+	                            ), 
+	                            /* /.username */
+	                            this.props.content
+	                        )
+	                        /* /.comment-text */
+	                    )
+	                )
+	            }
+	        });
+
+	        return Post;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Attachment = React.createClass({displayName: "Attachment",
+	            getDefaultProps: function() {
+	                return {
+	                    content: 'sample comment',
+	                    displayName: 'John Doe', 
+	                    displayPicture: '../dist/img/user4-128x128.jpg',
+	                    date: '8:03 PM Today'
+	                }
+	            },
+	            render: function() {
+	                return (
+	                    React.createElement("div", {className: "attachment-block clearfix"}, 
+	                        React.createElement("img", {className: "attachment-img", src: this.props.picture, alt: "attachment image"}), 
+	                        React.createElement("div", {className: "attachment-pushed"}, 
+	                            React.createElement("h4", {className: "attachment-heading"}, 
+	                                React.createElement("a", {href: this.props.link}, 
+	                                    this.props.title
+	                                )
+	                            ), 
+	                            React.createElement("div", {className: "attachment-text"}, 
+	                                this.props.content, 
+	                                React.createElement("a", {href: this.props.link}, "more")
+	                            )
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return Attachment;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(24),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -1671,11 +2031,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 44 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -1717,11 +2077,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 45 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(22)
+	        __webpack_require__(24)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 

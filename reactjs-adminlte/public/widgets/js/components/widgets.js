@@ -13,9 +13,12 @@ define(
         './page-widgets/chat-box/contacts',
         './page-widgets/profile-card/profile-card',
         './page-widgets/profile-card/profile-info-list',
-        './page-widgets/profile-card/profile-info-blocks'
+        './page-widgets/profile-card/profile-info-blocks',
+        './page-widgets/post/post',
+        './page-widgets/post/social-button',
+        './page-widgets/post/social-info'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
@@ -25,7 +28,8 @@ define(
                     smallBoxOptions: [],
                     smallBoxBorderedOptions: [],
                     chatBoxOptions: [],
-                    ProfileCardOptions: []
+                    profileCardOptions: [],
+                    postOptions: []
                 }
             },
             componentDidMount: function() {
@@ -178,26 +182,26 @@ define(
                     notifications: 2,
 
                     conversations: [{
-                        name: 'Alexander Pierce',
+                        displayName: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
                         align: 'right',
-                        name: 'Sarah Bullock',
+                        displayName: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
 
                     contacts: [{
-                        name: 'Count Dracula',
+                        displayName: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         link: '#',
                         date: '2/28/2015',
                         message: 'How have you been? I was...'
                     }, {
-                        name: 'Count Dracula',
+                        displayName: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         link: '#',
                         date: '2/28/2015',
@@ -213,20 +217,20 @@ define(
                     notifications: 3,
 
                     conversations: [{
-                        name: 'Alexander Pierce',
+                        displayName: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
                         align: 'right',
-                        name: 'Sarah Bullock',
+                        displayName: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
 
                     contacts: [{
-                        name: 'Count Dracula',
+                        displayName: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         link: '#',
                         date: '2/28/2015',
@@ -241,20 +245,20 @@ define(
                     notifications: 4,
 
                     conversations: [{
-                        name: 'Alexander Pierce',
+                        displayName: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
                         align: 'right',
-                        name: 'Sarah Bullock',
+                        displayName: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
 
                     contacts: [{
-                        name: 'Count Dracula',
+                        displayName: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         link: '#',
                         date: '2/28/2015',
@@ -269,20 +273,20 @@ define(
                     notifications: 5,
 
                     conversations: [{
-                        name: 'Alexander Pierce',
+                        displayName: 'Alexander Pierce',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         date: '23 Jan 2:00 pm',
                         message: "Is this template really for free? That's unbelievable!"
                     }, {
                         align: 'right',
-                        name: 'Sarah Bullock',
+                        displayName: 'Sarah Bullock',
                         displayPicture: '../dist/img/user3-128x128.jpg',
                         date: '23 Jan 2:05 pm',    
                         message: 'You better believe it!'
                     }],
 
                     contacts: [{
-                        name: 'Count Dracula',
+                        displayName: 'Count Dracula',
                         displayPicture: '../dist/img/user1-128x128.jpg',
                         link: '#',
                         date: '2/28/2015',
@@ -290,7 +294,7 @@ define(
                     }]
                 }],
 
-                ProfileCardOptions = [
+                profileCardOptions = [
                     {
                         theme: 'bg-yellow',
                         displayName: 'Nadia Carmichael',
@@ -352,6 +356,57 @@ define(
                     }
                 ];
 
+                var postOptions = [
+                    {
+                        displayName: 'Jonathan Burke Jr.',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        date: 'Shared publicly - 7:30 PM Today',
+                        postPicture: '../dist/img/photo2.png',
+                        content: 'I took this photo this morning. What do you guys think?',
+                        socialInfo: '127 likes - 3 comments',
+                        comments: [
+                            {
+                                displayName: 'Maria Gonzales',
+                                displayPicture: '../dist/img/user3-128x128.jpg',
+                                date: '8:03 PM Today',
+                                content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                            }, {
+                                displayName: 'Luna Stark',
+                                displayPicture: '../dist/img/user4-128x128.jpg',
+                                date: '8:03 PM Today',
+                                content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                            }
+                        ]
+                    }, {
+                        displayName: 'Jonathan Burke Jr.',
+                        displayPicture: '../dist/img/user1-128x128.jpg',
+                        date: 'Shared publicly - 7:30 PM Today',
+                        content: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.',
+                        socialInfo: '45 likes - 2 comments',
+                        attachments: [
+                            {
+                                title: 'Lorem ipsum text generator',
+                                link: 'http://www.lipsum.com/',
+                                picture: '../dist/img/photo1.png',
+                                content: 'Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
+                            }
+                        ],
+                        comments: [
+                            {
+                                displayName: 'Maria Gonzales',
+                                displayPicture: '../dist/img/user3-128x128.jpg',
+                                date: '8:03 PM Today',
+                                content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                            }, {
+                                displayName: 'Nora Havisham',
+                                displayPicture: '../dist/img/user5-128x128.jpg',
+                                date: '8:03 PM Today',
+                                content: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                            }
+                        ]
+                    }
+                ];
+
                 this.setState({
                     infoTileOptions: infoTileOptions,
                     progressInfoTileOptions: progressInfoTileOptions,
@@ -359,7 +414,8 @@ define(
                     smallBoxOptions: smallBoxOptions,
                     smallBoxBorderedOptions: smallBoxBorderedOptions,
                     chatBoxOptions: chatBoxOptions,
-                    ProfileCardOptions: ProfileCardOptions
+                    profileCardOptions: profileCardOptions,
+                    postOptions: postOptions
                 });
             },
             render: function() {
@@ -447,7 +503,7 @@ define(
                     )
                 });
 
-                var ProfileCardWidgets = this.state.ProfileCardOptions.map(function (options, iterator) {
+                var ProfileCardWidgets = this.state.profileCardOptions.map(function (options, iterator) {
                     if(options.pictureAlignment === 'left'){
                         return (
                             <ProfileCard 
@@ -478,7 +534,26 @@ define(
                             </ProfileCard>
                         )
                     }
-                
+                });
+
+                var posts = this.state.postOptions.map(function (options, iterator) {
+                    return (
+                        <Post 
+                            key={"rowEight"+iterator} 
+                            displayName={options.displayName}
+                            displayPicture={options.displayPicture}
+                            date={options.date}
+                            postPicture={options.postPicture}
+                            content={options.content}
+                            attachments={options.attachments}
+                            comments={options.comments} >
+
+                            <SocialButton type='like' />
+                            <SocialButton type='share' />
+                            <SocialInfo info={options.socialInfo} />
+                        </Post>
+
+                    )
                 });
 
                 return (
@@ -529,7 +604,7 @@ define(
                                 </div>
 
                                 <div className="row">
-                                                     
+                                    {posts}         
                                 </div>
                             </section>
 

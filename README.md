@@ -7,6 +7,8 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 [Widgets created in ReactJS](./reactjs-adminlte/public/widgets)
 
+[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8080/widgets.html) to see a live preview!
+
 ![](./reactjs-adminlte/screenshots/widgets.png)
 
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
@@ -30,7 +32,7 @@ More stuff coming soon. Stay tuned!
 - Go to [http://localhost:8080/widgets.html](http://localhost:8080/widgets.html) to see available widgets in ReactJS.
 - Use [React Developer Tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) to understand the components hierarchy and structure and to track down bugs.
 
-This is still a work in progress and will get better over time. Will try and think of more essential features. Looking for feedback and contributions!
+This is still a work in progress and will get better over time. Will try and think of more essential features. Looking for feedback and contributions! For any discussions or queries, send an email.
 
 #### Upcoming stuff
 
