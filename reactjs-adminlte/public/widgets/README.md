@@ -438,12 +438,12 @@ var comments = [
 	    displayName: 'Maria Gonzales',
 	    displayPicture: '../dist/img/user3-128x128.jpg',
 	    date: '8:03 PM Today',
-	    content: 'I like what you've done with the place!',
+	    content: "I like what you've done with the place!"
 	}, {
 	    displayName: 'Nora Havisham',
 	    displayPicture: '../dist/img/user5-128x128.jpg',
 	    date: '8:20 PM Today',
-	    content: 'Awesome, when are you inviting us over?',
+	    content: 'Awesome, when are you inviting us over?'
 	}
 ];
 
