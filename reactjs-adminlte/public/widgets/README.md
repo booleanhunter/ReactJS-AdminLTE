@@ -310,11 +310,11 @@ var infoList = [{
 }];
 
 <ProfileCard 
-	theme: 'bg-red',
-	displayName: 'Jane Doe',
-	description: 'Lead Developer',
-	displayPicture: '../dist/img/user7-128x128.jpg',
-	pictureAlignment: 'left' >
+	theme = 'bg-red',
+	displayName = 'Jane Doe',
+	description = 'Lead Developer',
+	displayPicture = '../dist/img/user7-128x128.jpg',
+	pictureAlignment = 'left' >
 
 	<ProfileInfoList list={infoList} />
 </ProfileCard>
@@ -335,14 +335,98 @@ var infoList = [{
 }];
 
 <ProfileCard 
-	theme: 'bg-aqua',
-	displayName: 'John Roe',
-	description: 'Founder & CEO',
-	displayPicture: '../dist/img/user1-128x128.jpg',
-	coverPicture: '../dist/img/photo4.png' >
+	theme = 'bg-aqua',
+	displayName = 'John Roe',
+	description = 'Founder & CEO',
+	displayPicture = '../dist/img/user1-128x128.jpg',
+	coverPicture = '../dist/img/photo4.png' >
 
 	<ProfileInfoBlocks list={infoList} />
 </ProfileCard>
 
 ```
 ![](../../screenshots/profile-card-center.png)
+
+### - [Post](./js/components/page-widgets/post/post.js)
+
+A post to b displayed in a news feed page on a social network.
+
+#### Usage:
+
+Props: This component takes 7 values from props.
+
+```javascript
+displayName = 'John Doe'
+displayPicture = 'url/of/the/image'
+date = 'String'
+postPicture = 'url/of/the/image' (optional picture embedded in the post)
+content = 'String' (Optional content of the post)
+attachments =  (An embedded link within the post containing title, image and description)
+comments = (Comments on the post)
+```
+
+The Post component uses the [Comment](./js/components/page-widgets/post/comment.js) component to render comments passed from props.comments. It accepts 4 values from props
+
+```javascript
+content = 'string' (content of the comment)
+displayName = 'Person who commented'
+displayPicture = 'url/of/the/image'
+date = 'date when commented'
+```
+
+Post also uses the [Attachment](./js/components/page-widgets/post/attachment.js) component to render attachments passed from props.attachments. It takes 4 values from props
+
+```javascript
+title = 'string' (title of the attachment)
+link = 'url/of/the/link'
+picture = 'url/of/the/image'
+content = 'content of the attachment'
+```
+
+You can use [SocialInfo](./js/components/page-widgets/post/social-info.js) component to show additional information, such as likes, shares, views etc. Pass it as children of Post
+
+```javascript
+var metaInfo = '50 likes - 10 comments';
+
+<SocialInfo info={metaInfo} />
+```
+
+You can use [SocialButton](./js/components/page-widgets/post/social-button.js) component to render buttons such as 'like' or 'share'. Pass it as children of Post. It accepts 3 values from props
+
+```javascript
+position = 'left'/'right' (optional, which side should the button appear - default is left)
+theme = 'btn-default'/ 'btn-primary'/ 'btn-aqua' (optional theme, default is 'btn-default')
+type = 'like'/'share' (type of the button, default is 'like')
+
+<SocialButton type='share' theme = 'btn-aqua' />
+```
+
+#### Examples: 
+
+```javascript
+var comments = [
+	{
+	    displayName: 'Maria Gonzales',
+	    displayPicture: '../dist/img/user3-128x128.jpg',
+	    date: '8:03 PM Today',
+	    content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	}, {
+	    displayName: 'Luna Stark',
+	    displayPicture: '../dist/img/user4-128x128.jpg',
+	    date: '8:03 PM Today',
+	    content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	}
+];
+<Post 
+    displayName = 'Jonathan Burke Jr.'
+    displayPicture = '../dist/img/user1-128x128.jpg'
+    date = 'Shared publicly - 7:30 PM Today'
+    postPicture = '../dist/img/photo2.png'
+    content = 'I took this photo this morning. What do you guys think?'
+    comments={options.comments} >
+
+    <SocialButton type = 'like' />
+    <SocialButton type = 'share' />
+    <SocialInfo info = '127 likes - 3 comments' />
+</Post>
+```

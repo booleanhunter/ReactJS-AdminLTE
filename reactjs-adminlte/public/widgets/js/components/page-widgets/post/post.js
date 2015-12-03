@@ -10,8 +10,6 @@ define(
         var Post = React.createClass({
             getDefaultProps: function() {
                 return {
-                    pictureAlignment: 'center',
-                    theme: 'bg-yellow',
                     displayName: 'John Doe',
                     description: 'My profile description',
                     displayPicture: '../dist/img/user7-128x128.jpg'   

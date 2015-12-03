@@ -4,14 +4,6 @@ define(
     ],
     function (React) {
         var Attachment = React.createClass({
-            getDefaultProps: function() {
-                return {
-                    content: 'sample comment',
-                    displayName: 'John Doe', 
-                    displayPicture: '../dist/img/user4-128x128.jpg',
-                    date: '8:03 PM Today'
-                }
-            },
             render: function() {
                 return (
                     <div className="attachment-block clearfix">
