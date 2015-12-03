@@ -365,7 +365,7 @@ attachments =  (An embedded link within the post containing title, image and des
 comments = (Comments on the post)
 ```
 
-The Post component uses the [Comment](./js/components/page-widgets/post/comment.js) component to render comments passed from props.comments. It accepts 4 values from props
+The Post component uses [Comment](./js/components/page-widgets/post/comment.js) component to render comments passed from props.comments. It accepts 4 values from props
 
 ```javascript
 content = 'string' (content of the comment)
@@ -374,7 +374,7 @@ displayPicture = 'url/of/the/image'
 date = 'date when commented'
 ```
 
-Post also uses the [Attachment](./js/components/page-widgets/post/attachment.js) component to render attachments passed from props.attachments. It takes 4 values from props
+Post also uses [Attachment](./js/components/page-widgets/post/attachment.js) component to render attachments passed from props.attachments. It takes 4 values from props
 
 ```javascript
 title = 'string' (title of the attachment)
@@ -395,7 +395,7 @@ You can use [SocialButton](./js/components/page-widgets/post/social-button.js) c
 
 ```javascript
 position = 'left'/'right' (optional, which side should the button appear - default is left)
-theme = 'btn-default'/ 'btn-primary'/ 'btn-aqua' (optional theme, default is 'btn-default')
+theme = 'btn-default'/ 'btn-primary'/ 'btn-warning'/'btn-aqua' (optional theme, default is 'btn-default')
 type = 'like'/'share' (type of the button, default is 'like')
 
 <SocialButton type='share' theme = 'btn-aqua' />
@@ -409,12 +409,12 @@ var comments = [
 	    displayName: 'Maria Gonzales',
 	    displayPicture: '../dist/img/user3-128x128.jpg',
 	    date: '8:03 PM Today',
-	    content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	    content: 'Looks great!',
 	}, {
 	    displayName: 'Luna Stark',
 	    displayPicture: '../dist/img/user4-128x128.jpg',
-	    date: '8:03 PM Today',
-	    content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+	    date: '8:21 PM Today',
+	    content: 'Very nice ambience, would love to work in a place like this!',
 	}
 ];
 <Post 
@@ -423,10 +423,52 @@ var comments = [
     date = 'Shared publicly - 7:30 PM Today'
     postPicture = '../dist/img/photo2.png'
     content = 'I took this photo this morning. What do you guys think?'
-    comments={options.comments} >
+    comments={comments} >
 
     <SocialButton type = 'like' />
     <SocialButton type = 'share' />
     <SocialInfo info = '127 likes - 3 comments' />
 </Post>
 ```
+![](../../screenshots/post-with-picture.png)
+
+```javascript
+var comments = [
+	{
+	    displayName: 'Maria Gonzales',
+	    displayPicture: '../dist/img/user3-128x128.jpg',
+	    date: '8:03 PM Today',
+	    content: 'I like what you've done with the place!',
+	}, {
+	    displayName: 'Nora Havisham',
+	    displayPicture: '../dist/img/user5-128x128.jpg',
+	    date: '8:20 PM Today',
+	    content: 'Awesome, when are you inviting us over?',
+	}
+];
+
+var attachments = [
+    {
+        title: 'My Office Lobby',
+        link: 'http://www.lipsum.com/',
+        picture: '../dist/img/photo2.png',
+        content: 'The sun was beautiful today morning. It felt like the office needed a new decor. I began to start re-arranging... ' 
+    }
+];
+
+<Post 
+    displayName = 'Jonathan Burke Jr.'
+    displayPicture = '../dist/img/user1-128x128.jpg'
+    date = 'Shared publicly - 7:30 PM Today'
+    postPicture = '../dist/img/photo2.png'
+    content = 'My blog post on how to revamp your workspace, check it out!' 
+    attachments = {attachments}
+    comments = {comments} >
+
+    <SocialButton type = 'like' position = 'right' theme='btn-primary' />
+    <SocialButton type = 'share' position = 'right' />
+    <SocialInfo info = '45 likes - 2 comments' position ='left'/>
+
+</Post>
+```
+![](../../screenshots/post-with-attachment.png)
