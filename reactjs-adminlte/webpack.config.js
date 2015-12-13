@@ -43,19 +43,19 @@ var config = {
             'window.$': 'jquery'
         }),
         //new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'widgets/js/vendors.js', Infinity),
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
 
     ],
 
     entry: {
-        dashboardV1: './public/dashboardV1/js/main',
-        widgets: './public/widgets/js/main',
+        dashboardV1: './public/src/dashboardV1/js/main',
+        widgets: './public/src/widgets/js/main',
         vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 
     output: {
         path: path.join(__dirname, "public"),
-        filename: "[name]/js/[name].bundle.js"
+        filename: "dist/js/[name].bundle.js"
     },
     
     module: {

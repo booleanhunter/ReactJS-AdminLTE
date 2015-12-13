@@ -5,7 +5,7 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 ### UPDATES:
 
-[Widgets created in ReactJS](./reactjs-adminlte/public/widgets)
+[Widgets created in ReactJS](./reactjs-adminlte/public/src/widgets)
 
 [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8080/widgets.html) to see a live preview!
 
@@ -13,7 +13,7 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
 
-[Dashboard-v1 in ReactJS](./reactjs-adminlte/public/dashboardV1)
+[Dashboard-v1 in ReactJS](./reactjs-adminlte/public/src/dashboardV1)
 
 Will soon be populated with charts.
 
