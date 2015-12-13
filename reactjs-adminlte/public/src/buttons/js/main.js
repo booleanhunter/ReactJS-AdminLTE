@@ -9,10 +9,10 @@ define(
         'reactDom',   
         'jquery',
         './common-functions',
-        './components/widgets'
+        './components/buttons'
     ], 
-    function(React, ReactDOM, $, commonFunctions, Widgets) {
-    	ReactDOM.render(<Widgets />,  document.getElementById('widgets-container'));
+    function(React, ReactDOM, $, commonFunctions, Buttons) {
+    	ReactDOM.render(<Buttons />,  document.getElementById('buttons-container'));
 
     	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
     }

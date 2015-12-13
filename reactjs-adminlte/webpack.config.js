@@ -50,6 +50,7 @@ var config = {
     entry: {
         dashboardV1: './public/src/dashboardV1/js/main',
         widgets: './public/src/widgets/js/main',
+        buttons: './public/src/buttons/js/main',
         vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 

@@ -8,8 +8,8 @@ function initialize(app){
         res.render('dashboard.html');		
 	});
 
-    app.get('/widgets.html', function(req, res){
-        res.render('widgets.html');
+    app.get('/starter.html', function(req, res){
+        res.render('starter.html');
     });
 
     app.get('/index.html', function(req, res){
@@ -20,9 +20,14 @@ function initialize(app){
         res.render('index2.html');
     });
 
-    app.get('/graph.html', function(req, res){
-        res.render('graph.html');
+    app.get('/widgets.html', function(req, res){
+        res.render('widgets.html');
     });
+
+    app.get('/buttons.html', function(req, res){
+        res.render('buttons.html');
+    });
+
 }
 
 exports.initialize = initialize;
