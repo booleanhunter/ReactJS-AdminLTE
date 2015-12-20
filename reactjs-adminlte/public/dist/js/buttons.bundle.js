@@ -94,11 +94,13 @@ webpackJsonp([3],{
 	        var Buttons = React.createClass({displayName: "Buttons",
 	            getInitialState: function() {
 	                return {
-	                    someState: ''
+	                    rowOneOptions: [],
+	                    rowTwoOptions: [],
+	                    rowThreeOptions:[]
 	                }
 	            },
 	            componentDidMount: function() {
-	    
+	                
 	            },
 	            render: function() {
 
@@ -121,14 +123,987 @@ webpackJsonp([3],{
 	                            ), 
 
 	                            React.createElement("section", {className: "content"}, 
-	                                React.createElement("div", {className: "row"}
-	                                ), 
 
-	                                React.createElement("div", {className: "row"}
-	                                ), 
+	                                React.createElement("div", {className: "row"}, 
+	                                    React.createElement("div", {className: "col-md-12"}, 
+	                                        React.createElement("div", {className: "box box-primary"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("i", {className: "fa fa-edit"}), 
 
-	                                React.createElement("div", {className: "row"}
+	                                                React.createElement("h3", {className: "box-title"}, "Buttons")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body pad table-responsive"}, 
+	                                                React.createElement("p", null, "Various types of buttons. Using the base class ", React.createElement("code", null, ".btn")), 
+	                                                React.createElement("table", {className: "table table-bordered text-center"}, 
+	                                                    React.createElement("tbody", null, 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("th", null, "Normal"), 
+	                                                            React.createElement("th", null, "Large ", React.createElement("code", null, ".btn-lg")), 
+	                                                            React.createElement("th", null, "Small ", React.createElement("code", null, ".btn-sm")), 
+	                                                            React.createElement("th", null, "X-Small ", React.createElement("code", null, ".btn-xs")), 
+	                                                            React.createElement("th", null, "Flat ", React.createElement("code", null, ".btn-flat")), 
+	                                                            React.createElement("th", null, "Disabled ", React.createElement("code", null, ".disabled"))
+	                                                        ), 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-default"}, "Default")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-default btn-lg"}, "Default")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-default btn-sm"}, "Default")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-default btn-xs"}, "Default")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-default btn-flat"}, "Default")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-default disabled"}, "Default")
+	                                                            )
+	                                                        ), 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-primary"}, "Primary")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-primary btn-lg"}, "Primary")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-primary btn-sm"}, "Primary")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-primary btn-xs"}, "Primary")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-primary btn-flat"}, "Primary")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-primary disabled"}, "Primary")
+	                                                            )
+	                                                        ), 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-success"}, "Success")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-success btn-lg"}, "Success")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-success btn-sm"}, "Success")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-success btn-xs"}, "Success")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-success btn-flat"}, "Success")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-success disabled"}, "Success")
+	                                                            )
+	                                                        ), 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-info"}, "Info")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-info btn-lg"}, "Info")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-info btn-sm"}, "Info")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-info btn-xs"}, "Info")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-info btn-flat"}, "Info")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-info disabled"}, "Info")
+	                                                            )
+	                                                        ), 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-danger"}, "Danger")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-danger btn-lg"}, "Danger")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-danger btn-sm"}, "Danger")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-danger btn-xs"}, "Danger")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-danger btn-flat"}, "Danger")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-danger disabled"}, "Danger")
+	                                                            )
+	                                                        ), 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-warning"}, "Warning")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-warning btn-lg"}, "Warning")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-warning btn-sm"}, "Warning")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-warning btn-xs"}, "Warning")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-warning btn-flat"}, "Warning")
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("button", {type: "button", className: "btn btn-block btn-warning disabled"}, "Warning")
+	                                                            )
+	                                                        )
+	                                                    )
+	                                                )
+	                                            )
+	                                            /* /.box */
+	                                        )
+	                                    )
+	                                    /* /.col */
+	                                ), 
+	                                /* ./row */
+	                                React.createElement("div", {className: "row"}, 
+	                                    React.createElement("div", {className: "col-md-6"}, 
+	                                        /* Block buttons */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Block Buttons")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body"}, 
+	                                                React.createElement("button", {type: "button", className: "btn btn-default btn-block"}, ".btn-block"), 
+	                                                React.createElement("button", {type: "button", className: "btn btn-default btn-block btn-flat"}, ".btn-block .btn-flat"), 
+	                                                React.createElement("button", {type: "button", className: "btn btn-default btn-block btn-sm"}, ".btn-block .btn-sm")
+	                                            )
+	                                        ), 
+	                                        /* /.box */
+
+	                                        /* Horizontal grouping */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Horizontal Button Group")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body table-responsive pad"}, 
+	                                                React.createElement("p", null, 
+	                                                    "Horizontal button groups are easy to create with bootstrap. Just add your buttons inside ", React.createElement("code", null, "<div className=\"btn-group\"></div>")
+	                                                ), 
+
+	                                                React.createElement("table", {className: "table table-bordered"}, 
+	                                                    React.createElement("tbody", null, 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("th", null, "Button"), 
+	                                                            React.createElement("th", null, "Icons"), 
+	                                                            React.createElement("th", null, "Flat"), 
+	                                                            React.createElement("th", null, "Dropdown")
+	                                                        ), 
+	                                                        /* Default */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "Left"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "Right")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-default dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* ./default */
+	                                                        /* Info */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "Left"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "Right")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-info dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* /. info */
+	                                                        /* /.danger */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "Left"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "Right")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-danger dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* /.danger */
+	                                                        /* warning */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "Left"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "Right")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-warning dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* /.warning */
+	                                                        /* success */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "Left"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "Right")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-success dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        )
+	                                                        /* /.success */
+	                                                    )
+	                                                )
+	                                            )
+	                                        ), 
+	                                        /* /.box */
+
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Button Addon")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body"}, 
+	                                                React.createElement("p", null, "With dropdown"), 
+
+	                                                React.createElement("div", {className: "input-group margin"}, 
+	                                                    React.createElement("div", {className: "input-group-btn"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-default dropdown-toggle", "data-toggle": "dropdown"}, "Action", 
+	                                                            React.createElement("span", {className: "fa fa-caret-down"})), 
+	                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    /* /btn-group */
+	                                                    React.createElement("input", {type: "text", className: "form-control"})
+	                                                ), 
+	                                                /* /input-group */
+	                                                React.createElement("p", null, "Normal"), 
+
+	                                                React.createElement("div", {className: "input-group margin"}, 
+	                                                    React.createElement("div", {className: "input-group-btn"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-danger"}, "Action")
+	                                                    ), 
+	                                                    /* /btn-group */
+	                                                    React.createElement("input", {type: "text", className: "form-control"})
+	                                                ), 
+	                                                /* /input-group */
+	                                                React.createElement("p", null, "Flat"), 
+
+	                                                React.createElement("div", {className: "input-group margin"}, 
+	                                                    React.createElement("input", {type: "text", className: "form-control"}), 
+	                                                    React.createElement("span", {className: "input-group-btn"}, 
+	                                                  React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, "Go!")
+	                                                )
+	                                                )
+	                                                /* /input-group */
+	                                            )
+	                                            /* /.box-body */
+	                                        ), 
+	                                        /* /.box */
+	                                        /* split buttons box */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Split buttons")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body"}, 
+	                                                /* Split button */
+	                                                React.createElement("p", null, "Normal split buttons:"), 
+
+	                                                React.createElement("div", {className: "margin"}, 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-default"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-default dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-info"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-info dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-danger"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-danger dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-success"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-success dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-warning"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-warning dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    )
+	                                                ), 
+	                                                /* flat split buttons */
+	                                                React.createElement("p", null, "Flat split buttons:"), 
+
+	                                                React.createElement("div", {className: "margin"}, 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-default btn-flat dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-info btn-flat dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-danger btn-flat dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-success btn-flat dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    ), 
+	                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, "Action"), 
+	                                                        React.createElement("button", {type: "button", className: "btn btn-warning btn-flat dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                            React.createElement("span", {className: "caret"}), 
+	                                                            React.createElement("span", {className: "sr-only"}, "Toggle Dropdown")
+	                                                        ), 
+	                                                        React.createElement("ul", {className: "dropdown-menu", role: "menu"}, 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+	                                                            React.createElement("li", {className: "divider"}), 
+	                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+	                                                        )
+	                                                    )
+	                                                )
+	                                            )
+	                                            /* /.box-body */
+	                                        ), 
+	                                        /* end split buttons box */
+
+	                                        /* social buttons */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Social Buttons (By ", React.createElement("a", {href: "https://github.com/lipis/bootstrap-social"}, "Lipis"), ")"
+	                                          )
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body"}, 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-bitbucket"}, 
+	                                                    React.createElement("i", {className: "fa fa-bitbucket"}), " Sign in with Bitbucket"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-dropbox"}, 
+	                                                    React.createElement("i", {className: "fa fa-dropbox"}), " Sign in with Dropbox"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-facebook"}, 
+	                                                    React.createElement("i", {className: "fa fa-facebook"}), " Sign in with Facebook"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-flickr"}, 
+	                                                    React.createElement("i", {className: "fa fa-flickr"}), " Sign in with Flickr"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-foursquare"}, 
+	                                                    React.createElement("i", {className: "fa fa-foursquare"}), " Sign in with Foursquare"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-github"}, 
+	                                                    React.createElement("i", {className: "fa fa-github"}), " Sign in with GitHub"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-google"}, 
+	                                                    React.createElement("i", {className: "fa fa-google-plus"}), " Sign in with Google"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-instagram"}, 
+	                                                    React.createElement("i", {className: "fa fa-instagram"}), " Sign in with Instagram"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-linkedin"}, 
+	                                                    React.createElement("i", {className: "fa fa-linkedin"}), " Sign in with LinkedIn"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-tumblr"}, 
+	                                                    React.createElement("i", {className: "fa fa-tumblr"}), " Sign in with Tumblr"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-twitter"}, 
+	                                                    React.createElement("i", {className: "fa fa-twitter"}), " Sign in with Twitter"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-block btn-social btn-vk"}, 
+	                                                    React.createElement("i", {className: "fa fa-vk"}), " Sign in with VK"
+	                                                ), 
+	                                                React.createElement("br", null), 
+
+	                                                React.createElement("div", {className: "text-center"}, 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-bitbucket"}, React.createElement("i", {className: "fa fa-bitbucket"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-dropbox"}, React.createElement("i", {className: "fa fa-dropbox"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-facebook"}, React.createElement("i", {className: "fa fa-facebook"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-flickr"}, React.createElement("i", {className: "fa fa-flickr"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-foursquare"}, React.createElement("i", {className: "fa fa-foursquare"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-github"}, React.createElement("i", {className: "fa fa-github"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-google"}, React.createElement("i", {className: "fa fa-google-plus"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-instagram"}, React.createElement("i", {className: "fa fa-instagram"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-linkedin"}, React.createElement("i", {className: "fa fa-linkedin"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-tumblr"}, React.createElement("i", {className: "fa fa-tumblr"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-twitter"}, React.createElement("i", {className: "fa fa-twitter"})), 
+	                                                    React.createElement("a", {className: "btn btn-social-icon btn-vk"}, React.createElement("i", {className: "fa fa-vk"}))
+	                                                )
+	                                            )
+	                                        )
+	                                        /* /.box */
+
+	                                    ), 
+	                                    /* /.col */
+	                                    React.createElement("div", {className: "col-md-6"}, 
+	                                        /* Application buttons */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Application Buttons")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body"}, 
+	                                                React.createElement("p", null, "Add the classes ", React.createElement("code", null, ".btn.btn-app"), " to an ", React.createElement("code", null, "<a>"), " tag to achieve the following:"), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("i", {className: "fa fa-edit"}), " Edit"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("i", {className: "fa fa-play"}), " Play"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("i", {className: "fa fa-repeat"}), " Repeat"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("i", {className: "fa fa-pause"}), " Pause"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("i", {className: "fa fa-save"}), " Save"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("span", {className: "badge bg-yellow"}, "3"), 
+	                                                    React.createElement("i", {className: "fa fa-bullhorn"}), " Notifications"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("span", {className: "badge bg-green"}, "300"), 
+	                                                    React.createElement("i", {className: "fa fa-barcode"}), " Products"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("span", {className: "badge bg-purple"}, "891"), 
+	                                                    React.createElement("i", {className: "fa fa-users"}), " Users"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("span", {className: "badge bg-teal"}, "67"), 
+	                                                    React.createElement("i", {className: "fa fa-inbox"}), " Orders"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("span", {className: "badge bg-aqua"}, "12"), 
+	                                                    React.createElement("i", {className: "fa fa-envelope"}), " Inbox"
+	                                                ), 
+	                                                React.createElement("a", {className: "btn btn-app"}, 
+	                                                    React.createElement("span", {className: "badge bg-red"}, "531"), 
+	                                                    React.createElement("i", {className: "fa fa-heart-o"}), " Likes"
+	                                                )
+	                                            )
+	                                            /* /.box-body */
+	                                        ), 
+	                                        /* /.box */
+	                                        /* Various colors */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Different colors")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body"}, 
+	                                                React.createElement("p", null, "Mix and match with various background colors. Use base className ", React.createElement("code", null, ".btn"), " and add any available", 
+	                                                    React.createElement("code", null, ".bg-*"), " className"), 
+	                                                /* You may notice a .margin className added
+	                                          here but that's only to make the content
+	                                          display correctly without having to use a table*/
+	                                                React.createElement("p", null, 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-maroon btn-flat margin"}, ".btn.bg-maroon.btn-flat"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-purple btn-flat margin"}, ".btn.bg-purple.btn-flat"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-navy btn-flat margin"}, ".btn.bg-navy.btn-flat"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-orange btn-flat margin"}, ".btn.bg-orange.btn-flat"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-olive btn-flat margin"}, ".btn.bg-olive.btn-flat")
+	                                                ), 
+
+	                                                React.createElement("p", null, 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-maroon margin"}, ".btn.bg-maroon"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-purple margin"}, ".btn.bg-purple"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-navy margin"}, ".btn.bg-navy"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-orange margin"}, ".btn.bg-orange"), 
+	                                                    React.createElement("button", {type: "button", className: "btn bg-olive margin"}, ".btn.bg-olive")
+	                                                )
+	                                            )
+	                                        ), 
+	                                        /* /.box */
+
+	                                        /* Vertical grouping */
+	                                        React.createElement("div", {className: "box"}, 
+	                                            React.createElement("div", {className: "box-header"}, 
+	                                                React.createElement("h3", {className: "box-title"}, "Vertical Button Group")
+	                                            ), 
+	                                            React.createElement("div", {className: "box-body table-responsive pad"}, 
+
+	                                                React.createElement("p", null, 
+	                                                    "Vertical button groups are easy to create with bootstrap. Just add your buttons inside ", React.createElement("code", null, "<div className=\"btn-group-vertical\"></div>")
+	                                                ), 
+
+	                                                React.createElement("table", {className: "table table-bordered"}, 
+	                                                    React.createElement("tbody", null, 
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("th", null, "Button"), 
+	                                                            React.createElement("th", null, "Icons"), 
+	                                                            React.createElement("th", null, "Flat"), 
+	                                                            React.createElement("th", null, "Dropdown")
+	                                                        ), 
+	                                                        /* Default */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "Top"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "Bottom")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-default"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-default dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* ./default */
+	                                                        /* Info */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "Top"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "Bottom")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-info"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-info dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* /. info */
+	                                                        /* /.danger */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "Top"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "Bottom")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-danger"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-danger dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* /.danger */
+	                                                        /* warning */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "Top"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "Bottom")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-warning"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-warning dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        ), 
+	                                                        /* /.warning */
+	                                                        /* success */
+	                                                        React.createElement("tr", null, 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "Top"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "Middle"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "Bottom")
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, React.createElement("i", {className: "fa fa-align-left"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, React.createElement("i", {className: "fa fa-align-center"})), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success btn-flat"}, React.createElement("i", {className: "fa fa-align-right"}))
+	                                                                )
+	                                                            ), 
+	                                                            React.createElement("td", null, 
+	                                                                React.createElement("div", {className: "btn-group-vertical"}, 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "1"), 
+	                                                                    React.createElement("button", {type: "button", className: "btn btn-success"}, "2"), 
+
+	                                                                    React.createElement("div", {className: "btn-group"}, 
+	                                                                        React.createElement("button", {type: "button", className: "btn btn-success dropdown-toggle", "data-toggle": "dropdown"}, 
+	                                                                            React.createElement("span", {className: "caret"})
+	                                                                        ), 
+	                                                                        React.createElement("ul", {className: "dropdown-menu"}, 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link")), 
+	                                                                            React.createElement("li", null, React.createElement("a", {href: "#"}, "Dropdown link"))
+	                                                                        )
+	                                                                    )
+	                                                                )
+	                                                            )
+	                                                        )
+	                                                        /* /.success */
+	                                                    )
+	                                                )
+	                                            )
+	                                            /* /.box-body */
+	                                        )
+	                                        /* /.box */
+	                                    )
+	                                    /* /.col */
 	                                )
+	                                /* /. row */
 	                            )
 
 	                        ), 
