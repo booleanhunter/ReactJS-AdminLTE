@@ -423,6 +423,7 @@ define(
                     return (
                         <InfoTile 
                             key = {"rowOne"+iterator}
+                            width = {3}
                             content = '' 
                             icon = {options.icon} 
                             stats = {options.stats} 
@@ -435,6 +436,7 @@ define(
                     return (
                         <InfoTile 
                             key = {"rowTwo"+iterator} 
+                            width = {3}
                             content='' 
                             icon = {options.icon} 
                             stats = {options.stats} 
@@ -449,6 +451,7 @@ define(
                     return (
                         <StatTile 
                             key={"rowThree"+iterator}
+                            width = {3}
                             icon = {options.icon} 
                             link = {options.link}
                             stats = {options.stats}
@@ -461,6 +464,7 @@ define(
                     return (
                         <SmallBox 
                             key={"rowFour"+iterator} 
+                            width = {3}
                             border = {false}
                             content = {options.content}
                             loading = {options.loading} 
@@ -473,7 +477,8 @@ define(
                 var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
                     return (
                         <SmallBox 
-                            key={"rowFive"+iterator} 
+                            key={"rowFive"+iterator}
+                            width = {3} 
                             border = {options.border}
                             content = {options.content}
                             loading = {options.loading} 
@@ -487,6 +492,7 @@ define(
                     return (
                         <ChatBox 
                             key={"rowSix"+iterator} 
+                            width = {3}
                             buttonTheme = {options.buttonTheme}
                             chatTheme = {options.chatTheme}
                             headerTheme = {options.headerTheme}
@@ -508,6 +514,7 @@ define(
                         return (
                             <ProfileCard 
                                 key={"rowSeven"+iterator}
+                                width={4}
                                 theme={options.theme} 
                                 displayName={options.displayName} 
                                 description={options.description}
@@ -523,6 +530,7 @@ define(
                         return (
                             <ProfileCard 
                                 key={"rowSeven"+iterator}
+                                width={4}
                                 theme={options.theme} 
                                 displayName={options.displayName} 
                                 description={options.description}
@@ -540,6 +548,7 @@ define(
                     return (
                         <Post 
                             key={"rowEight"+iterator} 
+                            width={6}
                             displayName={options.displayName}
                             displayPicture={options.displayPicture}
                             date={options.date}

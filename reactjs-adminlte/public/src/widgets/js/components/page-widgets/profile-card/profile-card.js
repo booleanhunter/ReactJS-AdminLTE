@@ -28,7 +28,7 @@ define(
                 }
 
                 return (
-                    <div className="col-md-4">
+                    <div className={"col-md-"+this.props.width}>
                         {/* Widget: user widget style 1 */}
                         <div className={"box box-widget "+alignmentType}>
                             {/* Add the bg color to the header using any of the bg-* classes */}

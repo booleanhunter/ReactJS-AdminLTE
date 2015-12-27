@@ -37,7 +37,7 @@ define(
                 }
 
                 return(
-                    <div className = "col-lg-3 col-xs-6">
+                    <div className = {"col-lg-"+this.props.width+" col-xs-6"}>
                         <div className={"small-box "+this.props.theme}>
                             <div className="inner">
                                 {stats}

@@ -69,7 +69,7 @@ define(
                 }
 
                 return(
-                    <div className = "col-md-3">
+                    <div className = {"col-md-"+this.props.width}>
                         <div className={"box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}>
                             <div className="box-header with-border">
                                 <h3 className="box-title">{this.props.title}</h3>

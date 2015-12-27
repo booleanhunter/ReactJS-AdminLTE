@@ -58,7 +58,7 @@ define(
                 }
 
                 return (
-                    <div className="col-md-6">
+                    <div className={"col-md-"+this.props.width}>
                         <div className="box box-widget">
                             <div className="box-header with-border">
                                 <div className="user-block">

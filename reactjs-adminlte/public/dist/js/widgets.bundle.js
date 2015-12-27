@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -20,7 +20,53 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(27)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Contacts = React.createClass({displayName: "Contacts",
+	            render: function() {
+
+	                var contacts = this.props.contacts.map(function(contactDetails, iterator){
+	                    return (
+	                        React.createElement("li", {key: "contact"+iterator}, 
+	                            React.createElement("a", {href: contactDetails.link}, 
+	                                React.createElement("img", {className: "contacts-list-img", src: contactDetails.displayPicture}), 
+	                                React.createElement("div", {className: "contacts-list-info"}, 
+	                                    React.createElement("span", {className: "contacts-list-name"}, 
+	                                        contactDetails.displayName, 
+	                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
+	                                        contactDetails.date
+	                                    )
+	                                ), 
+	                                    React.createElement("span", {className: "contacts-list-msg"}, 
+	                                        contactDetails.message
+	                                    )
+	                                )
+	                                /* /.contacts-list-info */
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("div", {className: "direct-chat-contacts"}, 
+	                        React.createElement("ul", {className: "contacts-list"}, 
+	                            contacts
+	                            /* End Contact Item */
+	                        )
+	                        /* /.contatcts-list */
+	                    )
+	                )
+	            }
+	        });
+
+	        return Contacts;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -97,21 +143,21 @@ webpackJsonp([2],[
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(27),
 	        __webpack_require__(3),
+	        __webpack_require__(19),
+	        __webpack_require__(20),
+	        __webpack_require__(22),
+	        __webpack_require__(23),
+	        __webpack_require__(24),
+	        __webpack_require__(25),
+	        __webpack_require__(26),
+	        __webpack_require__(21),
+	        __webpack_require__(1),
+	        __webpack_require__(28),
+	        __webpack_require__(29),
 	        __webpack_require__(30),
 	        __webpack_require__(31),
-	        __webpack_require__(33),
-	        __webpack_require__(34),
-	        __webpack_require__(35),
-	        __webpack_require__(36),
-	        __webpack_require__(37),
 	        __webpack_require__(32),
-	        __webpack_require__(38),
-	        __webpack_require__(39),
-	        __webpack_require__(40),
-	        __webpack_require__(41),
-	        __webpack_require__(42),
-	        __webpack_require__(43),
-	        __webpack_require__(44)
+	        __webpack_require__(33)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
@@ -517,6 +563,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(InfoTile, {
 	                            key: "rowOne"+iterator, 
+	                            width: 3, 
 	                            content: "", 
 	                            icon: options.icon, 
 	                            stats: options.stats, 
@@ -529,6 +576,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(InfoTile, {
 	                            key: "rowTwo"+iterator, 
+	                            width: 3, 
 	                            content: "", 
 	                            icon: options.icon, 
 	                            stats: options.stats, 
@@ -543,6 +591,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(StatTile, {
 	                            key: "rowThree"+iterator, 
+	                            width: 3, 
 	                            icon: options.icon, 
 	                            link: options.link, 
 	                            stats: options.stats, 
@@ -555,6 +604,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(SmallBox, {
 	                            key: "rowFour"+iterator, 
+	                            width: 3, 
 	                            border: false, 
 	                            content: options.content, 
 	                            loading: options.loading, 
@@ -568,6 +618,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(SmallBox, {
 	                            key: "rowFive"+iterator, 
+	                            width: 3, 
 	                            border: options.border, 
 	                            content: options.content, 
 	                            loading: options.loading, 
@@ -581,6 +632,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(ChatBox, {
 	                            key: "rowSix"+iterator, 
+	                            width: 3, 
 	                            buttonTheme: options.buttonTheme, 
 	                            chatTheme: options.chatTheme, 
 	                            headerTheme: options.headerTheme, 
@@ -602,6 +654,7 @@ webpackJsonp([2],[
 	                        return (
 	                            React.createElement(ProfileCard, {
 	                                key: "rowSeven"+iterator, 
+	                                width: 4, 
 	                                theme: options.theme, 
 	                                displayName: options.displayName, 
 	                                description: options.description, 
@@ -617,6 +670,7 @@ webpackJsonp([2],[
 	                        return (
 	                            React.createElement(ProfileCard, {
 	                                key: "rowSeven"+iterator, 
+	                                width: 4, 
 	                                theme: options.theme, 
 	                                displayName: options.displayName, 
 	                                description: options.description, 
@@ -634,6 +688,7 @@ webpackJsonp([2],[
 	                    return (
 	                        React.createElement(Post, {
 	                            key: "rowEight"+iterator, 
+	                            width: 6, 
 	                            displayName: options.displayName, 
 	                            displayPicture: options.displayPicture, 
 	                            date: options.date, 
@@ -725,26 +780,15 @@ webpackJsonp([2],[
 /* 16 */,
 /* 17 */,
 /* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(27),
 	        __webpack_require__(3),
-	        __webpack_require__(50),
-	        __webpack_require__(51),
-	        __webpack_require__(52)
+	        __webpack_require__(47),
+	        __webpack_require__(48),
+	        __webpack_require__(49)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -932,7 +976,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1118,7 +1162,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1163,7 +1207,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1183,7 +1227,7 @@ webpackJsonp([2],[
 	                
 	                if(this.props.children){
 	                    return (
-	                        React.createElement("div", {className: "col-md-3 col-sm-6 col-xs-12"}, 
+	                        React.createElement("div", {className: "col-md-"+this.props.width+" col-sm-6 col-xs-12"}, 
 	                            React.createElement("div", {className: "info-box "+this.props.theme}, 
 	                                React.createElement("span", {className: "info-box-icon"}, 
 	                                    React.createElement("i", {className: "fa "+this.props.icon})
@@ -1224,7 +1268,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 34 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1263,7 +1307,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 35 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1303,7 +1347,7 @@ webpackJsonp([2],[
 	                }
 
 	                return(
-	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
+	                    React.createElement("div", {className: "col-lg-"+this.props.width+" col-xs-6"}, 
 	                        React.createElement("div", {className: "small-box "+this.props.theme}, 
 	                            React.createElement("div", {className: "inner"}, 
 	                                stats, 
@@ -1323,7 +1367,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1395,7 +1439,7 @@ webpackJsonp([2],[
 	                }
 
 	                return(
-	                    React.createElement("div", {className: "col-md-3"}, 
+	                    React.createElement("div", {className: "col-md-"+this.props.width}, 
 	                        React.createElement("div", {className: "box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
 	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
@@ -1420,7 +1464,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1470,7 +1514,7 @@ webpackJsonp([2],[
 	                }
 
 	                return (
-	                    React.createElement("div", {className: "col-md-3"}, 
+	                    React.createElement("div", {className: "col-md-"+this.props.width}, 
 	                        /* DIRECT CHAT PRIMARY */
 	                        React.createElement("div", {className: "box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
@@ -1519,54 +1563,8 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var Contacts = React.createClass({displayName: "Contacts",
-	            render: function() {
-
-	                var contacts = this.props.contacts.map(function(contactDetails, iterator){
-	                    return (
-	                        React.createElement("li", {key: "contact"+iterator}, 
-	                            React.createElement("a", {href: contactDetails.link}, 
-	                                React.createElement("img", {className: "contacts-list-img", src: contactDetails.displayPicture}), 
-	                                React.createElement("div", {className: "contacts-list-info"}, 
-	                                    React.createElement("span", {className: "contacts-list-name"}, 
-	                                        contactDetails.displayName, 
-	                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
-	                                        contactDetails.date
-	                                    )
-	                                ), 
-	                                    React.createElement("span", {className: "contacts-list-msg"}, 
-	                                        contactDetails.message
-	                                    )
-	                                )
-	                                /* /.contacts-list-info */
-	                            )
-	                        )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("div", {className: "direct-chat-contacts"}, 
-	                        React.createElement("ul", {className: "contacts-list"}, 
-	                            contacts
-	                            /* End Contact Item */
-	                        )
-	                        /* /.contatcts-list */
-	                    )
-	                )
-	            }
-	        });
-
-	        return Contacts;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 39 */
+/* 27 */,
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1597,7 +1595,7 @@ webpackJsonp([2],[
 	                }
 
 	                return (
-	                    React.createElement("div", {className: "col-md-4"}, 
+	                    React.createElement("div", {className: "col-md-"+this.props.width}, 
 	                        /* Widget: user widget style 1 */
 	                        React.createElement("div", {className: "box box-widget "+alignmentType}, 
 	                            /* Add the bg color to the header using any of the bg-* classes */
@@ -1624,7 +1622,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 40 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1657,7 +1655,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 41 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1689,14 +1687,14 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 42 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(27),
 	        __webpack_require__(2),
-	        __webpack_require__(53),
-	        __webpack_require__(54),
+	        __webpack_require__(50),
+	        __webpack_require__(51),
 	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, Comment, Attachment, commonFunctions) {
 	        var Post = React.createClass({displayName: "Post",
@@ -1750,7 +1748,7 @@ webpackJsonp([2],[
 	                }
 
 	                return (
-	                    React.createElement("div", {className: "col-md-6"}, 
+	                    React.createElement("div", {className: "col-md-"+this.props.width}, 
 	                        React.createElement("div", {className: "box box-widget"}, 
 	                            React.createElement("div", {className: "box-header with-border"}, 
 	                                React.createElement("div", {className: "user-block"}, 
@@ -1808,7 +1806,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 43 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1859,7 +1857,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 44 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1897,12 +1895,20 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
 /* 45 */,
 /* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -1956,7 +1962,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 51 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -2002,7 +2008,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 52 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -2073,7 +2079,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 53 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -2111,7 +2117,7 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 54 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [

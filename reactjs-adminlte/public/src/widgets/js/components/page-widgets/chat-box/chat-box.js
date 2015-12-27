@@ -47,7 +47,7 @@ define(
                 }
 
                 return (
-                    <div className="col-md-3">
+                    <div className={"col-md-"+this.props.width}>
                         {/* DIRECT CHAT PRIMARY */}
                         <div className={"box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass}>
                             <div className="box-header with-border">
