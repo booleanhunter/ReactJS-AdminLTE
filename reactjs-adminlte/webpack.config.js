@@ -50,6 +50,7 @@ var config = {
     entry: {
         dashboardV1: './public/src/dashboardV1/js/main',
         widgets: './public/src/widgets/js/main',
+        timeline: './public/src/timeline-page/js/main',
         buttons: './public/src/buttons/js/main',
         vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
@@ -61,7 +62,8 @@ var config = {
     
     module: {
         noParse: [
-            new RegExp(lib_dir + './public/libraries/react-with-addons.js')
+            new RegExp(lib_dir + './react.js'),
+            new RegExp(lib_dir + './react-dom.js')
         ],
         loaders: [
             { 

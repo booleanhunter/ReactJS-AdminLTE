@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([4],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,11 +8,11 @@ webpackJsonp([1],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(13),
-	        __webpack_require__(14)
+	        __webpack_require__(49),
+	        __webpack_require__(50)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, commonFunctions, Widgets) {
 	    	ReactDOM.render(React.createElement(Widgets, null),  document.getElementById('widgets-container'));
 
@@ -20,53 +20,7 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var Contacts = React.createClass({displayName: "Contacts",
-	            render: function() {
-
-	                var contacts = this.props.contacts.map(function(contactDetails, iterator){
-	                    return (
-	                        React.createElement("li", {key: "contact"+iterator}, 
-	                            React.createElement("a", {href: contactDetails.link}, 
-	                                React.createElement("img", {className: "contacts-list-img", src: contactDetails.displayPicture}), 
-	                                React.createElement("div", {className: "contacts-list-info"}, 
-	                                    React.createElement("span", {className: "contacts-list-name"}, 
-	                                        contactDetails.displayName, 
-	                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
-	                                        contactDetails.date
-	                                    )
-	                                ), 
-	                                    React.createElement("span", {className: "contacts-list-msg"}, 
-	                                        contactDetails.message
-	                                    )
-	                                )
-	                                /* /.contacts-list-info */
-	                            )
-	                        )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("div", {className: "direct-chat-contacts"}, 
-	                        React.createElement("ul", {className: "contacts-list"}, 
-	                            contacts
-	                            /* End Contact Item */
-	                        )
-	                        /* /.contatcts-list */
-	                    )
-	                )
-	            }
-	        });
-
-	        return Contacts;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
+/* 1 */,
 /* 2 */,
 /* 3 */,
 /* 4 */,
@@ -78,13 +32,49 @@ webpackJsonp([1],[
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        exports,
 	        __webpack_require__(3),
-	        __webpack_require__(4)
+	        __webpack_require__(6)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (exports, $, velocity) {
 
 	        exports.toggleBoxCollapse = function(box, boxBody, icon) {
@@ -137,27 +127,27 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 14 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
-	        __webpack_require__(3),
-	        __webpack_require__(19),
-	        __webpack_require__(20),
-	        __webpack_require__(22),
-	        __webpack_require__(23),
-	        __webpack_require__(24),
-	        __webpack_require__(25),
-	        __webpack_require__(26),
-	        __webpack_require__(21),
 	        __webpack_require__(1),
-	        __webpack_require__(28),
-	        __webpack_require__(29),
-	        __webpack_require__(30),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(33)
+	        __webpack_require__(3),
+	        __webpack_require__(52),
+	        __webpack_require__(56),
+	        __webpack_require__(57),
+	        __webpack_require__(58),
+	        __webpack_require__(59),
+	        __webpack_require__(60),
+	        __webpack_require__(61),
+	        __webpack_require__(51),
+	        __webpack_require__(62),
+	        __webpack_require__(63),
+	        __webpack_require__(64),
+	        __webpack_require__(65),
+	        __webpack_require__(66),
+	        __webpack_require__(69),
+	        __webpack_require__(70)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
@@ -776,19 +766,60 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Conversations = React.createClass({displayName: "Conversations",
+	            render: function() {
+
+	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
+	                    return (
+	                        React.createElement("div", {className: "direct-chat-msg " + messageDetails.align, key: "message"+iterator}, 
+	                            React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                React.createElement("span", {className: "direct-chat-name pull-right"}, 
+	                                    messageDetails.displayName
+	                                ), 
+	                                React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
+	                                    messageDetails.date
+	                                )
+	                            ), 
+	                            /* /.direct-chat-info */
+	                            React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
+	                            /* /.direct-chat-img */
+	                            React.createElement("div", {className: "direct-chat-text"}, 
+	                                messageDetails.message
+	                            )
+	                            /* /.direct-chat-text */
+	                        )
+	                    )
+	                });
+
+	                return (      
+	                    React.createElement("div", {className: "direct-chat-messages"}, 
+	                        /* Message. Default to the left */
+	                        conversations
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return Conversations;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1),
 	        __webpack_require__(3),
-	        __webpack_require__(47),
-	        __webpack_require__(48),
-	        __webpack_require__(49)
+	        __webpack_require__(53),
+	        __webpack_require__(54),
+	        __webpack_require__(55)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -976,11 +1007,182 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 20 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
+
+	            render: function () {
+	                var that = this;
+
+	                var messageList = this.props.messages.map(function (messageDetails, iterator) {
+	                    return (
+	                        React.createElement("li", {key: "header-message-item"+iterator}, 
+	                            /* start message */
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("div", {className: "pull-left"}, 
+	                                    React.createElement("img", {src: messageDetails.displayPicture, className: "img-circle", alt: "User Image"})
+	                                ), 
+	                                React.createElement("h4", null, 
+	                                    messageDetails.displayName, 
+	                                    React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " ", messageDetails.messageTime)
+	                                ), 
+	                                React.createElement("p", null, messageDetails.messageSubject)
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    messageList
+	                                ), 
+	                                
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderMessages;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
+
+	            render: function () {
+	                var that = this;
+
+	                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
+	                    return (
+	                        React.createElement("li", {key: "header-notification-item"+iterator}, 
+	                        React.createElement("a", {href: "#"}, 
+	                            React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
+	                        )
+	                    )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    notificationList
+	                                ), 
+	                                
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderNotifications;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
+
+	            render: function(){
+	                var that = this;
+	                var stylePercentage, progressBarColor;
+
+	                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
+	                    stylePercentage = {
+	                        width: taskDetails.percentage + '%'
+	                    };
+
+	                    if(taskDetails.percentage < 21){
+	                        progressBarColor = 'progress-bar-red'
+	                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
+	                        progressBarColor = 'progress-bar-yellow'
+	                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
+	                        progressBarColor = 'progress-bar-green'
+	                    }else if (taskDetails.percentage > 60){
+	                        progressBarColor = 'progress-bar-aqua';
+	                    }
+
+	                    return (
+	                        React.createElement("li", {key: "header-task-item"+iterator}, 
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("h3", null, 
+	                                    taskDetails.subject, 
+	                                    React.createElement("small", {className: "pull-right"}, taskDetails.percentage+'%')
+	                                ), 
+	                                React.createElement("div", {className: "progress xs"}, 
+	                                    React.createElement("div", {className: "progress-bar "+ progressBarColor, style: stylePercentage}, 
+	                                        React.createElement("span", {className: "sr-only"}, taskDetails.percentage + '% Complete', " ")
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    taskList
+	                                ), 
+
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, 
+	                            React.createElement("a", {href: "#"}, "View all tasks")
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderTasks;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -1162,56 +1364,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 21 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var Conversations = React.createClass({displayName: "Conversations",
-	            render: function() {
-
-	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
-	                    return (
-	                        React.createElement("div", {className: "direct-chat-msg " + messageDetails.align, key: "message"+iterator}, 
-	                            React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                React.createElement("span", {className: "direct-chat-name pull-right"}, 
-	                                    messageDetails.displayName
-	                                ), 
-	                                React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
-	                                    messageDetails.date
-	                                )
-	                            ), 
-	                            /* /.direct-chat-info */
-	                            React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
-	                            /* /.direct-chat-img */
-	                            React.createElement("div", {className: "direct-chat-text"}, 
-	                                messageDetails.message
-	                            )
-	                            /* /.direct-chat-text */
-	                        )
-	                    )
-	                });
-
-	                return (      
-	                    React.createElement("div", {className: "direct-chat-messages"}, 
-	                        /* Message. Default to the left */
-	                        conversations
-	                    )
-	                )
-	                
-	            }
-	        });
-
-	        return Conversations;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var InfoTile = React.createClass({displayName: "InfoTile",
 	            getDefaultProps: function() {
@@ -1268,11 +1425,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 23 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProgressBar = React.createClass({displayName: "ProgressBar",
 	            getDefaultProps: function() {
@@ -1307,11 +1464,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 24 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var StatTile = React.createClass({displayName: "StatTile",
 	            getDefaultProps: function() {
@@ -1367,13 +1524,13 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 25 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1),
 	        __webpack_require__(2),
-	        __webpack_require__(13)
+	        __webpack_require__(49)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            getDefaultProps: function() {
@@ -1464,13 +1621,13 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 26 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1),
 	        __webpack_require__(2),
-	        __webpack_require__(13)
+	        __webpack_require__(49)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var ChatBox = React.createClass({displayName: "ChatBox",
 	            getDefaultProps: function() {
@@ -1563,12 +1720,58 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 27 */,
-/* 28 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Contacts = React.createClass({displayName: "Contacts",
+	            render: function() {
+
+	                var contacts = this.props.contacts.map(function(contactDetails, iterator){
+	                    return (
+	                        React.createElement("li", {key: "contact"+iterator}, 
+	                            React.createElement("a", {href: contactDetails.link}, 
+	                                React.createElement("img", {className: "contacts-list-img", src: contactDetails.displayPicture}), 
+	                                React.createElement("div", {className: "contacts-list-info"}, 
+	                                    React.createElement("span", {className: "contacts-list-name"}, 
+	                                        contactDetails.displayName, 
+	                                    React.createElement("small", {className: "contacts-list-date pull-right"}, 
+	                                        contactDetails.date
+	                                    )
+	                                ), 
+	                                    React.createElement("span", {className: "contacts-list-msg"}, 
+	                                        contactDetails.message
+	                                    )
+	                                )
+	                                /* /.contacts-list-info */
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("div", {className: "direct-chat-contacts"}, 
+	                        React.createElement("ul", {className: "contacts-list"}, 
+	                            contacts
+	                            /* End Contact Item */
+	                        )
+	                        /* /.contatcts-list */
+	                    )
+	                )
+	            }
+	        });
+
+	        return Contacts;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProfileCard = React.createClass({displayName: "ProfileCard",
 	            getDefaultProps: function() {
@@ -1622,11 +1825,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 29 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProfileInfoList = React.createClass({displayName: "ProfileInfoList",
 	            render: function() {
@@ -1655,11 +1858,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 30 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProfileInfoBlocks = React.createClass({displayName: "ProfileInfoBlocks",
 	            render: function() {
@@ -1687,15 +1890,15 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
+	        __webpack_require__(1),
 	        __webpack_require__(2),
-	        __webpack_require__(50),
-	        __webpack_require__(51),
-	        __webpack_require__(13)
+	        __webpack_require__(67),
+	        __webpack_require__(68),
+	        __webpack_require__(49)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, Comment, Attachment, commonFunctions) {
 	        var Post = React.createClass({displayName: "Post",
 	            getDefaultProps: function() {
@@ -1806,11 +2009,80 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 32 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Post = React.createClass({displayName: "Post",
+	            getDefaultProps: function() {
+	                return {
+	                    content: 'sample comment',
+	                    displayName: 'John Doe', 
+	                    displayPicture: '../dist/img/user4-128x128.jpg',
+	                    date: '8:03 PM Today'
+	                }
+	            },
+	            render: function() {
+	                return (
+	                    React.createElement("div", {className: "box-comment"}, 
+	                        /* User image */
+	                        React.createElement("img", {className: "img-circle img-sm", src: this.props.displayPicture, alt: "user image"}), 
+	                        React.createElement("div", {className: "comment-text"}, 
+	                            React.createElement("span", {className: "username"}, 
+	                                this.props.displayName, 
+	                                React.createElement("span", {className: "text-muted pull-right"}, this.props.date)
+	                            ), 
+	                            /* /.username */
+	                            this.props.content
+	                        )
+	                        /* /.comment-text */
+	                    )
+	                )
+	            }
+	        });
+
+	        return Post;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var Attachment = React.createClass({displayName: "Attachment",
+	            render: function() {
+	                return (
+	                    React.createElement("div", {className: "attachment-block clearfix"}, 
+	                        React.createElement("img", {className: "attachment-img", src: this.props.picture, alt: "attachment image"}), 
+	                        React.createElement("div", {className: "attachment-pushed"}, 
+	                            React.createElement("h4", {className: "attachment-heading"}, 
+	                                React.createElement("a", {href: this.props.link}, 
+	                                    this.props.title
+	                                )
+	                            ), 
+	                            React.createElement("div", {className: "attachment-text"}, 
+	                                this.props.content, 
+	                                React.createElement("a", {href: this.props.link}, "more")
+	                            )
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return Attachment;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var SocialButton = React.createClass({displayName: "SocialButton",
 	            getDefaultProps: function() {
@@ -1857,11 +2129,11 @@ webpackJsonp([1],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 33 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
+	        __webpack_require__(1)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var SocialInfo = React.createClass({displayName: "SocialInfo",
 	            getDefaultProps: function() {
@@ -1892,259 +2164,6 @@ webpackJsonp([1],[
 	        });
 
 	        return SocialInfo;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
-
-	            render: function () {
-	                var that = this;
-
-	                var messageList = this.props.messages.map(function (messageDetails, iterator) {
-	                    return (
-	                        React.createElement("li", {key: "header-message-item"+iterator}, 
-	                            /* start message */
-	                            React.createElement("a", {href: "#"}, 
-	                                React.createElement("div", {className: "pull-left"}, 
-	                                    React.createElement("img", {src: messageDetails.displayPicture, className: "img-circle", alt: "User Image"})
-	                                ), 
-	                                React.createElement("h4", null, 
-	                                    messageDetails.displayName, 
-	                                    React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " ", messageDetails.messageTime)
-	                                ), 
-	                                React.createElement("p", null, messageDetails.messageSubject)
-	                            )
-	                        )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
-	                        React.createElement("li", null, 
-	                            /* inner menu: contains the actual data */
-	                            React.createElement("div", {className: "slimScrollDiv"}, 
-
-	                                React.createElement("ul", {className: "menu"}, 
-	                                    messageList
-	                                ), 
-	                                
-	                                React.createElement("div", {className: "slimScrollBar"}), 
-	                                React.createElement("div", {className: "slimScrollRail"})
-	                            )
-	                        ), 
-	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
-	                    )
-	                )
-	            }
-	        });
-
-	        return HeaderMessages;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
-
-	            render: function () {
-	                var that = this;
-
-	                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
-	                    return (
-	                        React.createElement("li", {key: "header-notification-item"+iterator}, 
-	                        React.createElement("a", {href: "#"}, 
-	                            React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
-	                        )
-	                    )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
-	                        React.createElement("li", null, 
-	                            /* inner menu: contains the actual data */
-	                            React.createElement("div", {className: "slimScrollDiv"}, 
-
-	                                React.createElement("ul", {className: "menu"}, 
-	                                    notificationList
-	                                ), 
-	                                
-	                                React.createElement("div", {className: "slimScrollBar"}), 
-	                                React.createElement("div", {className: "slimScrollRail"})
-	                            )
-	                        ), 
-	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
-	                    )
-	                )
-	            }
-	        });
-
-	        return HeaderNotifications;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
-
-	            render: function(){
-	                var that = this;
-	                var stylePercentage, progressBarColor;
-
-	                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
-	                    stylePercentage = {
-	                        width: taskDetails.percentage + '%'
-	                    };
-
-	                    if(taskDetails.percentage < 21){
-	                        progressBarColor = 'progress-bar-red'
-	                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
-	                        progressBarColor = 'progress-bar-yellow'
-	                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
-	                        progressBarColor = 'progress-bar-green'
-	                    }else if (taskDetails.percentage > 60){
-	                        progressBarColor = 'progress-bar-aqua';
-	                    }
-
-	                    return (
-	                        React.createElement("li", {key: "header-task-item"+iterator}, 
-	                            React.createElement("a", {href: "#"}, 
-	                                React.createElement("h3", null, 
-	                                    taskDetails.subject, 
-	                                    React.createElement("small", {className: "pull-right"}, taskDetails.percentage+'%')
-	                                ), 
-	                                React.createElement("div", {className: "progress xs"}, 
-	                                    React.createElement("div", {className: "progress-bar "+ progressBarColor, style: stylePercentage}, 
-	                                        React.createElement("span", {className: "sr-only"}, taskDetails.percentage + '% Complete', " ")
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
-	                        React.createElement("li", null, 
-	                            /* inner menu: contains the actual data */
-	                            React.createElement("div", {className: "slimScrollDiv"}, 
-
-	                                React.createElement("ul", {className: "menu"}, 
-	                                    taskList
-	                                ), 
-
-	                                React.createElement("div", {className: "slimScrollBar"}), 
-	                                React.createElement("div", {className: "slimScrollRail"})
-	                            )
-	                        ), 
-	                        React.createElement("li", {className: "footer"}, 
-	                            React.createElement("a", {href: "#"}, "View all tasks")
-	                        )
-	                    )
-	                )
-	            }
-	        });
-
-	        return HeaderTasks;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var Post = React.createClass({displayName: "Post",
-	            getDefaultProps: function() {
-	                return {
-	                    content: 'sample comment',
-	                    displayName: 'John Doe', 
-	                    displayPicture: '../dist/img/user4-128x128.jpg',
-	                    date: '8:03 PM Today'
-	                }
-	            },
-	            render: function() {
-	                return (
-	                    React.createElement("div", {className: "box-comment"}, 
-	                        /* User image */
-	                        React.createElement("img", {className: "img-circle img-sm", src: this.props.displayPicture, alt: "user image"}), 
-	                        React.createElement("div", {className: "comment-text"}, 
-	                            React.createElement("span", {className: "username"}, 
-	                                this.props.displayName, 
-	                                React.createElement("span", {className: "text-muted pull-right"}, this.props.date)
-	                            ), 
-	                            /* /.username */
-	                            this.props.content
-	                        )
-	                        /* /.comment-text */
-	                    )
-	                )
-	            }
-	        });
-
-	        return Post;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(27)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var Attachment = React.createClass({displayName: "Attachment",
-	            render: function() {
-	                return (
-	                    React.createElement("div", {className: "attachment-block clearfix"}, 
-	                        React.createElement("img", {className: "attachment-img", src: this.props.picture, alt: "attachment image"}), 
-	                        React.createElement("div", {className: "attachment-pushed"}, 
-	                            React.createElement("h4", {className: "attachment-heading"}, 
-	                                React.createElement("a", {href: this.props.link}, 
-	                                    this.props.title
-	                                )
-	                            ), 
-	                            React.createElement("div", {className: "attachment-text"}, 
-	                                this.props.content, 
-	                                React.createElement("a", {href: this.props.link}, "more")
-	                            )
-	                        )
-	                    )
-	                )
-	            }
-	        });
-
-	        return Attachment;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }
