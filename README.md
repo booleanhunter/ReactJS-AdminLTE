@@ -6,6 +6,8 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 ### UPDATE 2: 
 [ReactJS Timeline](./reactjs-adminlte/public/src/timeline-page)
 
+[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8080/timeline.html) to see it live
+
 
 ### UPDATE 1:
 
