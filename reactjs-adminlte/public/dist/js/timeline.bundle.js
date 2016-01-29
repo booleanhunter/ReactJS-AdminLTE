@@ -1,5 +1,6 @@
-webpackJsonp([2],[
-/* 0 */
+webpackJsonp([4],{
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -8,11 +9,11 @@ webpackJsonp([2],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1),
+	        __webpack_require__(33),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(28),
-	        __webpack_require__(29)
+	        __webpack_require__(15),
+	        __webpack_require__(16)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, commonFunctions, TimelinePage) {
 	    	ReactDOM.render(React.createElement(TimelinePage, null),  document.getElementById('timeline-container'));
 
@@ -20,40 +21,14 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */
+
+/***/ 15:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        exports,
 	        __webpack_require__(3),
-	        __webpack_require__(6)
+	        __webpack_require__(4)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (exports, $, velocity) {
 
 	        exports.toggleBoxCollapse = function(box, boxBody, icon) {
@@ -106,15 +81,16 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 29 */
+
+/***/ 16:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1),
+	        __webpack_require__(33),
 	        __webpack_require__(3),
-	        __webpack_require__(30),
-	        __webpack_require__(34),
-	        __webpack_require__(35)
+	        __webpack_require__(47),
+	        __webpack_require__(48),
+	        __webpack_require__(49)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, Timeline) {
 	        var TimelinePage = React.createClass({displayName: "TimelinePage",
 	            getInitialState: function() {
@@ -271,15 +247,16 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 30 */
+
+/***/ 47:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1),
+	        __webpack_require__(33),
 	        __webpack_require__(3),
-	        __webpack_require__(31),
-	        __webpack_require__(32),
-	        __webpack_require__(33)
+	        __webpack_require__(60),
+	        __webpack_require__(61),
+	        __webpack_require__(62)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -467,182 +444,12 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 31 */
+
+/***/ 48:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1),
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
-
-	            render: function () {
-	                var that = this;
-
-	                var messageList = this.props.messages.map(function (messageDetails, iterator) {
-	                    return (
-	                        React.createElement("li", {key: "header-message-item"+iterator}, 
-	                            /* start message */
-	                            React.createElement("a", {href: "#"}, 
-	                                React.createElement("div", {className: "pull-left"}, 
-	                                    React.createElement("img", {src: messageDetails.displayPicture, className: "img-circle", alt: "User Image"})
-	                                ), 
-	                                React.createElement("h4", null, 
-	                                    messageDetails.displayName, 
-	                                    React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " ", messageDetails.messageTime)
-	                                ), 
-	                                React.createElement("p", null, messageDetails.messageSubject)
-	                            )
-	                        )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
-	                        React.createElement("li", null, 
-	                            /* inner menu: contains the actual data */
-	                            React.createElement("div", {className: "slimScrollDiv"}, 
-
-	                                React.createElement("ul", {className: "menu"}, 
-	                                    messageList
-	                                ), 
-	                                
-	                                React.createElement("div", {className: "slimScrollBar"}), 
-	                                React.createElement("div", {className: "slimScrollRail"})
-	                            )
-	                        ), 
-	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
-	                    )
-	                )
-	            }
-	        });
-
-	        return HeaderMessages;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
-
-	            render: function () {
-	                var that = this;
-
-	                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
-	                    return (
-	                        React.createElement("li", {key: "header-notification-item"+iterator}, 
-	                        React.createElement("a", {href: "#"}, 
-	                            React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
-	                        )
-	                    )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
-	                        React.createElement("li", null, 
-	                            /* inner menu: contains the actual data */
-	                            React.createElement("div", {className: "slimScrollDiv"}, 
-
-	                                React.createElement("ul", {className: "menu"}, 
-	                                    notificationList
-	                                ), 
-	                                
-	                                React.createElement("div", {className: "slimScrollBar"}), 
-	                                React.createElement("div", {className: "slimScrollRail"})
-	                            )
-	                        ), 
-	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
-	                    )
-	                )
-	            }
-	        });
-
-	        return HeaderNotifications;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
-
-	            render: function(){
-	                var that = this;
-	                var stylePercentage, progressBarColor;
-
-	                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
-	                    stylePercentage = {
-	                        width: taskDetails.percentage + '%'
-	                    };
-
-	                    if(taskDetails.percentage < 21){
-	                        progressBarColor = 'progress-bar-red'
-	                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
-	                        progressBarColor = 'progress-bar-yellow'
-	                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
-	                        progressBarColor = 'progress-bar-green'
-	                    }else if (taskDetails.percentage > 60){
-	                        progressBarColor = 'progress-bar-aqua';
-	                    }
-
-	                    return (
-	                        React.createElement("li", {key: "header-task-item"+iterator}, 
-	                            React.createElement("a", {href: "#"}, 
-	                                React.createElement("h3", null, 
-	                                    taskDetails.subject, 
-	                                    React.createElement("small", {className: "pull-right"}, taskDetails.percentage+'%')
-	                                ), 
-	                                React.createElement("div", {className: "progress xs"}, 
-	                                    React.createElement("div", {className: "progress-bar "+ progressBarColor, style: stylePercentage}, 
-	                                        React.createElement("span", {className: "sr-only"}, taskDetails.percentage + '% Complete', " ")
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                });
-
-	                return (
-	                    React.createElement("ul", {className: "dropdown-menu"}, 
-	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
-	                        React.createElement("li", null, 
-	                            /* inner menu: contains the actual data */
-	                            React.createElement("div", {className: "slimScrollDiv"}, 
-
-	                                React.createElement("ul", {className: "menu"}, 
-	                                    taskList
-	                                ), 
-
-	                                React.createElement("div", {className: "slimScrollBar"}), 
-	                                React.createElement("div", {className: "slimScrollRail"})
-	                            )
-	                        ), 
-	                        React.createElement("li", {className: "footer"}, 
-	                            React.createElement("a", {href: "#"}, "View all tasks")
-	                        )
-	                    )
-	                )
-	            }
-	        });
-
-	        return HeaderTasks;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(1),
+	        __webpack_require__(33),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -824,43 +631,47 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 35 */
+
+/***/ 49:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1),
-			__webpack_require__(36),
-			__webpack_require__(37)
+			__webpack_require__(33),
+			__webpack_require__(63),
+			__webpack_require__(64)
 		], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, TimeLabel, TimelineItem) {
 			var Timeline = React.createClass({displayName: "Timeline",
 				render: function(){
 					var timelineInfo = [];
 
-					this.props.timelineInfo.map(function(timelineElement, iterator){
+					if(this.props.children){
+						timelineInfo = this.props.children;
+					}else{
+						this.props.timelineInfo.map(function(timelineElement, iterator){
 
-						if(timelineElement.endDate){
-							timelineInfo.push(React.createElement(TimeLabel, {key: "label1"+iterator, theme: "bg-red", content: timelineElement.endDate}));
-						}
-						
-
-						timelineElement.items.map(function(item, i){
-							timelineInfo.push(
-								React.createElement(TimelineItem, {
-									key: "item"+iterator+i, 
-									icon: item.icon, 
-									iconTheme: item.iconTheme, 
-									time: item.time, 
-									header: item.header, 
-									body: item.body, 
-								    footer: item.footer}
+							if(timelineElement.endDate){
+								timelineInfo.push(React.createElement(TimeLabel, {key: "label1"+iterator, theme: "bg-red", content: timelineElement.endDate}));
+							}
+							
+							timelineElement.items.map(function(item, i){
+								timelineInfo.push(
+									React.createElement(TimelineItem, {
+										key: "item"+iterator+i, 
+										icon: item.icon, 
+										iconTheme: item.iconTheme, 
+										time: item.time, 
+										header: item.header, 
+										body: item.body, 
+									    footer: item.footer}
+									)
 								)
-							)
+							});
+							
+							if(timelineElement.startDate){
+								timelineInfo.push(React.createElement(TimeLabel, {key: "label2"+iterator, theme: "bg-green", content: timelineElement.startDate}))
+							}	
 						});
-						
-						if(timelineElement.startDate){
-							timelineInfo.push(React.createElement(TimeLabel, {key: "label2"+iterator, theme: "bg-green", content: timelineElement.startDate}))
-						}	
-					});
+					}
 					
 					return (
 						React.createElement("div", {className: "col-md-12"}, 
@@ -881,11 +692,186 @@ webpackJsonp([2],[
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 36 */
+
+/***/ 60:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
+	        __webpack_require__(33),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
+
+	            render: function () {
+	                var that = this;
+
+	                var messageList = this.props.messages.map(function (messageDetails, iterator) {
+	                    return (
+	                        React.createElement("li", {key: "header-message-item"+iterator}, 
+	                            /* start message */
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("div", {className: "pull-left"}, 
+	                                    React.createElement("img", {src: messageDetails.displayPicture, className: "img-circle", alt: "User Image"})
+	                                ), 
+	                                React.createElement("h4", null, 
+	                                    messageDetails.displayName, 
+	                                    React.createElement("small", null, React.createElement("i", {className: "fa fa-clock-o"}), " ", messageDetails.messageTime)
+	                                ), 
+	                                React.createElement("p", null, messageDetails.messageSubject)
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.messages.length, " messages"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    messageList
+	                                ), 
+	                                
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "See All Messages"))
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderMessages;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+
+/***/ 61:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(33)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
+
+	            render: function () {
+	                var that = this;
+
+	                var notificationList = this.props.notifications.map(function (notificationDetails, iterator) {
+	                    return (
+	                        React.createElement("li", {key: "header-notification-item"+iterator}, 
+	                        React.createElement("a", {href: "#"}, 
+	                            React.createElement("i", {className: notificationDetails.className}), " ", notificationDetails.subject
+	                        )
+	                    )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.notifications.length, " notifications"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    notificationList
+	                                ), 
+	                                
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, React.createElement("a", {href: "#"}, "View all"))
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderNotifications;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+
+/***/ 62:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(33)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
+
+	            render: function(){
+	                var that = this;
+	                var stylePercentage, progressBarColor;
+
+	                var taskList = this.props.tasks.map(function (taskDetails, iterator) {
+	                    stylePercentage = {
+	                        width: taskDetails.percentage + '%'
+	                    };
+
+	                    if(taskDetails.percentage < 21){
+	                        progressBarColor = 'progress-bar-red'
+	                    }else if (taskDetails.percentage > 20 && taskDetails.percentage < 41){
+	                        progressBarColor = 'progress-bar-yellow'
+	                    }else if (taskDetails.percentage > 40 && taskDetails.percentage < 61){
+	                        progressBarColor = 'progress-bar-green'
+	                    }else if (taskDetails.percentage > 60){
+	                        progressBarColor = 'progress-bar-aqua';
+	                    }
+
+	                    return (
+	                        React.createElement("li", {key: "header-task-item"+iterator}, 
+	                            React.createElement("a", {href: "#"}, 
+	                                React.createElement("h3", null, 
+	                                    taskDetails.subject, 
+	                                    React.createElement("small", {className: "pull-right"}, taskDetails.percentage+'%')
+	                                ), 
+	                                React.createElement("div", {className: "progress xs"}, 
+	                                    React.createElement("div", {className: "progress-bar "+ progressBarColor, style: stylePercentage}, 
+	                                        React.createElement("span", {className: "sr-only"}, taskDetails.percentage + '% Complete', " ")
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "dropdown-menu"}, 
+	                        React.createElement("li", {className: "header"}, "You have ", this.props.tasks.length, " tasks"), 
+	                        React.createElement("li", null, 
+	                            /* inner menu: contains the actual data */
+	                            React.createElement("div", {className: "slimScrollDiv"}, 
+
+	                                React.createElement("ul", {className: "menu"}, 
+	                                    taskList
+	                                ), 
+
+	                                React.createElement("div", {className: "slimScrollBar"}), 
+	                                React.createElement("div", {className: "slimScrollRail"})
+	                            )
+	                        ), 
+	                        React.createElement("li", {className: "footer"}, 
+	                            React.createElement("a", {href: "#"}, "View all tasks")
+	                        )
+	                    )
+	                )
+	            }
+	        });
+
+	        return HeaderTasks;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+
+/***/ 63:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+			__webpack_require__(33)
 		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
 			var TimeLabel = React.createClass({displayName: "TimeLabel",
 				getDefaultProps: function() {
@@ -909,14 +895,15 @@ webpackJsonp([2],[
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */
+
+/***/ 64:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1),
-			__webpack_require__(38),
-			__webpack_require__(39),
-			__webpack_require__(40)
+			__webpack_require__(33),
+			__webpack_require__(68),
+			__webpack_require__(69),
+			__webpack_require__(70)
 		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React, TimelineHeader, TimelineBody, TimelineFooter) {
 			var TimelineItem = React.createClass({displayName: "TimelineItem",
 				getDefaultProps: function() {
@@ -966,11 +953,12 @@ webpackJsonp([2],[
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 38 */
+
+/***/ 68:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
+			__webpack_require__(33)
 		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
 			var TimelineHeader = React.createClass({displayName: "TimelineHeader",
 				render: function(){
@@ -988,11 +976,12 @@ webpackJsonp([2],[
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 39 */
+
+/***/ 69:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
+			__webpack_require__(33)
 		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
 			var TimelineBody = React.createClass({displayName: "TimelineBody",
 				getDefaultProps: function() {
@@ -1014,11 +1003,12 @@ webpackJsonp([2],[
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 40 */
+
+/***/ 70:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
+			__webpack_require__(33)
 		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
 			var TimelineFooter = React.createClass({displayName: "TimelineFooter",
 				render: function(){
@@ -1035,4 +1025,5 @@ webpackJsonp([2],[
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }
-]);
+
+});
