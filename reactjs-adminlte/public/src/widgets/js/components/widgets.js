@@ -16,7 +16,7 @@ define(
         './page-widgets/profile-card/profile-info-blocks',
         './page-widgets/post/post',
         './page-widgets/post/social-button',
-        './page-widgets/post/social-info'
+        './page-widgets/post/social-info',
     ],
     function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
         var Widgets = React.createClass({
@@ -615,6 +615,7 @@ define(
                                 <div className="row">
                                     {posts}         
                                 </div>
+
                             </section>
 
                         </div>

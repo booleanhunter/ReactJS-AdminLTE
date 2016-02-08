@@ -28,6 +28,10 @@ function initialize(app){
         res.render('buttons.html');
     });
 
+    app.get('/UI/general.html', function(req, res){
+        res.render('general.html');
+    });
+
     app.get('/timeline.html', function(req, res){
         res.render('timeline.html');
     });

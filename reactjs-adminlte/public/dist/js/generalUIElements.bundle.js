@@ -1,4 +1,4 @@
-webpackJsonp([3],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11,10 +11,10 @@ webpackJsonp([3],[
 	        __webpack_require__(1),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
-	        __webpack_require__(38),
-	        __webpack_require__(39)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, commonFunctions, TimelinePage) {
-	    	ReactDOM.render(React.createElement(TimelinePage, null),  document.getElementById('timeline-container'));
+	        __webpack_require__(28),
+	        __webpack_require__(29)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function(React, ReactDOM, $, commonFunctions, UIElements) {
+	    	ReactDOM.render(React.createElement(UIElements, null),  document.getElementById('ui-container'));
 
 	    	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))    
@@ -47,17 +47,7 @@ webpackJsonp([3],[
 /* 25 */,
 /* 26 */,
 /* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -116,127 +106,27 @@ webpackJsonp([3],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 39 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(1),
 	        __webpack_require__(3),
-	        __webpack_require__(40),
-	        __webpack_require__(44),
-	        __webpack_require__(45)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, Timeline) {
-	        var TimelinePage = React.createClass({displayName: "TimelinePage",
+	        __webpack_require__(30),
+	        __webpack_require__(34),
+	        __webpack_require__(35)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, Box) {
+	        var UIElements = React.createClass({displayName: "UIElements",
 	            getInitialState: function() {
 	                return {
-	                    timelineInfo: []
+	                    infoTileOptions: [],
 	                }
 	            },
 	            componentDidMount: function() {
-	                var timelineInfo = [
-	                    {
-	                        startDate: '10 Feb. 2014',
-	                        endDate: '3 Jan. 2014',
-	                        items: [
-	                            {
-	                                icon: 'fa fa-envelope',
-	                                iconTheme: 'bg-blue',
-	                                time: ' 12:05',
-	                                header: {
-	                                    url: '#',
-	                                    title: 'Support Team ',
-	                                    content: 'sent you an email'
-	                                },
-	                                body: {
-	                                    content: 'Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo...',
-	                                },
-	                                footer: {
-	                                    content: '',
-	                                    markup: [
-	                                        React.createElement("a", {key: "1", className: "btn btn-primary btn-xs"}, "Read more"),
-	                                        React.createElement("a", {key: "2", className: "btn btn-danger btn-xs"}, "Delete")
-	                                    ]
-	                                }
-	                            },
-	                            {
-	                                icon: 'fa fa-user',
-	                                iconTheme: 'bg-aqua',
-	                                time: ' 5 mins ago',
-	                                header: {
-	                                    url: '#',
-	                                    title: 'Sarah Young ',
-	                                    content: 'accepted your friend request'
-	                                }
-	                            },
-	                            {
-	                                icon: 'fa fa-comments',
-	                                iconTheme: 'bg-yellow',
-	                                time: ' 27 mins ago',
-	                                header: {
-	                                    url: '#',
-	                                    title: 'Jay White ',
-	                                    content: 'commented on your post'
-	                                },
-	                                body: {
-	                                    content: 'Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!'
-	                                },
-	                                footer: {
-	                                    content: '',
-	                                    markup: React.createElement("a", {className: "btn btn-warning btn-flat btn-xs"}, "View comment")
-	                                }
-	                            }
-	                        ]
-	                    },{
-	                        items: [
-	                            {
-	                                icon: 'fa fa-camera',
-	                                iconTheme: 'bg-purple',
-	                                time: ' 2 days ago',
-	                                header: {
-	                                    url: '#',
-	                                    title: 'Mina Lee ',
-	                                    content: 'uploaded new photos'
-	                                },
-	                                body: {
-	                                    content: '',
-	                                    markup: [
-	                                        React.createElement("img", {key: "1", src: "http://placehold.it/150x100", alt: "...", className: "margin"}),
-	                                        React.createElement("img", {key: "2", src: "http://placehold.it/150x100", alt: "...", className: "margin"}),
-	                                        React.createElement("img", {key: "3", src: "http://placehold.it/150x100", alt: "...", className: "margin"}),
-	                                        React.createElement("img", {key: "4", src: "http://placehold.it/150x100", alt: "...", className: "margin"})
-	                                    ]
-	                                }
-	                            },
-	                            {
-	                                icon: 'fa fa-video-camera',
-	                                iconTheme: 'bg-maroon',
-	                                time: ' 5 days ago',
-	                                header: {
-	                                    url: '#',
-	                                    title: 'Mr. Doe ',
-	                                    content: 'shared a video'
-	                                },
-	                                body: {
-	                                    content: '',
-	                                    markup: React.createElement("div", {className: "embed-responsive embed-responsive-16by9"}, 
-	                                        React.createElement("iframe", {className: "embed-responsive-item", src: "https://www.youtube.com/embed/tMWkeBIohBs", frameBorder: "0", allowFullScreen: ""}
-	                                        )
-	                                    )
-	                                },
-	                                footer: {
-	                                    content: '',
-	                                    markup: React.createElement("a", {href: "#", className: "btn btn-xs bg-maroon"}, "See comments")
-	                                }
-	                            }
-	                        ]       
-	                    }
-	                ];
-
-	                this.setState({
-	                    timelineInfo: timelineInfo
-	                });
+	                
 	            },
 	            render: function() {
+
 	                return (
 	                    React.createElement("div", {className: "wrapper"}, 
 	                        React.createElement(HeaderBar, null), 
@@ -246,20 +136,20 @@ webpackJsonp([3],[
 	                        React.createElement("div", {className: "content-wrapper"}, 
 	                            React.createElement("section", {className: "content-header"}, 
 	                                React.createElement("h1", null, 
-	                                    "Timeline", 
-	                                    React.createElement("small", null, "example")
+	                                    "General UI", 
+	                                    React.createElement("small", null, "Preview of UI elements")
+	                                ), 
+	                                React.createElement("ol", {className: "breadcrumb"}, 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, React.createElement("i", {className: "fa fa-dashboard"}), " Home")), 
+	                                    React.createElement("li", null, React.createElement("a", {href: "#"}, "UI")), 
+	                                    React.createElement("li", {className: "active"}, "General")
 	                                )
-	                                /*<ol className="breadcrumb">
-	                                    <li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
-	                                    <li className="active">Dashboard</li>
-	                                </ol>*/
 	                            ), 
 
 	                            React.createElement("section", {className: "content"}, 
-	                                React.createElement("div", {className: "row"}, 
-	                                    React.createElement(Timeline, {timelineInfo: this.state.timelineInfo})
-	                                )
-
+	                                React.createElement(Box, {
+	                                    title: "Color Palette", 
+	                                    headerMarkup: React.createElement("i", {className: "fa fa-tag"})})
 	                            )
 
 	                        ), 
@@ -277,19 +167,19 @@ webpackJsonp([3],[
 	            }
 	        });
 
-	        return TimelinePage;
+	        return UIElements;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 40 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	        __webpack_require__(1),
 	        __webpack_require__(3),
-	        __webpack_require__(41),
-	        __webpack_require__(42),
-	        __webpack_require__(43)
+	        __webpack_require__(31),
+	        __webpack_require__(32),
+	        __webpack_require__(33)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -318,27 +208,27 @@ webpackJsonp([3],[
 	            componentDidMount: function () {
 	                var messages = [{
 	                    displayName: 'Support Team',
-	                    displayPicture: 'dist/img/user2-160x160.jpg',
+	                    displayPicture: '/dist/img/user2-160x160.jpg',
 	                    messageSubject: 'Why not buy a new awesome theme?',
 	                    messageTime: '5 mins',
 	                }, {
 	                    displayName: 'AdminLTE Design Team',
-	                    displayPicture: 'dist/img/user3-128x128.jpg',
+	                    displayPicture: '/dist/img/user3-128x128.jpg',
 	                    messageSubject: 'Why not buy a new awesome theme?',
 	                    messageTime: '2 hours',
 	                }, {
 	                    displayName: 'Developers',
-	                    displayPicture: 'dist/img/user4-128x128.jpg',
+	                    displayPicture: '/dist/img/user4-128x128.jpg',
 	                    messageSubject: 'Why not buy a new awesome theme?',
 	                    messageTime: 'Today',
 	                }, {
 	                    displayName: 'Sales Department',
-	                    displayPicture: 'dist/img/user3-128x128.jpg',
+	                    displayPicture: '/dist/img/user3-128x128.jpg',
 	                    messageSubject: 'Why not buy a new awesome theme?',
 	                    messageTime: 'Yesterday',
 	                }, {
 	                    displayName: 'Reviewers',
-	                    displayPicture: 'dist/img/user4-128x128.jpg',
+	                    displayPicture: '/dist/img/user4-128x128.jpg',
 	                    messageSubject: 'Why not buy a new awesome theme?',
 	                    messageTime: '2 days',
 	                }];
@@ -426,13 +316,13 @@ webpackJsonp([3],[
 	                                    /* User Account: style can be found in dropdown.less */
 	                                    React.createElement("li", {className: "dropdown user user-menu"}, 
 	                                        React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
-	                                            React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "user-image", alt: "User Image"}), 
+	                                            React.createElement("img", {src: "/dist/img/user2-160x160.jpg", className: "user-image", alt: "User Image"}), 
 	                                            React.createElement("span", {className: "hidden-xs"}, "Alexander Pierce")
 	                                        ), 
 	                                        React.createElement("ul", {className: "dropdown-menu"}, 
 	                                            /* User image */
 	                                            React.createElement("li", {className: "user-header"}, 
-	                                                React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"}), 
+	                                                React.createElement("img", {src: "/dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"}), 
 	                                                React.createElement("p", null, 
 	                                                    "Alexander Pierce - Web Developer", 
 	                                                    React.createElement("small", null, "Member since Nov. 2012")
@@ -477,7 +367,7 @@ webpackJsonp([3],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 41 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -531,7 +421,7 @@ webpackJsonp([3],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 42 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -577,7 +467,7 @@ webpackJsonp([3],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 43 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -648,7 +538,7 @@ webpackJsonp([3],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 44 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -664,7 +554,7 @@ webpackJsonp([3],[
 	                            /* Sidebar user panel */
 	                            React.createElement("div", {className: "user-panel"}, 
 	                                React.createElement("div", {className: "pull-left image"}, 
-	                                    React.createElement("img", {src: "dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"})
+	                                    React.createElement("img", {src: "/dist/img/user2-160x160.jpg", className: "img-circle", alt: "User Image"})
 	                                ), 
 	                                React.createElement("div", {className: "pull-left info"}, 
 	                                    React.createElement("p", null, "Alexander Pierce"), 
@@ -834,218 +724,278 @@ webpackJsonp([3],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 45 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1),
-			__webpack_require__(46),
-			__webpack_require__(47)
-		], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, TimeLabel, TimelineItem) {
-			var Timeline = React.createClass({displayName: "Timeline",
-				render: function(){
-					var timelineInfo = [];
+	        __webpack_require__(1),
+	        __webpack_require__(2),
+	        __webpack_require__(36),
+	        __webpack_require__(37)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, BoxTool, boxFunctions) {
+	        var Box = React.createClass({displayName: "Box",
+	            // getDefaultProps: function() {
+	            //     return {
+	            //         type: 'expandable',
+	            //         theme: 'box-default',
+	            //         loading: false,
+	            //         border: true,
+	            //         title: 'Default title',
+	            //         content: 'Default content',
+	            //     }
+	            // },
+	            toggleCollapse: function(event) {
+	                console.log(ReactDOM.findDOMNode(this))
+	                var box = ReactDOM.findDOMNode(this).children[0],
+	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
+	                    icon = event.currentTarget.children[0];
 
-					if(this.props.children){
-						timelineInfo = this.props.children;
-					}else{
-						this.props.timelineInfo.map(function(timelineElement, iterator){
+	                boxFunctions.toggleBoxCollapse(box, boxBody, icon);
+	            },
+	            removeBox: function(event){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+	                boxFunctions.removeBox(box);
+	            },
+	            render: function() {
+	                var that=this;
+	                return (
+	                    React.createElement("div", {className: "col-md-6"}, 
+	                    React.createElement("div", {className: "box box-default color-palette-box"}, 
+	                        React.createElement("div", {className: "box-header with-border"}, 
+	                            React.createElement("h3", {className: "box-title"}, this.props.headerMarkup, " ", this.props.title), 
+	                            React.createElement("div", {className: "box-tools pull-right"}, 
+	                                React.createElement(BoxTool, {toolType: "minimize", callback: that.toggleCollapse})
+	                            )
+	                        ), 
+	                        React.createElement("div", {className: "box-body"}, 
+	                            React.createElement("div", {className: "row"}, 
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Primary"), 
 
-							if(timelineElement.endDate){
-								timelineInfo.push(React.createElement(TimeLabel, {key: "label1"+iterator, theme: "bg-red", content: timelineElement.endDate}));
-							}
-							
-							timelineElement.items.map(function(item, i){
-								timelineInfo.push(
-									React.createElement(TimelineItem, {
-										key: "item"+iterator+i, 
-										icon: item.icon, 
-										iconTheme: item.iconTheme, 
-										time: item.time, 
-										header: item.header, 
-										body: item.body, 
-									    footer: item.footer}
-									)
-								)
-							});
-							
-							if(timelineElement.startDate){
-								timelineInfo.push(React.createElement(TimeLabel, {key: "label2"+iterator, theme: "bg-green", content: timelineElement.startDate}))
-							}	
-						});
-					}
-					
-					return (
-						React.createElement("div", {className: "col-md-12"}, 
-							React.createElement("ul", {className: "timeline"}, 
-							    /* timeline time label */
-							    timelineInfo, 
-							    React.createElement("li", null, 
-							        React.createElement("i", {className: "fa fa-clock-o bg-gray"})
-							    )
-							)
-						)
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-light-blue disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-light-blue color-palette"}, React.createElement("span", null, "#3c8dbc")), 
+	                                        React.createElement("div", {className: "bg-light-blue-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Info"), 
 
-					)
-				}
-			});
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-aqua disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-aqua color-palette"}, React.createElement("span", null, "#00c0ef")), 
+	                                        React.createElement("div", {className: "bg-aqua-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Success"), 
 
-			return Timeline;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-green disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-green color-palette"}, React.createElement("span", null, "#00a65a")), 
+	                                        React.createElement("div", {className: "bg-green-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Warning"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-yellow disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-yellow color-palette"}, React.createElement("span", null, "#f39c12")), 
+	                                        React.createElement("div", {className: "bg-yellow-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Danger"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-red disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-red color-palette"}, React.createElement("span", null, "#f56954")), 
+	                                        React.createElement("div", {className: "bg-red-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Gray"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-gray disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-gray color-palette"}, React.createElement("span", null, "#d2d6de")), 
+	                                        React.createElement("div", {className: "bg-gray-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                )
+	                                /* /.col */
+	                            ), 
+	                            /* /.row */
+	                            React.createElement("div", {className: "row"}, 
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Navy"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-navy disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-navy color-palette"}, React.createElement("span", null, "#001F3F")), 
+	                                        React.createElement("div", {className: "bg-navy-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Teal"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-teal disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-teal color-palette"}, React.createElement("span", null, "#39CCCC")), 
+	                                        React.createElement("div", {className: "bg-teal-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Purple"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-purple disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-purple color-palette"}, React.createElement("span", null, "#605ca8")), 
+	                                        React.createElement("div", {className: "bg-purple-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Orange"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-orange disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-orange color-palette"}, React.createElement("span", null, "#ff851b")), 
+	                                        React.createElement("div", {className: "bg-orange-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Maroon"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-maroon disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-maroon color-palette"}, React.createElement("span", null, "#D81B60")), 
+	                                        React.createElement("div", {className: "bg-maroon-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                ), 
+	                                /* /.col */
+	                                React.createElement("div", {className: "col-sm-4 col-md-2"}, 
+	                                    React.createElement("h4", {className: "text-center"}, "Black"), 
+
+	                                    React.createElement("div", {className: "color-palette-set"}, 
+	                                        React.createElement("div", {className: "bg-black disabled color-palette"}, React.createElement("span", null, "Disabled")), 
+	                                        React.createElement("div", {className: "bg-black color-palette"}, React.createElement("span", null, "#111111")), 
+	                                        React.createElement("div", {className: "bg-black-active color-palette"}, React.createElement("span", null, "Active"))
+	                                    )
+	                                )
+	                                /* /.col */
+	                            )
+	                            /* /.row */
+	                        )
+	                        /* /.box-body */
+	                    )
+	                    )
+	                )
+	            }
+
+	        })
+
+	        return Box;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 46 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
-		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
-			var TimeLabel = React.createClass({displayName: "TimeLabel",
-				getDefaultProps: function() {
-				    return {
-				        theme: 'bg-red',
-				        content: 'Default content',
-				    }
-				},
-				render: function(){
-					return (
-						React.createElement("li", {className: "time-label"}, 
-						    React.createElement("span", {className: this.props.theme}, 
-						        this.props.content
-						    )
-						)
-					)
-				}
-			});
+	        __webpack_require__(1),
+	        __webpack_require__(2),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
+	    	var BoxTool = React.createClass({displayName: "BoxTool",
+	    		render: function() {
+	    			var button = '', that = this;
 
-			return TimeLabel
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+	    			switch(this.props.toolType){
+	    				case 'minimize':
+	    					return (
+	    						React.createElement("button", {className: "btn btn-box-tool", "data-widget": "collapse", onClick: that.props.callback}, React.createElement("i", {className: "fa fa-minus"}))
+		    				)
+		    			case 'maximize':
+		    				return (
+		    					React.createElement("button", {className: "btn btn-box-tool", "data-widget": "expand", onClick: that.props.callback}, React.createElement("i", {className: "fa fa-plus"}))
+		    				)
+		    			case 'close':
+		    				return (
+		    					React.createElement("button", {className: "btn btn-box-tool", "data-widget": "remove", onClick: that.props.callback}, React.createElement("i", {className: "fa fa-times"}))
+		    				)
+	    			}
+	    		}
+	    	});
+
+	    	return BoxTool;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 47 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1),
-			__webpack_require__(48),
-			__webpack_require__(49),
-			__webpack_require__(50)
-		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React, TimelineHeader, TimelineBody, TimelineFooter) {
-			var TimelineItem = React.createClass({displayName: "TimelineItem",
-				getDefaultProps: function() {
-				    return {
-				        icon: 'fa fa-coffee',
-				        iconTheme: 'bg-blue',
-				        time: '',   
-				    }
-				},
-				render: function(){
-					var body = '', footer = '';
-					if(this.props.body){
-						body = React.createElement(TimelineBody, {content: this.props.body.content}, 
-						        	this.props.body.markup
-						        )
-					}
+	        exports,
+	        __webpack_require__(3),
+	        __webpack_require__(6)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (exports, $, velocity) {
 
-					if(this.props.footer){
-						footer = React.createElement(TimelineFooter, {content: this.props.footer.content}, 
-						        	this.props.footer.markup
-						        )
+	        exports.toggleBoxCollapse = function(box, boxBody, icon) {
+	            if(box.className.indexOf('collapsed-box') !== -1) {
+	                icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');
+	                $(boxBody).velocity('slideDown', {
+	                    duration: 500,
+	                    easing: 'easeInSine',
+	                    complete: function() {
+	                        box.className = box.className.replace(/ collapsed-box/g, '');
+	                    }
+	                });
+	                // $(boxBody).slideDown(500, function () {
+	                //     box.className = box.className.replace(/ collapsed-box/g, '');
+	                // });
+	            } else {
+	                icon.className = icon.className.replace(/fa-minus/g, 'fa-plus');
+	                $(boxBody).velocity('slideUp', {
+	                    duration: 500,
+	                    easing: 'easeInSine',
+	                    complete: function() {
+	                        box.className += ' collapsed-box';
+	                    }
+	                });
+	                // $(boxBody).slideUp(500, function () {
+	                //     box.className += ' collapsed-box';
+	                // });
+	            }
+	        };
 
-					}
+	        exports.removeBox = function(box){
+	            $(box).velocity('slideUp', {
+	                duration: 500,
+	                easing: 'easeInSine'
+	            });
+	        };
 
-					return (
-						React.createElement("li", null, 
-						    React.createElement("i", {className: this.props.icon+" "+ this.props.iconTheme}), 
+	        exports.initialize = function(){
+	            function bootstrapTooltips(selector){
+	                $('body').tooltip({
+	                  selector: selector
+	                });
+	            }
 
-						    React.createElement("div", {className: "timeline-item"}, 
-						        React.createElement("span", {className: "time"}, 
-						        	React.createElement("i", {className: "fa fa-clock-o"}), 
-						        	this.props.time
-						        ), 
-
-						        React.createElement(TimelineHeader, {url: this.props.header.url, title: this.props.header.title, content: this.props.header.content}), 
-
-						        body, 
-
-						        footer
-						    )
-						)
-					)
-				}
-			});
-
-			return TimelineItem
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
-		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
-			var TimelineHeader = React.createClass({displayName: "TimelineHeader",
-				render: function(){
-					return (
-				        React.createElement("h3", {className: "timeline-header"}, 
-				        	React.createElement("a", {href: this.props.url, target: "_blank"}, this.props.title), 
-				        	this.props.content, 
-				        	this.props.children
-				        )
-					)
-				}
-			});
-
-			return TimelineHeader
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
-		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
-			var TimelineBody = React.createClass({displayName: "TimelineBody",
-				getDefaultProps: function() {
-				    return {
-				        content: 'Sample content',   
-				    }
-				},
-				render: function(){
-					return (
-				        React.createElement("div", {className: "timeline-body"}, 
-				            this.props.content, 
-				            this.props.children
-				        )
-					)
-				}
-			});
-
-			return TimelineBody
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-			__webpack_require__(1)
-		], __WEBPACK_AMD_DEFINE_RESULT__ = function  (React) {
-			var TimelineFooter = React.createClass({displayName: "TimelineFooter",
-				render: function(){
-					return (
-				        React.createElement("div", {className: "timeline-footer"}, 
-				            this.props.content, 
-				            this.props.children
-				        )
-					)
-				}
-			});
-
-			return TimelineFooter
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+	            return {
+	                bootstrapTooltips: bootstrapTooltips
+	            }
+	            
+	        };
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ }
 ]);

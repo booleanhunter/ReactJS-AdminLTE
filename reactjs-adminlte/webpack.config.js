@@ -52,6 +52,7 @@ var config = {
         widgets: './public/src/widgets/js/main',
         timeline: './public/src/timeline-page/js/main',
         buttons: './public/src/buttons/js/main',
+        generalUIElements: './public/src/ui-elements/general/js/main',
         vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
     },
 
