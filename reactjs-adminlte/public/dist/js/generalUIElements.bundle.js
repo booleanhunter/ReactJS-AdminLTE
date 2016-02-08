@@ -759,7 +759,7 @@ webpackJsonp([2],[
 	            render: function() {
 	                var that=this;
 	                return (
-	                    React.createElement("div", {className: "col-md-6"}, 
+	                    React.createElement("div", {className: "col-md-12"}, 
 	                    React.createElement("div", {className: "box box-default color-palette-box"}, 
 	                        React.createElement("div", {className: "box-header with-border"}, 
 	                            React.createElement("h3", {className: "box-title"}, this.props.headerMarkup, " ", this.props.title), 
