@@ -27,7 +27,7 @@ var config = {
             //jvectormapWorld: plugins_dir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
             //knob: plugins_dir + '/knob/jquery.knob.js',
             moment: plugins_dir + '/moment/moment.js',
-            daterangepicker: plugins_dir + '/daterangepicker/daterangepicker.js',
+            //daterangepicker: plugins_dir + '/daterangepicker/daterangepicker.js',
             bootstrapDatepicker: plugins_dir + '/datepicker/bootstrap-datepicker.js',
             //bootstrapWysihtml5: plugins_dir + '/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js',
             slimscroll: plugins_dir + '/slimScroll/jquery.slimscroll.min.js',
@@ -53,7 +53,7 @@ var config = {
         timeline: './public/src/timeline-page/js/main',
         buttons: './public/src/buttons/js/main',
         generalUIElements: './public/src/ui-elements/general/js/main',
-        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','daterangepicker','bootstrapDatepicker','slimscroll','fastclick']
+        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker','slimscroll','fastclick']
     },
 
     output: {
@@ -68,8 +68,10 @@ var config = {
         ],
         loaders: [
             { 
-                test: /\.js$/, 
-                loader: 'jsx-loader' 
+               loader: 'babel', //'jsx-loader'
+                query: {
+                    presets: ['react', 'es2015']
+                } 
             }, 
         ]
     }
