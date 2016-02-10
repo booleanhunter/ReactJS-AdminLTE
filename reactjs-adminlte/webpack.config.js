@@ -14,7 +14,7 @@ var config = {
 
     resolve: {
         alias: {
-            react: lib_dir + '/react.js',
+            react: node_dir + '/react',
             reactDom: lib_dir + '/react-dom',
             jquery: lib_dir + '/jQuery-2.1.4.min.js',
             velocity: lib_dir + '/velocity.min.js',
@@ -36,6 +36,7 @@ var config = {
     },   
 
     plugins: [
+        //new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
             '$': "jquery",
             'jQuery': "jquery",
@@ -49,11 +50,11 @@ var config = {
 
     entry: {
         dashboardV1: './public/src/dashboardV1/js/main',
-        widgets: './public/src/widgets/js/main',
+        widgets: ['./public/src/widgets/js/main'],
         timeline: './public/src/timeline-page/js/main',
         buttons: './public/src/buttons/js/main',
         generalUIElements: './public/src/ui-elements/general/js/main',
-        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker','slimscroll','fastclick']
+        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker','slimscroll','fastclick'],
     },
 
     output: {
@@ -68,10 +69,16 @@ var config = {
         ],
         loaders: [
             { 
+                test: /\.jsx?$/, 
+                loaders: ['react-hot'],
+                include: path.join(__dirname, 'public')
+
+            },{ 
                loader: 'babel', //'jsx-loader'
                 query: {
                     presets: ['react', 'es2015']
-                } 
+                },
+                include: path.join(__dirname, 'public')
             }, 
         ]
     }
@@ -83,6 +90,9 @@ module.exports = config;
 /*
 ----------
 View package.json for more configuration details
+
+0. During development:-
+    Run webpack-dev-server --hot --inline and point your entry files to http://localhost:8080 in your HTML, for HMP
 
 1. Command:- 
     webpack --profile --json > stats.json 
