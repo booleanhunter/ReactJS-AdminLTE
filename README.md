@@ -6,14 +6,14 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 ### UPDATE 2: 
 [ReactJS Timeline](./reactjs-adminlte/public/src/timeline-page)
 
-[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8080/timeline.html) to see it live
+[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
 
 
 ### UPDATE 1:
 
 [ReactJS Widgets](./reactjs-adminlte/public/src/widgets)
 
-[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8080/widgets.html) to see a live preview!
+[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
 
 ![](./reactjs-adminlte/screenshots/widgets.png)
 
@@ -33,11 +33,29 @@ More stuff coming soon. Stay tuned!
 
 - Fork or clone this repo
 - Install nodejs and NPM
-- Go to the project folder reactjs-adminlte from your terminal and run npm install
-- Run node server.js
-- Going to [http://localhost:8080](http://localhost:8080) will render an empty dashboard skeleton in the client-side using ReactJS. Clicking on one of the dashboard options on the left pane displays the original dashboards from AdminLTE.
-- Go to [http://localhost:8080/widgets.html](http://localhost:8080/widgets.html) to see available widgets in ReactJS.
+- Go to the project folder reactjs-adminlte from your terminal and run `npm install`
+- Run `node server.js`
+- Going to [http://localhost:8000](http://localhost:8000) will render an empty dashboard skeleton in the client-side using ReactJS. Clicking on one of the dashboard options on the left pane displays the original dashboards from AdminLTE.
+- Go to [http://localhost:8000/widgets.html](http://localhost:8000/widgets.html) to see available widgets in ReactJS.
 - Use [React Developer Tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) to understand the components hierarchy and structure and to track down bugs.
+
+
+#### For development
+
+- React Hot Loader can be used to ease your development workflow. This can be done by installing dev dependencies from `package.json` file. If you haven't, then
+run `npm install webpack-dev-server` and `npm install react-hot-loader`.
+- Then in your HTML, change your javascript bundles' source paths to point to the webpack-dev-server proxy in your `script` tags. So if you have something
+like this 
+
+`<script src="/dist/js/vendors.js"></script>
+<script src="/dist/js/app.bundle.js"></script>`
+
+
+change this to 
+
+`<script src="http://localhost:8080/dist/js/vendors.js"></script>
+<script src="http://localhost:8080/dist/js/app.bundle.js"></script>`
+
 
 This is still a work in progress and will get better over time. Will try and think of more essential features. Looking for feedback and contributions! For any discussions or queries, send an email.
 
