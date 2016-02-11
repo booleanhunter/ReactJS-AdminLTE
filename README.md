@@ -47,15 +47,17 @@ run `npm install webpack-dev-server` and `npm install react-hot-loader`.
 - Then in your HTML, change your javascript bundles' source paths to point to the webpack-dev-server proxy in your `script` tags. So if you have something
 like this 
 
-`<script src="/dist/js/vendors.js"></script>
-<script src="/dist/js/app.bundle.js"></script>`
-
+```html
+<script src="/dist/js/vendors.js"></script>
+<script src="/dist/js/app.bundle.js"></script>
+```
 
 change this to 
 
-`<script src="http://localhost:8080/dist/js/vendors.js"></script>
-<script src="http://localhost:8080/dist/js/app.bundle.js"></script>`
-
+```html
+<script src="http://localhost:8080/dist/js/vendors.js"></script>
+<script src="http://localhost:8080/dist/js/app.bundle.js"></script>
+```
 
 This is still a work in progress and will get better over time. Will try and think of more essential features. Looking for feedback and contributions! For any discussions or queries, send an email.
 
