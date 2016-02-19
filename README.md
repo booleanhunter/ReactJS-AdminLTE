@@ -59,6 +59,8 @@ change this to
 <script src="http://localhost:8080/dist/js/app.bundle.js"></script>
 ```
 
+For a detailed explanation on setting up a workflow using Webpack, check out my blog post - [Webpack for The Fast and The Furious](https://medium.com/@booleanhunter/webpack-for-the-fast-and-the-furious-bf8d3746adbd#.uzx2l0hy4) :-)
+
 This is still a work in progress and will get better over time. Will try and think of more essential features. Looking for feedback and contributions! For any discussions or queries, send an email.
 
 #### Upcoming stuff
