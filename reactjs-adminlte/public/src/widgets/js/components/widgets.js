@@ -17,8 +17,9 @@ define(
         './page-widgets/post/post',
         './page-widgets/post/social-button',
         './page-widgets/post/social-info',
+        './page-widgets/custom-box/box',
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo, Box) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
@@ -614,6 +615,17 @@ define(
 
                                 <div className="row">
                                     {posts}         
+                                </div>
+
+                                <div className="row">
+                                    <Box 
+                                        title="Sample Box" 
+                                        width="12"
+                                        theme="box-default"
+                                        border={false}
+                                        boxTools = {['minimize','close']} 
+                                        content="Sample Content"
+                                        footer="footer"/>         
                                 </div>
 
                             </section>
