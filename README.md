@@ -11,7 +11,7 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 ### UPDATE 1:
 
-[ReactJS Widgets](./reactjs-adminlte/public/src/widgets)
+[ReactJS Widgets](./reactjs-adminlte/public/src/widgets-page)
 
 [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
 
