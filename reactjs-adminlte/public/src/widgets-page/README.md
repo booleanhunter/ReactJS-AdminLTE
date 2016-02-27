@@ -1,18 +1,19 @@
-#### [Go to the widgets folder](./js/components/page-widgets)
+#### [Go to the widgets folder](./js/components/widgets)
 
 ## List of widgets
 
 
-### - [InfoTile](./js/components/page-widgets/info-tile/info-tile.js)
+### - [InfoTile](./js/components/widgets/info-tile/info-tile.js)
 
 A basic info-tile for displaying info. 
 
 #### Usage:
 
-Props: This component takes 5 values.
+Props: This component takes 6 values.
 
 ```javascript
 
+width = 3 (Sets the size/width)
 theme = 'bg-aqua' / 'bg-green' / 'bg-yellow' (To apply background color to the icon),
 icon = 'fa-envelope-o' / 'fa-flag-0' / 'fa-files-0' (Any font-awesome icon)
 subject =  'Can be a string or a number'
@@ -23,6 +24,7 @@ content = 'Can be a string or a number'
 
 ```javascript
 <InfoTile  
+    width = 3
     content = '' 
     icon = 'fa-envelope-o' 
     stats = '1,410' 
@@ -32,26 +34,26 @@ content = 'Can be a string or a number'
 ```
 ![](../../../screenshots/info-tile.png)
 
-You can optionally display a progress status and bar by passing the [ProgressBar](./js/components/page-widgets/info-tile/progress-bar.js) component as props.children
+You can optionally display a progress status and bar by passing the [ProgressBar](./js/components/widgets/info-tile/progress-bar.js) component as props.children
 
 ```javascript
-<InfoTile content = '' icon = 'fa-thumbs-o-up' stats = '41,410' subject = 'Likes' theme = 'bg-green' >
+<InfoTile width = 3 content = '' icon = 'fa-thumbs-o-up' stats = '41,410' subject = 'Likes' theme = 'bg-green' >
 	<ProgressBar percent = 50 description = '50% Increase in 30 Days' color = 'white' />
 </InfoTile>	
 ```
 ![](../../../screenshots/progress-info-tile.png)
 
 
-### - [StatTile](./js/components/page-widgets/stat-tile.js)
+### - [StatTile](./js/components/widgets/stat-tile.js)
 
 A tile for displaying some basic info, highlighting numbers or stats. 
 
 #### Usage:
 
-Props: This component takes 5 values from props, 1 is optional
+Props: This component takes 6 values from props, 1 is optional
 
 ```javascript
-
+width = 3 (Sets the size/width)
 theme = 'bg-aqua' / 'bg-green' / 'bg-red' (To apply background color to the icon),
 icon = 'fa-shopping-cart' / 'ion-stats-bars' / 'ion-person-add' (Any font-awesome icon)
 subject =  'Can be a string or a number'
@@ -62,6 +64,7 @@ link = 'Link to go to for more information'  (Optional)
 
 ```javascript
 <StatTile 
+    width = 3
 	theme = 'bg-yellow' 
 	icon = 'ion-person-add' 
 	subject = 'User Registration' 
@@ -73,21 +76,24 @@ link = 'Link to go to for more information'  (Optional)
 ![](../../../screenshots/stat-tile.png)
 
 
-### - [SmallBox](./js/components/page-widgets/small-box.js)
+### - [Box](./js/components/widgets/custom-box/box.js)
 
-A box / window for displaying some basic info, to which properties can be applied. 
+A customizable box / window for displaying some basic info, to which properties can be applied. Use this to make your own version of a box.
 
 #### Usage:
 
-Props: This component takes 6 values from props, out of which 2 are optional
+Props: This component takes 7 values from props, out of which 2 are optional
 
 ```javascript
-type = 'expandable' / 'collapsable' / 'removable' (To make the box expandable, collapsable or removable)
+width = 3 (Sets the size/width)
+collapsed = true/false (Optional boolean to set initial state of the box. Setting it to true will render a collapsed box, by default this is false)
 theme = 'box-default' / 'box-primary' / 'box-warning' / 'box-danger' / 'box-success'
 loading = true (Optional boolean value, to show a loading animation)
-border = true (Optional boolean value, will apply a border for the box and color for the title bar)
+border = true (Optional boolean value, will apply a border for the box and color for the title bar if true)
 title = 'Can be a string or a number'
 content = 'Can be a string or a number'
+footer = 'Can be a string or a number' (Optional)
+boxTools = {['collapse','remove','expand']}  (Optional buttons to make the box expand, collapse or remove upon clicking )
 ```
 
 #### Examples: 
@@ -96,12 +102,14 @@ content = 'Can be a string or a number'
 
 ```javascript
 
-<SmallBox 
+<Box 
+    width = 3
 	border = true
 	content = 'The body of the box'
 	theme = 'box-default'
 	title = 'Expandable'
-	type = 'expandable'
+	collapsed = true
+    boxTools = ['expand']
 />
 ```
 
@@ -111,12 +119,14 @@ content = 'Can be a string or a number'
 
 ```javascript
 
-<SmallBox 
+<Box 
+    width = 3 
 	border = true
 	content = 'The body of the box'
 	theme = 'box-primary'
 	title = 'Collapsable'
-	type = 'collapsable'
+	collapsed = true
+    boxTools = ['collapse']
 />
 ```
 
@@ -125,11 +135,12 @@ content = 'Can be a string or a number'
 ##### A removable box without border
 
 ```javascript
-<SmallBox 
+<Box 
+    width = 3
 	content = 'The body of the box'
 	theme = 'box-danger'
 	title = 'Removable'
-	type = 'removable'
+    boxTools = ['remove']
 />
 ```
 
@@ -138,27 +149,29 @@ content = 'Can be a string or a number'
 ##### A removable box without border with loading animation
 
 ```javascript
-<SmallBox 
+<Box 
+    width = 3
 	content = 'The body of the box'
 	theme = 'box-warning'
 	loading = true
 	title = 'Loading state'
-	type = 'removable'
+    boxTools = ['collapse']
 />
 ```
 
 ![](../../../screenshots/small-box-loading.png)
 
 
-### - [ChatBox](./js/components/page-widgets/chat-box/chat-box.js)
+### - [ChatBox](./js/components/widgets/chat-box/chat-box.js)
 
 A box / window which displays chat messages, notifications and contact information. 
 
 #### Usage:
 
-Props: This component takes 7 values from props to customize it's UI.
+Props: This component takes 8 values from props to customize it's UI.
 
 ```javascript
+width = 3 (Sets the size/width)
 border = true/false (To display the border)
 buttonTheme = 'btn-primary' / 'btn-success' / 'btn-warning' (To apply color for the submit button)
 chatTheme = 'direct-chat-primary' / 'direct-chat-success' / 'direct-chat-warning' / 'direct-chat-danger' / {Chat messages color}
@@ -168,7 +181,7 @@ notifications = 'Can be a string or a number' (Number of notifications)
 title = 'Can be a string or a number'
 ```
 
-Pass the [Conversations](./js/components/page-widgets/chat-box/conversations.js) component as props.children to add chat messages. It accepts an array of objects containing chat information.
+Pass the [Conversations](./js/components/widgets/chat-box/conversations.js) component as props.children to add chat messages. It accepts an array of objects containing chat information.
 
 ```javascript
 var conversationsArray = [{
@@ -181,7 +194,7 @@ var conversationsArray = [{
 <Conversations conversations = {conversationsArray} />
 ```
 
-Pass the [Contacts](./js/components/page-widgets/chat-box/contacts.js) component as props.children to add contacts in the right drawer. It accepts an array of objects containing contact information
+Pass the [Contacts](./js/components/widgets/chat-box/contacts.js) component as props.children to add contacts in the right drawer. It accepts an array of objects containing contact information
 
 ```javascript
 var contactsArray = [{
@@ -228,6 +241,7 @@ var contactsInfo = [{
 }];
 
 <ChatBox  
+    width = 3
     buttonTheme = 'btn-primary'
     chatTheme = 'direct-chat-primary'
     headerTheme = 'box-primary'
@@ -243,15 +257,16 @@ var contactsInfo = [{
 ![](../../../screenshots/chat-box.png)
 
 
-### - [ProfileCard](./js/components/page-widgets/profile-card/profile-card.js)
+### - [ProfileCard](./js/components/widgets/profile-card/profile-card.js)
 
 A card to display profile information in social media.
 
 #### Usage:
 
-Props: This component takes 5 values from props, 1 is optional
+Props: This component takes 7 values from props, 1 is optional
 
 ```javascript
+width = 3 (Sets the size/width)
 theme = 'bg-yellow' / 'bg-aqua-active' / 'bg-red' (Optional, To apply background color),
 displayName = 'String'
 description = 'String' (Description below the display name)
@@ -260,7 +275,7 @@ coverPicture = 'url of the image' (Optional cover picture, this will overwrite t
 pictureAlignment = 'left' (Display picture is center aligned by default, can be left-aligned)
 ```
 
-You can choose between [ProfileInfoBlocks](./js/components/page-widgets/profile-card/profile-info-blocks.js) component or [ProfileInfoList](./js/components/page-widgets/profile-card/profile-info-list.js) component to display additional meta data in the profile card. You have to pass them as props.children.
+You can choose between [ProfileInfoBlocks](./js/components/widgets/profile-card/profile-info-blocks.js) component or [ProfileInfoList](./js/components/widgets/profile-card/profile-info-list.js) component to display additional meta data in the profile card. You have to pass them as props.children.
 
 ```javascript
 var infoList = [{
@@ -310,10 +325,11 @@ var infoList = [{
 }];
 
 <ProfileCard 
-	theme = 'bg-red',
-	displayName = 'Jane Doe',
-	description = 'Lead Developer',
-	displayPicture = '../dist/img/user7-128x128.jpg',
+    width = 3
+	theme = 'bg-red'
+	displayName = 'Jane Doe'
+	description = 'Lead Developer'
+	displayPicture = '../dist/img/user7-128x128.jpg'
 	pictureAlignment = 'left' >
 
 	<ProfileInfoList list={infoList} />
@@ -335,10 +351,11 @@ var infoList = [{
 }];
 
 <ProfileCard 
-	theme = 'bg-aqua',
-	displayName = 'John Roe',
-	description = 'Founder & CEO',
-	displayPicture = '../dist/img/user1-128x128.jpg',
+    width = 3
+	theme = 'bg-aqua'
+	displayName = 'John Roe'
+	description = 'Founder & CEO'
+	displayPicture = '../dist/img/user1-128x128.jpg'
 	coverPicture = '../dist/img/photo4.png' >
 
 	<ProfileInfoBlocks list={infoList} />
@@ -347,15 +364,16 @@ var infoList = [{
 ```
 ![](../../../screenshots/profile-card-center.png)
 
-### - [Post](./js/components/page-widgets/post/post.js)
+### - [Post](./js/components/widgets/post/post.js)
 
 A post to b displayed in a news feed page on a social network.
 
 #### Usage:
 
-Props: This component takes 7 values from props.
+Props: This component takes 8 values from props.
 
 ```javascript
+width = 3 (Sets the size/width)
 displayName = 'John Doe'
 displayPicture = 'url/of/the/image'
 date = 'String'
@@ -365,7 +383,7 @@ attachments =  (An embedded link within the post containing title, image and des
 comments = (Comments on the post)
 ```
 
-The Post component uses [Comment](./js/components/page-widgets/post/comment.js) component to render comments passed from props.comments. It accepts 4 values from props
+The Post component uses [Comment](./js/components/widgets/post/comment.js) component to render comments passed from props.comments. It accepts 4 values from props
 
 ```javascript
 content = 'string' (content of the comment)
@@ -374,7 +392,7 @@ displayPicture = 'url/of/the/image'
 date = 'date when commented'
 ```
 
-Post also uses [Attachment](./js/components/page-widgets/post/attachment.js) component to render attachments passed from props.attachments. It takes 4 values from props
+Post also uses [Attachment](./js/components/widgets/post/attachment.js) component to render attachments passed from props.attachments. It takes 4 values from props
 
 ```javascript
 title = 'string' (title of the attachment)
@@ -383,7 +401,7 @@ picture = 'url/of/the/image'
 content = 'content of the attachment'
 ```
 
-You can use [SocialInfo](./js/components/page-widgets/post/social-info.js) component to show additional information, such as likes, shares, views etc. Pass it as children of Post
+You can use [SocialInfo](./js/components/widgets/post/social-info.js) component to show additional information, such as likes, shares, views etc. Pass it as children of Post
 
 ```javascript
 var metaInfo = '50 likes - 10 comments';
@@ -391,7 +409,7 @@ var metaInfo = '50 likes - 10 comments';
 <SocialInfo info={metaInfo} />
 ```
 
-You can use [SocialButton](./js/components/page-widgets/post/social-button.js) component to render buttons such as 'like' or 'share'. Pass it as children of Post. It accepts 3 values from props
+You can use [SocialButton](./js/components/widgets/post/social-button.js) component to render buttons such as 'like' or 'share'. Pass it as children of Post. It accepts 3 values from props
 
 ```javascript
 position = 'left'/'right' (optional, which side should the button appear - default is left)
@@ -418,6 +436,7 @@ var comments = [
 	}
 ];
 <Post 
+    width = 3
     displayName = 'Jonathan Burke Jr.'
     displayPicture = '../dist/img/user1-128x128.jpg'
     date = 'Shared publicly - 7:30 PM Today'
@@ -457,6 +476,7 @@ var attachments = [
 ];
 
 <Post 
+    width = 3
     displayName = 'Jonathan Burke Jr.'
     displayPicture = '../dist/img/user1-128x128.jpg'
     date = 'Shared publicly - 7:30 PM Today'

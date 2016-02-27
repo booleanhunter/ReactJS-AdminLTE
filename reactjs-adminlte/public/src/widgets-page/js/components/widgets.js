@@ -4,30 +4,29 @@ define(
         'jquery',
         './header-bar/header-bar',
         './navigation-menu',
-        './page-widgets/info-tile/info-tile',
-        './page-widgets/info-tile/progress-bar',
-        './page-widgets/stat-tile',
-        './page-widgets/small-box',
-        './page-widgets/chat-box/chat-box',
-        './page-widgets/chat-box/conversations',
-        './page-widgets/chat-box/contacts',
-        './page-widgets/profile-card/profile-card',
-        './page-widgets/profile-card/profile-info-list',
-        './page-widgets/profile-card/profile-info-blocks',
-        './page-widgets/post/post',
-        './page-widgets/post/social-button',
-        './page-widgets/post/social-info',
-        './page-widgets/custom-box/box',
+        './widgets/info-tile/info-tile',
+        './widgets/info-tile/progress-bar',
+        './widgets/stat-tile',
+        './widgets/custom-box/box',
+        './widgets/chat-box/chat-box',
+        './widgets/chat-box/conversations',
+        './widgets/chat-box/contacts',
+        './widgets/profile-card/profile-card',
+        './widgets/profile-card/profile-info-list',
+        './widgets/profile-card/profile-info-blocks',
+        './widgets/post/post',
+        './widgets/post/social-button',
+        './widgets/post/social-info'
     ],
-    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo, Box) {
+    function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, Box, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks, Post, SocialButton, SocialInfo) {
         var Widgets = React.createClass({
             getInitialState: function() {
                 return {
                     infoTileOptions: [],
                     progressInfoTileOptions: [],
                     statTileOptions: [],
-                    smallBoxOptions: [],
-                    smallBoxBorderedOptions: [],
+                    boxOptions: [],
+                    boxBorderedOptions: [],
                     chatBoxOptions: [],
                     profileCardOptions: [],
                     postOptions: []
@@ -124,8 +123,8 @@ define(
                     link: '#'
                 }];
 
-                var smallBoxOptions = [{
-                    type: 'collapsed', 
+                var boxOptions = [{
+                    collapsed: true, 
                     theme: 'box-default',
                     title: 'Expandable',
                     content: 'The body of the box',
@@ -147,8 +146,8 @@ define(
                     content: 'The body of the box'
                 }];
 
-                var smallBoxBorderedOptions = [{
-                    type: 'collapsed', 
+                var boxBorderedOptions = [{
+                    collapsed: true, 
                     theme: 'box-primary',
                     border: true,
                     title: 'Expandable',
@@ -412,8 +411,8 @@ define(
                     infoTileOptions: infoTileOptions,
                     progressInfoTileOptions: progressInfoTileOptions,
                     statTileOptions: statTileOptions,
-                    smallBoxOptions: smallBoxOptions,
-                    smallBoxBorderedOptions: smallBoxBorderedOptions,
+                    boxOptions: boxOptions,
+                    boxBorderedOptions: boxBorderedOptions,
                     chatBoxOptions: chatBoxOptions,
                     profileCardOptions: profileCardOptions,
                     postOptions: postOptions
@@ -461,7 +460,7 @@ define(
                     )
                 });
 
-                var smallBoxWidgets = this.state.smallBoxOptions.map(function (options, iterator) {
+                var boxWidgets = this.state.boxOptions.map(function (options, iterator) {
                     return (
                         <Box 
                             key={"rowFour"+iterator} 
@@ -471,12 +470,12 @@ define(
                             loading = {options.loading} 
                             theme = {options.theme}
                             title = {options.title} 
-                            type = {options.type} 
+                            collapsed = {options.collapsed} 
                             boxTools = {options.boxTools} />
                     )
                 });
 
-                var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
+                var smallBoxBorderedWidgets = this.state.boxBorderedOptions.map(function (options, iterator) {
                     return (
                         <Box 
                             key={"rowFive"+iterator}
@@ -486,7 +485,7 @@ define(
                             loading = {options.loading} 
                             theme = {options.theme}
                             title = {options.title} 
-                            type = {options.type} 
+                            collapsed = {options.collapsed} 
                             boxTools = {options.boxTools} />
                     )
                 });
@@ -600,7 +599,7 @@ define(
                                 </div>
 
                                 <div className="row">
-                                    {smallBoxWidgets}       
+                                    {boxWidgets}       
                                 </div>
 
                                 <div className="row">

@@ -7,7 +7,7 @@ define(
         var Box = React.createClass({
             getDefaultProps: function() {
                 return {
-                    type: 'collapsable',
+                    collapsed: false,
                     theme: 'box-default',
                     loading: false,
                     border: true,
@@ -21,7 +21,7 @@ define(
                 if(this.props.border === true){
                     borderClass = 'box-solid';
                 }
-                console.log(this.props.boxTools)
+                
                 if(this.props.boxTools){
                     var BoxTool = require('./box-tool');
 
@@ -39,7 +39,7 @@ define(
                         </div>
                 }
 
-                if(this.props.type === 'collapsed'){
+                if(this.props.collapsed){
                     boxType = "collapsed-box"
                 }
 
