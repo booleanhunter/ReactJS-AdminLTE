@@ -125,53 +125,53 @@ define(
                 }];
 
                 var smallBoxOptions = [{
-                    type: 'expandable', 
+                    type: 'collapsed', 
                     theme: 'box-default',
                     title: 'Expandable',
-                    content: 'The body of the box'
+                    content: 'The body of the box',
+                    boxTools: ['expand','remove']
                 }, {
-                    type: 'collapsable',
                     theme: 'box-success',
                     title: 'Collapsable',
-                    content: 'The body of the box'
+                    content: 'The body of the box',
+                    boxTools: ['collapse']
                 }, {
-                    type: 'removable', 
                     theme: 'box-warning',
                     title: 'Removable',
-                    content: 'The body of the box'
+                    content: 'The body of the box',
+                    boxTools: ['remove']
                 }, {
-                    type: 'removable',
                     theme: 'box-danger',
                     loading: true,
                     title: 'Loading state',
-                    content: 'The body of the box'      
+                    content: 'The body of the box'
                 }];
 
                 var smallBoxBorderedOptions = [{
-                    type: 'expandable', 
+                    type: 'collapsed', 
                     theme: 'box-primary',
                     border: true,
                     title: 'Expandable',
-                    content: 'The body of the box'
+                    content: 'The body of the box',
+                    boxTools: ['expand','remove']
                 }, {
-                    type: 'collapsable',
                     theme: 'box-warning',
                     border: true,
                     title: 'Collapsable',
-                    content: 'The body of the box'
+                    content: 'The body of the box',
+                    boxTools: ['collapse']
                 }, {
-                    type: 'removable', 
                     theme: 'box-danger',
                     border: true,
                     title: 'Removable',
-                    content: 'The body of the box'
+                    content: 'The body of the box',
+                    boxTools: ['remove']
                 }, {
-                    type: 'removable',
                     theme: 'box-info',
                     loading: true,
                     border: true,
                     title: 'Loading state',
-                    content: 'The body of the box'      
+                    content: 'The body of the box',    
                 }];
 
                 var chatBoxOptions = [{
@@ -463,7 +463,7 @@ define(
 
                 var smallBoxWidgets = this.state.smallBoxOptions.map(function (options, iterator) {
                     return (
-                        <SmallBox 
+                        <Box 
                             key={"rowFour"+iterator} 
                             width = {3}
                             border = {false}
@@ -471,13 +471,14 @@ define(
                             loading = {options.loading} 
                             theme = {options.theme}
                             title = {options.title} 
-                            type = {options.type} />
+                            type = {options.type} 
+                            boxTools = {options.boxTools} />
                     )
                 });
 
                 var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
                     return (
-                        <SmallBox 
+                        <Box 
                             key={"rowFive"+iterator}
                             width = {3} 
                             border = {options.border}
@@ -485,7 +486,8 @@ define(
                             loading = {options.loading} 
                             theme = {options.theme}
                             title = {options.title} 
-                            type = {options.type} />
+                            type = {options.type} 
+                            boxTools = {options.boxTools} />
                     )
                 });
 
@@ -623,7 +625,7 @@ define(
                                         width="12"
                                         theme="box-default"
                                         border={false}
-                                        boxTools = {['minimize','close']} 
+                                        boxTools = {['collapse','remove']} 
                                         content="Sample Content"
                                         footer="footer"/>         
                                 </div>

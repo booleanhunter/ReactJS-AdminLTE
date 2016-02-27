@@ -21,15 +21,16 @@ define(
     			var button = '', that = this;
 
     			switch(this.props.toolType){
-    				case 'minimize':
+                    case 'expand':
+                        return (
+                            <button className="btn btn-box-tool" data-widget="expand" onClick={that.toggleCollapse}><i className="fa fa-plus"></i></button>
+                        )
+    				case 'collapse':
     					return (
     						<button className="btn btn-box-tool" data-widget="collapse" onClick={that.toggleCollapse}><i className="fa fa-minus"></i></button>
 	    				)
-	    			case 'maximize':
-	    				return (
-	    					<button className="btn btn-box-tool" data-widget="expand" onClick={that.toggleCollapse}><i className="fa fa-plus"></i></button>
-	    				)
-	    			case 'close':
+	    			
+	    			case 'remove':
 	    				return (
 	    					<button className="btn btn-box-tool" data-widget="remove" onClick={that.removeBox}><i className="fa fa-times"></i></button>
 	    				)

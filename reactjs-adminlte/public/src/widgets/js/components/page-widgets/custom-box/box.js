@@ -2,38 +2,54 @@ define(
     [
         'react',
         'reactDom',
-        './box-tool',
-        './box-functions'
     ],
-    function (React, ReactDOM, BoxTool, boxFunctions) {
+    function (React, ReactDOM) {
         var Box = React.createClass({
-            // getDefaultProps: function() {
-            //     return {
-            //         type: 'expandable',
-            //         theme: 'box-default',
-            //         loading: false,
-            //         border: true,
-            //         title: 'Default title',
-            //         content: 'Default content',
-            //     }
-            // },
+            getDefaultProps: function() {
+                return {
+                    type: 'collapsable',
+                    theme: 'box-default',
+                    loading: false,
+                    border: true,
+                    title: 'Default title',
+                    content: 'Default content',
+                }
+            },
             render: function() {
-                var that = this;
-                var borderClass = "", boxToolsContainer, boxTools = []
+                var boxType = '', borderClass = '', boxToolsContainer, boxTools = [], loadingState, footer;
+
                 if(this.props.border === true){
                     borderClass = 'box-solid';
                 }
-                if(this.props.boxTools !== null){
-                    that.props.boxTools.map(function(tool, index){
+                console.log(this.props.boxTools)
+                if(this.props.boxTools){
+                    var BoxTool = require('./box-tool');
+
+                    this.props.boxTools.map(function(tool, index){
                         boxTools.push(<BoxTool key={index} toolType={tool} />)
                     });
 
                     boxToolsContainer = <div className="box-tools pull-right">{boxTools}</div>
                 }
 
+                if(this.props.loading === true){
+                    loadingState = 
+                        <div className="overlay">
+                            <i className="fa fa-refresh fa-spin"></i>
+                        </div>
+                }
+
+                if(this.props.type === 'collapsed'){
+                    boxType = "collapsed-box"
+                }
+
+                if(this.props.footer){
+                    footer = <div className="box-footer">{this.props.footer}</div>
+                }
+
                 return (
                     <div className={"col-md-"+this.props.width+" col-sm-6 col-xs-12"}>
-                        <div className={"box "+this.props.theme+" "+borderClass+ " color-palette-box"}>
+                        <div className={"box "+this.props.theme+" "+borderClass+ " color-palette-box "+boxType}>
                             <div className="box-header with-border">
                                 <h3 className="box-title">{this.props.headerMarkup} {this.props.title}</h3>
                                 {boxToolsContainer}
@@ -43,10 +59,9 @@ define(
                                 {this.props.children}
                             </div>
 
-                            <div className="box-footer">
-                                {this.props.footer}
-                            </div>
+                            {footer}
                             {/* /.box-body */}
+                            {loadingState}
                         </div>
                     </div>
                 )
