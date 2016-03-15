@@ -4,9 +4,10 @@ define(
         'jquery',
         './header-bar/header-bar',
         './navigation-menu',
+        './page-ui-elements/color-palette-set',
         './page-ui-elements/custom-box/box'
     ],
-    function (React, $, HeaderBar, NavigationMenu, Box) {
+    function (React, $, HeaderBar, NavigationMenu, ColorPaletteSet, Box) {
         var UIElements = React.createClass({
             getInitialState: function() {
                 return {
@@ -38,9 +39,29 @@ define(
                             </section>
 
                             <section className="content">
-                                <Box 
+                                <Box
+                                    border = {false}
+                                    width = "12"
+                                    theme = "box-default"
                                     title = "Color Palette"
-                                    headerMarkup={<i className="fa fa-tag"></i>} />
+                                    headerMarkup={<i className="fa fa-tag"></i>} >
+                                        <div className="row">
+                                            <ColorPaletteSet width= "2" title="Primary" theme="bg-light-blue" />
+                                            <ColorPaletteSet width= "2" title="Info" theme="bg-aqua" />
+                                            <ColorPaletteSet width= "2" title="Success" theme="bg-green" />
+                                            <ColorPaletteSet width= "2" title="Warning" theme="bg-yellow" />
+                                            <ColorPaletteSet width= "2" title="Danger" theme="bg-red" />
+                                            <ColorPaletteSet width= "2" title="Gray" theme="bg-gray" />
+                                        </div>
+                                        <div className="row">
+                                            <ColorPaletteSet width= "2" title="Navy" theme="bg-navy" />
+                                            <ColorPaletteSet width= "2" title="Teal" theme="bg-teal" />
+                                            <ColorPaletteSet width= "2" title="Purple" theme="bg-purple" />
+                                            <ColorPaletteSet width= "2" title="Orange" theme="bg-orange" />
+                                            <ColorPaletteSet width= "2" title="Maroon" theme="bg-maroon" />
+                                            <ColorPaletteSet width= "2" title="Black" theme="bg-black" />
+                                        </div>
+                                </Box>
                             </section>
 
                         </div>
