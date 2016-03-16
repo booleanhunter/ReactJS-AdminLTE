@@ -12,7 +12,7 @@ define(
                     loading: false,
                     border: true,
                     title: 'Default title',
-                    content: 'Default content',
+                    content: '',
                 }
             },
             render: function() {

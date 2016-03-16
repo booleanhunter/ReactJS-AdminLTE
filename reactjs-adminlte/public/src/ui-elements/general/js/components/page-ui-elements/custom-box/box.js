@@ -12,7 +12,8 @@ define(
                     loading: false,
                     border: true,
                     title: 'Default title',
-                    content: 'Default content',
+                    content: '',
+                    customClass: ''
                 }
             },
             render: function() {
@@ -49,7 +50,7 @@ define(
 
                 return (
                     <div className={"col-md-"+this.props.width+" col-sm-6 col-xs-12"}>
-                        <div className={"box "+this.props.theme+" "+borderClass+ " color-palette-box "+boxType}>
+                        <div className={"box "+this.props.theme+" "+borderClass+ " "+this.props.customClass+" "+boxType}>
                             <div className="box-header with-border">
                                 <h3 className="box-title">{this.props.headerMarkup} {this.props.title}</h3>
                                 {boxToolsContainer}
