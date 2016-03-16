@@ -3,13 +3,18 @@
 ReactJS version of the original AdminLTE dashboard - https://github.com/almasaeed2010/AdminLTE
 
 
-### UPDATE 2: 
+### UPDATES: 
+
+[UI Elements](./reactjs-adminlte/public/src/ui-elements) turning up.
+[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/UI/general.html) to see it live
+
+
+
 [ReactJS Timeline](./reactjs-adminlte/public/src/timeline-page)
 
 [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
 
 
-### UPDATE 1:
 
 [ReactJS Widgets](./reactjs-adminlte/public/src/widgets-page)
 
@@ -25,6 +30,7 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 Will soon be populated with charts.
 
 ![](./reactjs-adminlte/screenshots/dashboard-v1.png)
+
 
 More stuff coming soon. Stay tuned!
 
