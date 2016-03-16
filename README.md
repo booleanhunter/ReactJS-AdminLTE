@@ -5,22 +5,23 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 ### UPDATES: 
 
-[UI Elements](./reactjs-adminlte/public/src/ui-elements) turning up.
-[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/UI/general.html) to see it live
+- [UI Elements](./reactjs-adminlte/public/src/ui-elements) turning up.
+
+     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/UI/general.html) to see it live
 
 
 
-[ReactJS Timeline](./reactjs-adminlte/public/src/timeline-page)
+- [ReactJS Timeline](./reactjs-adminlte/public/src/timeline-page)
 
-[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
+    [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
 
 
+- [ReactJS Widgets](./reactjs-adminlte/public/src/widgets-page)
 
-[ReactJS Widgets](./reactjs-adminlte/public/src/widgets-page)
+    [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
 
-[Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
+    ![](./reactjs-adminlte/screenshots/widgets.png)
 
-![](./reactjs-adminlte/screenshots/widgets.png)
 
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
 
