@@ -22,7 +22,9 @@ define(
                         <div className="tab-content no-padding">
                             {/* Morris chart - Sales */}
                             <div className="chart tab-pane" id="revenue-chart" style={style}></div>
-                            <div className="chart tab-pane active" id="sales-chart" style={style}></div>
+                            <div className="chart tab-pane active" id="sales-chart" style={style}>
+                                {this.props.children}
+                            </div>
                         </div>
                     </div>
     			)

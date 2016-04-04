@@ -8,6 +8,7 @@ var path = require("path");
 
 var lib_dir = __dirname + '/public/libraries',
     node_dir = __dirname + '/node_modules',
+    bower_dir = __dirname + '/bower_components',
     plugins_dir = __dirname + '/public/plugins';
 
 var config = {
@@ -20,8 +21,9 @@ var config = {
             velocity: lib_dir + '/velocity.min.js',
             jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
             bootstrap: plugins_dir + '/bootstrap/js/bootstrap.min.js',
-            //raphael: plugins_dir + '/raphael/raphael.min.js',
-            //morris: plugins_dir + '/morris/morris.min.js',
+            //eve: node_dir + '/raphael/eve/eve.js',
+            raphael: node_dir + '/webpack-raphael/raphael.js',
+            morris: plugins_dir + '/morris/morris.js',
             //sparkline: plugins_dir + '/sparkline/jquery.sparkline.min.js',
             //jvectormap: plugins_dir + '/jvectormap/jquery-jvectormap-1.2.2.min.js',
             //jvectormapWorld: plugins_dir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
@@ -39,9 +41,9 @@ var config = {
         //new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
             '$': "jquery",
-            'jQuery': "jquery",
             'window.jQuery': "jquery",
-            'window.$': 'jquery'
+            'jQuery':'jquery',
+            'window.$': 'jquery',
         }),
         //new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
         new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
@@ -54,7 +56,8 @@ var config = {
         timeline: './public/src/timeline-page/js/main',
         buttons: './public/src/buttons/js/main',
         generalUIElements: './public/src/ui-elements/general/js/main',
-        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker','slimscroll','fastclick'],
+        vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker'],
+        chartVendors: ['jquery','raphael','morris'],
     },
 
     output: {
