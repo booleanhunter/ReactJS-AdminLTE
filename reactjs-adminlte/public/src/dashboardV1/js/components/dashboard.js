@@ -7,6 +7,7 @@ define(
         './header-bar/header-bar',
         './navigation-menu',
         './control-panel',
+        './charts/donut-chart',
         './containers/container-one',
         './containers/container-two',
         './containers/container-three',
@@ -17,7 +18,7 @@ define(
         './controls-menu',
         './stat-tile'
     ],
-    function(React, $, Raphael, Morris, HeaderBar, NavigationMenu, ControlPanel, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu,StatTile){
+    function(React, $, Raphael, Morris, HeaderBar, NavigationMenu, ControlPanel, DonutChart, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu,StatTile){
     	var Dashboard = React.createClass({
             getInitialState: function() {
                 return {
@@ -80,17 +81,12 @@ define(
                     hideHover: 'auto'
                 });
 
-                var donut = new Morris.Donut({
-                    element: 'sales-chart',
-                    resize: true,
-                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
-                    data: [
-                    {label: "Download Sales", value: 12},
-                    {label: "In-Store Sales", value: 30},
-                    {label: "Mail-Order Sales", value: 20}
-                    ],
-                    hideHover: 'auto'
+                $('.box ul.nav a').on('shown.bs.tab', function () {
+                  area.redraw();
+                  donut.redraw();
+                  console.log("graph drawn")
                 });
+
             },
 
     		render: function(){
@@ -134,6 +130,14 @@ define(
     							<div className="row">
     								<section className="col-lg-7 connectedSortable ui-sortable" >
     									<ContainerOne>
+                                            <DonutChart 
+                                                id='sales-chart'
+                                                colors= {["#3c8dbc", "#f56954", "#00a65a"]}
+                                                data= {[
+                                                    {label: "Download Sales", value: 12},
+                                                    {label: "In-Store Sales", value: 30},
+                                                    {label: "Mail-Order Sales", value: 20}
+                                                ]} />
                                         </ContainerOne>
                                         <ContainerTwo />
                                         <ContainerThree />
