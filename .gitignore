@@ -1,1 +1,4 @@
-reactjs-adminlte/public/dist/js/buttons.bundle.js
+node_modules/**
+public/dist/js/
+.idea/
+build/
