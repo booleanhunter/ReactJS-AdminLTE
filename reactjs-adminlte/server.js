@@ -1,24 +1,25 @@
-var http = require("http");  //1
-var url = require("url");  //2
-var express = require("express");
-var consolidate = require('consolidate');
-var handlebars = require('handlebars');
-var bodyParser = require('body-parser');
+const http = require('http');  // 1
+const url = require('url');  // 2
+const express = require('express');
+const consolidate = require('consolidate');
+const handlebars = require('handlebars');
+const bodyParser = require('body-parser');
 
-var routes = require('./routes');
+const routes = require('./routes');
 
-var app = express();
+const app = express();
 
-app.set('views', 'views'); //Set the folder-name from where you serve the html page. ]
+app.set('views', 'views'); // Set the folder-name from where you serve the html page. ]
 app.set('view engine', 'html');
 app.engine('html', consolidate.handlebars);
-app.use(express.static('./public')); //Set the folder from where you serve all static files like images, css, javascripts, libraries etc
+app.use(express.static('./public'));
+// Set the folder from where you serve all static files like images, css, javascripts, libraries etc
 app.use(bodyParser.urlencoded({ extended: true }));
-var portNumber = 8000;
+const portNumber = 8000;
 
-http.createServer(app).listen(portNumber, function(){
-	console.log('Server listening at port '+ portNumber);
-	routes.initialize(app);
+http.createServer(app).listen(portNumber, () => {
+  console.log('Server listening at port ' + portNumber);
+  routes.initialize(app);
 });
 
 // var webpack = require('webpack');
