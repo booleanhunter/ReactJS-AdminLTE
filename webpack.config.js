@@ -55,6 +55,11 @@ const config = {
   ],
   entry: {
     loginform: './public/src/login/LoginForm',
+    dashboardV1: './public/src/dashboardV1/js/main',
+    widgets: ['./public/src/widgets-page/js/main'],
+    timeline: './public/src/timeline-page/js/main',
+    buttons: './public/src/buttons/js/main',
+    generalUIElements: './public/src/ui-elements/general/js/main',
     vendors: ['react', 'reactDom', 'jquery', 'velocity', 'jqueryUi', 'bootstrap',
       'moment', 'bootstrapDatepicker'],
     chartVendors: ['jquery', 'raphael', 'morris'],
