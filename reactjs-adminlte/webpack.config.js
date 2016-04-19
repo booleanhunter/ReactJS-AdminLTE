@@ -3,47 +3,47 @@
  * @Details Webpack config file for adding new vendors, defining entry points and shimming modules. 
  */
 
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
-var lib_dir = __dirname + '/public/libraries',
-    node_dir = __dirname + '/node_modules',
-    bower_dir = __dirname + '/bower_components',
-    plugins_dir = __dirname + '/public/plugins';
+const libDir = __dirname + '/public/libraries';
+const nodeDir = __dirname + '/node_modules';
+const bowerDir = __dirname + '/bower_components';
+const pluginsDir = __dirname + '/public/plugins';
 
-var config = {
+const config = {
   resolve: {
     alias: {
-      react: node_dir + '/react',
-      reactDom: lib_dir + '/react-dom',
-      jquery: lib_dir + '/jQuery-2.1.4.min.js',
-      velocity: lib_dir + '/velocity.min.js',
-      jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
-      bootstrap: plugins_dir + '/bootstrap/js/bootstrap.min.js',
-      //eve: node_dir + '/raphael/eve/eve.js',
-      raphael: node_dir + '/webpack-raphael/raphael.js',
-      morris: plugins_dir + '/morris/morris.js',
-      //sparkline: plugins_dir + '/sparkline/jquery.sparkline.min.js',
-      //jvectormap: plugins_dir + '/jvectormap/jquery-jvectormap-1.2.2.min.js',
-      //jvectormapWorld: plugins_dir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
-      //knob: plugins_dir + '/knob/jquery.knob.js',
-      moment: plugins_dir + '/moment/moment.js',
-      //daterangepicker: plugins_dir + '/daterangepicker/daterangepicker.js',
-      bootstrapDatepicker: plugins_dir + '/datepicker/bootstrap-datepicker.js',
-      //bootstrapWysihtml5: plugins_dir + '/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js',
-      slimscroll: plugins_dir + '/slimScroll/jquery.slimscroll.min.js',
-      fastclick: plugins_dir + '/fastclick/fastclick.min.js',
+      react: nodeDir + '/react',
+      reactDom: libDir + '/react-dom',
+      jquery: libDir + '/jQuery-2.1.4.min.js',
+      velocity: libDir + '/velocity.min.js',
+      jqueryUi: pluginsDir + '/jQueryUI/jquery-ui.min.js',
+      bootstrap: pluginsDir + '/bootstrap/js/bootstrap.min.js',
+      // eve: nodeDir + '/raphael/eve/eve.js',
+      raphael: nodeDir + '/webpack-raphael/raphael.js',
+      morris: pluginsDir + '/morris/morris.js',
+      // sparkline: pluginsDir + '/sparkline/jquery.sparkline.min.js',
+      // jvectormap: pluginsDir + '/jvectormap/jquery-jvectormap-1.2.2.min.js',
+      // jvectormapWorld: pluginsDir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
+      // knob: pluginsDir + '/knob/jquery.knob.js',
+      moment: pluginsDir + '/moment/moment.js',
+      // daterangepicker: pluginsDir + '/daterangepicker/daterangepicker.js',
+      bootstrapDatepicker: pluginsDir + '/datepicker/bootstrap-datepicker.js',
+      // bootstrapWysihtml5: pluginsDir + '/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js',
+      slimscroll: pluginsDir + '/slimScroll/jquery.slimscroll.min.js',
+      fastclick: pluginsDir + '/fastclick/fastclick.min.js',
     },
   },
   plugins: [
-    //new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-        $: 'jquery',
-        'window.jQuery': 'jquery',
-        jQuery: 'jquery',
-        'window.$': 'jquery',
+      $: 'jquery',
+      'window.jQuery': 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
     }),
-    //new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
+    // new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
 
   ],
@@ -63,8 +63,8 @@ var config = {
   },
   module: {
     noParse: [
-      new RegExp(lib_dir + './react.js'),
-      new RegExp(lib_dir + './react-dom.js'),
+      new RegExp(libDir + './react.js'),
+      new RegExp(libDir + './react-dom.js'),
     ],
     loaders: [
       {
@@ -73,9 +73,9 @@ var config = {
         include: path.join(__dirname, 'public'),
 
       }, {
-        loader: 'babel', //'jsx-loader'
+        loader: 'babel', // 'jsx-loader'
         query: {
-            presets: ['react', 'es2015'],
+          presets: ['react', 'es2015'],
         },
         include: path.join(__dirname, 'public'),
       },
@@ -105,15 +105,21 @@ View package.json for more configuration details
 2. Commands:-
     --> npm run dev
 
-    Will run webpack-dev-server with the arguments specified (--devtool eval --progress --colors --content-base build)
+    Will run webpack-dev-server with the arguments specified
+    (--devtool eval --progress --colors --content-base build)
 
-1. --devtool eval will add source urls to your code, which will make sure that any errors point to the right file and line.
-2. --progress and --colors will just improve the feedback you get in the terminal when running your workflow.
+1. --devtool eval will add source urls to your code,
+   which will make sure that any errors point to the right file and line.
+2. --progress and --colors will just improve the feedback
+   you get in the terminal when running your workflow.
 3. --content-base build points to where you have your custom index.html located.
 ----------
-Since we are using React, we need to evaluate XML along with JS.  This can be done by using jsx-loader. npm install jsx-loader --save will make 
-the module available, and then we specify the loader in here- {test:/\.js$/,loader: 'jsx-loader'}. This tells
-WebPack that whenever we try to require something that ends with .js it should run the contents of that file through the jsx-loader. 
+Since we are using React, we need to evaluate XML along with JS.
+This can be done by using jsx-loader. npm install jsx-loader --save will make
+the module available, and then we specify the loader in here-
+{test:/\.js$/,loader: 'jsx-loader'}. This tells
+WebPack that whenever we try to require something that ends with .js it should run
+the contents of that file through the jsx-loader.
 ----------
 
   'scripts': {
