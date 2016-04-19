@@ -2,8 +2,11 @@ function initialize(app) {
 	// These are the API end points that you can write.
 	// Setting up an event listener for GET request to '/'
   app.get('/', (req, res) => {
-    console.log('request to / received');
     res.render('dashboard.html');
+  });
+
+  app.get('/login', (req, res) => {
+    res.render('login.html');
   });
 
   app.get('/starter.html', (req, res) => {
