@@ -73,7 +73,7 @@ const config = {
         include: path.join(__dirname, 'public'),
 
       }, {
-        loader: 'babel', // 'jsx-loader'
+        loader: 'babel-loader', // 'jsx-loader'
         query: {
           presets: ['react', 'es2015'],
         },
