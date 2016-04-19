@@ -38,7 +38,7 @@ const config = {
     jquery: 'jQuery',
     $: '$',
     react: 'React',
-    'react-dom': 'ReactDOM',
+    reactDom: 'ReactDOM',
     marked: 'marked',
   },
   plugins: [
