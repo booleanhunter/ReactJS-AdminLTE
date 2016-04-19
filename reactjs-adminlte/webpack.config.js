@@ -48,6 +48,7 @@ const config = {
 
   ],
   entry: {
+    loginform: './public/src/login/LoginForm',
     dashboardV1: './public/src/dashboardV1/js/main',
     widgets: ['./public/src/widgets-page/js/main'],
     timeline: './public/src/timeline-page/js/main',
