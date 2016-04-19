@@ -35,6 +35,13 @@ const config = {
       fastclick: pluginsDir + '/fastclick/fastclick.min.js',
     },
   },
+  externals: {
+    jquery: 'jQuery',
+    $: '$',
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    marked: 'marked',
+  },
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
@@ -48,7 +55,7 @@ const config = {
 
   ],
   entry: {
-    loginform: './public/src/login/LoginForm',
+    loginform: './public/src/login/main',
     dashboardV1: './public/src/dashboardV1/js/main',
     widgets: ['./public/src/widgets-page/js/main'],
     timeline: './public/src/timeline-page/js/main',
