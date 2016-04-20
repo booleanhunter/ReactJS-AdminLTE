@@ -1,45 +1,38 @@
 /**
  * @Author Ashwin Hariharan
- * @Details Webpack config file for adding new vendors, defining entry points and shimming modules. 
+ * @Details Webpack config file for adding new vendors, defining entry points and shimming modules.
  */
 
 const webpack = require('webpack');
 const path = require('path');
 
-const libDir = __dirname + '/public/libraries';
-const nodeDir = __dirname + '/node_modules';
-const pluginsDir = __dirname + '/public/plugins';
+const libDir = `${__dirname}/public/libraries`;
+const nodeDir = `${__dirname}/node_modules`;
+const pluginsDir = `${__dirname}/public/plugins`;
 
 const config = {
   resolve: {
     alias: {
-      react: nodeDir + '/react',
-      reactDom: libDir + '/react-dom',
-      jquery: libDir + '/jQuery-2.1.4.min.js',
-      velocity: libDir + '/velocity.min.js',
-      jqueryUi: pluginsDir + '/jQueryUI/jquery-ui.min.js',
-      bootstrap: pluginsDir + '/bootstrap/js/bootstrap.min.js',
-      // eve: nodeDir + '/raphael/eve/eve.js',
-      raphael: nodeDir + '/webpack-raphael/raphael.js',
-      morris: pluginsDir + '/morris/morris.js',
-      // sparkline: pluginsDir + '/sparkline/jquery.sparkline.min.js',
-      // jvectormap: pluginsDir + '/jvectormap/jquery-jvectormap-1.2.2.min.js',
-      // jvectormapWorld: pluginsDir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
-      // knob: pluginsDir + '/knob/jquery.knob.js',
-      moment: pluginsDir + '/moment/moment.js',
-      // daterangepicker: pluginsDir + '/daterangepicker/daterangepicker.js',
-      bootstrapDatepicker: pluginsDir + '/datepicker/bootstrap-datepicker.js',
-      // bootstrapWysihtml5: pluginsDir + '/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js',
-      slimscroll: pluginsDir + '/slimScroll/jquery.slimscroll.min.js',
-      fastclick: pluginsDir + '/fastclick/fastclick.min.js',
+      react: `${nodeDir}/react`,
+      reactDom: `${libDir}/react-dom`,
+      jquery: `${libDir}/jQuery-2.1.4.min.js`,
+      velocity: `${libDir}/velocity.min.js`,
+      jqueryUi: `${pluginsDir}/jQueryUI/jquery-ui.min.js`,
+      bootstrap: `${pluginsDir}/bootstrap/js/bootstrap.min.js`,
+      // eve: `${nodeDir}/raphael/eve/eve.js`,
+      raphael: `${nodeDir}/webpack-raphael/raphael.js`,
+      morris: `${pluginsDir}/morris/morris.js`,
+      // sparkline: `${pluginsDir}/sparkline/jquery.sparkline.min.js`,
+      // jvectormap: `${pluginsDir}/jvectormap/jquery-jvectormap-1.2.2.min.js`,
+      // jvectormapWorld: `${pluginsDir}/jvectormap/jquery-jvectormap-world-mill-en.js`,
+      // knob: `${pluginsDir}/knob/jquery.knob.js`,
+      moment: `${pluginsDir}/moment/moment.js`,
+      // daterangepicker: `${pluginsDir}/daterangepicker/daterangepicker.js`,
+      bootstrapDatepicker: `${pluginsDir}/datepicker/bootstrap-datepicker.js`,
+      // bootstrapWysihtml5: `${pluginsDir}/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js`,
+      slimscroll: `${pluginsDir}/slimScroll/jquery.slimscroll.min.js`,
+      fastclick: `${pluginsDir}/fastclick/fastclick.min.js`,
     },
-  },
-  externals: {
-    jquery: 'jQuery',
-    $: '$',
-    react: 'React',
-    reactDom: 'ReactDOM',
-    marked: 'marked',
   },
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
@@ -65,8 +58,8 @@ const config = {
   },
   module: {
     noParse: [
-      new RegExp(libDir + './react.js'),
-      new RegExp(libDir + './react-dom.js'),
+      new RegExp(`${libDir}./react.js'`),
+      new RegExp(`${libDir}./react-dom.js`),
     ],
     loaders: [
       {
