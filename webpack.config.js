@@ -26,6 +26,7 @@ const config = {
       raphael: `${nodeDir}/webpack-raphael/raphael.js`,
       morris: `${pluginsDir}/morris/morris.js`,
       slimscroll: `${pluginsDir}/slimScroll/jquery.slimscroll.min.js`,
+      html5shiv: `${pluginsDir}/html5shiv/html5shiv-printshiv.min.js`,
       // fastclick: `${pluginsDir}/fastclick/fastclick.min.js`, // FOR MOBILES
       // eve: `${nodeDir}/raphael/eve/eve.js`, // FOR NORMAL CSS (WE USE CSS MODULES)
       // sparkline: `${pluginsDir}/sparkline/jquery.sparkline.min.js`, // FOR INLINED CHARTS
@@ -72,8 +73,9 @@ const config = {
       'jquery', 'velocity', 'jqueryUi',
       'bootstrap', 'moment', 'bootstrapDatepicker',
       'slimscroll',
+      'html5shiv',
     ],
-    chartVendors: ['jquery', 'raphael', 'morris'],
+    chartVendors: ['raphael', 'morris'],
   },
   output: {
     path: path.join(__dirname, 'public'),
