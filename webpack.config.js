@@ -67,7 +67,7 @@ const config = {
     new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
   ],
   entry: {
-    loginform: './public/src/login/js/LoginForm',
+    loginform: './public/src/login/js/main',
     vendors: [
       'react', 'reactDom',
       'jquery', 'velocity', 'jqueryUi',
