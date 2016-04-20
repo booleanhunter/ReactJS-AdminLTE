@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'reactDom';
 
 export default class LoginForm extends React.Component {
   render() {
@@ -49,8 +48,3 @@ export default class LoginForm extends React.Component {
     );
   }
 }
-
-render(
-  <LoginForm />,
-  document.getElementById('login-form')
-);
