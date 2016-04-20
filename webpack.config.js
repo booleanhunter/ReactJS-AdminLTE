@@ -19,19 +19,21 @@ const config = {
       velocity: `${libDir}/velocity.min.js`,
       jqueryUi: `${pluginsDir}/jQueryUI/jquery-ui.min.js`,
       bootstrap: `${pluginsDir}/bootstrap/js/bootstrap.min.js`,
-      // eve: `${nodeDir}/raphael/eve/eve.js`,
+      moment: `${pluginsDir}/moment/moment.js`,
+      bootstrapDatepicker: `${pluginsDir}/datepicker/bootstrap-datepicker.js`,
       raphael: `${nodeDir}/webpack-raphael/raphael.js`,
       morris: `${pluginsDir}/morris/morris.js`,
-      // sparkline: `${pluginsDir}/sparkline/jquery.sparkline.min.js`,
-      // jvectormap: `${pluginsDir}/jvectormap/jquery-jvectormap-1.2.2.min.js`,
-      // jvectormapWorld: `${pluginsDir}/jvectormap/jquery-jvectormap-world-mill-en.js`,
-      // knob: `${pluginsDir}/knob/jquery.knob.js`,
-      moment: `${pluginsDir}/moment/moment.js`,
-      // daterangepicker: `${pluginsDir}/daterangepicker/daterangepicker.js`,
-      bootstrapDatepicker: `${pluginsDir}/datepicker/bootstrap-datepicker.js`,
-      // bootstrapWysihtml5: `${pluginsDir}/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js`,
       slimscroll: `${pluginsDir}/slimScroll/jquery.slimscroll.min.js`,
-      fastclick: `${pluginsDir}/fastclick/fastclick.min.js`,
+      // fastclick: `${pluginsDir}/fastclick/fastclick.min.js`, // FOR MOBILES
+      // eve: `${nodeDir}/raphael/eve/eve.js`, // FOR NORMAL CSS (WE USE CSS MODULES)
+      // sparkline: `${pluginsDir}/sparkline/jquery.sparkline.min.js`, // FOR INLINED CHARTS
+      // jvectormap: `${pluginsDir}/jvectormap/jquery-jvectormap-1.2.2.min.js`, // FOR WORLD MAPS
+      // jvectormapWorld: `${pluginsDir}/jvectormap/jquery-jvectormap-world-mill-en.js`, // SAME
+      // knob: `${pluginsDir}/knob/jquery.knob.js`, // FOR JQUERY DIALS
+      // daterangepicker: `${pluginsDir}/daterangepicker/daterangepicker.js`,
+      // --> LIKE DATEPICKER BUT FOR DATE TO DATE
+      // bootstrapWysihtml5: `${pluginsDir}/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js`,
+      // --> FOR CREATING NICE TEXTAREAS WITH TEXT FORMATTING
     },
   },
   plugins: [
@@ -48,8 +50,12 @@ const config = {
   ],
   entry: {
     loginform: './public/src/login/LoginForm',
-    vendors: ['react', 'reactDom', 'jquery', 'velocity', 'jqueryUi', 'bootstrap',
-      'moment', 'bootstrapDatepicker'],
+    vendors: [
+      'react', 'reactDom',
+      'jquery', 'velocity', 'jqueryUi',
+      'bootstrap', 'moment', 'bootstrapDatepicker',
+      'slimscroll',
+    ],
     chartVendors: ['jquery', 'raphael', 'morris'],
   },
   output: {
