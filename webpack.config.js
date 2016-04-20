@@ -54,7 +54,7 @@ const config = {
 
   ],
   entry: {
-    loginform: './public/src/login/LoginForm',
+    loginform: './public/src/login/components/LoginForm',
     vendors: ['react', 'reactDom', 'jquery', 'velocity', 'jqueryUi', 'bootstrap',
       'moment', 'bootstrapDatepicker'],
     chartVendors: ['jquery', 'raphael', 'morris'],
