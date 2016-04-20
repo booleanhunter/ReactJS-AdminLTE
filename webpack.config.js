@@ -44,9 +44,20 @@ const config = {
       jQuery: 'jquery',
       'window.$': 'jquery',
     }),
-    // new webpack.optimize.CommonsChunkPlugin('vendors', 'dashboardV1/js/vendors.js', Infinity),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
-
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        except: ['$super', '$', 'exports', 'require'],
+      },
+    }),
   ],
   entry: {
     loginform: './public/src/login/LoginForm',
