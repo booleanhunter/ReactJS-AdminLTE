@@ -110,40 +110,40 @@ const config = {
 module.exports = config;
 
 /*
-----------
-View package.json for more configuration details
+ ----------
+ View package.json for more configuration details
 
-0. During development:-
-    Run webpack-dev-server --hot --inline and point your entry files to http://localhost:8080 in your HTML, for HMP
+ 0. During development:-
+ Run webpack-dev-server --hot --inline and point your entry files to http://localhost:8080 in your HTML, for HMP
 
-1. Command:-
-    webpack --profile --json > stats.json
+ 1. Command:-
+ webpack --profile --json > stats.json
 
-    Will generate a JSON file called stats.json. Go to http://webpack.github.io/analyse/ and upload the file,
-    and see all dependencies in a tree like structure
+ Will generate a JSON file called stats.json. Go to http://webpack.github.io/analyse/ and upload the file,
+ and see all dependencies in a tree like structure
 
-2. Commands:-
-    --> npm run dev
+ 2. Commands:-
+ --> npm run dev
 
-    Will run webpack-dev-server with the arguments specified
-    (--devtool eval --progress --colors --content-base build)
+ Will run webpack-dev-server with the arguments specified
+ (--devtool eval --progress --colors --content-base build)
 
-1. --devtool eval will add source urls to your code,
-   which will make sure that any errors point to the right file and line.
-2. --progress and --colors will just improve the feedback
-   you get in the terminal when running your workflow.
-3. --content-base build points to where you have your custom index.html located.
-----------
-Since we are using React, we need to evaluate XML along with JS.
-This can be done by using jsx-loader. npm install jsx-loader --save will make
-the module available, and then we specify the loader in here-
-{test:/\.js$/,loader: 'jsx-loader'}. This tells
-WebPack that whenever we try to require something that ends with .js it should run
-the contents of that file through the jsx-loader.
-----------
+ 1. --devtool eval will add source urls to your code,
+ which will make sure that any errors point to the right file and line.
+ 2. --progress and --colors will just improve the feedback
+ you get in the terminal when running your workflow.
+ 3. --content-base build points to where you have your custom index.html located.
+ ----------
+ Since we are using React, we need to evaluate XML along with JS.
+ This can be done by using jsx-loader. npm install jsx-loader --save will make
+ the module available, and then we specify the loader in here-
+ {test:/\.js$/,loader: 'jsx-loader'}. This tells
+ WebPack that whenever we try to require something that ends with .js it should run
+ the contents of that file through the jsx-loader.
+ ----------
 
-  'scripts': {
-    'dev': 'webpack-dev-server --devtool eval --progress --colors --content-base views/'
-  },
+ 'scripts': {
+ 'dev': 'webpack-dev-server --devtool eval --progress --colors --content-base views/'
+ },
 
-*/
+ */
