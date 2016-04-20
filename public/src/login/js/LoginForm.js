@@ -32,7 +32,7 @@ export default class LoginForm extends React.Component {
                 <div className="col-sm-offset-2 col-sm-10">
                   <div className="checkbox">
                     <label>
-                      <input type="checkbox " />
+                      <input type="checkbox" />
                       Remember me
                     </label>
                   </div>
