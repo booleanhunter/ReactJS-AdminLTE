@@ -10,6 +10,8 @@ const libDir = `${__dirname}/public/libraries`;
 const nodeDir = `${__dirname}/node_modules`;
 const pluginsDir = `${__dirname}/public/plugins`;
 
+const PROD = JSON.parse(process.env.PROD_ENV || '0');
+
 const config = {
   resolve: {
     alias: {
@@ -36,7 +38,24 @@ const config = {
       // --> FOR CREATING NICE TEXTAREAS WITH TEXT FORMATTING
     },
   },
-  plugins: [
+  plugins: PROD ? [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      'window.jQuery': 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
+    }),
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        except: ['$super', '$', 'exports', 'require'],
+      },
+    }),
+  ] : [
     // new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -45,19 +64,6 @@ const config = {
       'window.$': 'jquery',
     }),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-      mangle: {
-        except: ['$super', '$', 'exports', 'require'],
-      },
-    }),
   ],
   entry: {
     loginform: './public/src/login/LoginForm',
