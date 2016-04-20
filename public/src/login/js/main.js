@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'reactDom';
 import LoginForm from './LoginForm.js';
 
 ReactDOM.render(
