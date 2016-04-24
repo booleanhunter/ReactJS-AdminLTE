@@ -9,6 +9,7 @@ define(
         './control-panel',
         './charts/donut-chart',
         './charts/area-chart',
+        './charts/world-map',
         './containers/container-one',
         './containers/container-two',
         './containers/container-three',
@@ -19,7 +20,7 @@ define(
         './controls-menu',
         './stat-tile'
     ],
-    function(React, $, Raphael, Morris, HeaderBar, NavigationMenu, ControlPanel, DonutChart, AreaChart, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu,StatTile){
+    function(React, $, Raphael, Morris, HeaderBar, NavigationMenu, ControlPanel, DonutChart, AreaChart, WorldMap, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu,StatTile){
     	var Dashboard = React.createClass({
             getInitialState: function() {
                 return {
@@ -144,7 +145,23 @@ define(
     								</section>
 
                                     <section className="col-lg-5 connectedSortable ui-sortable">
-                                        <ContainerFive />
+                                        <ContainerFive>
+                                            <WorldMap 
+                                                id="world-map"
+                                                info = {{
+                                                    "US": 398,
+                                                    "SA": 400, 
+                                                    "CA": 1000, 
+                                                    "DE": 500, 
+                                                    "FR": 760, 
+                                                    "CN": 300, 
+                                                    "AU": 700, 
+                                                    "BR": 600, 
+                                                    "IN": 800,
+                                                    "GB": 320, 
+                                                    "RU": 3000 
+                                                }} />
+                                        </ContainerFive>
                                         <ContainerSix />
                                         <ContainerSeven />
                                     </section>

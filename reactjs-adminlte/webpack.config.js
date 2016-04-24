@@ -25,8 +25,8 @@ var config = {
             raphael: node_dir + '/webpack-raphael/raphael.js',
             morris: plugins_dir + '/morris/morris.js',
             //sparkline: plugins_dir + '/sparkline/jquery.sparkline.min.js',
-            //jvectormap: plugins_dir + '/jvectormap/jquery-jvectormap-1.2.2.min.js',
-            //jvectormapWorld: plugins_dir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
+            jvectormap: plugins_dir + '/jvectormap/jquery-jvectormap-1.2.2.min.js',
+            jvectormapWorld: plugins_dir + '/jvectormap/jquery-jvectormap-world-mill-en.js',
             //knob: plugins_dir + '/knob/jquery.knob.js',
             moment: plugins_dir + '/moment/moment.js',
             //daterangepicker: plugins_dir + '/daterangepicker/daterangepicker.js',
@@ -57,7 +57,7 @@ var config = {
         buttons: './public/src/buttons/js/main',
         generalUIElements: './public/src/ui-elements/general/js/main',
         vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker'],
-        chartVendors: ['jquery','raphael','morris'],
+        chartVendors: ['jquery','raphael','morris','jvectormap','jvectormapWorld'],
     },
 
     output: {

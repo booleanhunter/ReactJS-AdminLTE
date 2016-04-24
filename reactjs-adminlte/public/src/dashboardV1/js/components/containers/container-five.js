@@ -2,9 +2,12 @@ define(
     [
         'react',
         'jquery',
+
     ],
     function(React,$){
     	var ContainerFive = React.createClass({
+            componentDidMount: function(){
+            },
     		render: function(){
                 var style = {
                     height: '250px'
@@ -29,6 +32,7 @@ define(
                         </div>
 
                         <div className="box-body" style={style}>
+                            {this.props.children}
                         </div>
 
                         <div className="box-footer no-border">
