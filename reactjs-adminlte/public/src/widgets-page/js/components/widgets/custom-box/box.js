@@ -26,7 +26,7 @@ define(
                     var BoxTool = require('./box-tool');
 
                     this.props.boxTools.map(function(tool, index){
-                        boxTools.push(<BoxTool key={index} toolType={tool} />)
+                        boxTools.push(<BoxTool key={index} toolType={tool} containerClass="box"/>)
                     });
 
                     boxToolsContainer = <div className="box-tools pull-right">{boxTools}</div>

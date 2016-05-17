@@ -7,15 +7,18 @@ define(
     function (React, ReactDOM, boxFunctions) {
     	var BoxTool = React.createClass({
             toggleCollapse: function(event){
-                var box = boxFunctions.findClosestElement(event.currentTarget, 'box'),
+                var box = boxFunctions.findClosestElement(event.currentTarget, this.props.containerClass),
                     boxBody = box.children[1],
                     icon = event.currentTarget.children[0];
 
                 boxFunctions.toggleBoxCollapse(box, boxBody, icon);
             },
             removeBox: function(event){
-                var box = boxFunctions.findClosestElement(event.currentTarget, 'box');
+                var box = boxFunctions.findClosestElement(event.currentTarget, this.props.containerClass);
                 boxFunctions.removeBox(box);
+            },
+            edit: function(){
+                this.props.callback();
             },
     		render: function() {
     			var button = '', that = this;

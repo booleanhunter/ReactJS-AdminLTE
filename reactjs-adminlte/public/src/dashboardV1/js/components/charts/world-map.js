@@ -44,9 +44,9 @@ define(
                 var style = {
                     height: '250px'
                 };
-                //style="overflow: hidden; width: auto; height: 250px;"
     			return (
                     <div id={this.props.id} style={style}>
+                    
                     </div>
     			)
     		}
