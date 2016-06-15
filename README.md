@@ -5,32 +5,32 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 ### UPDATES: 
 
-- [UI Elements](./reactjs-adminlte/public/src/ui-elements) turning up.
+- [UI Elements](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/ui-elements) turning up.
 
      [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/UI/general.html) to see it live
 
 
 
-- [ReactJS Timeline](./reactjs-adminlte/public/src/timeline-page)
+- [ReactJS Timeline](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/timeline-page)
 
     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
 
 
-- [ReactJS Widgets](./reactjs-adminlte/public/src/widgets-page)
+- [ReactJS Widgets](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/widgets-page)
 
     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
 
-    ![](./reactjs-adminlte/screenshots/widgets.png)
+    ![](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/screenshots/widgets.png)
 
 
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
 
 
-[ReactJS Dashboard](./reactjs-adminlte/public/src/dashboardV1)
+[ReactJS Dashboard](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/dashboardV1)
 
 Will soon be populated with charts.
 
-![](./reactjs-adminlte/screenshots/dashboard-v1.png)
+![](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/screenshots/dashboard-v1.png)
 
 
 More stuff coming soon. Stay tuned!
