@@ -20,7 +20,7 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
 
-    ![](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/screenshots/widgets.png)
+    ![](https://github.com/booleanhunter/ReactJS-AdminLTE/blob/master/screenshots/widgets.png?raw=true)
 
 
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
@@ -30,7 +30,7 @@ ReactJS version of the original AdminLTE dashboard - https://github.com/almasaee
 
 Will soon be populated with charts.
 
-![](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/screenshots/dashboard-v1.png)
+![](https://github.com/booleanhunter/ReactJS-AdminLTE/blob/master/screenshots/dashboard-v1.png?raw=true)
 
 
 More stuff coming soon. Stay tuned!
