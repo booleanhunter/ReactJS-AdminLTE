@@ -1,5 +1,7 @@
 # ReactJS-AdminLTE
 
+[![npm version](https://badge.fury.io/js/adminlte-reactjs.svg)](https://badge.fury.io/js/adminlte-reactjs)
+
 ReactJS version of the original AdminLTE dashboard - https://github.com/almasaeed2010/AdminLTE. This project consists of widgets, charts and other components written in ReactJS. Stylesheets are borrowed from the AdminLTE project. 
 
 If you use React in your app, you might find some of these components useful!
