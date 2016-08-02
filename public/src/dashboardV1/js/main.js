@@ -4,13 +4,15 @@
  */
 
 define(
-    [
-        'react',
-        'reactDom',   
-        'jquery',
-        './components/dashboard'
-    ], 
-    function(React, ReactDOM, $, Dashboard) {
-    	ReactDOM.render(<Dashboard />,  document.getElementById('dashboard-container'));
-    }
+  [
+    'react',
+    'reactDom',
+    'jquery',
+    './components/dashboard'
+  ],
+  function (React, ReactDOM, $, Dashboard) {
+    ReactDOM.render( < Dashboard / >, document.getElementById('dashboard-container')
+    )
+    ;
+  }
 )    

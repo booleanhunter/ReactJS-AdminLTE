@@ -1,24 +1,26 @@
 define(
-    [
-        'react',
-        'jquery',
-    ],
-    function(React,$){
-    	var ControlPanel = React.createClass({
-    		render: function(){
-                var style = {
-                    position: 'relative',
-                    height: '300px'
-                };
+  [
+    'react',
+    'jquery',
+  ],
+  function (React, $) {
+    var ControlPanel = React.createClass({
+      render: function () {
+        var style = {
+          position: 'relative',
+          height: '300px'
+        };
 
-    			return (
-    				<div className="row" id="contains-custom-header">
+        return (
+          < div
+        className = "row"
+        id = "contains-custom-header" >
 
-                    </div>
-    			)
-    		}
-    	})
+          < / div >
+        )
+      }
+    })
 
-    	return ControlPanel;
-    }   
+    return ControlPanel;
+  }
 )     

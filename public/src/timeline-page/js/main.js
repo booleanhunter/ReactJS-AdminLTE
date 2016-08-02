@@ -4,16 +4,18 @@
  */
 
 define(
-    [
-        'react',
-        'reactDom',   
-        'jquery',
-        './common-functions',
-        './components/timeline-page'
-    ], 
-    function(React, ReactDOM, $, commonFunctions, TimelinePage) {
-    	ReactDOM.render(<TimelinePage />,  document.getElementById('timeline-container'));
+  [
+    'react',
+    'reactDom',
+    'jquery',
+    './common-functions',
+    './components/timeline-page'
+  ],
+  function (React, ReactDOM, $, commonFunctions, TimelinePage) {
+    ReactDOM.render( < TimelinePage / >, document.getElementById('timeline-container')
+    )
+    ;
 
-    	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
-    }
+    commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
+  }
 )    
