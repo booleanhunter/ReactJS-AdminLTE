@@ -4,16 +4,18 @@
  */
 
 define(
-    [
-        'react',
-        'reactDom',   
-        'jquery',
-        './common-functions',
-        './components/buttons'
-    ], 
-    function(React, ReactDOM, $, commonFunctions, Buttons) {
-    	ReactDOM.render(<Buttons />,  document.getElementById('buttons-container'));
+  [
+    'react',
+    'reactDom',
+    'jquery',
+    './common-functions',
+    './components/buttons'
+  ],
+  function (React, ReactDOM, $, commonFunctions, Buttons) {
+    ReactDOM.render( < Buttons / >, document.getElementById('buttons-container')
+    )
+    ;
 
-    	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
-    }
+    commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
+  }
 )    

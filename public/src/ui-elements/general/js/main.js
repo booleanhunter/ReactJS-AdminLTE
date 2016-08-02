@@ -4,16 +4,18 @@
  */
 
 define(
-    [
-        'react',
-        'reactDom',   
-        'jquery',
-        './common-functions',
-        './components/ui-elements'
-    ], 
-    function(React, ReactDOM, $, commonFunctions, UIElements) {
-    	ReactDOM.render(<UIElements />,  document.getElementById('ui-container'));
+  [
+    'react',
+    'reactDom',
+    'jquery',
+    './common-functions',
+    './components/ui-elements'
+  ],
+  function (React, ReactDOM, $, commonFunctions, UIElements) {
+    ReactDOM.render( < UIElements / >, document.getElementById('ui-container')
+    )
+    ;
 
-    	commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
-    }
+    commonFunctions.initialize().bootstrapTooltips("[data-toggle='tooltip']");
+  }
 )    
