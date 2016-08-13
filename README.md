@@ -9,18 +9,18 @@ If you use React in your app, you might find some of these components useful!
 
 ### UPDATES: 
 
-- [UI Elements](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/ui-elements) turning up.
+- [UI Elements](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/pages/ui-elements) turning up.
 
-     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/UI/general.html) to see it live
+    [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/UI/general.html) to see it live
 
 
 
-- [ReactJS Timeline](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/timeline-page)
+- [ReactJS Timeline](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/pages/timeline-page)
 
     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
 
 
-- [ReactJS Widgets](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/widgets-page)
+- [ReactJS Widgets](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/pages/widgets-page)
 
     [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
 
@@ -30,7 +30,7 @@ If you use React in your app, you might find some of these components useful!
 ##### Widgets will use velocity.js animations instead of the originally used JQuery animations wherever possible, for improved performance across all browsers and devices.
 
 
-[ReactJS Dashboard](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/dashboardV1)
+[ReactJS Dashboard](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/public/src/pages/dashboardV1)
 
 Will soon be populated with charts.
 

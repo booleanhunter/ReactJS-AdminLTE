@@ -32,7 +32,7 @@ content = 'Can be a string or a number'
     theme = 'bg-aqua' 
 />
 ```
-![](../../../screenshots/info-tile.png)
+![](../../../../screenshots/info-tile.png)
 
 You can optionally display a progress status and bar by passing the [ProgressBar](./js/components/widgets/info-tile/progress-bar.js) component as props.children
 
@@ -41,7 +41,7 @@ You can optionally display a progress status and bar by passing the [ProgressBar
 	<ProgressBar percent = 50 description = '50% Increase in 30 Days' color = 'white' />
 </InfoTile>	
 ```
-![](../../../screenshots/progress-info-tile.png)
+![](../../../../screenshots/progress-info-tile.png)
 
 
 ### - [StatTile](./js/components/widgets/stat-tile.js)
@@ -73,7 +73,7 @@ link = 'Link to go to for more information'  (Optional)
 />
 ```
 
-![](../../../screenshots/stat-tile.png)
+![](../../../../screenshots/stat-tile.png)
 
 
 ### - [Box](./js/components/widgets/custom-box/box.js)
@@ -113,7 +113,7 @@ boxTools = {['collapse','remove','expand']}  (Optional buttons to make the box e
 />
 ```
 
-![](../../../screenshots/small-box-expandable.png)
+![](../../../../screenshots/small-box-expandable.png)
 
 ##### A collapsable box with border
 
@@ -130,7 +130,7 @@ boxTools = {['collapse','remove','expand']}  (Optional buttons to make the box e
 />
 ```
 
-![](../../../screenshots/small-box-collapsable.png)
+![](../../../../screenshots/small-box-collapsable.png)
 
 ##### A removable box without border
 
@@ -144,7 +144,7 @@ boxTools = {['collapse','remove','expand']}  (Optional buttons to make the box e
 />
 ```
 
-![](../../../screenshots/small-box-removable.png)
+![](../../../../screenshots/small-box-removable.png)
 
 ##### A removable box without border with loading animation
 
@@ -159,7 +159,7 @@ boxTools = {['collapse','remove','expand']}  (Optional buttons to make the box e
 />
 ```
 
-![](../../../screenshots/small-box-loading.png)
+![](../../../../screenshots/small-box-loading.png)
 
 
 ### - [ChatBox](./js/components/widgets/chat-box/chat-box.js)
@@ -254,7 +254,7 @@ var contactsInfo = [{
 
 </ChatBox>
 ```
-![](../../../screenshots/chat-box.png)
+![](../../../../screenshots/chat-box.png)
 
 
 ### - [ProfileCard](./js/components/widgets/profile-card/profile-card.js)
@@ -336,7 +336,7 @@ var infoList = [{
 </ProfileCard>
 
 ```
-![](../../../screenshots/profile-card-left.png)
+![](../../../../screenshots/profile-card-left.png)
 
 ```javascript
 var infoList = [{
@@ -362,7 +362,7 @@ var infoList = [{
 </ProfileCard>
 
 ```
-![](../../../screenshots/profile-card-center.png)
+![](../../../../screenshots/profile-card-center.png)
 
 ### - [Post](./js/components/widgets/post/post.js)
 
@@ -449,7 +449,7 @@ var comments = [
     <SocialInfo info = '127 likes - 3 comments' />
 </Post>
 ```
-![](../../../screenshots/post-with-picture.png)
+![](../../../../screenshots/post-with-picture.png)
 
 ```javascript
 var comments = [
@@ -491,4 +491,4 @@ var attachments = [
 
 </Post>
 ```
-![](../../../screenshots/post-with-attachment.png)
+![](../../../../screenshots/post-with-attachment.png)

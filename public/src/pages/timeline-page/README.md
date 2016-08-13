@@ -149,4 +149,4 @@ var timelineInfo = [
 
 <Timeline timelineInfo={this.state.timelineInfo}/>
 ```
-![](../../../screenshots/timeline.png)
+![](../../../../screenshots/timeline.png)
