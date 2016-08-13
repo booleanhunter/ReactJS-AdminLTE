@@ -51,11 +51,11 @@ var config = {
     ],
 
     entry: {
-        dashboardV1: './public/src/dashboardV1/js/main',
-        widgets: ['./public/src/widgets-page/js/main'],
-        timeline: './public/src/timeline-page/js/main',
-        buttons: './public/src/buttons/js/main',
-        generalUIElements: './public/src/ui-elements/general/js/main',
+        dashboardV1: './public/src/pages/dashboardV1/js/main',
+        widgets: ['./public/src/pages/widgets-page/js/main'],
+        timeline: './public/src/pages/timeline-page/js/main',
+        buttons: './public/src/pages/buttons/js/main',
+        generalUIElements: './public/src/pages/ui-elements/general/js/main',
         vendors: ['react','reactDom','jquery','velocity','jqueryUi','bootstrap','moment','bootstrapDatepicker'],
         chartVendors: ['jquery','raphael','morris','jvectormap','jvectormapWorld'],
     },

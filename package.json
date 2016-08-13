@@ -25,7 +25,8 @@
     "jsx-loader": "^0.13.2",
     "raphael": "^2.1.4",
     "react": "~0.14.7",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "webpack-raphael": "^2.1.4"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
