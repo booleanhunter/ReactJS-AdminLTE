@@ -1,6 +1,6 @@
 {
   "name": "adminlte-reactjs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "http://github.com/booleanhunter/ReactJS-AdminLTE"
@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git://github.com/almasaeed2010/AdminLTE.git"
   },
+  "main": "src/widgets.src.js",
   "dependencies": {
     "babel-core": "~6.5.1",
     "babel-loader": "~6.2.2",
@@ -25,13 +26,20 @@
     "jsx-loader": "^0.13.2",
     "raphael": "^2.1.4",
     "react": "~0.14.7",
+    "velocity-animate": "^1.2.3",
     "webpack": "^1.12.13",
     "webpack-raphael": "^2.1.4"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "expect": "^1.20.2",
+    "mocha": "^3.1.2",
     "react-hot-loader": "~1.3.0",
     "style-loader": "^0.13.0",
     "webpack-dev-server": "~1.14.1"
+  },
+  "scripts": {
+    "test": "mocha test -u bdd -R spec"
   }
 }

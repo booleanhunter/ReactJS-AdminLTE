@@ -14,7 +14,7 @@ app.set('view engine', 'html');
 app.engine('html', consolidate.handlebars);
 app.use(express.static('./public')); //Set the folder from where you serve all static files like images, css, javascripts, libraries etc
 app.use(bodyParser.urlencoded({ extended: true }));
-var portNumber = 8000;
+var portNumber = process.argv[2] || 8000;
 
 http.createServer(app).listen(portNumber, function(){
 	console.log('Server listening at port '+ portNumber);
