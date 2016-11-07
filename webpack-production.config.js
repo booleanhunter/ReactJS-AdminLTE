@@ -18,7 +18,7 @@ var config = {
         alias: {
             react: node_dir + '/react',
             reactDom: lib_dir + '/react-dom',
-            jquery: lib_dir + '/jQuery-2.1.4.min.js',
+            jquery: node_dir + '/jquery/dist/jquery.min.js',
             velocity: lib_dir + '/velocity.min.js',
             jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
             bootstrap: plugins_dir + '/bootstrap/js/bootstrap.min.js',

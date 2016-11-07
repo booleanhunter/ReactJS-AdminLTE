@@ -8,17 +8,20 @@ function initialize(app){
         res.render('dashboard.html');		
 	});
 
-    app.get('/starter.html', function(req, res){
-        res.render('starter.html');
+	//Routes for rendering original adminlte pages
+
+    app.get('/adminlte/index.html', function(req, res){
+        res.render('adminlte-pages/index.html');
     });
 
-    app.get('/index.html', function(req, res){
-        res.render('index.html');
+    app.get('/adminlte/index2.html', function(req, res){
+        res.render('adminlte-pages/index2.html');
     });
 
-    app.get('/index2.html', function(req, res){
-        res.render('index2.html');
-    });
+
+    /*Routes for rendering pages in reactjs.
+    After creating a page in react, define a route for it here 
+    */
 
     app.get('/widgets.html', function(req, res){
         res.render('widgets.html');

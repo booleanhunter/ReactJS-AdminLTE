@@ -61,11 +61,11 @@ var config = {
     ],
     devtool: 'cheap-module-source-map',
     entry: {
-        dashboardV1: './src/pages/dashboardV1/js/main',
-        widgets: ['./src/pages/widgets-page/js/main'],
-        timeline: './src/pages/timeline-page/js/main',
-        buttons: './src/pages/buttons/js/main',
-        generalUIElements: './src/pages/ui-elements/general/js/main',
+        dashboardV1: './src/pages/dashboardV1/js/dashboard',
+        widgets: ['./src/pages/widgets-page/js/widgets-page'],
+        timeline: './src/pages/timeline-page/js/timeline-page',
+        generalUIElements: './src/pages/ui-elements-page/general/js/page-ui-elements',
+
         vendors: ['react', 'reactDom', 'jquery', 'velocity', 'jqueryUi', 'bootstrap', 'moment', 'bootstrapDatepicker'],
         chartVendors: ['jquery', 'raphael', 'morris', 'jvectormap', 'jvectormapWorld'],
     },
