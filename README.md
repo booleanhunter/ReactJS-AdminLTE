@@ -47,6 +47,13 @@ More stuff coming soon. Stay tuned!
 
 ##### Due to several work related commitments, the development rate is a little slow and I apologize for that. However, I'm looking for awesome folks :metal: who could contribute and help me maintain this project.
 
+#### Where can you contribute? (starting from easy to relatively challenging)
+
+- Covering [documentation](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/src/components#list-of-components) for all the available components and how to use them (this is the easiest one, but quite important!)
+- Converting existing components into ES6/ECMAScript 2016 
+- Writing tests for components. Similar to tests written in the [React-Bootstrap](https://github.com/react-bootstrap/react-bootstrap/tree/master/test) project.
+- Reactifying the rest of the widgets, elements and pages from AdminLTE. Here are the steps to do this:
+
 #### Step 1 : 
 
 - Fork or clone this repo. Alternatively - if you have NPM installed, you can also do `npm install adminlte-reactjs`.
@@ -88,6 +95,14 @@ After you've finished writing a component and testing it out, you can include it
 - Place/move your component inside the [/src/components](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/src) folder and include it inside `widgets.src.js`.
 - Run `npm build` to generate the library `reactjsAdminlte.js`. Your component will be included in the library!
 - To make sure that your component works correctly, test it out by including it in the page using the library.
+
+
+#### Some tips before making a pull request
+- Make sure that you've pulled the latest commits into your fork.
+- Create a branch for your edits - that way the project maintainer can safely pull your code and test it out.
+- If it's your first P.R, it'll be easier if you begin with something small first instead of making huge changes in lots of files. It helps me understand what the P.R is about, and I could help you out with the rest of changes if needed. It'll also save you from spending lot of effort in doing something that might not be necessary.
+- An important thing to remember is to have a P.R that fixes one issue at a time, and not make changes to lot of files in the same P.R. This way it's easier to test the changes out and have a relatively clean commit log.
+- You can learn more about these tips in detail [here](https://guides.github.com/activities/contributing-to-open-source/#contributing)
 
 
 ##### If you have any further queries that you may have on how to contribute, or you have just general questions about how to use the components in your app - feel free to shoot an email. I'll help you out! :smile_cat:
