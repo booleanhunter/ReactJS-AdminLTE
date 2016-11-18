@@ -14,12 +14,12 @@ If you use React in your app, you might find some of these components useful!
 
 - [ReactJS Timeline](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/src/components/#--timeline)
 
-    [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/timeline.html) to see it live
+    [Click here](http://adminlte.booleanhunter.com/timeline.html) to see it live
 
 
 - [ReactJS Widgets](https://github.com/booleanhunter/ReactJS-AdminLTE/tree/master/src/components)
 
-    [Click here](http://ec2-52-74-208-196.ap-southeast-1.compute.amazonaws.com:8000/widgets.html) to see a live preview!
+    [Click here](http://adminlte.booleanhunter.com/widgets.html) to see a live preview!
 
     ![](https://github.com/booleanhunter/ReactJS-AdminLTE/blob/master/screenshots/widgets.png?raw=true)
 
