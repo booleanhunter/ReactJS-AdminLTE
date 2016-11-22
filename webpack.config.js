@@ -49,7 +49,7 @@ var config = {
         new webpack.optimize.CommonsChunkPlugin('vendors', 'dist/js/vendors.js', Infinity),
         new webpack.DefinePlugin({
             'process.env': {
-                'NODE_ENV': JSON.stringify('production')
+                'NODE_ENV': JSON.stringify('development')
             }
         }),
         new webpack.optimize.UglifyJsPlugin({

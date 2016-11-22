@@ -41,6 +41,7 @@
     "webpack-dev-server": "~1.14.1"
   },
   "scripts": {
+    "dev": "node server.js",
     "test": "mocha test -u bdd -R spec",
     "build": "webpack -p --config ./webpack.production.config.js"
   }
