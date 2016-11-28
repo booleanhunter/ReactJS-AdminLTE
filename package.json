@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git://github.com/almasaeed2010/AdminLTE.git"
   },
-  "main": "src/widgets.src.js",
+  "main": "reactjsAdminlte.js",
   "dependencies": {
     "babel-core": "~6.5.1",
     "babel-loader": "~6.2.2",
