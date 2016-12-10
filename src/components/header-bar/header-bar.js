@@ -87,7 +87,7 @@ define(
                                             </li>
                                         </ul>
                                     </li>
-                                    { /* ontrol Sidebar Toggle Button */}
+                                    { /* Control Sidebar Toggle Button */}
                                     <li>
                                         <a href="#" data-toggle="control-sidebar"><i className="fa fa-gears"></i></a>
                                     </li>
