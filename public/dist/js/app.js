@@ -56,7 +56,7 @@ $.AdminLTE.options = {
   //BoxRefresh Plugin
   enableBoxRefresh: true,
   //Bootstrap.js tooltip
-  enableBSToppltip: true,
+  enableBSToppltip: false,
   BSTooltipSelector: "[data-toggle='tooltip']",
   //Enable Fast Click. Fastclick.js creates a more
   //native touch experience with touch devices. If you
