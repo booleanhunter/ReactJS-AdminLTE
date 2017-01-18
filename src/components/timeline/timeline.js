@@ -21,7 +21,7 @@ define (
 						timelineElement.items.map(function(item, i){
 							timelineInfo.push(
 								<TimelineItem 
-									key={"item"+iterator+i}
+									key={"item"+iterator+'.'+i}
 									icon={item.icon} 
 									iconTheme={item.iconTheme}
 									time= {item.time}
