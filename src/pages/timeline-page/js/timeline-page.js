@@ -1,7 +1,7 @@
 define(
     [
         'react',
-        'reactDom',
+        'react-dom',
         'jquery',
         '../../../widgets.src'
     ],

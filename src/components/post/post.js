@@ -1,7 +1,7 @@
 define(
     [
         'react',
-        'reactDom',
+        'react-dom',
         './comment',
         './attachment',
         '../../services/common-functions'

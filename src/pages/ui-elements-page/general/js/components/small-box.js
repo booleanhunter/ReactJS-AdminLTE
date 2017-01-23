@@ -1,7 +1,7 @@
 define(
     [
         'react',
-        'reactDom',
+        'react-dom',
         '../../common-functions'
     ],
     function (React, ReactDOM, commonFunctions) {

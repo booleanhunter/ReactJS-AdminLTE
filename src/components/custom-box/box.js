@@ -1,7 +1,7 @@
 define(
     [
         'react',
-        'reactDom',
+        'react-dom',
     ],
     function (React, ReactDOM) {
         var Box = React.createClass({

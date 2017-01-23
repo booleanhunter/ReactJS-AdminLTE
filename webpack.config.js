@@ -17,9 +17,9 @@ var config = {
     resolve: {
         alias: {
             react: node_dir + '/react',
-            reactDom: lib_dir + '/react-dom',
+            "react-dom": node-dir + '/react-dom',
             jquery: node_dir + '/jquery/dist/jquery.min.js',
-            velocity: lib_dir + '/velocity.min.js',
+            "velocity-animate": node_dir + '/velocity-animate',
             jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
             bootstrap: plugins_dir + '/bootstrap/js/bootstrap.min.js',
             //eve: node_dir + '/raphael/eve/eve.js',

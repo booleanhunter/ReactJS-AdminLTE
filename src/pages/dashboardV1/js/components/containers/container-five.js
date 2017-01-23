@@ -2,7 +2,7 @@ define(
     [
         'react',
         'jquery',
-        'velocity'
+        'velocity-animate'
 
     ],
     function(React,$){

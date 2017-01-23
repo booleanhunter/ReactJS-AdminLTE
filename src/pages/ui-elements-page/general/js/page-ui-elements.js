@@ -1,7 +1,7 @@
 define(
     [
         'react',
-        'reactDom',
+        'react-dom',
         'jquery',
         './components/header-bar/header-bar',
         './components/navigation-menu',

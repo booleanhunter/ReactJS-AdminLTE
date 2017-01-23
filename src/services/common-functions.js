@@ -2,7 +2,7 @@ define(
     [
         'exports',
         'jquery',
-        'velocity'
+        'velocity-animate'
     ],
     function (exports, $, velocity) {
 

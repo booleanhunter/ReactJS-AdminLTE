@@ -2,7 +2,7 @@ define(
     [
         'exports',
         'jquery',
-        'velocity'
+        'velocity-animate'
     ],
     function (exports, $, velocity) {
         //https://www.debuggex.com/r/Q-7k9g2R6hDLKE7J

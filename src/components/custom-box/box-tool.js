@@ -1,7 +1,7 @@
 define(
     [
         'react',
-        'reactDom',
+        'react-dom',
         './box-functions'
     ],
     function (React, ReactDOM, boxFunctions) {
