@@ -17,7 +17,7 @@ var config = {
     resolve: {
         alias: {
             react: node_dir + '/react',
-            "react-dom": node-dir + '/react-dom',
+            "react-dom": node_dir + '/react-dom',
             jquery: node_dir + '/jquery/dist/jquery.min.js',
             "velocity-animate": node_dir + '/velocity-animate',
             jqueryUi: plugins_dir + '/jQueryUI/jquery-ui.min.js',
