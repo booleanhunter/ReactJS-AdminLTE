@@ -13,8 +13,21 @@ define(
                     chatTheme: 'direct-chat-primary',
                     buttonTheme: 'btn-primary',
                     title: 'Chat Box',
-                    notifications: 0   
+                    notifications: 0,
+                    sendMessage: function() {}
                 }
+            },
+            getInitialState: function() {
+                return {
+                    message: ''
+                };
+            },
+            changeMessage: function(ev) {
+                this.setState({message: ev.target.value})
+            },
+            sendMessage: function (e) {
+                e.preventDefault();
+                this.props.sendMessage(this.state.message);  
             },
             toggleCollapse: function(event) {
                 var box = ReactDOM.findDOMNode(this).children[0],
@@ -41,7 +54,6 @@ define(
                 var a = React.Children.map(this.props.children, function(child){
                     return child
                 });
-                console.log(a);
                 if(this.props.border === true){
                     borderClass = 'box-solid';
                 }
@@ -74,11 +86,11 @@ define(
                             </div>
                             {/* /.box-body */}
                             <div className="box-footer">
-                                <form action="#" method="post">
+                                <form onSubmit={this.sendMessage}>
                                     <div className="input-group">
-                                        <input type="text" name="message" placeholder="Type Message ..." className="form-control" />
+                                        <input type="text" name="message" placeholder="Type Message ..." className="form-control" onChange={this.changeMessage} />
                                         <span className="input-group-btn">
-                                            <button type="button" className={"btn btn-flat "+this.props.buttonTheme}>Send</button>
+                                            <button type="submit" className={"btn btn-flat "+this.props.buttonTheme}>Send Message</button>
                                         </span>
                                     </div>
                                 </form>
