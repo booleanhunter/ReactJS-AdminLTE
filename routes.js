@@ -39,6 +39,10 @@ function initialize(app){
         res.render('timeline.html');
     });
 
+    app.get('/documentation/index.html', function(req, res){
+        res.render('documentation/index.html');
+    });
+
 }
 
 exports.initialize = initialize;
