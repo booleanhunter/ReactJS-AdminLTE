@@ -3,7 +3,6 @@
  * @Details Webpack config file for adding new vendors, defining entry points and shimming modules. 
  */
 var webpack = require('webpack');
-var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var path = require("path");
 //var env = require('yargs').argv.mode;
 
@@ -52,11 +51,6 @@ var config = {
                 'NODE_ENV': JSON.stringify('development')
             }
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true
-        }),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.OccurenceOrderPlugin()
 
     ],
     devtool: 'cheap-module-source-map',
@@ -73,26 +67,31 @@ var config = {
     output: {
         path: path.join(__dirname, "public"),
         filename: "dist/js/[name].bundle.js",
-        libraryTarget: "umd",
+        libraryTarget: "commonjs",
         umdNamedDefine: true,
     },
+
+    optimization: {
+        minimize: true
+    },
+
     module: {
         noParse: [
             //new RegExp(node_dir + '/react'),
             new RegExp(lib_dir + './react-dom.js')
         ],
-        loaders: [
-            { 
+        rules: [
+            {
                 test: /\.jsx?$/, 
-                loaders: ['react-hot'],
+                loader: require.resolve('react-hot'),
                 include: path.join(__dirname, 'public'),
                 exclude: /(node_modules|bower_components)/
-
             },
             {
-                loader: 'babel', //'jsx-loader'
-                query: {
-                    presets: ['react', 'es2015']
+                loader: require.resolve('babel-loader'),
+                options: {
+                    presets: ['react', 'es2015'],
+                    compact: true
                 },
                 include: path.join(__dirname, 'src'),
                 exclude: /(node_modules|bower_components)/
