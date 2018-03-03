@@ -21,6 +21,7 @@
     "body-parser": "^1.14.0",
     "bower": "^1.7.7",
     "consolidate": "^0.15.0",
+    "create-react-class": "^15.6.3",
     "express": "^4.16.2",
     "handlebars": "^4.0.3",
     "jquery": "^3.1.1",

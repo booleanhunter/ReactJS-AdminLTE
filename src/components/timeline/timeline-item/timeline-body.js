@@ -1,9 +1,10 @@
 define (
 	[
-		'react'
+		'react',
+		'create-react-class',
 	],
-	function  (React) {
-		var TimelineBody = React.createClass({
+	function (React, createReactClass) {
+		var TimelineBody = createReactClass({
 			getDefaultProps: function() {
 			    return {
 			        content: 'Sample content',   

@@ -1,13 +1,14 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         './comment',
         './attachment',
         '../../services/common-functions'
     ],
-    function (React, ReactDOM, Comment, Attachment, commonFunctions) {
-        var Post = React.createClass({
+    function (React, createReactClass, ReactDOM, Comment, Attachment, commonFunctions) {
+        var Post = createReactClass({
             getDefaultProps: function() {
                 return {
                     displayName: 'John Doe',

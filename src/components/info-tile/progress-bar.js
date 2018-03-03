@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var ProgressBar = React.createClass({
+    function (React, createReactClass) {
+        var ProgressBar = createReactClass({
             getDefaultProps: function() {
                 return {
                     percent: 50,

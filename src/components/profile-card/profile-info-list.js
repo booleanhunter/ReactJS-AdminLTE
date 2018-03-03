@@ -1,9 +1,10 @@
 define(
     [
         'react',
+        'create-react-class',
     ],
-    function (React) {
-        var ProfileInfoList = React.createClass({
+    function (React, createReactClass) {
+        var ProfileInfoList = createReactClass({
             render: function() {
                 var listItems = this.props.list.map(function(info, iterator){
                     return (

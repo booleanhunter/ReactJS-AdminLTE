@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var NotificationItem = React.createClass({
+    function (React, createReactClass) {
+        var NotificationItem = createReactClass({
 
             render: function () {
                 return (

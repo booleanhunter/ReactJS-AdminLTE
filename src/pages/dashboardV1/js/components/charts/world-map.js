@@ -1,12 +1,13 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
         'jvectormap',
         'jvectormapWorld'
     ],
-    function(React,$){
-    	var WorldMap = React.createClass({
+    function (React, createReactClass,$){
+    	var WorldMap = createReactClass({
             getDefaultProps: function() {
                 return {
                     id: 'world-map-1',

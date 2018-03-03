@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         './notification-item'
     ],
-    function (React, NotificationItem) {
-        var HeaderNotifications = React.createClass({
+    function (React, createReactClass, NotificationItem) {
+        var HeaderNotifications = createReactClass({
             getInitialState: function () {
                 return {
                     notifications: []

@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var TaskItem = React.createClass({
+    function (React, createReactClass) {
+        var TaskItem = createReactClass({
 
             render: function(){
                 var stylePercentage = {

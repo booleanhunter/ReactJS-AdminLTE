@@ -1,13 +1,13 @@
 define (
 	[
 		'react',
+		'create-react-class',
 		'jquery',
-		
 		'./chat-message'
 	],
 
-	function(React, $, ChatMessage){
-		var Conversations = React.createClass({
+	function (React, createReactClass, $, ChatMessage){
+		var Conversations = createReactClass({
 			getInitialState: function(){
 				return {
 					messages: []

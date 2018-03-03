@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var StatTile = React.createClass({
+    function (React, createReactClass) {
+        var StatTile = createReactClass({
             getDefaultProps: function() {
                 return {
                     color: 'bg-yellow',

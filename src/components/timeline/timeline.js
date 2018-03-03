@@ -1,11 +1,12 @@
 define (
 	[
 		'react',
+		'create-react-class',
 		'./time-label',
 		'./timeline-item/timeline-item'
 	],
-	function (React, TimeLabel, TimelineItem) {
-		var Timeline = React.createClass({
+	function (React, createReactClass, TimeLabel, TimelineItem) {
+		var Timeline = createReactClass({
 			render: function(){
 				var timelineInfo = [];
 

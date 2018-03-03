@@ -1,13 +1,14 @@
 define(
     [
         'react',
+        'create-react-class',
         '../widgets/conversations',
         'jquery',
         'slimscroll'
         
     ],
-    function(React,Conversations,$){
-    	var ContainerTwo = React.createClass({
+    function (React, createReactClass,Conversations,$){
+    	var ContainerTwo = createReactClass({
             componentDidMount: function(){
                 $("#chat-box").slimScroll();
             },

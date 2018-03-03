@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
     ],
-    function (React, ReactDOM) {
-        var CustomTabs = React.createClass({
+    function (React, createReactClass, ReactDOM) {
+        var CustomTabs = createReactClass({
             getDefaultProps: function() {
                 return {
                 }

@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         './message-item'
     ],
-    function (React, MessageItem) {
-        var HeaderMessages = React.createClass({
+    function (React, createReactClass, MessageItem) {
+        var HeaderMessages = createReactClass({
             getInitialState: function () {
                 return {
                     messages: []

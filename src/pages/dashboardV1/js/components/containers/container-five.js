@@ -1,12 +1,13 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
         'velocity-animate'
 
     ],
-    function(React,$){
-    	var ContainerFive = React.createClass({
+    function (React, createReactClass,$){
+    	var ContainerFive = createReactClass({
             toggleBoxCollapse: function(box, boxBody, icon) {
                 if(box.className.indexOf('collapsed-box') !== -1) {
                     icon.className = icon.className.replace(/fa-plus/g, 'fa-minus');

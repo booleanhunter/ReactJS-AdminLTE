@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var Attachment = React.createClass({
+    function (React, createReactClass) {
+        var Attachment = createReactClass({
             render: function() {
                 return (
                     <div className="attachment-block clearfix">

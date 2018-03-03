@@ -1,12 +1,13 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
         'raphael',
         'morris'
     ],
-    function(React, $, Raphael, Morris){
-    	var AreaChart = React.createClass({
+    function (React, createReactClass, $, Raphael, Morris){
+    	var AreaChart = createReactClass({
             getDefaultProps: function() {
                 return {
                     id: 'area-chart-1',

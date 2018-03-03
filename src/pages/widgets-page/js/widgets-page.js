@@ -6,11 +6,12 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         'jquery',
         '../../../widgets.src'
     ], 
-    function (React, ReactDOM, $, reactjsAdminlte) {
+    function (React, createReactClass, ReactDOM, $, reactjsAdminlte) {
         var HeaderBar = reactjsAdminlte.HeaderBar;
         var NavigationMenu = reactjsAdminlte.NavigationMenu;
         var InfoTile = reactjsAdminlte.InfoTile;
@@ -29,7 +30,7 @@ define(
 
         var commonFunctions = reactjsAdminlte.commonFunctions;
         
-        var Widgets = React.createClass({
+        var Widgets = createReactClass({
             getInitialState: function() {
                 return {
                     infoTileOptions: [],

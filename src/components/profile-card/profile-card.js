@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var ProfileCard = React.createClass({
+    function (React, createReactClass) {
+        var ProfileCard = createReactClass({
             getDefaultProps: function() {
                 return {
                     pictureAlignment: 'center',

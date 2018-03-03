@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var Contacts = React.createClass({
+    function (React, createReactClass) {
+        var Contacts = createReactClass({
             render: function() {
 
                 var contacts = this.props.contacts.map(function(contactDetails, iterator){
