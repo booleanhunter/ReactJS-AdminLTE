@@ -33,7 +33,7 @@
     "raphael": "^2.1.4",
     "velocity-animate": "^1.4.0",
     "webpack": "^4.0.1",
-    "webpack-raphael": "^2.1.4"
+    "webpack-raphael": "^2.1.4",
     "chai": "^4.1.2",
     "css-loader": "^0.28.10",
     "expect": "^1.20.2",
