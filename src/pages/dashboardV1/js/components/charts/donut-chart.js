@@ -1,12 +1,13 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
         'raphael',
         'morris'
     ],
-    function(React, $, Raphael, Morris){
-    	var DonutChart = React.createClass({
+    function (React, createReactClass, $, Raphael, Morris){
+    	var DonutChart = createReactClass({
             getDefaultProps: function() {
                 return {
                     id: 'donut-chart-1',

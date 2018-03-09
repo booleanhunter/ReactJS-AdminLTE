@@ -1,9 +1,10 @@
 define (
 	[
-		'react'
+		'react',
+		'create-react-class',
 	],
-	function  (React) {
-		var TimeLabel = React.createClass({
+	function (React, createReactClass) {
+		var TimeLabel = createReactClass({
 			getDefaultProps: function() {
 			    return {
 			        theme: 'bg-red',

@@ -1,11 +1,12 @@
 define (
 	[
 		'react',
+		'create-react-class',
 		'jquery'
 	],
 
-	function(React, $){
-		var ChatMessage = React.createClass({
+	function (React, createReactClass, $){
+		var ChatMessage = createReactClass({
 			render: function(){
 				var style2 = {
 				    overflow: "hidden", 

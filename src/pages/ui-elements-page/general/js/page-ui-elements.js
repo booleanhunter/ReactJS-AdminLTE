@@ -1,6 +1,7 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         'jquery',
         './components/header-bar/header-bar',
@@ -11,8 +12,8 @@ define(
         './components/callout',
         './components/custom-tabs/custom-tabs',
     ],
-    function (React, ReactDOM, $, HeaderBar, NavigationMenu, ColorPaletteSet, Box, Alert, Callout, CustomTabs) {
-        var UIElements = React.createClass({
+    function (React, createReactClass, ReactDOM, $, HeaderBar, NavigationMenu, ColorPaletteSet, Box, Alert, Callout, CustomTabs) {
+        var UIElements = createReactClass({
             getInitialState: function() {
                 return {
                     infoTileOptions: [],

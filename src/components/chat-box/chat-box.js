@@ -1,11 +1,12 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         '../../services/common-functions'
     ],
-    function (React, ReactDOM, commonFunctions) {
-        var ChatBox = React.createClass({
+    function (React, createReactClass, ReactDOM, commonFunctions) {
+        var ChatBox = createReactClass({
             getDefaultProps: function() {
                 return {
                     headerTheme: 'box-primary',

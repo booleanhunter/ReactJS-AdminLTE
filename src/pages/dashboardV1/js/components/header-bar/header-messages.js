@@ -1,9 +1,10 @@
 define(
     [
         'react',
+        'create-react-class',
     ],
-    function (React) {
-        var HeaderMessages = React.createClass({
+    function (React, createReactClass) {
+        var HeaderMessages = createReactClass({
 
             render: function () {
                 var that = this;

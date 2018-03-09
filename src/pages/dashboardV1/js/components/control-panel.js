@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
     ],
-    function(React,$){
-    	var ControlPanel = React.createClass({
+    function (React, createReactClass,$){
+    	var ControlPanel = createReactClass({
     		render: function(){
                 var style = {
                     position: 'relative',

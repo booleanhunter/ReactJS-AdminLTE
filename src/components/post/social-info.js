@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var SocialInfo = React.createClass({
+    function (React, createReactClass) {
+        var SocialInfo = createReactClass({
             getDefaultProps: function() {
                 return {
                     info: '',

@@ -1,9 +1,10 @@
 define(
     [
         'react',
+        'create-react-class',
     ],
-    function (React) {
-        var MessageItem = React.createClass({
+    function (React, createReactClass) {
+        var MessageItem = createReactClass({
 
             render: function () {
 

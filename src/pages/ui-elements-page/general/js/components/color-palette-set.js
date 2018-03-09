@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var ColorPaletteSet = React.createClass({
+    function (React, createReactClass) {
+        var ColorPaletteSet = createReactClass({
         	render: function(){
         		return (
 	        		<div className={"col-sm-4 col-md-"+this.props.width}>

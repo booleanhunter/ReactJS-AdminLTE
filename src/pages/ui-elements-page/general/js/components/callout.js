@@ -1,9 +1,10 @@
 define(
     [
         'react',
+        'create-react-class',
     ],
-    function (React) {
-        var Callout = React.createClass({
+    function (React, createReactClass) {
+        var Callout = createReactClass({
         	render: function(){
         		return (
                     <div className={"callout "+this.props.theme} >

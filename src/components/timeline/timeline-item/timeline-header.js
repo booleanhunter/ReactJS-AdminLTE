@@ -1,9 +1,10 @@
 define (
 	[
-		'react'
+		'react',
+		'create-react-class',
 	],
-	function  (React) {
-		var TimelineHeader = React.createClass({
+	function (React, createReactClass) {
+		var TimelineHeader = createReactClass({
 			render: function(){
 				return (
 			        <h3 className="timeline-header">

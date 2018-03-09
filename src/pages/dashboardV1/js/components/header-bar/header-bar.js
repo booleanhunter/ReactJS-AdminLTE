@@ -1,13 +1,14 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
         './header-messages/header-messages',
         './header-notifications/header-notifications',
         './header-tasks/header-tasks'
     ],
-    function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
-        var HeaderBar = React.createClass({
+    function (React, createReactClass, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
+        var HeaderBar = createReactClass({
             pushMenu: function () {
                 var body = document.body;
                 if(body.clientWidth > 768){

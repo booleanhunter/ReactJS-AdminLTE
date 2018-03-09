@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
     ],
-    function (React, $) {
-        var NavigationMenu = React.createClass({
+    function (React, createReactClass, $) {
+        var NavigationMenu = createReactClass({
             render: function () {
                 var style = {
                     display: "block"

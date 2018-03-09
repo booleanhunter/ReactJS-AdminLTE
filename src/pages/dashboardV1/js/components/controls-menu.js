@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
     ],
-    function(React,$){
-        var ControlsMenu = React.createClass({
+    function (React, createReactClass,$){
+        var ControlsMenu = createReactClass({
             componentDidMount:function(){
 
             },

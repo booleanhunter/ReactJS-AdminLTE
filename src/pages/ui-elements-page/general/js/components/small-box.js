@@ -1,11 +1,12 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         '../../common-functions'
     ],
-    function (React, ReactDOM, commonFunctions) {
-        var SmallBox = React.createClass({
+    function (React, createReactClass, ReactDOM, commonFunctions) {
+        var SmallBox = createReactClass({
             getDefaultProps: function() {
                 return {
                     type: 'expandable',

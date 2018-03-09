@@ -1,9 +1,10 @@
 define (
 	[
-		'react'
+		'react',
+		'create-react-class',
 	],
-	function  (React) {
-		var TimelineFooter = React.createClass({
+	function (React, createReactClass) {
+		var TimelineFooter = createReactClass({
 			render: function(){
 				return (
 			        <div className="timeline-footer">

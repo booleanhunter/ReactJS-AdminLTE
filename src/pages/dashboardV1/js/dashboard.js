@@ -6,6 +6,7 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         'jquery',
         'raphael',
@@ -26,8 +27,8 @@ define(
         './components/controls-menu',
         './components/stat-tile'
     ],
-    function(React, ReactDOM, $, Raphael, Morris, HeaderBar, NavigationMenu, ControlPanel, DonutChart, AreaChart, WorldMap, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu,StatTile){
-    	var Dashboard = React.createClass({
+    function (React, createReactClass, ReactDOM, $, Raphael, Morris, HeaderBar, NavigationMenu, ControlPanel, DonutChart, AreaChart, WorldMap, ContainerOne, ContainerTwo, ContainerThree, ContainerFour,ContainerFive,ContainerSix,ContainerSeven,ControlsMenu,StatTile){
+    	var Dashboard = createReactClass({
             getInitialState: function() {
                 return {
                     statTileOptions: []

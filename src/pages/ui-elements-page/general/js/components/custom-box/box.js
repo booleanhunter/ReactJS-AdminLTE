@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
     ],
-    function (React, ReactDOM) {
-        var Box = React.createClass({
+    function (React, createReactClass, ReactDOM) {
+        var Box = createReactClass({
             getDefaultProps: function() {
                 return {
                     collapsed: false,

@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var SocialButton = React.createClass({
+    function (React, createReactClass) {
+        var SocialButton = createReactClass({
             getDefaultProps: function() {
                 return {
                     position: '',

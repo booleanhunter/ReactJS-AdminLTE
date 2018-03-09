@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
     ],
-    function(React,$){
-    	var ContainerSeven = React.createClass({
+    function (React, createReactClass,$){
+    	var ContainerSeven = createReactClass({
     		render: function(){
                 var style = {
                     height: '250px'

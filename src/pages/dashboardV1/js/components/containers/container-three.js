@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         'jquery',
     ],
-    function(React,$){
-    	var ContainerThree = React.createClass({
+    function (React, createReactClass,$){
+    	var ContainerThree = createReactClass({
     		render: function(){
                 var style = {
                     position: 'relative',

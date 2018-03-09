@@ -1,12 +1,13 @@
 define (
 	[
 		'react',
+		'create-react-class',
 		'./timeline-header',
 		'./timeline-body',
 		'./timeline-footer'
 	],
-	function  (React, TimelineHeader, TimelineBody, TimelineFooter) {
-		var TimelineItem = React.createClass({
+	function (React, createReactClass, TimelineHeader, TimelineBody, TimelineFooter) {
+		var TimelineItem = createReactClass({
 			getDefaultProps: function() {
 			    return {
 			        icon: 'fa fa-coffee',

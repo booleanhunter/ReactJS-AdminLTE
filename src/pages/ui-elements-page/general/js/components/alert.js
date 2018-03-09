@@ -1,9 +1,10 @@
 define(
     [
         'react',
+        'create-react-class',
     ],
-    function (React) {
-        var Alert = React.createClass({
+    function (React, createReactClass) {
+        var Alert = createReactClass({
         	render: function(){
         		return (
         			<div className={"alert "+this.props.theme+" alert-dismissible"}>

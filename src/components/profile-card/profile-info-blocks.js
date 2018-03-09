@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var ProfileInfoBlocks = React.createClass({
+    function (React, createReactClass) {
+        var ProfileInfoBlocks = createReactClass({
             render: function() {
                 var descriptionBlocks = this.props.list.map(function(info, iterator){
                     return (

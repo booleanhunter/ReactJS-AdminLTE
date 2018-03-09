@@ -1,10 +1,11 @@
 define(
     [
         'react',
+        'create-react-class',
         './task-item'
     ],
-    function (React, TaskItem) {
-        var HeaderTasks = React.createClass({
+    function (React, createReactClass, TaskItem) {
+        var HeaderTasks = createReactClass({
             getInitialState: function () {
                 return {
                     tasks: []

@@ -1,11 +1,12 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         './box-functions'
     ],
-    function (React, ReactDOM, boxFunctions) {
-    	var BoxTool = React.createClass({
+    function (React, createReactClass, ReactDOM, boxFunctions) {
+    	var BoxTool = createReactClass({
             toggleCollapse: function(event){
                 var box = boxFunctions.findClosestElement(event.currentTarget, this.props.containerClass),
                     boxBody = box.children[1],

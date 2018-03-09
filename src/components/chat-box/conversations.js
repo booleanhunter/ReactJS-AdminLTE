@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var Conversations = React.createClass({
+    function (React, createReactClass) {
+        var Conversations = createReactClass({
             render: function() {
 
                 var conversations = this.props.conversations.map(function(messageDetails, iterator){

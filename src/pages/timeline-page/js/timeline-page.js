@@ -1,18 +1,19 @@
 define(
     [
         'react',
+        'create-react-class',
         'react-dom',
         'jquery',
         '../../../widgets.src'
     ],
-    function (React, ReactDOM, $, reactjsAdminlte) {
+    function (React, createReactClass, ReactDOM, $, reactjsAdminlte) {
         var HeaderBar = reactjsAdminlte.HeaderBar;
         var NavigationMenu = reactjsAdminlte.NavigationMenu;
         var Timeline = reactjsAdminlte.Timeline;
 
         var commonFunctions = reactjsAdminlte.commonFunctions;
 
-        var TimelinePage = React.createClass({
+        var TimelinePage = createReactClass({
             getInitialState: function() {
                 return {
                     timelineInfo: []

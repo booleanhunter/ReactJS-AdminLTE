@@ -1,9 +1,10 @@
 define(
     [
-        'react'
+        'react',
+        'create-react-class',
     ],
-    function (React) {
-        var Post = React.createClass({
+    function (React, createReactClass) {
+        var Post = createReactClass({
             getDefaultProps: function() {
                 return {
                     content: 'sample comment',
