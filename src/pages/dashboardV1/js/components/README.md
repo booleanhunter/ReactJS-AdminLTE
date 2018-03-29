@@ -3,7 +3,7 @@
 
 ### - [AreaChart](./charts/area-chart.js)
 
-A basic Area Chart For displaying grouped sets of data points.
+A basic Area Chart For displaying multiple sets of data grouped to one x axis
 
 #### Usage:
 
@@ -12,7 +12,7 @@ Props: This component takes 6 values.
 ```javascript
 
 id = 'chart' (A string signifying the unique id of the chart)
-data = '{[{ xkey_string: 'Any String', ykey_string: 'Any Number'}]}' (Where xkey_string is a variable with the same verbatim name as string defined in xkey prop)
+data = '{[{ xkey_string: 'Any String', ykey_string: Any_Number }]}' (Where xkey_string is a variable with the same verbatim name as string defined in xkey prop)
                                                                      (Where ykey_string is a variable with the same verbatim name as one of the strings defined in ykeys prop)
 xkey = 'Any Unique String' 
 ykeys =  ['Any Unique String', 'Any Unique String']
@@ -20,6 +20,20 @@ labels = ['A String', 'A String'], (Directly Correlational to ykeys index)
 lineColors = ['A Hex Color', 'A Hex Color'], (Directly Correlational to ykeys index)
 
 ```
+#### Default Values:
+
+These Prop values are used if none are supplied.
+
+    id : 'area-chart-1',
+    data : [
+        {y: '2011 Q1', item1: 2666, item2: 2666},
+        {y: '2011 Q2', item1: 2778, item2: 2294}
+    ],
+    xkey : 'y',
+    ykeys: ['item1', 'item2'],
+    labels: ['Item 1', 'Item 2'],
+    lineColors: ['#a0d0e0', '#3c8dbc']
+
 #### Example: 
 
 ```javascript
@@ -44,3 +58,45 @@ lineColors = ['A Hex Color', 'A Hex Color'], (Directly Correlational to ykeys in
 ```
 ![](../../../../../screenshots/area-chart.png)
 
+
+
+### - [DonutChart](./charts/area-chart.js)
+
+A basic Donut Chart for displaying data as percentages of all data
+
+#### Usage:
+
+Props: This component takes 3 values.
+
+```javascript
+
+id = 'chart' (A string signifying the unique id of the chart)
+data = {[{label: 'Any String', value: 'Any_Number'},{label: 'Any String', value: 'Any_Number'}]} (Each Element is a Slice of the circle represented by an object with a label and value)
+colors = {['A Hex Color', 'A Hex Color']} (Directly Correlational to data object index)
+
+```
+#### Default Values:
+
+These Prop values are used if none are supplied.
+
+    id: 'donut-chart-1',
+    colors: ['#3c8dbc'],
+    data: [
+        {
+            label: "Donut piece", value: 40
+        }
+    ]
+
+#### Example: 
+
+```javascript
+<DonutChart 
+    id="sales-chart"
+    colors= {["#3c8dbc", "#f56954", "#00a65a"]}
+    data= {[
+        {label: "Download Sales", value: 12},
+        {label: "In-Store Sales", value: 30},
+        {label: "Mail-Order Sales", value: 20}
+    ]} />
+```
+![](../../../../../screenshots/donut-chart.png)
