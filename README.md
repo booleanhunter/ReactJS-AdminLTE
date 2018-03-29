@@ -33,6 +33,8 @@ Will soon be populated with charts.
 
 ![](https://github.com/booleanhunter/ReactJS-AdminLTE/blob/master/screenshots/dashboard-v1.png?raw=true)
 
+[List of Dashboard Components](src/pages/dashboardV1/js/components/README.md)
+
 
 More stuff coming soon. Stay tuned!
 
