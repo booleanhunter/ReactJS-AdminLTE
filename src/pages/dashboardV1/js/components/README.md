@@ -164,8 +164,8 @@ What is ISO ALPHA-2?
 
 ##### Why a Container?
 
-        The Container Class is meant to organize and group common components so that they can be constructed and displayed without actually changing the component code itself. 
-        It helps maintain a uniform look and feel throughout the UI.
+    The Container Class is meant to organize and group common components so that they can be constructed and displayed without actually changing the component code itself. 
+    It helps maintain a uniform look and feel throughout the UI.
 
 ### - [ContainerOne](./containers/container-one.js)
 
@@ -181,7 +181,7 @@ Props: This component takes 0 values but requires two children divs (which it lo
 
     Why a Container?
 
-        This Container in particular groups two common chart types used primarily for data analysis.
+    This Container in particular groups two common chart types used primarily for data analysis.
         
 
 #### Example: 
