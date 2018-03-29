@@ -3,7 +3,11 @@
 
 ### - [AreaChart](./charts/area-chart.js)
 
-A basic Area Chart For displaying multiple sets of data grouped to one x axis
+A basic Area Chart For displaying multiple sets of data grouped to one x axis.
+
+#### Features:
+
+By scrolling the pointer over a xkey data point, A tooltip will appear with xkey data point name and corresponding ykey data point names and values.
 
 #### Usage:
 
@@ -20,6 +24,7 @@ labels = ['A String', 'A String'], (Directly Correlational to ykeys index)
 lineColors = ['A Hex Color', 'A Hex Color'], (Directly Correlational to ykeys index)
 
 ```
+
 #### Default Values:
 
 These Prop values are used if none are supplied.
@@ -60,9 +65,14 @@ These Prop values are used if none are supplied.
 
 
 
-### - [DonutChart](./charts/area-chart.js)
+### - [DonutChart](./charts/donut-chart.js)
 
-A basic Donut Chart for displaying data as percentages of all data
+A basic Donut Chart for displaying data as percentages of all data.
+
+#### Features:
+
+By scrolling the pointer over a slice of the donu chart, the selected slice will enlargen and create a secondary line to indicate selection. 
+    The label and value of the selected slice will also be displayed in the center of the chart.
 
 #### Usage:
 
@@ -100,3 +110,50 @@ These Prop values are used if none are supplied.
     ]} />
 ```
 ![](../../../../../screenshots/donut-chart.png)
+
+### - [WorldMap](./charts/world-map.js)
+
+A World Map That gives different gradients based upon input values.
+
+#### Features:
+
+Displays a map of the world with a + button for zooming inwards and a - button for zooming outwards.
+
+#### Usage:
+
+Props: This component takes 2 values.
+
+```javascript
+
+id = 'world-map' (A string signifying the unique id of the chart)
+info = {{"ISO ALPHA-2 Code": "Any Number"}} (The Shade of the number is directly correlational to the magnitude of the number)
+
+
+```
+#### Supplementary Info:
+
+What is ISO ALPHA-2? 
+
+    ISO ALPHA-2 is a international convention providing a two character code to countries and regions around the world.
+    [Click Here](http://www.nationsonline.org/oneworld/country_code_list.htm) for a full list.
+
+#### Example: 
+
+```javascript
+<WorldMap 
+    id="world-map"
+    info = {{
+        "US": 398,
+        "SA": 400, 
+        "CA": 1000, 
+        "DE": 500, 
+        "FR": 760, 
+        "CN": 300, 
+        "AU": 700, 
+        "BR": 600, 
+        "IN": 800,
+        "GB": 320, 
+        "RU": 3000 
+    }} />
+```
+![](../../../../../screenshots/world-map.png)
