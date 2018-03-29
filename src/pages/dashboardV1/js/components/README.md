@@ -179,7 +179,7 @@ Generates Two Tabs linked to a #revenue-chart and #sales-chart IDs and loads the
 
 Props: This component takes 0 values but requires two children divs (which it loads as props) with IDs mentioned above.
 
-    ##### Why a Container?
+    Why a Container?
 
         This Container in particular groups two common chart types used primarily for data analysis.
         
