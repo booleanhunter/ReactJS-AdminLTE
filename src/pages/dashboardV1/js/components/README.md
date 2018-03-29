@@ -135,7 +135,7 @@ info = {{"ISO ALPHA-2 Code": "Any Number"}} (The Shade of the number is directly
 What is ISO ALPHA-2? 
 
     ISO ALPHA-2 is a international convention providing a two character code to countries and regions around the world.
-    [Click Here](http://www.nationsonline.org/oneworld/country_code_list) for a full list.
+    [Click Here](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) for a full list.
 
 #### Example: 
 
