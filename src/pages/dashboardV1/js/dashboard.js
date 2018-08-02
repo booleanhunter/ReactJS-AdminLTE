@@ -190,6 +190,6 @@ define(
     		}
     	});
 
-    	ReactDOM.render(<Dashboard />,  document.getElementById('dashboard-container'));
+    	// ReactDOM.render(<Dashboard />,  document.getElementById('dashboard-container'));
     }   
 )     
