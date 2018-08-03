@@ -35,11 +35,16 @@ class Box extends Component {
             isCollapsed: !this.state.isCollapsed
         });
     }
-
+    removeAnimationComplete = () =>{
+        if(this.props.onBoxClosed){
+            this.props.onBoxClosed();
+        }
+    }
     removeBox = () =>{
         Velocity.animate(this.box.current, 'slideUp', {
             duration: 500,
-            easing: 'easeInSine'
+            easing: 'easeInSine',
+            complete: this.removeAnimationComplete
         });
     }
 
@@ -93,6 +98,7 @@ Box.propTypes = {
     content: PropTypes.string,
     loading: PropTypes.bool,
     border: PropTypes.bool,
+    onBoxClosed: PropTypes.func
 };
 
 export default Box;

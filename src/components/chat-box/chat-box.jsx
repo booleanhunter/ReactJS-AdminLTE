@@ -9,7 +9,7 @@ class ChatBox extends Component {
         isCollapsed: false
     }
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.input = React.createRef();
         this.box = React.createRef();
@@ -23,17 +23,19 @@ class ChatBox extends Component {
         });
     }
 
-   
+
     sendMessage = (e) => {
         e.preventDefault();
-        this.props.sendMessage(this.input.current.value);
-        if (this.props.clearOnSend){
+        if (this.props.sendMessage) {
+            this.props.sendMessage(this.input.current.value);
+        }
+        if (this.props.clearOnSend) {
             this.input.current.value = null;
         }
     }
 
     toggleCollapse = (event) => {
-      
+
         const { isCollapsed } = this.state;
         Velocity.animate(this.boxBody.current, isCollapsed ? 'slideDown' : 'slideUp', {
             duration: 500,
@@ -41,10 +43,18 @@ class ChatBox extends Component {
             complete: this.toggleAnimationComplete
         });
     }
+
+    removeAnimationComplete = () =>{
+        if(this.props.onBoxClosed){
+            this.props.onBoxClosed();
+        }
+    }
+
     removeBox = (event) => {
         Velocity.animate(this.box.current, 'slideUp', {
             duration: 500,
-            easing: 'easeInSine'
+            easing: 'easeInSine',
+            complete: this.removeAnimationComplete
         });
     }
 
@@ -67,8 +77,8 @@ class ChatBox extends Component {
         }
 
         return (
-           
-             <div className={"col-md-" + this.props.width}>
+
+            <div className={"col-md-" + this.props.width}>
                 {/* DIRECT CHAT PRIMARY */}
                 <div ref={this.box} className={"box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass + (isShowContact ? " direct-chat-contacts-open" : "")}>
                     <div className="box-header with-border">
@@ -107,8 +117,8 @@ class ChatBox extends Component {
                     {/* /.box-footer*/}
                 </div>
                 {/*/.direct-chat */}
-             </div>
-            
+            </div>
+
         )
     }
 }
@@ -120,8 +130,7 @@ ChatBox.defaultProps = {
     buttonTheme: 'btn-primary',
     title: 'Chat Box',
     notifications: 0,
-    clearOnSend : false,
-    sendMessage: function () { }
+    clearOnSend: false
 }
 
 ChatBox.propsTypes = {
@@ -132,7 +141,8 @@ ChatBox.propsTypes = {
     title: PropTypes.string,
     notifications: PropTypes.number,
     sendMessage: PropTypes.func,
-    clearOnSend: PropTypes.bool
+    clearOnSend: PropTypes.bool,
+    onBoxClosed: PropTypes.func
 }
 
 export default ChatBox;

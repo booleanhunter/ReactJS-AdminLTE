@@ -201,6 +201,28 @@ class SectionWidgetsDemo extends Component {
             date: '23 Jan 2:05 pm',
             message: 'You better believe it!'
         }],
+        boxOptions: [{
+            collapsed: true,
+            theme: 'box-default',
+            title: 'Expandable',
+            content: 'The body of the box',
+            boxTools: ['expand', 'remove']
+        }, {
+            theme: 'box-success',
+            title: 'Collapsable',
+            content: 'The body of the box',
+            boxTools: ['collapse']
+        }, {
+            theme: 'box-warning',
+            title: 'Removable',
+            content: 'The body of the box',
+            boxTools: ['remove']
+        }, {
+            theme: 'box-danger',
+            loading: true,
+            title: 'Loading state',
+            content: 'The body of the box'
+        }]
     };
 
 
@@ -328,28 +350,7 @@ class SectionWidgetsDemo extends Component {
         link: '#'
     }];
 
-    boxOptions = [{
-        collapsed: true,
-        theme: 'box-default',
-        title: 'Expandable',
-        content: 'The body of the box',
-        boxTools: ['expand', 'remove']
-    }, {
-        theme: 'box-success',
-        title: 'Collapsable',
-        content: 'The body of the box',
-        boxTools: ['collapse']
-    }, {
-        theme: 'box-warning',
-        title: 'Removable',
-        content: 'The body of the box',
-        boxTools: ['remove']
-    }, {
-        theme: 'box-danger',
-        loading: true,
-        title: 'Loading state',
-        content: 'The body of the box'
-    }];
+
 
     boxBorderedOptions = [{
         collapsed: true,
@@ -380,6 +381,23 @@ class SectionWidgetsDemo extends Component {
 
     statTileLinkClick = (link, id) => {
         console.log(link, id);
+    }
+
+    removeBoxItem = (options) => {
+        console.log(options);
+        var items = []
+        var position = this.state.boxOptions.indexOf(options);
+        console.log(position);
+        for (var i = 0; i < this.state.boxOptions.length; i++) {
+            if (i !== position)
+                items.push(this.state.boxOptions[i]);
+        }
+        console.log(items);
+        this.setState(
+            {
+                boxOptions: items
+            }
+        );
     }
 
     render() {
@@ -424,16 +442,18 @@ class SectionWidgetsDemo extends Component {
                         ))}
                     </div>
                     <div className="row">
-                        {this.boxOptions.map((options, iterator) => (
+                        {this.state.boxOptions.map(options => (
                             <Box
-                                key={"rowFour" + iterator}
+                                key={"rowFour" + options.title}
                                 width={3}
                                 border={false}
                                 content={options.content}
                                 loading={options.loading}
                                 theme={options.theme}
                                 title={options.title}
-                                collapsed={options.collapsed}
+                                onBoxClosed={() => {
+                                    this.removeBoxItem(options)
+                                }}
                                 boxTools={options.boxTools} />
                         ))}
                     </div>
