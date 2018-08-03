@@ -38,7 +38,6 @@ class HeaderMessages extends Component {
 
     handleClickOutside = (event) => {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-            console.log("click outside");
             this.setState({
                 expanded: false
             });

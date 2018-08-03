@@ -5,11 +5,15 @@ import Velocity from 'velocity-animate';
 class ChatBox extends Component {
 
     state = {
-        message: null,
-        boxClass: '',
         isShowContact: false,
         isCollapsed: false
     }
+
+    constructor(props){
+        super(props);
+        this.input = React.createRef();
+    }
+
 
     toggleAnimationComplete = () => {
         this.setState({
@@ -17,12 +21,13 @@ class ChatBox extends Component {
         });
     }
 
-    changeMessage = (ev) => {
-        this.setState({ message: ev.target.value });
-    }
+   
     sendMessage = (e) => {
         e.preventDefault();
-        this.props.sendMessage(this.state.message);
+        this.props.sendMessage(this.input.current.value);
+        if (this.props.clearOnSend){
+            this.input.current.value = null;
+        }
     }
 
     toggleCollapse = (event) => {
@@ -44,7 +49,7 @@ class ChatBox extends Component {
 
     toggleChat = () => {
         this.setState({
-            isShowContact: !this.state.isShowContacts
+            isShowContact: !this.state.isShowContact
         })
     }
 
@@ -90,7 +95,7 @@ class ChatBox extends Component {
                     <div className="box-footer">
                         <form onSubmit={this.sendMessage}>
                             <div className="input-group">
-                                <input type="text" name="message" placeholder="Type Message ..." className="form-control" onChange={this.changeMessage} />
+                                <input type="text" name="message" placeholder="Type Message ..." className="form-control" ref={this.input} />
                                 <span className="input-group-btn">
                                     <button type="submit" className={"btn btn-flat " + this.props.buttonTheme}>Send Message</button>
                                 </span>
@@ -113,6 +118,7 @@ ChatBox.defaultProps = {
     buttonTheme: 'btn-primary',
     title: 'Chat Box',
     notifications: 0,
+    clearOnSend : false,
     sendMessage: function () { }
 }
 
@@ -123,7 +129,8 @@ ChatBox.propsTypes = {
     buttonTheme: PropTypes.string,
     title: PropTypes.string,
     notifications: PropTypes.number,
-    sendMessage: PropTypes.func
+    sendMessage: PropTypes.func,
+    clearOnSend: PropTypes.bool
 }
 
 export default ChatBox;

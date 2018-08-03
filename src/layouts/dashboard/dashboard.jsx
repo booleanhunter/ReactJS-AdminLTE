@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import HeaderMessages from '../../../components/header-bar/header-messages/header-messages.jsx';
-import HeaderNotifications from '../../../components/header-bar/header-notifications/header-notifications.jsx';
-import HeaderTasks from '../../../components/header-bar/header-tasks/header-tasks.jsx';
-import ChatBox from '../../../components/chat-box/chat-box.jsx';
-import Conversations from '../../../components/chat-box/conversations.jsx';
-import Contacts from '../../../components/chat-box/contacts.jsx';
+import HeaderMessages from '../../components/header-bar/header-messages/header-messages.jsx';
+import HeaderNotifications from '../../components/header-bar/header-notifications/header-notifications.jsx';
+import HeaderTasks from '../../components/header-bar/header-tasks/header-tasks.jsx';
+import ChatBox from '../../components/chat-box/chat-box.jsx';
+import Conversations from '../../components/chat-box/conversations.jsx';
+import Contacts from '../../components/chat-box/contacts.jsx';
 
 
 
 class Header extends Component {
+
+    state = {
+        isOpen: true
+    }
+
     messages = [
         {
             id: "1",
@@ -87,8 +92,20 @@ class Header extends Component {
         }
     ];
 
+    componentDidMount() {
+        document.body.className = "skin-blue sidebar-mini sidebar-open";
+    }
+
     pushMenu = () => {
-        console.log("push menu clicked");
+        // if open close
+        if (this.state.isOpen) {
+            document.body.className = "skin-blue sidebar-mini sidebar-collapse";
+        } else {
+            document.body.className = "skin-blue sidebar-mini sidebar-open";
+        }
+        // invert state
+        this.setState({ isOpen: !this.state.isOpen });
+       
     }
 
 
@@ -164,17 +181,20 @@ class Header extends Component {
     }
 }
 
+
+
+
 class Dashboard extends Component {
 
     state = {
-        conversations : [{
+        conversations: [{
             id: '1',
             name: 'Alexander Pierce',
             avatar: '../dist/img/user1-128x128.jpg',
             date: '23 Jan 2:00 pm',
             message: "Is this template really for free? That's unbelievable!"
         }, {
-            id : '2',
+            id: '2',
             align: 'right',
             name: 'Sarah Bullock',
             avatar: '../dist/img/user3-128x128.jpg',
@@ -182,17 +202,17 @@ class Dashboard extends Component {
             message: 'You better believe it!'
         }]
     };
-    
+
 
     contacts = [{
-        id : '1',
+        id: '1',
         name: 'Count Dracula',
         avatar: '../dist/img/user1-128x128.jpg',
         link: '#',
         date: '2/28/2015',
         message: 'How have you been? I was...'
     }, {
-        id : '2',
+        id: '2',
         name: 'Count Dracula',
         avatar: '../dist/img/user1-128x128.jpg',
         link: '#',
@@ -200,16 +220,16 @@ class Dashboard extends Component {
         message: 'How have you been? I was...'
     }];
 
-    sendMessage = (e) =>{
-       const chat = {
-            id :  (e +'123'),
-            name : 'You',
-            avatar : '../dist/img/user1-128x128.jpg',
-            date : '3 Jul 11:41 am',
-            message : e
+    sendMessage = (e) => {
+        const chat = {
+            id: (e + '123'),
+            name: 'You',
+            avatar: '../dist/img/user1-128x128.jpg',
+            date: '3 Jul 11:41 am',
+            message: e
         };
         this.setState({
-            conversations : [...this.state.conversations, chat]
+            conversations: [...this.state.conversations, chat]
         });
     }
 
@@ -218,8 +238,9 @@ class Dashboard extends Component {
             <div className="wrapper" style={{ height: (window.innerHeight + "px") }}>
                 <Header />
                 <div className="content-wrapper">
-                    <div className="row">
-                        <ChatBox width={3} notification={2} sendMessage={this.sendMessage}>
+                {/* Chat box */}
+                    <div className="row" style={{ margin: 0, top: 'auto', right: 0, zIndex: 1000, bottom: 0, width: '100%', left: (window.innerWidth - 340), position: 'fixed' }}>
+                        <ChatBox title="Direct Message" clearOnSend width={3} notification={2} sendMessage={this.sendMessage}>
                             <Conversations conversations={this.state.conversations} />
                             <Contacts contacts={this.contacts} />
                         </ChatBox>
