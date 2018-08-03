@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class InfoTile extends Component {
 
     render() {
-        const { children, width, icon, theme, content, stats } = this.props;
+        const { children, width, icon, theme, content, stats, subject } = this.props;
         return (
             <div className={"col-md-" + width + " col-sm-6 col-xs-12"}>
                 <div className={"info-box " + theme}>

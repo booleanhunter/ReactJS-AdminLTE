@@ -5,7 +5,10 @@ import HeaderTasks from '../../components/header-bar/header-tasks/header-tasks.j
 import ChatBox from '../../components/chat-box/chat-box.jsx';
 import Conversations from '../../components/chat-box/conversations.jsx';
 import Contacts from '../../components/chat-box/contacts.jsx';
-
+import InfoTile from '../../components/info-tile/info-tile.jsx';
+import ProgressBar from '../../components/info-tile/progress-bar.jsx';
+import StatTile from '../../components/info-tile/stat-tile.jsx';
+import Box from '../../components/custom-box/box.jsx';
 
 
 class Header extends Component {
@@ -105,7 +108,7 @@ class Header extends Component {
         }
         // invert state
         this.setState({ isOpen: !this.state.isOpen });
-       
+
     }
 
 
@@ -181,10 +184,7 @@ class Header extends Component {
     }
 }
 
-
-
-
-class Dashboard extends Component {
+class SectionWidgetsDemo extends Component {
 
     state = {
         conversations: [{
@@ -200,7 +200,7 @@ class Dashboard extends Component {
             avatar: '../dist/img/user3-128x128.jpg',
             date: '23 Jan 2:05 pm',
             message: 'You better believe it!'
-        }]
+        }],
     };
 
 
@@ -233,22 +233,259 @@ class Dashboard extends Component {
         });
     }
 
+
+    infoTileOptions = [{
+        theme: 'bg-aqua',
+        icon: 'fa-envelope-o',
+        subject: 'Messages',
+        stats: '1,410',
+        content: ''
+    }, {
+        theme: 'bg-green',
+        icon: 'fa-flag-o',
+        subject: 'Bookmarks',
+        stats: '410',
+        content: ''
+    }, {
+        theme: 'bg-yellow',
+        icon: 'fa-files-o',
+        subject: 'Uploads',
+        stats: '13,648',
+        content: ''
+    }, {
+        theme: 'bg-red',
+        icon: 'fa-star-o',
+        subject: 'Likes',
+        stats: '93,139',
+        content: ''
+    }];
+
+    progressInfoTileOptions = [{
+        theme: 'bg-aqua',
+        icon: 'fa-bookmark-o',
+        subject: 'Bookmarks',
+        stats: '41,410',
+        content: '',
+        progressPercent: 70,
+        progressDescription: '70% Increase in 30 Days',
+        progressColor: 'white'
+    }, {
+        theme: 'bg-green',
+        icon: 'fa-thumbs-o-up',
+        subject: 'Likes',
+        stats: '41,410',
+        content: '',
+        progressPercent: 50,
+        progressDescription: '50% Increase in 30 Days',
+        progressColor: 'white'
+    }, {
+        theme: 'bg-yellow',
+        icon: 'fa-calendar',
+        subject: 'Events',
+        stats: '41,410',
+        content: '',
+        progressPercent: 70,
+        progressDescription: '70% Increase in 30 Days',
+        progressColor: 'white'
+    }, {
+        theme: 'bg-red',
+        icon: 'fa-comments-o',
+        subject: 'comments',
+        stats: '41,410',
+        content: '',
+        progressPercent: 70,
+        progressDescription: '70% Increase in 30 Days',
+        progressColor: 'white'
+    }];
+
+    statTileOptions = [{
+        id: '1',
+        theme: 'bg-aqua',
+        icon: 'fa-shopping-cart',
+        subject: 'New Orders',
+        stats: '150',
+        link: '#'
+    }, {
+        id: '2',
+        theme: 'bg-green',
+        icon: 'ion-stats-bars',
+        subject: 'Bounce Rate',
+        stats: '53%',
+        link: '#'
+    }, {
+        id: '3',
+        theme: 'bg-yellow',
+        icon: 'ion-person-add',
+        subject: 'User Registrations',
+        stats: '44',
+        link: 'https://facebook.com/me'
+    }, {
+        id: '4',
+        theme: 'bg-red',
+        icon: 'ion-pie-graph',
+        subject: 'Unique Visitors',
+        stats: '65',
+        link: '#'
+    }];
+
+    boxOptions = [{
+        collapsed: true,
+        theme: 'box-default',
+        title: 'Expandable',
+        content: 'The body of the box',
+        boxTools: ['expand', 'remove']
+    }, {
+        theme: 'box-success',
+        title: 'Collapsable',
+        content: 'The body of the box',
+        boxTools: ['collapse']
+    }, {
+        theme: 'box-warning',
+        title: 'Removable',
+        content: 'The body of the box',
+        boxTools: ['remove']
+    }, {
+        theme: 'box-danger',
+        loading: true,
+        title: 'Loading state',
+        content: 'The body of the box'
+    }];
+
+    boxBorderedOptions = [{
+        collapsed: true,
+        theme: 'box-primary',
+        border: true,
+        title: 'Expandable',
+        content: 'The body of the box',
+        boxTools: ['expand', 'remove']
+    }, {
+        theme: 'box-warning',
+        border: true,
+        title: 'Collapsable',
+        content: 'The body of the box',
+        boxTools: ['collapse']
+    }, {
+        theme: 'box-danger',
+        border: true,
+        title: 'Removable',
+        content: 'The body of the box',
+        boxTools: ['remove']
+    }, {
+        theme: 'box-info',
+        loading: true,
+        border: true,
+        title: 'Loading state',
+        content: 'The body of the box',
+    }];
+
+    statTileLinkClick = (link, id) => {
+        console.log(link, id);
+    }
+
     render() {
         return (
-            <div className="wrapper" style={{ height: (window.innerHeight + "px") }}>
-                <Header />
-                <div className="content-wrapper">
-                {/* Chat box */}
-                    <div className="row" style={{ margin: 0, top: 'auto', right: 0, zIndex: 1000, bottom: 0, width: '100%', left: (window.innerWidth - 340), position: 'fixed' }}>
-                        <ChatBox title="Direct Message" clearOnSend width={3} notification={2} sendMessage={this.sendMessage}>
+            <React.Fragment>
+                {/* place div inside react fragment */}
+                <section className="content-header">
+                    <h1>Widgets<small>Preview page</small></h1>
+                </section>
+                <section className="content">
+                    <div className="row">
+                        {this.infoTileOptions.map(tile => (
+                            <InfoTile key={tile.subject} theme={tile.theme} stats={tile.stats} subject={tile.subject} icon={tile.icon} content="" width={3} />
+                        ))}
+                    </div>
+                    <div className="row">
+                        {this.progressInfoTileOptions.map(options => (
+                            <InfoTile
+                                key={"rowTwo" + options.subject}
+                                width={3}
+                                content=''
+                                icon={options.icon}
+                                stats={options.stats}
+                                subject={options.subject}
+                                theme={options.theme} >
+                                <ProgressBar percent={options.progressPercent} description={options.progressDescription} color={options.progressColor} />
+                            </InfoTile>
+                        ))}
+                    </div>
+                    <div className="row">
+                        {this.statTileOptions.map(options => (
+                            <StatTile
+                                onLinkClicked={this.statTileLinkClick}
+                                key={options.id}
+                                id={options.id}
+                                width={3}
+                                icon={options.icon}
+                                link={options.link}
+                                stats={options.stats}
+                                subject={options.subject}
+                                theme={options.theme} />
+                        ))}
+                    </div>
+                    <div className="row">
+                        {this.boxOptions.map((options, iterator) => (
+                            <Box
+                                key={"rowFour" + iterator}
+                                width={3}
+                                border={false}
+                                content={options.content}
+                                loading={options.loading}
+                                theme={options.theme}
+                                title={options.title}
+                                collapsed={options.collapsed}
+                                boxTools={options.boxTools} />
+                        ))}
+                    </div>
+                    <div className="row">
+                        {this.boxBorderedOptions.map((options, iterator) => (
+                            <Box
+                                key={"rowFive" + iterator}
+                                width={3}
+                                border={options.border}
+                                content={options.content}
+                                loading={options.loading}
+                                theme={options.theme}
+                                title={options.title}
+                                collapsed={options.collapsed}
+                                boxTools={options.boxTools} />
+                        ))}
+                    </div>
+                    <div className="row" >
+                        <ChatBox title="Interactive" clearOnSend width={3} notification={2} sendMessage={this.sendMessage}>
                             <Conversations conversations={this.state.conversations} />
                             <Contacts contacts={this.contacts} />
                         </ChatBox>
+                        <ChatBox title="Direct Message" clearOnSend width={3} notification={2}>
+                            <Conversations conversations={[]} />
+                            <Contacts contacts={this.contacts} />
+                        </ChatBox>
                     </div>
+                </section>
+            </React.Fragment>
+        );
+    }
+}
+
+
+class Dashboard extends Component {
+
+
+
+    render() {
+        return (
+            <div className="wrapper" style={{ minHeight: (window.innerHeight + "px") }}>
+                <Header />
+                <div className="content-wrapper">
+
+                    <SectionWidgetsDemo />
+
                 </div>
             </div>
         );
     }
 }
+
+// style={{ margin: 0, top: 'auto', right: 0, zIndex: 1000, bottom: 0, width: '100%', left: (window.innerWidth - 340), position: 'fixed' }}
 
 export default Dashboard;

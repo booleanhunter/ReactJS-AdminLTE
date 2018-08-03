@@ -12,6 +12,8 @@ class ChatBox extends Component {
     constructor(props){
         super(props);
         this.input = React.createRef();
+        this.box = React.createRef();
+        this.boxBody = React.createRef();
     }
 
 
@@ -31,17 +33,16 @@ class ChatBox extends Component {
     }
 
     toggleCollapse = (event) => {
-        var chat_box_body = document.getElementById("box-body");
+      
         const { isCollapsed } = this.state;
-        Velocity.animate(chat_box_body, isCollapsed ? 'slideDown' : 'slideUp', {
+        Velocity.animate(this.boxBody.current, isCollapsed ? 'slideDown' : 'slideUp', {
             duration: 500,
             easing: 'easeInSine',
             complete: this.toggleAnimationComplete
         });
     }
     removeBox = (event) => {
-        var box = document.getElementById("chat-box");
-        Velocity.animate(box, 'slideUp', {
+        Velocity.animate(this.box.current, 'slideUp', {
             duration: 500,
             easing: 'easeInSine'
         });
@@ -66,9 +67,10 @@ class ChatBox extends Component {
         }
 
         return (
-            <div className={"col-md-" + this.props.width}>
+           
+             <div className={"col-md-" + this.props.width}>
                 {/* DIRECT CHAT PRIMARY */}
-                <div id="chat-box" className={"box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass + (isShowContact ? " direct-chat-contacts-open" : "")}>
+                <div ref={this.box} className={"box " + this.props.headerTheme + " direct-chat " + this.props.chatTheme + " " + borderClass + (isShowContact ? " direct-chat-contacts-open" : "")}>
                     <div className="box-header with-border">
                         <h3 className="box-title">{this.props.title}</h3>
                         <div className="box-tools pull-right">
@@ -88,7 +90,7 @@ class ChatBox extends Component {
                         </div>
                     </div>
                     {/* /.box-header */}
-                    <div id="box-body" className={"box-body" + (isCollapsed ? " collapsed-box" : "")}>
+                    <div ref={this.boxBody} className={"box-body" + (isCollapsed ? " collapsed-box" : "")}>
                         {this.props.children}
                     </div>
                     {/* /.box-body */}
@@ -105,9 +107,9 @@ class ChatBox extends Component {
                     {/* /.box-footer*/}
                 </div>
                 {/*/.direct-chat */}
-            </div>
+             </div>
+            
         )
-
     }
 }
 
