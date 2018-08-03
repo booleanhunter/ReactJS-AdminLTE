@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NotificationItem from './notification-item';
 
-const NotificationList = ({ notifications, onItemClicked }) => (
-    notifications.map(notificationDetails => (
+const NotificationList = ({ items, onItemClicked }) => (
+    items.map(notificationDetails => (
         <NotificationItem
             onItemClicked={onItemClicked}
             id={notificationDetails.id}
@@ -20,18 +20,40 @@ class HeaderNotifications extends Component {
         expanded: false
     }
 
+
+    componentDidMount(){
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
     toggleMenu = () => {
-        this.setState(prev => ({
-            expanded: !prev.expanded
-        }));
+        this.setState({
+            expanded: !this.state.expanded
+        });
+    }
+
+    handleClickOutside = (event) => {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+            console.log("click outside");
+            this.setState({
+                expanded: false
+            });
+        }
+    }
+
+    setWrapperRef = (node) =>{
+        this.wrapperRef = node;
     }
 
     render() {
-        const { notifications } = this.props;
+        const { items } = this.props;
         const { expanded } = this.state;
-        const length = notifications ? notifications.length : 0;
+        const length = items ? items.length : 0;
         return (
-            <li className={"dropdown notifications-menu " + (expanded ? "open" : "")}>
+            <li ref={this.setWrapperRef} className={"dropdown notifications-menu " + (expanded ? "open" : "")}>
                 <a href="#" onClick={this.toggleMenu} className="dropdown-toggle" data-toggle="dropdown">
                     <i className="fa fa-bell-o"></i>
                     {length > 0 && <span className="label label-warning">{length}</span>}
@@ -44,7 +66,7 @@ class HeaderNotifications extends Component {
                         <div className="slimScrollDiv">
 
                             <ul className="menu">
-                                <NotificationList notifications={notifications} onItemClicked={this.props.onItemClicked} />
+                             {items &&   <NotificationList items={items} onItemClicked={this.props.onItemClicked} />}
                             </ul>
 
                             <div className="slimScrollBar"></div>
@@ -59,7 +81,7 @@ class HeaderNotifications extends Component {
 }
 
 HeaderNotifications.propTypes = {
-    notifications: PropTypes.array,
+    items: PropTypes.array,
     onViewAllClicked: PropTypes.func.isRequired,
     onItemClicked: PropTypes.func.isRequired
 };

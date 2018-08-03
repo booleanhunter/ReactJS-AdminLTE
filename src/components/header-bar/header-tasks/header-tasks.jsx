@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TaskItem from './task-item';
 
-const TaskList = ({ tasks, onItemClicked }) => (
-    tasks.map(taskDetails => {
+const TaskList = ({ items, onItemClicked }) => (
+    items.map(taskDetails => {
         var progressBarColor;
         if (taskDetails.progress < 21) {
             progressBarColor = 'progress-bar-red'
@@ -11,7 +11,7 @@ const TaskList = ({ tasks, onItemClicked }) => (
             progressBarColor = 'progress-bar-yellow'
         } else if (taskDetails.progress > 40 && taskDetails.progress < 61) {
             progressBarColor = 'progress-bar-green'
-        } else if (taskDetails.progress > 60) {
+        } else  {
             progressBarColor = 'progress-bar-aqua';
         }
         <TaskItem
@@ -31,32 +31,52 @@ class HeaderTasks extends Component {
         expanded: false //State to toggle dropdown
     }
 
-    toggleMenu = () => {
-        this.setState(prev => ({
-            expanded: !prev.expanded
-        }));
+    componentDidMount(){
+        document.addEventListener('mousedown', this.handleClickOutside);
     }
 
+    componentWillUnmount(){
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    toggleMenu = () => {
+        this.setState({
+            expanded: !this.state.expanded
+        });
+    }
+
+    handleClickOutside = (event) => {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+            console.log("click outside");
+            this.setState({
+                expanded: false
+            });
+        }
+    }
+
+    setWrapperRef = (node) =>{
+        this.wrapperRef = node;
+    }
 
 
     render() {
         const { expanded } = this.state;
-        const { tasks, onViewAllClicked } = this.props;
-        const length = tasks ? tasks.length : 0;
+        const { items, onViewAllClicked } = this.props;
+        const length = items ? items.length : 0;
         return (
-            <li className="dropdown tasks-menu">
-                <a href="#" className={"dropdown-toggle " + expanded ? "open" : ""} data-toggle="dropdown">
+            <li ref={this.setWrapperRef} className={"dropdown tasks-menu " + (expanded ? "open" : "")}>
+                <a href="#" onClick={this.toggleMenu} className="dropdown-toggle " data-toggle="dropdown">
                     <i className="fa fa-flag-o"></i>
-                    <span className="label label-danger">{length}</span>
+                    {length && <span className="label label-danger">{length}</span>}
                 </a>
-                {expanded && <ul className="dropdown-menu">
-                    <li className="header">You have {""+length} tasks.</li>
+                <ul className="dropdown-menu">
+                    <li className="header">You have {length} tasks.</li>
                     <li>
                         {/* inner menu: contains the actual data */}
                         <div className="slimScrollDiv">
 
                             <ul className="menu">
-                                <TaskList onItemClicked={this.props.onItemClicked} tasks={tasks} />
+                                {items && <TaskList onItemClicked={this.props.onItemClicked} items={items} />}
                             </ul>
 
                             <div className="slimScrollBar"></div>
@@ -66,14 +86,14 @@ class HeaderTasks extends Component {
                     <li className="footer">
                         <a href="#" onClick={onViewAllClicked}>View all tasks</a>
                     </li>
-                </ul>}
+                </ul>
             </li>
         );
     }
 }
 
 HeaderTasks.propTypes = {
-    tasks: PropTypes.array,
+    items: PropTypes.array,
     onViewAllClicked: PropTypes.func.isRequired,
     onItemClicked: PropTypes.func.isRequired
 }

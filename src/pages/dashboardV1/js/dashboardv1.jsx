@@ -12,7 +12,7 @@ class Header extends Component {
     messages = [
         {
             id: "1",
-            title: "firt message",
+            title: "first message",
             avatar: "/dist/img/avatar.png",
             time: "8:33 PM Today",
             content: "this is some body content"
@@ -102,7 +102,7 @@ class Header extends Component {
                 <span className="logo-lg"><b>Admin</b>LTE</span>
             </a>
             {/* Header Navbar: style can be found in header.less */}
-            <nav className="navbar navbar-static-top" role="navigation">
+            <nav className="navbar navbar-static-top">
                 {/* Sidebar toggle button*/}
                 <a href="#" className="sidebar-toggle" data-toggle="offcanvas" role="button" onClick={this.pushMenu}>
                     <span className="sr-only">Toggle navigation</span>
@@ -110,21 +110,21 @@ class Header extends Component {
                 <div className="navbar-custom-menu">
                     <ul className="nav navbar-nav">
                         {/* Messages: style can be found in dropdown.less*/}
-                        <HeaderMessages messages={this.messages} onSeeAllClicked={(e) => { console.log(e) }} onItemClicked={(e) => { console.log(e) }} />
+                        <HeaderMessages items={this.messages} onSeeAllClicked={(e) => { console.log(e) }} onItemClicked={(e) => { console.log(e) }} />
                         {/* Notifications: style can be found in dropdown.less */}
-                        <HeaderNotifications notifications={this.notification} onItemClicked={(e) => { console.log(e) }} onViewAllClicked={(e) => { console.log(e) }} />
+                        <HeaderNotifications items={this.notification} onItemClicked={(e) => { console.log(e) }} onViewAllClicked={(e) => { console.log(e) }} />
                         {/* Tasks: style can be found in dropdown.less */}
-                        <HeaderTasks tasks={this.task} onItemClicked={(e) => { console.log(e) }} onViewAllClicked={(e) => { console.log(e) }} />
+                        <HeaderTasks items={this.task} onItemClicked={(e) => { console.log(e) }} onViewAllClicked={(e) => { console.log(e) }} />
                         {/* User Account: style can be found in dropdown.less */}
                         <li className="dropdown user user-menu">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/user2-160x160.jpg" className="user-image" alt="User Image" />
+                                <img src="dist/img/user2-160x160.jpg" className="user-image" alt="User Avatar" />
                                 <span className="hidden-xs">Alexander Pierce</span>
                             </a>
                             <ul className="dropdown-menu">
                                 {/* User image */}
                                 <li className="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User Image" />
+                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User Avatar" />
                                     <p>
                                         Alexander Pierce - Web Developer
                                                 <small>Member since Nov. 2012</small>
@@ -166,41 +166,61 @@ class Header extends Component {
 
 class Dashboard extends Component {
 
-    conversations = [{
-        displayName: 'Alexander Pierce',
-        displayPicture: '../dist/img/user1-128x128.jpg',
-        date: '23 Jan 2:00 pm',
-        message: "Is this template really for free? That's unbelievable!"
-    }, {
-        align: 'right',
-        displayName: 'Sarah Bullock',
-        displayPicture: '../dist/img/user3-128x128.jpg',
-        date: '23 Jan 2:05 pm',
-        message: 'You better believe it!'
-    }];
+    state = {
+        conversations : [{
+            id: '1',
+            name: 'Alexander Pierce',
+            avatar: '../dist/img/user1-128x128.jpg',
+            date: '23 Jan 2:00 pm',
+            message: "Is this template really for free? That's unbelievable!"
+        }, {
+            id : '2',
+            align: 'right',
+            name: 'Sarah Bullock',
+            avatar: '../dist/img/user3-128x128.jpg',
+            date: '23 Jan 2:05 pm',
+            message: 'You better believe it!'
+        }]
+    };
+    
 
     contacts = [{
-        displayName: 'Count Dracula',
-        displayPicture: '../dist/img/user1-128x128.jpg',
+        id : '1',
+        name: 'Count Dracula',
+        avatar: '../dist/img/user1-128x128.jpg',
         link: '#',
         date: '2/28/2015',
         message: 'How have you been? I was...'
     }, {
-        displayName: 'Count Dracula',
-        displayPicture: '../dist/img/user1-128x128.jpg',
+        id : '2',
+        name: 'Count Dracula',
+        avatar: '../dist/img/user1-128x128.jpg',
         link: '#',
         date: '2/28/2015',
         message: 'How have you been? I was...'
     }];
+
+    sendMessage = (e) =>{
+       const chat = {
+            id :  (e +'123'),
+            name : 'You',
+            avatar : '../dist/img/user1-128x128.jpg',
+            date : '3 Jul 11:41 am',
+            message : e
+        };
+        this.setState({
+            conversations : [...this.state.conversations, chat]
+        });
+    }
 
     render() {
         return (
-            <div className="wrapper" style={{ height: "100%" }}>
+            <div className="wrapper" style={{ height: (window.innerHeight + "px") }}>
                 <Header />
                 <div className="content-wrapper">
                     <div className="row">
-                        <ChatBox width={3} notification={2}>
-                            <Conversations conversations={this.conversations} />
+                        <ChatBox width={3} notification={2} sendMessage={this.sendMessage}>
+                            <Conversations conversations={this.state.conversations} />
                             <Contacts contacts={this.contacts} />
                         </ChatBox>
                     </div>

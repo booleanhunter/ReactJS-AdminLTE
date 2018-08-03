@@ -28,7 +28,7 @@ class ChatBox extends Component {
     toggleCollapse = (event) => {
         var chat_box_body = document.getElementById("box-body");
         const { isCollapsed } = this.state;
-        Velocity.animate(chat_box_body, isCollapsed ? 'slideUp' : 'slideDown', {
+        Velocity.animate(chat_box_body, isCollapsed ? 'slideDown' : 'slideUp', {
             duration: 500,
             easing: 'easeInSine',
             complete: this.toggleAnimationComplete
