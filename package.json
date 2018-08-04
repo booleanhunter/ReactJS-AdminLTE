@@ -12,40 +12,19 @@
     "type": "git",
     "url": "git://github.com/almasaeed2010/AdminLTE.git"
   },
-  "main": "reactjsAdminlte.js",
   "dependencies": {
-    "jquery": "^3.1.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "velocity-animate": "^1.4.0"
   },
   "devDependencies": {
-    "babel-core": "~6.26.0",
-    "babel-loader": "~7.1.3",
-    "babel-preset-es2015": "~6.24.1",
-    "babel-preset-react": "~6.24.1",
-    "body-parser": "^1.14.0",
-    "bower": "^1.7.7",
-    "consolidate": "^0.15.0",
-    "create-react-class": "^15.6.3",
-    "express": "^4.16.2",
-    "handlebars": "^4.0.3",
-    "jsx-loader": "^0.13.2",
-    "raphael": "^2.1.4",
-    "velocity-animate": "^1.4.0",
-    "webpack": "^4.0.1",
-    "webpack-raphael": "^2.1.4",
-    "chai": "^4.1.2",
-    "css-loader": "^0.28.10",
-    "expect": "^1.20.2",
-    "mocha": "^5.0.1",
-    "react-hot-loader": "^4.0.0",
-    "style-loader": "^0.20.2",
-    "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "~3.1.0"
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "dev": "node server.js",
     "test": "mocha test -u bdd -R spec",
-    "build": "webpack -p --config ./webpack.production.config.js"
+    "build": "react-scripts build",
+    "start": "react-scripts start"
   }
 }
