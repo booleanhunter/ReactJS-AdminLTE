@@ -111,8 +111,7 @@ define(
                                         <Callout
                                             title="I am a danger callout!"
                                             theme="callout-danger"
-                                            content = "There is a problem that we need to fix. A wonderful serenity has taken possession of my entire soul,
-                                            like these sweet mornings of spring which I enjoy with my whole heart." />
+                                            content = 'There is a problem that we need to fix. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.' />
                                         <Callout
                                             title="I am an info callout!"
                                             theme="callout-info"

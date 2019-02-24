@@ -13,18 +13,25 @@
     "url": "git://github.com/almasaeed2010/AdminLTE.git"
   },
   "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "velocity-animate": "^1.4.0"
+    "prop-types": "^15.7.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "velocity-animate": "^1.5.2",
+    "consolidate": "^0.15.1"
   },
   "devDependencies": {
-    "react-scripts": "1.1.4"
+    "react-scripts": "2.1.5"
   },
   "scripts": {
     "dev": "node server.js",
     "test": "mocha test -u bdd -R spec",
     "build": "react-scripts build",
     "start": "react-scripts start"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
