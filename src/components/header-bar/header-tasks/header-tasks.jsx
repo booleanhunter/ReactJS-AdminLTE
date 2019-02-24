@@ -14,7 +14,7 @@ const TaskList = ({ items, onItemClicked }) => (
         } else  {
             progressBarColor = 'progress-bar-aqua';
         }
-        <TaskItem
+        return <TaskItem
             onItemClicked={onItemClicked}
             key={taskDetails.id}
             id={taskDetails.id}
