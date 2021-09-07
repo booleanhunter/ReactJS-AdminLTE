@@ -1,8 +1,29 @@
 # ReactJS-AdminLTE
 
-[![npm version](https://badge.fury.io/js/adminlte-reactjs.svg)](https://badge.fury.io/js/adminlte-reactjs)
+![Maintenance](https://img.shields.io/maintenance/no/2017?style=for-the-badge)
 
-ReactJS version of the original AdminLTE dashboard - https://github.com/almasaeed2010/AdminLTE. This project consists of widgets, charts and other components written in ReactJS. Stylesheets are borrowed from the AdminLTE project. 
+ReactJS version of the original AdminLTE dashboard - https://github.com/almasaeed2010/AdminLTE. This project consists of widgets, charts and other components written in ReactJS. Stylesheets are borrowed from the AdminLTE project.
+
+-----
+## Update
+
+Thank you kindly for the ⭐ and forks. When I first started working on this project in 2015, I had just graduated from college and had no prior exposure to web-development or open source. I was very new to the open-source world, and did not fully grasp the challenges in maintaining an open-source project sustainably.
+
+For few months while I was working in a fast-paced startup, I moved my focus away from ReactJS to focus on other technologies. But by the time I once again tried to resume work on this project, the ReactJS core library, tooling and ecosystem had changed so rapidly that this repository practically needed a rewrite from scratch. As evident from the [number of issues](https://github.com/booleanhunter/ReactJS-AdminLTE/issues) that users kept raising - the project was rendered unusable in the later versions of React.
+
+Without financial support, it was overwhelming to fix these issues, not to mention that I felt like an absolute imposter. With a heavy heart 💔, I decided to archive this project, and as-of-today, this is where it stands.
+
+Back in 2015, ready-to-use React component libraries were somewhat unknown, and this was one of my very early attempts at creating one. Today, there are several excellent projects that are actively maintained, and they are backed by corporate sponsorship. Here are just a few:
+* [AntD](https://ant.design/)
+* [Material UI](https://material-ui.com/)
+
+So my fellow hipster, you're much better off using one of those than this one. This repo might just be of historical academic interest to you, but try not to use this one in a real project.
+
+I take comfort knowing that this has been quite the learning experience, and since then I have been educating myself on open-source sustainability. 🔥 Today I have other projects that I now actively maintain, that could really use your ⭐ and support. Please visit [my profile](https://github.com/booleanhunter) and check out my pinned repositories for the same. Thank you 🙏🏼
+
+-----
+
+## Project documentation
 
 If you use React in your app, you might find some of these components useful!
 
